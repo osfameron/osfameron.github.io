@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script>(window.dataLayer=window.dataLayer||[]).push({event:'gtm.js','gtm.start':+new Date()})</script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MVPNN2"></script>
-<title>Install and Start Using the Ottoman ODM with Couchbase Server | Couchbase Docs</title>
+<title>The Ottoman ODM with Couchbase Server | Couchbase Docs</title>
 <link rel="canonical" href="https://osfameron.github.io/DOC-9626-NodeJS-4-migration/nodejs-sdk/current/hello-world/start-using-ottoman.html">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
 <meta name="description" content="Installing the Ottoman ODM &amp;amp; a Hello World program.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="nodejs-sdk">
-<meta name="dcterms.identifier" content="3.2">
+<meta name="dcterms.identifier" content="4.0">
 <meta name="page-url" content="/nodejs-sdk/current/hello-world/start-using-ottoman.html">
 <meta name="generator" content="Antora 3.0.0-alpha.3">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Node.js SDK</span>
         <select class="version_list" data-component="nodejs-sdk">
-          <option value="3.2" data-url="overview.html" selected>3.2</option>
+          <option value="4.0" data-url="overview.html" selected>4.0</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.2">
+      <div class="version_items hide" data-version="4.0">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -119,7 +119,7 @@
 </li>
 <li class="menu_list is-current-page" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link is-current-page" href="start-using-ottoman.html">Start Using the Ottoman ODM</a>
+    <a class="menu_title menu_link is-current-page" href="start-using-ottoman.html">The Ottoman ODM</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -181,6 +181,11 @@
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../howtos/concurrent-document-mutations.html">Concurrent Document Mutations</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../howtos/distributed-acid-transactions-from-the-sdk.html">Distributed ACID Transactions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -552,13 +557,13 @@
 <ul>
 <li class="crumb"><a href="overview.html">Node.js SDK</a></li>
 <li class="crumb">Getting Started</li>
-<li class="crumb"><a href="start-using-ottoman.html">Start Using the Ottoman ODM</a></li>
+<li class="crumb"><a href="start-using-ottoman.html">The Ottoman ODM</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Install and Start Using the Ottoman ODM with Couchbase Server</h1>
+<h1 class="page">The Ottoman ODM with Couchbase Server</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
@@ -600,387 +605,15 @@ We recomend familiarizing yourself with these concepts before proceeding with th
 </div>
 </div>
 <div class="sect1">
-<h2 id="creating-a-new-ottoman-project"><a class="anchor" href="#creating-a-new-ottoman-project"></a>Creating a New Ottoman Project</h2>
+<h2 id="support-in-node-js-sdk-4-0"><a class="anchor" href="#support-in-node-js-sdk-4-0"></a>Support in Node.js SDK 4.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Creating a new Ottoman project is as easy as making a directory and initializing it with npm.
-The next two commands will do that for us.
-Open up a terminal and run the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ mkdir node-ottoman-project &amp;&amp; cd $_</code></pre>
-</div>
+<p>Ottoman is currently <strong>not supported</strong> in Node.js SDK 4.0.
+We intend to fully support it with the next 4.1 release.</p>
 </div>
 <div class="paragraph">
-<p>The command above will create our directory and change the current working directory.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ npm init -y</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If a directory does not already have a <code>package.json</code> at its root, this means it is not initialized.
-The command above will accomplish this.</p>
-</div>
-<div class="paragraph">
-<p>Note: We have used the <code>-y</code> flag to take the initialization defaults.
-To change any of these defaults, just open the <code>package.json</code> and manually make any changes.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "name": "node-ottoman-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="compatibility"><a class="anchor" href="#compatibility"></a>Compatibility</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Before installing Ottoman, you will need to ensure that you meet the minimum requirements shown in the compatibility table below:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Ottoman</th>
-<th class="tableblock halign-left valign-top">Node.js</th>
-<th class="tableblock halign-left valign-top">Couchbase SDK</th>
-<th class="tableblock halign-left valign-top">Couchbase Server</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>^2.0.0</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>^8.0.0</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>^3.2.2</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>^6.5.0</strong></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="installing-the-ottoman-odm"><a class="anchor" href="#installing-the-ottoman-odm"></a>Installing the Ottoman ODM</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ npm install ottoman --save</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will download the latest Ottoman ODM, and add a dependency to your <code>package.json</code>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="hello-ottoman"><a class="anchor" href="#hello-ottoman"></a>Hello Ottoman</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In the directory we have just created, named <code>node-ottoman-project</code>, let&#8217;s create an empty file named <code>index.js</code>.
-At this point we want to transition from the terminal to your code editor of choice.
-We will walk through, step by step, adding code to enable us to connect to a bucket, add a document, and retrieve it.
-First, import Ottoman in your new <code>index.js</code> file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js#L4-L5">const { Ottoman, Schema, SearchConsistency } = require('ottoman')
-const ottoman = new Ottoman()</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For the purposes of this example we will create an async function called <code>main</code> under our imports.
-This will contain all our example code going forward.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">async function main() {
-  // your code goes here...
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now, let&#8217;s create a connection to our Couchbase Server.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js#L10-L15">var connection = await ottoman.connect({
-  connectionString: 'couchbase://localhost',
-  bucketName: 'travel-sample',
-  username: 'Administrator',
-  password: 'password',
-})</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note that you can also use the below shorthand when creating a connection:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js#L19-L22">// alternate connect syntax
-connection = await ottoman.connect(
-  'couchbase://localhost/travel-sample@Administrator:password'
-)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Couchbase uses <a href="../../../server/current/learn/security/roles.html" class="page">Role Based Access Control (RBAC)</a> to control access to resources.
-Here we will use the <em>Full Admin</em> role created during installation of the Couchbase Data Platform.
-For production client code, you will want to use more appropriate, restrictive settings&#8201;&#8212;&#8201;but here we want to get you up and running quickly.</p>
-</div>
-<div class="paragraph">
-<p>Since we are running this locally, we will use the Couchbase alias for localhost.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If you are not working with the <code>travel-sample</code> data bucket, substitute <em>travel-sample</em> with your bucket name.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="schemas-models-and-documents"><a class="anchor" href="#schemas-models-and-documents"></a>Schemas, Models, and Documents</h3>
-<div class="paragraph">
-<p>Everything in Ottoman starts with a <em>Schema</em>.
-A Schema maps to a Collection and defines the shape of the documents within that Collection.</p>
-</div>
-<div class="paragraph">
-<p><em>Models</em> in Ottoman are simply constructors compiled from Schema definitions, which help you to easily create, read, update, and delete documents in your Couchbase database.
-An instance of a model is called a <em>Document</em>.</p>
-</div>
-<div class="paragraph">
-<p>First, we&#8217;ll define a schema to represent the shape of our data:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js#L26-L33">const airlineSchema = new Schema({
-  type: String,
-  id: Number,
-  name: String,
-  callsign: String,
-  iata: String,
-  icao: String,
-})</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now, we call the <code>model()</code> constructor to build the model based on the schema we just created.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js#L37-L39">const Airline = connection.model('airline', airlineSchema, {
-  scopeName: 'inventory',
-})</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that the constructor takes arguments like the collection <code>name</code>, <code>schema</code>, and <code>model options</code>.
-In the model options we can define properties such as <code>scopeName</code> to tell Ottoman which Scope we want to store our data in.
-In this case we are storing our data in the <code>inventory</code> Scope.</p>
-</div>
-<div class="paragraph">
-<p>Before performing any database actions we must call the <code>start()</code> function.
-This will ensure that the relevant scopes, collections, and indexes have been created in Couchbase.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js">await connection.start()</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To persist the data in Couchbase we will need to create a <em>Document</em>  object and subsequently call the <code>save()</code> function:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js">  const airlineDoc = new Airline({
-    type: 'airline',
-    id: 8091,
-    callsign: 'CBS',
-    name: 'Couchbase Airways 1',
-    icao: 'CBICAO',
-    iata: 'CBIATA',
-  })
-
-  // Persist the airline document we just created in the database
-  await airlineDoc.save()
-  console.log(`Success: airline ${airlineDoc.name} added!\n`)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Alternatively, we can also use the <code>create()</code> function to create and save the document:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js#L62-L69">await Airline.create({
-  type: 'airline',
-  id: 8092,
-  callsign: 'CBS2',
-  name: 'Couchbase Airways 2',
-  icao: 'CBICAO2',
-  iata: 'CBIATA2',
-})</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="querying-documents"><a class="anchor" href="#querying-documents"></a>Querying Documents</h3>
-<div class="paragraph">
-<p>Querying documents is easy with Ottoman, thanks to the underlying <em>Query Builder</em> built into the ODM.
-The Query Builder can handle many complex operations supported by Couchbase and <a href="../../../server/current/learn/data/n1ql-versus-sql.html" class="page">N1QL</a>.</p>
-</div>
-<div class="paragraph">
-<p>Documents can be retrieved using <code>model</code> helper methods such as <code>find()</code>, <code>findById()</code>, or <code>findOne()</code>.
-For this example, let&#8217;s retrieve one of the airline documents we saved previously with <code>find()</code>, and filter by <code>callsign</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js">const result = await Airline.find(
-  { callsign: 'CBS' },
-  { consistency: SearchConsistency.LOCAL }
-)
-console.log('Query Result: ', result.rows)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Finally, add this last code snippet after the <code>main</code> function:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js">main()
-  .catch((error) =&gt; console.log('ERR:', error))
-  .finally(process.exit)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now we can run our code using the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">$ node index.js</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The results you should expect are as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">Success: airline Couchbase Airways 1 added!
-
-Query Result:  [
-  _Model {
-    callsign: 'CBS',
-    iata: 'CBIATA',
-    icao: 'CBICAO',
-    id: 'airline_8091',
-    name: 'Couchbase Airways 1',
-    type: 'airline'
-  }
-]</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="full-example"><a class="anchor" href="#full-example"></a>Full Example</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you want to copy and paste to run the full example, here it is:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-nodejs hljs" data-lang="nodejs" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/hello-world/examples/start-using-ottoman.js">'use strict'
-
-const { Ottoman, Schema, SearchConsistency } = require('ottoman')
-const ottoman = new Ottoman()
-
-async function main() {
-  var connection = await ottoman.connect({
-    connectionString: 'couchbase://localhost',
-    bucketName: 'travel-sample',
-    username: 'Administrator',
-    password: 'password',
-  })
-
-  // alternate connect syntax
-  connection = await ottoman.connect(
-    'couchbase://localhost/travel-sample@Administrator:password'
-  )
-
-  const airlineSchema = new Schema({
-    type: String,
-    id: Number,
-    name: String,
-    callsign: String,
-    iata: String,
-    icao: String,
-  })
-
-  const Airline = connection.model('airline', airlineSchema, {
-    scopeName: 'inventory',
-  })
-
-  await connection.start()
-
-  const airlineDoc = new Airline({
-    type: 'airline',
-    id: 8091,
-    callsign: 'CBS',
-    name: 'Couchbase Airways 1',
-    icao: 'CBICAO',
-    iata: 'CBIATA',
-  })
-
-  // Persist the airline document we just created in the database
-  await airlineDoc.save()
-  console.log(`Success: airline ${airlineDoc.name} added!\n`)
-  
-  await Airline.create({
-    type: 'airline',
-    id: 8092,
-    callsign: 'CBS2',
-    name: 'Couchbase Airways 2',
-    icao: 'CBICAO2',
-    iata: 'CBIATA2',
-  })
-
-  const result = await Airline.find(
-    { callsign: 'CBS' },
-    { consistency: SearchConsistency.LOCAL }
-  )
-  console.log('Query Result: ', result.rows)
-  
-  // cleanup
-  await Airline.removeById(8092).catch(e =&gt; undefined)
-}
-
-main()
-  .catch((error) =&gt; console.log('ERR:', error))
-  .finally(process.exit)</code></pre>
-</div>
+<p>In the meantime, if you are interested in checking out Ottoman,
+please read the <a href="#3.2@nodejs-sdk:hello-world:start-using-ottoman.adoc" class="page unresolved">Ottoman for Node.js SDK 3.2</a> page, or explore the resources below.</p>
 </div>
 </div>
 </div>

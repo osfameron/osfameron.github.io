@@ -13,7 +13,7 @@
 <meta name="description" content="Data durability refers to the fault tolerance and persistence of data in the face of software or hardware failure.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="nodejs-sdk">
-<meta name="dcterms.identifier" content="3.2">
+<meta name="dcterms.identifier" content="4.0">
 <meta name="page-url" content="/nodejs-sdk/current/concept-docs/durability-replication-failure-considerations.html">
 <meta name="generator" content="Antora 3.0.0-alpha.3">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Node.js SDK</span>
         <select class="version_list" data-component="nodejs-sdk">
-          <option value="3.2" data-url="../hello-world/overview.html" selected>3.2</option>
+          <option value="4.0" data-url="../hello-world/overview.html" selected>4.0</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.2">
+      <div class="version_items hide" data-version="4.0">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -119,7 +119,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../hello-world/start-using-ottoman.html">Start Using the Ottoman ODM</a>
+    <a class="menu_title menu_link" href="../hello-world/start-using-ottoman.html">The Ottoman ODM</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -181,6 +181,11 @@
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../howtos/concurrent-document-mutations.html">Concurrent Document Mutations</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../howtos/distributed-acid-transactions-from-the-sdk.html">Distributed ACID Transactions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -666,44 +671,21 @@ Where the operation is an array append, or somesuch, then <a href="../../../serv
 <h2 id="older-server-versions"><a class="anchor" href="#older-server-versions"></a>Older Server Versions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In a version of Couchbase Server lower than 6.5 is being used then the application can fall-back to 'client verified' durability.
-Here the SDK will do a simple poll of the replicas and only return once the requested durability level is achieved.</p>
+<p>If a version of Couchbase Server lower than 6.5 is being used then the fallback is 'client verified' durability.</p>
 </div>
-<div class="paragraph">
-<p>Couchbase Server versions prior to 6.5 implement durability using the <code>Observe</code> operation for clients to check if a mutation has been replicated and/or persisted to a specified number of cluster nodes.
-This allows applications to determine when a write is durable (that is, will still be present after some amount of failure).</p>
-</div>
-<div class="paragraph">
-<p>The_level of durability_ is configurable with two values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <em>replication</em> factor of the operation: how many replicas must this operation be propagated to, using <code>ReplicateTo</code>.</p>
-</li>
-<li>
-<p>The_persistence_ of the modification: how many persisted copies of the modified record must exist, using the <code>PersistTo</code> option.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>See <a href="../howtos/kv-operations.html#durability" class="page">the durability examples in each SDK</a>.</p>
-</div>
-<div class="paragraph">
-<p>When an operation is propagated to a replica, it is first propagated to the replica’s memory and then placed in a queue, to be persisted to the replica’s disk.
-You can control whether you desire the operation to only be propagated to a replica’s memory (<code>ReplicateTo</code>), or whether to wait until it is fully persisted to the replica’s disk (<code>PersistTo</code>).</p>
-</div>
-<div class="paragraph">
-<p><code>PersistTo</code> receives a value total to the number of nodes that an operation should be persisted.
-The maximum value is the number of replica nodes plus one.
-A value of <code>1</code> indicates active-only persistence (and no replica persistence).</p>
-</div>
-<div class="paragraph">
-<p><code>ReplicateTo</code> receives a value total to the number of <em>replica</em> nodes the operation should be replicated.
-Its maximum value is the number of replica nodes.</p>
-</div>
-<div class="paragraph">
-<p>As with <a href="#ambiguity">Ambiguity</a> in recent server versions' Synchronous Replication, the operation may succeed before a network (or other) failure occurs&#8201;&#8212;&#8201;it&#8217;s up to the client application to handle such possibilities.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Client Verified durability is supported in <a href="#3.2@durability-replication-failure-considerations.adoc#older-server-versions" class="page unresolved">Node.js SDK 3.2</a> but not in 4.0.
+Legacy support will be available in a later 4.x release.
+See the <a href="../project-docs/migrating-sdk-code-to-3.n.html#sdk4-specifics" class="page">SDK 4.0 migration considerations</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="performance-considerations"><a class="anchor" href="#performance-considerations"></a>Performance considerations</h3>

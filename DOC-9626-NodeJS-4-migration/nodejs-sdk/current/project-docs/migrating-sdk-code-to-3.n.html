@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script>(window.dataLayer=window.dataLayer||[]).push({event:'gtm.js','gtm.start':+new Date()})</script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MVPNN2"></script>
-<title>Migrating from SDK2 to SDK3 API | Couchbase Docs</title>
+<title>Migrating to SDK API 3 | Couchbase Docs</title>
 <link rel="canonical" href="https://osfameron.github.io/DOC-9626-NodeJS-4-migration/nodejs-sdk/current/project-docs/migrating-sdk-code-to-3.n.html">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="The 3.x API (used in Node.js SDK 3.x and 4.x)  breaks the previous 2.x APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.">
+<meta name="description" content="The SDK API 3 (used in Node.js SDK 3.x and 4.x)  breaks the previous SDK API 2 APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="nodejs-sdk">
-<meta name="dcterms.identifier" content="3.2">
+<meta name="dcterms.identifier" content="4.0">
 <meta name="page-url" content="/nodejs-sdk/current/project-docs/migrating-sdk-code-to-3.n.html">
 <meta name="generator" content="Antora 3.0.0-alpha.3">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Node.js SDK</span>
         <select class="version_list" data-component="nodejs-sdk">
-          <option value="3.2" data-url="../hello-world/overview.html" selected>3.2</option>
+          <option value="4.0" data-url="../hello-world/overview.html" selected>4.0</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.2">
+      <div class="version_items hide" data-version="4.0">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -119,7 +119,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../hello-world/start-using-ottoman.html">Start Using the Ottoman ODM</a>
+    <a class="menu_title menu_link" href="../hello-world/start-using-ottoman.html">The Ottoman ODM</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -181,6 +181,11 @@
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../howtos/concurrent-document-mutations.html">Concurrent Document Mutations</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../howtos/distributed-acid-transactions-from-the-sdk.html">Distributed ACID Transactions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -559,7 +564,7 @@
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Migrating from SDK2 to SDK3 API</h1>
+<h1 class="page">Migrating to SDK API 3</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
@@ -569,16 +574,17 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-The 3.x API (used in Node.js SDK 3.x and 4.x)  breaks the previous 2.x APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.
+The SDK API 3 (used in Node.js SDK 3.x and 4.x)  breaks the previous SDK API 2 APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.
 The Document class and structure has been completely removed from the API, and the returned value is now <code>Result</code>.
 Retry behaviour is more proactive, and lazy bootstrapping moves all error handling to a single place.
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Additionally, the Node.js SDK 4.0 offers a new backend (Couchbase++) with better support for upcoming features. Though the API still matches the SDK 3.x spec, we have increased the major version to reflect the importance of this implementation change, as per <a href="https://semver.org/">semantic versioning</a>.</p>
+<p>Additionally, the Node.js SDK 4.0 offers a new backend (Couchbase++) with better support for upcoming features.
+Though the API still matches the SDK API 3.<em>x</em> spec, we have increased the major version to reflect the importance of this implementation change, as per <a href="https://semver.org/">semantic versioning</a>.</p>
 </div>
 <div class="paragraph">
-<p>Individual behaviour changes across services are explained on this page.</p>
+<p>Individual behavior changes across services are explained on this page.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -587,7 +593,7 @@ Retry behaviour is more proactive, and lazy bootstrapping moves all error handli
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-if you are an existing SDK 3.x user considering migrating to SDK 4.0,
+if you are an existing Node.js SDK 3.<em>x</em> user considering migrating to SDK 4.0,
 you may wish to skip to the <a href="#sdk4-specifics">SDK 4.0 specifics</a> below.
 </td>
 </tr>
@@ -641,10 +647,10 @@ Just for those few that do, the table below shows each Couchbase SDK release ver
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Go</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5 &amp; 1.6</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.0 &amp; 2.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.3 &amp; 2.4</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Java</p></td>
@@ -691,16 +697,16 @@ Just for those few that do, the table below shows each Couchbase SDK release ver
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>SDK API 3.2</strong>: Introduced alongside Couchbase Server 7.0 provides features in support of Scopes and Collections, extends capabilities around Open Telemetry API to instrument telemetry data, enhanced client side field level encryption to add an additional layer of security to protect sensitive data, adds new platform support such as Ubuntu 20.04 LTS.</p>
+<p><strong>SDK API 3.2</strong>: Introduced alongside Couchbase Server 7.0, provides features in support of Scopes and Collections, extends capabilities around Open Telemetry API to instrument telemetry data, enhanced client side field level encryption to add an additional layer of security to protect sensitive data, adds new platform support such as Ubuntu 20.04 LTS.</p>
 </div>
 <div class="paragraph">
-<p><strong>SDK API 3.1</strong>: Introduced alongside Couchbase Server 6.6,  focuses on Bucket Management API, adds capabilities around Full Text Search features such-as  Geo-Polygon support, Flex Index and Scoring.</p>
+<p><strong>SDK API 3.1</strong>: Introduced alongside Couchbase Server 6.6,  focuses on Bucket Management API, adds capabilities around Full Text Search features such-as  Geo-Polygon support, Flex Index, and Scoring.</p>
 </div>
 <div class="paragraph">
 <p><strong>SDK API 3.0</strong>: Introduced alongside Couchbase Server 6.5,  is a major overhaul from its predecessor, has simplified surface area, removed long-standing bugs and deprecated/removed old API, introduces new programming languages Scala and Ruby, written in anticipation to support Scopes and Collections.</p>
 </div>
 <div class="paragraph">
-<p><strong>SDK API 2.6</strong>: Introduced alongside Couchbase Server 6.0, with support for its new features such as the Analytics Service, improvements to Full Text Search, and support for more complex network configurations.</p>
+<p><strong>SDK API 2.7</strong>: Introduced alongside Couchbase Server 6.0, with support for its new features such as the Analytics Service, improvements to Full Text Search, and support for more complex network configurations.</p>
 </div>
 </div>
 </div>
@@ -709,7 +715,7 @@ Just for those few that do, the table below shows each Couchbase SDK release ver
 <div class="sectionbody">
 <div class="paragraph">
 <p>Before this guide dives into the language-specific technical component of the migration, it is important to understand the high level changes first.
-As a migration guide, this document assumes you are familiar with the previous generation of the SDK and does not re-introduce SDK 2.x concepts.
+As a migration guide, this document assumes you are familiar with the previous generation of the SDK and does not re-introduce SDK API 2 concepts.
 We recommend familiarizing yourself with the new SDK first by reading at least the <a href="../hello-world/start-using-sdk.html" class="page">getting started guide</a>, and browsing through the other chapters a little.</p>
 </div>
 <div class="sect2">
@@ -717,7 +723,7 @@ We recommend familiarizing yourself with the new SDK first by reading at least t
 <div class="paragraph">
 <p>The concept of a <code>Cluster</code> and a <code>Bucket</code> remain the same, but a fundamental new layer is introduced into the API: <code>Collections</code> and their <code>Scopes</code>.
 Collections are logical data containers inside a Couchbase bucket that let you group similar data just like a <em>Table</em> does in a relational database&#8201;&#8212;&#8201;although documents inside a collection do not need to have the same structure.
-Scopes allow the grouping of collections into a namespace, which is very usfeul when you have multilpe tenants acessing the same bucket.
+Scopes allow the grouping of collections into a namespace, which is very useful when you have multiple tenants accessing the same bucket.
 Couchbase Server includes support for collections as a <a href="#6.5@server:developer-preview:preview-mode.adoc" class="page unresolved">developer preview</a> in version 6.5, and as a first class concept of the programming model from <a href="../../../server/current/learn/data/scopes-and-collections.html" class="page">version 7.0.</a></p>
 </div>
 <div class="paragraph">
@@ -807,11 +813,11 @@ First, installation and configuration are covered, then we talk about exception 
 <h2 id="installation-and-configuration"><a class="anchor" href="#installation-and-configuration"></a>Installation and Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Node.js SDK 3.x and 4.x are available through <code>npm</code>, just like the previous generation.
+<p>The Node.js SDK 3.<em>x</em> and 4.<em>x</em> are available through <code>npm</code>, just like the previous generation.
 Please see the <a href="sdk-release-notes.html" class="page">Release Notes</a> for up-to-date information.</p>
 </div>
 <div class="paragraph">
-<p>The Nodes.j SDK 3.x has the following dependencies:</p>
+<p>The Node.js SDK 3.2 has the following dependencies:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -838,7 +844,7 @@ collection = bucket.scope("inventory").collection("airport");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Similar to SDK 2, if you create your own <code>ClusterEnvironment</code> the SDK will not shut it
+<p>Similar to SDK API 2, if you create your own <code>ClusterEnvironment</code> the SDK will not shut it
 down for you&#8201;&#8212;&#8201;you need to do this manually at the end of the program lifetime:</p>
 </div>
 <div class="listingblock">
@@ -888,9 +894,9 @@ var cluster = new couchbase.Cluster(
 <h2 id="connection-lifecycle"><a class="anchor" href="#connection-lifecycle"></a>Connection Lifecycle</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>From a high-level perspective, bootstrapping and shutdown is very similar to SDK 2.
+<p>From a high-level perspective, bootstrapping and shutdown is very similar to the SDK API 2.<em>x</em>.
 One notable difference is that the <code>Collection</code> is introduced and that the individual methods like <code>bucket</code> immediately return, and do not throw an exception.
-Compare SDK 2: the <code>openBucket</code> method would not work if it could not open the bucket.</p>
+Compare SDK API 2: the <code>openBucket</code> method would not work if it could not open the bucket.</p>
 </div>
 <div class="paragraph">
 <p>The reason behind this change is that even if a bucket can be opened, a millisecond later it may not be available any more.
@@ -898,7 +904,7 @@ All this state has been moved into the actual operation so there is only a singl
 This simplifies error handling and retry logic for an application.</p>
 </div>
 <div class="paragraph">
-<p>In SDK 2, you connected, opened a bucket, performed a KV op, and disconnected like this:</p>
+<p>In SDK API 2, you connected, opened a bucket, performed a KV op, and disconnected like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -912,7 +918,7 @@ cluster.close();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Here is the SDK 3 equivalent:</p>
+<p>Here is the SDK API 3 equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -958,9 +964,9 @@ If you are using an earlier version of the cluster you must open at least one bu
 <h2 id="serialization-and-transcoding"><a class="anchor" href="#serialization-and-transcoding"></a>Serialization and Transcoding</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In SDK 2 the main method to control transcoding was through providing different <code>Document</code> instances (which in turn had their own transcoder associated), such as the <code>JsonDocument</code>.
+<p>In SDK API 2 the main method to control transcoding was through providing different <code>Document</code> instances (which in turn had their own transcoder associated), such as the <code>JsonDocument</code>.
 This only worked for the KV APIs though&#8201;&#8212;&#8201;Query, Search, Views, and other services exposed their JSON rows/hits in different ways.
-All of this has been unified in SDK 3 under a single concept: serializers and transcoders.</p>
+All of this has been unified in SDK API 3 under a single concept: serializers and transcoders.</p>
 </div>
 <div class="paragraph">
 <p>By default, all KV APIs transcode to and from JSON&#8201;&#8212;&#8201;you can also provide Javascript objects which you couldn&#8217;t in the past.</p>
@@ -993,7 +999,7 @@ console.log(getResult);</code></pre>
 <h2 id="exception-handling"><a class="anchor" href="#exception-handling"></a>Exception Handling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>How to <em>handle</em> exceptions is unchanged from SDK 2.
+<p>How to <em>handle</em> exceptions is unchanged from SDK API 2.
 You should still use <code>try/catch</code> on the blocking APIs and the corresponding reactive/async methods on the other APIs.
 There have been changes made in the following areas:</p>
 </div>
@@ -1028,7 +1034,7 @@ Each <code>CouchbaseError</code> has an associated <code>ErrorContext</code> whi
 <p>One reason why the APIs do not expose a long list of exceptions is that the SDK now retries as many operations as it can if it can do so safely.
 This depends on the type of operation (idempotent or not), in which state of processing it is (already dispatched or not), and what the actual response code is if it arrived already.
 As a result, many transient cases&#8201;&#8212;&#8201;such as locked documents, or temporary failure&#8201;&#8212;&#8201;are now retried by default and should less often impact applications.
-It also means, when migrating to the new SDK API, you may observe a longer period of time until an error is returned by default.</p>
+It also means, when migrating to SDK API 3, you may observe a longer period of time until an error is returned by default.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1057,18 +1063,18 @@ Operations are retried by default as described above with the default <code>Best
 <p>The Key/Value (KV) API is now located under the <code>Collection</code> interface, so even if you do not use collections, the <code>defaultCollection()</code> needs to be opened in order to access it.</p>
 </div>
 <div class="paragraph">
-<p>The following table describes the SDK 2 KV APIs and where they are now located in SDK 3:</p>
+<p>The following table describes the SDK API 2 KV calls and where they are now located in SDK API 3:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. SDK 2.x KV API vs. SDK 3.x KV API</caption>
+<caption class="title">Table 2. KV API Changes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">SDK 2</th>
-<th class="tableblock halign-left valign-top">SDK 3</th>
+<th class="tableblock halign-left valign-top">SDK API 2</th>
+<th class="tableblock halign-left valign-top">SDK API 3</th>
 </tr>
 </thead>
 <tbody>
@@ -1153,8 +1159,8 @@ Operations are retried by default as described above with the default <code>Best
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">SDK 2</th>
-<th class="tableblock halign-left valign-top">SDK 3</th>
+<th class="tableblock halign-left valign-top">SDK API 2</th>
+<th class="tableblock halign-left valign-top">SDK API 3</th>
 </tr>
 </thead>
 <tbody>
@@ -1239,7 +1245,7 @@ Operations are retried by default as described above with the default <code>Best
 </div>
 <div class="paragraph">
 <p>The signatures now look very similar.
-The concept of the <code>Document</code> as a type is gone in SDK 3 and instead you need to pass in the properties explicitly.
+The concept of the <code>Document</code> as a type is gone in SDK API 3 and instead you need to pass in the properties explicitly.
 This makes it very clear what is returned, especially on the response side.</p>
 </div>
 <div class="paragraph">
@@ -1252,22 +1258,22 @@ All required params are still part of the method signature, making it clear what
 </div>
 <div class="paragraph">
 <p>The timeout can be overridden on every operation and now takes a <code>Duration</code> from java 8.
-Compare SDK 2 and SDK 3 custom timeout setting:</p>
+Compare SDK API 2 and SDK API 3 custom timeout setting:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// SDK 2 custom timeout
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// SDK API 2 custom timeout
 bucket.get("mydoc-id", 5000);</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L132-L133">// SDK 3 custom timeout
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L132-L133">// SDK API 3 custom timeout
 const getResult = await collection.get( "airport_1254", {timeout : 2000});</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In SDK 2, the <code>getFromReplica</code> method had a <code>ReplicaMode</code> argument which allowed to customize its behavior on how many replicas should be reached.
+<p>In SDK API 2, the <code>getFromReplica</code> method had a <code>ReplicaMode</code> argument which allowed to customize its behavior on how many replicas should be reached.
 We have identified this as a potential source of confusion and as a result split it up in two methods that simplify usage significantly.
 There is now a <code>getAllReplicas</code> method and a <code>getAnyReplica</code> method.</p>
 </div>
@@ -1292,7 +1298,7 @@ There is now a <code>getAllReplicas</code> method and a <code>getAnyReplica</cod
 </td>
 <td class="content">
 Operations which cannot be performed on JSON documents have been moved to the <code>binarycollection</code>, accessible through <code>Collection.binary()</code>.
-These operations include <code>append</code>, <code>prepend</code>, <code>increment</code>, and <code>decrement</code> (previously called <code>counter</code> in SDK 2).
+These operations include <code>append</code>, <code>prepend</code>, <code>increment</code>, and <code>decrement</code> (previously called <code>counter</code> in SDK API 2).
 These operations should only be used against non-json data.
 Similar functionality is available through <code>mutateIn</code> on JSON documents.
 </td>
@@ -1303,11 +1309,11 @@ Similar functionality is available through <code>mutateIn</code> on JSON documen
 <div class="sect2">
 <h3 id="query"><a class="anchor" href="#query"></a>Query</h3>
 <div class="paragraph">
-<p>N1QL querying is now available at the <code>Cluster</code> level instead of the bucket level, because you can also write N1QL queries that span multiple buckets. Compare a simple N1QL query from SDK 2 with its SDK 3 equivalent:</p>
+<p>N1QL querying is now available at the <code>Cluster</code> level instead of the bucket level, because you can also write N1QL queries that span multiple buckets. Compare a simple N1QL query from SDK API 2 with its SDK API 3 equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// SDK 2 simple query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// SDK API 2 simple query
 queryResult = await bucket.query(
       couchbase.N1qlQuery.fromString('SELECT * FROM `travel-sample` WHERE city=$1 LIMIT 10'),
       [ 'Paris' ]);
@@ -1319,7 +1325,7 @@ queryResult.rows.forEach((row)=&gt;{
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L141-L145">// SDK 3 simple query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L141-L145">// SDK API 3 simple query
 const queryResult = await cluster.query("SELECT * FROM `travel-sample` WHERE city=$1 LIMIT 10", { parameters: ['Paris']});
 queryResult.rows.forEach((row)=&gt;{
    console.log(row);
@@ -1328,16 +1334,16 @@ queryResult.rows.forEach((row)=&gt;{
 </div>
 <div class="paragraph">
 <p>Note that there is no <code>N1qlQuery.fromString</code> any more&#8201;&#8212;&#8201;and query parameters argument has been moved to the options parameter for consistency reasons.
-The following shows how to do named and positional parameters in SDK 3:</p>
+The following shows how to do named and positional parameters in SDK API 3:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L152-L161">// SDK 3 named parameters
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L152-L161">// SDK API 3 named parameters
 const queryResultNamed = await cluster.query("SELECT * FROM `travel-sample` WHERE city=$CITY LIMIT 10", { parameters: {CITY:'Paris'}});
 queryResultNamed.rows.forEach((row)=&gt;{
    console.log(row);
 });
-// SDK 3 positional parameters
+// SDK API 3 positional parameters
 const queryResultPositional = await cluster.query("SELECT * FROM `travel-sample` WHERE city=$1 LIMIT 10", { parameters: ['Paris']});
 queryResultPositional.rows.forEach((row)=&gt;{
    console.log(row);
@@ -1353,7 +1359,7 @@ The reactive streaming API will terminate the rows' <code>Flux</code> with an ex
 This makes error handling much easier in both the blocking and non-blocking cases.</p>
 </div>
 <div class="paragraph">
-<p>While in SDK 2 you had to manually check for errors (otherwise you&#8217;d get an empty row collection):</p>
+<p>While in SDK API 2 you had to manually check for errors (otherwise you&#8217;d get an empty row collection):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1364,7 +1370,7 @@ if (!queryResult.errors.isEmpty()) {
 </div>
 </div>
 <div class="paragraph">
-<p>In SDK 3 the top level <code>query</code> method will throw an exception:</p>
+<p>In SDK API 3 the top level <code>query</code> method will throw an exception:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1385,7 +1391,7 @@ As with the Query service, parameters for the Analytics queries have moved into 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L168-L172">// SDK 3 simple analytics query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L168-L172">// SDK API 3 simple analytics query
 const analyticsResult = await cluster.analyticsQuery("select * from `travel-dataset` LIMIT 10");
 analyticsResult.rows.forEach((row)=&gt;{
    console.log(row);
@@ -1394,7 +1400,7 @@ analyticsResult.rows.forEach((row)=&gt;{
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L179-L195">// SDK 3 named parameters for analytics
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L179-L195">// SDK API 3 named parameters for analytics
 const analyticsResult1 = await cluster.analyticsQuery(
   "select * from `travel-sample` where city = $CITY LIMIT 10",
   { parameters : { CITY : "Paris"}}
@@ -1403,7 +1409,7 @@ analyticsResult1.rows.forEach((row)=&gt;{
    console.log(row);
 });
 
-// SDK 3 positional parameters for analytics
+// SDK API 3 positional parameters for analytics
 const analyticsResult2 = await cluster.analyticsQuery(
   "select * from `travel-sample` where city = $1 LIMIT 10",
   { parameters : [ "airport" ] }
@@ -1418,7 +1424,7 @@ analyticsResult2.rows.forEach((row)=&gt;{
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// SDK 2 error check
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// SDK API 2 error check
 AnalyticsQueryResult analyticsQueryResult = b1.query(AnalyticsQuery.simple("select * from foo"));
 if (!analyticsQueryResult.errors().isEmpty()) {
   // errors contain [{"msg":"Cannot find dataset foo in dataverse Default nor an alias with name foo! (in line 1, at column 15)","code":24045}]
@@ -1429,16 +1435,16 @@ if (!analyticsQueryResult.errors().isEmpty()) {
 <div class="sect2">
 <h3 id="search"><a class="anchor" href="#search"></a>Search</h3>
 <div class="paragraph">
-<p>The Search API has changed a bit in SDK 3 so that it aligns with the other query APIs.
+<p>The Search API has changed a bit in SDK API 3 so that it aligns with the other query APIs.
 The type of queries have stayed the same, but all optional parameters moved into <code>SearchOptions</code>.
 Also, similar to the other query APIs, it is now available at the <code>Cluster</code> level.</p>
 </div>
 <div class="paragraph">
-<p>Here is a SDK 2 Search query with some options, and its SDK 3 equivalent:</p>
+<p>Here is a SDK API 2 Search query with some options, and its SDK API 3 equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">//  SDK 2 search query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">//  SDK API 2 search query
 const searchResult = bucket.query(
   "airports"",
   { indexName : "airport_view", limit:5, fields : [ "a", "b", "c"]}
@@ -1452,7 +1458,7 @@ searchResult.rows.forEach((row)=&gt;{
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L202-L217">    // SDK 3 search query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L202-L217">    // SDK API 3 search query
     const ftsQuery =  couchbase.SearchQuery.match("airport");
     const searchResult = await cluster.searchQuery(
       "hotels",
@@ -1505,8 +1511,8 @@ The API has stayed mostly the same, the most important change is that <code>stal
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">SDK 2</th>
-<th class="tableblock halign-left valign-top">SDK 3</th>
+<th class="tableblock halign-left valign-top">SDK API 2</th>
+<th class="tableblock halign-left valign-top">SDK API 3</th>
 </tr>
 </thead>
 <tbody>
@@ -1525,11 +1531,11 @@ The API has stayed mostly the same, the most important change is that <code>stal
 </tbody>
 </table>
 <div class="paragraph">
-<p>Compare this SDK 2 view query with its SDK 3 equivalent:</p>
+<p>Compare this SDK API 2 view query with its SDK API 3 equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// SDK 2 view query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// SDK API 2 view query
 const query = async bucket.query(
   "design", "view", {limit:5, skip:2},
   10000
@@ -1542,7 +1548,7 @@ query.rows.forEach((row)=&gt;{
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L243-L251">// SDK 3 view query
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-sdk-nodejs/modules/devguide/examples/nodejs/migrating.js#L243-L251">// SDK API 3 view query
 const viewResult = await bucket.viewQuery(
   "dev_airports",
   "airport_view",
@@ -1557,24 +1563,24 @@ viewResult.rows.forEach((row)=&gt;{
 <div class="sect2">
 <h3 id="management-apis"><a class="anchor" href="#management-apis"></a>Management APIs</h3>
 <div class="paragraph">
-<p>In SDK 2, the management APIs were centralized in the <code>clustermanager</code> at the cluster level and the <code>bucketmanager</code> at the bucket level.
-Since SDK 3 provides more management APIs, they have been split up in their respective domains.
-So for example when in SDK 2 you needed to remove a bucket you would call <code>clustermanager.removeBucket</code> you will now find it under <code>bucketmanager.dropBucket</code>.
+<p>In SDK API 2, the management APIs were centralized in the <code>clustermanager</code> at the cluster level and the <code>bucketmanager</code> at the bucket level.
+Since SDK API 3 provides more management APIs, they have been split up in their respective domains.
+So for example when in SDK API 2 you needed to remove a bucket you would call <code>clustermanager.removeBucket</code> you will now find it under <code>bucketmanager.dropBucket</code>.
 Also, creating a N1QL index now lives in the <code>queryindexmanager</code>, which is accessible through the <code>cluster</code>.</p>
 </div>
 <div class="paragraph">
-<p>The following table provides a mapping from the SDK 2 management APIs to those of SDK 3:</p>
+<p>The following table provides a mapping from the SDK API 2 management APIs to those of SDK API 3:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. SDK 2 vs SDK 3 clustermanager</caption>
+<caption class="title">Table 5. <code>clustermanager</code> changes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">SDK 2</th>
-<th class="tableblock halign-left valign-top">SDK 3</th>
+<th class="tableblock halign-left valign-top">SDK API 2</th>
+<th class="tableblock halign-left valign-top">SDK API 3</th>
 </tr>
 </thead>
 <tbody>
@@ -1629,15 +1635,15 @@ Also, creating a N1QL index now lives in the <code>queryindexmanager</code>, whi
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. SDK 2 vs SDK 3 bucketmanager</caption>
+<caption class="title">Table 6. <code>bucketmanager</code> changes</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">SDK 2</th>
-<th class="tableblock halign-left valign-top">SDK 3</th>
+<th class="tableblock halign-left valign-top">SDK API 2</th>
+<th class="tableblock halign-left valign-top">SDK API 3</th>
 </tr>
 </thead>
 <tbody>
@@ -1704,6 +1710,13 @@ Also, creating a N1QL index now lives in the <code>queryindexmanager</code>, whi
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="encryption"><a class="anchor" href="#encryption"></a>Encryption</h3>
+<div class="paragraph">
+<p>Due to a change in algorithms and API, SDK API 2 cannot read fields encrypted by SDK API 3.
+Learn more in the <a href="../howtos/encrypting-using-sdk.html#migrating-from-2" class="page">encryption guide</a>.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1713,8 +1726,33 @@ Also, creating a N1QL index now lives in the <code>queryindexmanager</code>, whi
 <p>Node.js SDK 4.0 implements the SDK API 3 spec, so all the steps above also apply to a migration from a Node.js SDK 2.x directly to Node.js SDK 4.0.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, the Node.js SDK 4.0 offers a new backend (Couchbase++) with better support for upcoming features.
+<p>Additionally, the Node.js SDK 4.0 offers a new backend (Couchbase++) with support for
+<a href="../howtos/distributed-acid-transactions-from-the-sdk.html" class="page">multi-document ACID transactions</a>,
+as well as the capabilities required for upcoming features.
 You should be aware of the following considerations arising from this new backend implementation.</p>
+</div>
+<div class="paragraph">
+<p>The following features are unsupported in 4.0.
+They are available in 3.2, and will be available in a later 4.x release.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../concept-docs/response-time-observability.html" class="page">Response Time Availability</a></p>
+</li>
+<li>
+<p><a href="../concept-docs/durability-replication-failure-considerations.html#older-server-versions" class="page">Legacy durability</a></p>
+</li>
+<li>
+<p>Log forwarding</p>
+</li>
+<li>
+<p>Replica reads</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1723,9 +1761,6 @@ You should be aware of the following considerations arising from this new backen
 </li>
 <li>
 <p>Ping error entries are now typed.</p>
-</li>
-<li>
-<p>Search scan consistency <code>request-plus</code> has been removed.</p>
 </li>
 <li>
 <p><code>get</code> requests on locked documents now retry rather than fast-fail.</p>

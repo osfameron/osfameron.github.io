@@ -13,7 +13,7 @@
 <meta name="description" content="Features available in different SDK versions, and compatibility between Server and SDK. Plus notes on Cloud, networks, and AWS Lambda.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="nodejs-sdk">
-<meta name="dcterms.identifier" content="3.2">
+<meta name="dcterms.identifier" content="4.0">
 <meta name="page-url" content="/nodejs-sdk/current/project-docs/compatibility.html">
 <meta name="generator" content="Antora 3.0.0-alpha.3">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Node.js SDK</span>
         <select class="version_list" data-component="nodejs-sdk">
-          <option value="3.2" data-url="../hello-world/overview.html" selected>3.2</option>
+          <option value="4.0" data-url="../hello-world/overview.html" selected>4.0</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.2">
+      <div class="version_items hide" data-version="4.0">
 <ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
@@ -119,7 +119,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../hello-world/start-using-ottoman.html">Start Using the Ottoman ODM</a>
+    <a class="menu_title menu_link" href="../hello-world/start-using-ottoman.html">The Ottoman ODM</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -181,6 +181,11 @@
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
     <a class="menu_title menu_link" href="../howtos/concurrent-document-mutations.html">Concurrent Document Mutations</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="../howtos/distributed-acid-transactions-from-the-sdk.html">Distributed ACID Transactions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -572,7 +577,7 @@ Features available in different SDK versions, and compatibility between Server a
 </blockquote>
 </div>
 <div class="paragraph">
-<p>The Couchbase Node.js Client will run on any <a href="https://github.com/nodejs/Release">supported LTS version of Node.js</a>&#8201;&#8212;&#8201;currently, 10.x, 12.x, and 14.x.</p>
+<p>The Couchbase Node.js Client will run on any <a href="https://github.com/nodejs/Release">supported LTS version of Node.js</a>&#8201;&#8212;&#8201;currently, 12.x, 14.x, and 16.x.</p>
 </div>
 </div>
 </div>
@@ -611,16 +616,10 @@ It is best to upgrade either the SDK or the Couchbase version you are using.</p>
 <th class="tableblock halign-left valign-top"></th>
 <th class="tableblock halign-left valign-top">SDK 2.6</th>
 <th class="tableblock halign-left valign-top">SDK 3.0, 3.1</th>
-<th class="tableblock halign-left valign-top">3.2</th>
+<th class="tableblock halign-left valign-top">3.2, 4.0</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Server 5.0-5.5</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>✔</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">◎</p></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Server 6.0</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>✔</strong></p></td>
@@ -651,7 +650,7 @@ See the notes there for Support details.</p>
 <h2 id="platform-compatibility"><a class="anchor" href="#platform-compatibility"></a>Platform Compatibility</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Node.js SDK is built on top of libcouchbase (the C SDK), which is tested and supported on the following platforms:</p>
+<p>The Node.js SDK is tested and supported on the following platforms:</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -662,13 +661,13 @@ See the notes there for Support details.</p>
 <p>Amazon Linux 2.</p>
 </li>
 <li>
-<p>Red Hat Enterprise Linux 7 &amp; 8;</p>
-<div class="paragraph">
-<p>&amp; CentOS 7 &amp; 8.</p>
-</div>
+<p>Red Hat Enterprise Linux 8;</p>
 </li>
 <li>
-<p>Ubuntu (LTS) 16.04 (<em>Xenial</em>), 18.04 (<em>Bionic</em>), &amp; 20.04 (<em>Focal</em>).</p>
+<p>CentOS 7.</p>
+</li>
+<li>
+<p>Ubuntu (LTS) 18.04 (<em>Bionic</em>), &amp; 20.04 (<em>Focal</em>).</p>
 </li>
 <li>
 <p>Debian 9 (<em>Stretch</em>) &amp; 10 (<em>Buster</em>).</p>
@@ -677,12 +676,13 @@ See the notes there for Support details.</p>
 </div>
 <h3 id="microsoft-windows" class="discrete">Microsoft Windows</h3>
 <div class="paragraph">
-<p>Microsoft Windows 7 / Windows Server 2012 and onwards.</p>
+<p>We provide "prebuilds" for Windows 8.
+Any MS-supported version compatible with Visual Studio 2022 (VC17)</p>
 </div>
 <h3 id="mac-os-x" class="discrete">Mac OS X</h3>
 <div class="paragraph">
-<p>The current and previous two releases of OS X.
-At time of writing (July 2021): 10.14 (<em>Mojave</em>), 10.15 (<em>Catalina</em>), and 11 (<em>Big Sur</em>).</p>
+<p>The current and previous two releases of OS X on both Intel and ARM.
+At time of writing (February 2022): 10.15 (<em>Catalina</em>), 11 (<em>Big Sur</em>), and 12 (<em>Monterey</em>).</p>
 </div>
 </div>
 </div>
@@ -699,6 +699,19 @@ At time of writing (July 2021): 10.14 (<em>Mojave</em>), 10.15 (<em>Catalina</em
 <div class="paragraph">
 <p>The 3.2 Node.js SDK is compatible with <a href="https://ottomanjs.com/#introduction">version 2.0 of the Ottoman ODM</a>.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+the 4.0 Node.js SDK is not tested against Ottoman.
+We intend to support it fully in later versions.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -708,16 +721,14 @@ At time of writing (July 2021): 10.14 (<em>Mojave</em>), 10.15 (<em>Catalina</em
 <table class="tableblock frame-all grid-all stretch table-merge-cells">
 <caption class="title">Table 2. Couchbase Server and SDK Supported Version Matrix</caption>
 <colgroup>
-<col style="width: 23.3333%;">
-<col style="width: 23.3333%;">
-<col style="width: 16.6666%;">
-<col style="width: 20%;">
-<col style="width: 16.6668%;">
+<col style="width: 30.4347%;">
+<col style="width: 21.7391%;">
+<col style="width: 26.0869%;">
+<col style="width: 21.7393%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">Server 5.0, 5.1, &amp; 5.5</th>
 <th class="tableblock halign-left valign-top">Server 6.0</th>
 <th class="tableblock halign-left valign-top">Server 6.5 &amp; 6.6</th>
 <th class="tableblock halign-left valign-top">Server 7.0</th>
@@ -726,37 +737,36 @@ At time of writing (July 2021): 10.14 (<em>Mojave</em>), 10.15 (<em>Catalina</em
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Enhanced Durability</p></td>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">All SDK versions</p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">All SDK versions</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Durable Writes</p></td>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Not Supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Supported</p></td>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Since 3.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Analytics</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DP in 5.5 with 2.4.2</p></td>
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Since 2.6</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Default Collections</p></td>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Not Supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Supported</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Developer Preview in 6.5-6.6, SDK 3.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Since 3.0.7</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Scope-Level N1QL Queries &amp; all Collections features</p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Not Supported</p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Not Supported</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Since SDK 3.2.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Field Level Encryption v2</p></td>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Not Supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Supported</p></td>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Since SDK 3.2.0<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Request Tracing</p></td>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Not Supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Supported</p></td>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Since SDK 3.2.0</p></td>
 </tr>
 </tbody>
@@ -844,6 +854,115 @@ In rare instances, deprecated API may be rendered non-functional in a dot-minor 
 <p><strong>Internal</strong>: This level is used to indicate you should not rely on this API as it is not intended for use outside the module, even to other Couchbase components.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-version"><a class="anchor" href="#api-version"></a>API Version</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release of the SDK is written to version 3.2 of the SDK API specification (and matching the features available in Couchbase 7.0 and earlier).
+For most developers, just using the latest version will be all that matters, and few will need to look at another of our SDKs.
+Just for those few that do, the table below shows each Couchbase SDK release version that matches the API version.</p>
+</div>
+<div class="paragraph">
+<p>Whilst these two numbers match for the C, .NET, Java, PHP, Python, and Ruby SDKs, this is not the case for the others, as version numbers for individual SDKs are bumped up in line with <a href="https://semver.org/">Semantic Versioning</a>&#8201;&#8212;&#8201;check the <a href="#sdk-release-notes">release notes</a> of each SDK for individual details.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. SDK API Versions</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">API 2.7</th>
+<th class="tableblock halign-left valign-top">API 3.0</th>
+<th class="tableblock halign-left valign-top">API 3.1</th>
+<th class="tableblock halign-left valign-top">API 3.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C (libcouchbase)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.NET</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Go</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5 &amp; 1.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0 &amp; 2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.3 &amp; 2.4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node.js</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2 &amp; 4.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ruby</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scala</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>SDK API 3.2</strong>: Introduced alongside Couchbase Server 7.0, provides features in support of Scopes and Collections, extends capabilities around Open Telemetry API to instrument telemetry data, enhanced client side field level encryption to add an additional layer of security to protect sensitive data, adds new platform support such as Ubuntu 20.04 LTS.</p>
+</div>
+<div class="paragraph">
+<p><strong>SDK API 3.1</strong>: Introduced alongside Couchbase Server 6.6,  focuses on Bucket Management API, adds capabilities around Full Text Search features such-as  Geo-Polygon support, Flex Index, and Scoring.</p>
+</div>
+<div class="paragraph">
+<p><strong>SDK API 3.0</strong>: Introduced alongside Couchbase Server 6.5,  is a major overhaul from its predecessor, has simplified surface area, removed long-standing bugs and deprecated/removed old API, introduces new programming languages Scala and Ruby, written in anticipation to support Scopes and Collections.</p>
+</div>
+<div class="paragraph">
+<p><strong>SDK API 2.7</strong>: Introduced alongside Couchbase Server 6.0, with support for its new features such as the Analytics Service, improvements to Full Text Search, and support for more complex network configurations.</p>
 </div>
 </div>
 </div>
