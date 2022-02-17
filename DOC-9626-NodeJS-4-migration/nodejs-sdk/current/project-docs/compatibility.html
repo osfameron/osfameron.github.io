@@ -769,6 +769,11 @@ We intend to support it fully in later versions.
 <td class="tableblock halign-left valign-top"><p class="tableblock">Not Supported</p></td>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Since SDK 3.2.0</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distributed ACID Transactions</p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Not Supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Since SDK 4.0</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -858,18 +863,23 @@ In rare instances, deprecated API may be rendered non-functional in a dot-minor 
 </div>
 </div>
 <div class="sect1">
-<h2 id="api-version"><a class="anchor" href="#api-version"></a>API Version</h2>
+<h2 id="sdk-api-specification-and-version"><a class="anchor" href="#sdk-api-specification-and-version"></a>SDK API Specification and Version</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>API Specification ( referred to as API going forward) and its version represents a logical grouping of a set of features being bundled.
+SDK Versions follow <a href="https://semver.org/">Semantic Versioning</a> and implement an API specification version.</p>
+</div>
 <div class="paragraph">
 <p>This release of the SDK is written to version 3.2 of the SDK API specification (and matching the features available in Couchbase 7.0 and earlier).
 For most developers, just using the latest version will be all that matters, and few will need to look at another of our SDKs.
 Just for those few that do, the table below shows each Couchbase SDK release version that matches the API version.</p>
 </div>
 <div class="paragraph">
-<p>Whilst these two numbers match for the C, .NET, Java, PHP, Python, and Ruby SDKs, this is not the case for the others, as version numbers for individual SDKs are bumped up in line with <a href="https://semver.org/">Semantic Versioning</a>&#8201;&#8212;&#8201;check the <a href="#sdk-release-notes">release notes</a> of each SDK for individual details.</p>
+<p>Whilst these two numbers may match&#8201;&#8212;&#8201;for the C, .NET, Java, PHP, Python, and Ruby SDKs&#8201;&#8212;&#8201;this is not the case for the others.
+Check the <a href="sdk-release-notes.html" class="page">release notes</a> of each SDK for individual details.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. SDK API Versions</caption>
+<caption class="title">Table 3. API vs SDK Versions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -952,7 +962,7 @@ Just for those few that do, the table below shows each Couchbase SDK release ver
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
+<div id="sdk3" class="paragraph 2">
 <p><strong>SDK API 3.2</strong>: Introduced alongside Couchbase Server 7.0, provides features in support of Scopes and Collections, extends capabilities around Open Telemetry API to instrument telemetry data, enhanced client side field level encryption to add an additional layer of security to protect sensitive data, adds new platform support such as Ubuntu 20.04 LTS.</p>
 </div>
 <div class="paragraph">

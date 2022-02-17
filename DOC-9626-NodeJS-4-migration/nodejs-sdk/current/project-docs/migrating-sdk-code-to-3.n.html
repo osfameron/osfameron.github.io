@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://osfameron.github.io/DOC-9626-NodeJS-4-migration/nodejs-sdk/current/project-docs/migrating-sdk-code-to-3.n.html">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="The SDK API 3 (used in Node.js SDK 3.x and 4.x)  breaks the previous SDK API 2 APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.">
+<meta name="description" content="The SDK API 3 (used in Node.js SDK 3.x and 4.x) introduces breaking changes to the previous SDK API 2 APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="nodejs-sdk">
 <meta name="dcterms.identifier" content="4.0">
@@ -574,17 +574,17 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-The SDK API 3 (used in Node.js SDK 3.x and 4.x)  breaks the previous SDK API 2 APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.
+The SDK API 3 (used in Node.js SDK 3.x and 4.x) introduces breaking changes to the previous SDK API 2 APIs (used in Node.js SDK 2.x) in order to provide a number of improvements. Collections and Scopes are introduced.
 The Document class and structure has been completely removed from the API, and the returned value is now <code>Result</code>.
-Retry behaviour is more proactive, and lazy bootstrapping moves all error handling to a single place.
+Retry behavior is more proactive, and lazy bootstrapping moves all error handling to a single place.
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Additionally, the Node.js SDK 4.0 offers a new backend (Couchbase++) with better support for upcoming features.
-Though the API still matches the SDK API 3.<em>x</em> spec, we have increased the major version to reflect the importance of this implementation change, as per <a href="https://semver.org/">semantic versioning</a>.</p>
+<p>The current Node.js SDK 4.0 is also based on the <a href="compatibility.html#sdk3.2" class="page">SDK API 3.2 specification</a>, and offers an entirely new backend (couchbase++) with better support for upcoming features like Distributed ACID Transactions.
+We have increased the major version to reflect the importance of this implementation change as per <a href="https://semver.org/">semantic versioning</a>.</p>
 </div>
 <div class="paragraph">
-<p>Individual behavior changes across services are explained on this page.</p>
+<p>The intent of this migration guide is to provide detail information on the changes and what to look for while upgrading the SDK.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -602,18 +602,23 @@ you may wish to skip to the <a href="#sdk4-specifics">SDK 4.0 specifics</a> belo
 </div>
 </div>
 <div class="sect1">
-<h2 id="api-version"><a class="anchor" href="#api-version"></a>API Version</h2>
+<h2 id="sdk-api-specification-and-version"><a class="anchor" href="#sdk-api-specification-and-version"></a>SDK API Specification and Version</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>API Specification ( referred to as API going forward) and its version represents a logical grouping of a set of features being bundled.
+SDK Versions follow <a href="https://semver.org/">Semantic Versioning</a> and implement an API specification version.</p>
+</div>
 <div class="paragraph">
 <p>This release of the SDK is written to version 3.2 of the SDK API specification (and matching the features available in Couchbase 7.0 and earlier).
 For most developers, just using the latest version will be all that matters, and few will need to look at another of our SDKs.
 Just for those few that do, the table below shows each Couchbase SDK release version that matches the API version.</p>
 </div>
 <div class="paragraph">
-<p>Whilst these two numbers match for the C, .NET, Java, PHP, Python, and Ruby SDKs, this is not the case for the others, as version numbers for individual SDKs are bumped up in line with <a href="https://semver.org/">Semantic Versioning</a>&#8201;&#8212;&#8201;check the <a href="#sdk-release-notes">release notes</a> of each SDK for individual details.</p>
+<p>Whilst these two numbers may match&#8201;&#8212;&#8201;for the C, .NET, Java, PHP, Python, and Ruby SDKs&#8201;&#8212;&#8201;this is not the case for the others.
+Check the <a href="sdk-release-notes.html" class="page">release notes</a> of each SDK for individual details.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. SDK API Versions</caption>
+<caption class="title">Table 1. API vs SDK Versions</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -696,7 +701,7 @@ Just for those few that do, the table below shows each Couchbase SDK release ver
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
+<div id="sdk3" class="paragraph 2">
 <p><strong>SDK API 3.2</strong>: Introduced alongside Couchbase Server 7.0, provides features in support of Scopes and Collections, extends capabilities around Open Telemetry API to instrument telemetry data, enhanced client side field level encryption to add an additional layer of security to protect sensitive data, adds new platform support such as Ubuntu 20.04 LTS.</p>
 </div>
 <div class="paragraph">
