@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1654010584253,
+  "generated": 1654087859457,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -16,19 +16,7 @@
               "module": "app-services",
               "path": "channels/channels.adoc",
               "url": "/cloud/app-services/channels/channels.html",
-              "title": "Application Channels"
-            },
-            {
-              "module": "app-services",
-              "path": "channels/TEST-channels.adoc",
-              "url": "/cloud/app-services/channels/TEST-channels.html",
               "title": "Channels"
-            },
-            {
-              "module": "app-services",
-              "path": "channels/TEST-sync-function.adoc",
-              "url": "/cloud/app-services/channels/TEST-sync-function.html",
-              "title": "Sync Function Reference"
             },
             {
               "module": "app-services",
@@ -64,19 +52,19 @@
               "module": "app-services",
               "path": "user-management/create-app-role.adoc",
               "url": "/cloud/app-services/user-management/create-app-role.html",
-              "title": "Creating Application Roles"
+              "title": "Creating App Roles"
             },
             {
               "module": "app-services",
               "path": "user-management/create-user.adoc",
               "url": "/cloud/app-services/user-management/create-user.html",
-              "title": "Creating Application Users"
+              "title": "Creating App Users"
             },
             {
               "module": "app-services",
               "path": "user-management/search-users.adoc",
               "url": "/cloud/app-services/user-management/search-users.html",
-              "title": "Search for Application Users"
+              "title": "Search for App Users"
             },
             {
               "module": "app-services",

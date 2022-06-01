@@ -195,7 +195,7 @@ Capella supports a number of authentication providers, which can be configured f
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Out of the box, Capella supports <code>Basic</code>, <code>Anonymous</code>, and <code>OpenID</code> as methods for authentication.</p>
+<p>Out of the box, Capella supports <code>Basic</code> and <code>OpenID</code> as methods for authentication.</p>
 </div>
 <div class="paragraph">
 <p>From the main navigation, select the <b class="menuref">App Services</b> menu item.
@@ -208,7 +208,7 @@ This will bring you to the App Services screen.</p>
 </div>
 <div class="paragraph">
 <p>Now select the app service from the list.
-From the Services screen, you can select the application endpoint.</p>
+From the Services screen, you can select the App Endpoint.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -224,62 +224,44 @@ Make sure the Security tab is selected.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/user-management/authentication-provider-screen.png" alt="Application provider">
+<img src="../_images/user-management/authentication-provider-screen.png" alt="App Provider">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="authentication-types"><a class="anchor" href="#authentication-types"></a>Authentication Types</h2>
+<h2 id="basic-authentication"><a class="anchor" href="#basic-authentication"></a>Basic Authentication</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Basic Authentication</dt>
-<dd>
+<div class="paragraph">
 <p>The authentication credentials are passed through the HTTPS headers of the calling client.</p>
-</dd>
-<dt class="hdlist1">Anonymous Authentication</dt>
-<dd>
-<p>Access allowed without credentials.</p>
-<div class="admonitionblock note">
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="openid-connect-oidc"><a class="anchor" href="#openid-connect-oidc"></a>OpenID Connect (OIDC)</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Capella App Services does not allow anonymous or guest access by default.
-However, it can be enabled by making a call to service through the REST API.
+OIDC Connect is not supported as of Preview Launch.
 </td>
 </tr>
 </table>
 </div>
-</dd>
-<dt class="hdlist1">OpenID Connect (OIDC)</dt>
-<dd>
+<div class="paragraph">
 <p>The service supports OpenID Connect.
-This allows your application to use Couchbase for data synchronization and delegate the authentication to a 3rd party server (known as the Provider).
-There are two implementation methods available with OpenID Connect:</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Implicit Flow</dt>
-<dd>
-<p>With this method, the retrieval of the ID token takes place on the device.</p>
-</dd>
-<dt class="hdlist1">Code Authorization Flow</dt>
-<dd>
-<p>This method relies on service to retrieve the ID token.</p>
-</dd>
-</dl>
+This allows your application to use Couchbase for data synchronization and delegate the authentication to a 3rd party server (known as the Provider).</p>
 </div>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Capella&#8217;s implementation of OpenID Connect uses Implicit Flow.
+This means that the retrieval of the ID token takes place on the device.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="username-claim"><a class="anchor" href="#username-claim"></a>User Claims</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="username-claim"><a class="anchor" href="#username-claim"></a>User Claims</h3>
 <div class="paragraph">
 <p>You can use <strong><code>Username Claim</code></strong> to specify a claim other than subject to use as the Capella App Services username.</p>
 </div>
@@ -291,8 +273,8 @@ When authenticating incoming OIDC tokens, Capella App Services currently treats 
 <p>By default user_prefix is the issuer, but can be customized in the Capella App Services provider config.
 Subject is always the sub claim in the token.</p>
 </div>
-<div class="sect2">
-<h3 id="behavior"><a class="anchor" href="#behavior"></a>Behavior:</h3>
+<div class="sect3">
+<h4 id="behavior"><a class="anchor" href="#behavior"></a>Behavior:</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -308,6 +290,7 @@ Subject is always the sub claim in the token.</p>
 <p>If neither <code>username_claim</code> nor <code>user_prefix</code> are set, use <code>[issuer]_[subject]</code> as the Capella App Services username (existing behavior).</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
