@@ -224,6 +224,20 @@ Capella supports a number of authentication providers, which can be configured f
 <div class="paragraph">
 <p>The authentication credentials are passed through the HTTPS headers of the calling client.</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Your <a href="../connect/connect-apps-to-endpoint.html" class="xref page">Couchbase Lite SDK</a> will handle the details of this for you.
+It will pass an HTTPS header like <code>Authorization: Basic c3luY19nYXRld2F5OnBhc3N3b3Jk</code>.
+This random looking string is simply a Base64 encoded representation of the Username and Password that you have passed in.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">

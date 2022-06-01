@@ -212,7 +212,43 @@ Open your Capella administration page, and view the cluster you wish to add an A
 <h2 id="basics"><a class="anchor" href="#basics"></a>Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Enter a name for the App Service and fill in the rest of the details.</p>
+<p>Enter a name for the App Service.</p>
+</div>
+<div class="paragraph">
+<p>Choose the Cluster you want to connect to.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>only certain clusters can be selected:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MUST have Index and Query services running</p>
+</li>
+<li>
+<p>MUST have at least one Bucket to connect an App Endpoint to</p>
+</li>
+<li>
+<p>must NOT have the Eventing service running</p>
+</li>
+<li>
+<p>must NOT already have an App Service linked to it</p>
+</li>
+<li>
+<p>must NOT have XDCR with another Cluster that already has an App Service linked to it</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

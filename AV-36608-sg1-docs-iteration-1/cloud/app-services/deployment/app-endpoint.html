@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script>(window.dataLayer=window.dataLayer||[]).push({event:'gtm.js','gtm.start':+new Date()})</script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MVPNN2"></script>
-<title>Creating App Endpoints | Couchbase Capella Staging Docs</title>
+<title>Concepts | Couchbase Capella Staging Docs</title>
 <link rel="canonical" href="https://docs.stage.nonprod-project-avengers.com/cloud/app-services/deployment/app-endpoint.html">
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
@@ -169,13 +169,13 @@
 <ul>
 <li class="crumb"><a href="../../index.html">Couchbase Capella</a></li>
 <li class="crumb">App Services</li>
-<li class="crumb"><a href="app-endpoint.html">Creating App Endpoints</a></li>
+<li class="crumb"><a href="app-endpoint.html">Concepts</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Creating App Endpoints</h1>
+<h1 class="page">Concepts</h1>
 <div class="labels">
 <ul>
 <li class="status"><span>UNDER CONSTRUCTION</span></li>
@@ -188,6 +188,22 @@
 <span  id="otherContributor"> + </span>
 </div><div id="preamble">
 <div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An App Endpoint is an endpoint on your App Service to which the mobile app will connect.</p>
+</li>
+<li>
+<p>Every App Endpoint is backed by a Server bucket.</p>
+</li>
+<li>
+<p>An App Service can have one or more App Endpoints.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h1 id="creating-app-endpoints" class="sect0"><a class="anchor" href="#creating-app-endpoints"></a>Creating App Endpoints</h1>
 <div class="paragraph">
 <p>Open the appropriate App Service.
 Follow the prompt to <b class="menuref">Create App Endpoint</b>.</p>
@@ -198,14 +214,29 @@ Follow the prompt to <b class="menuref">Create App Endpoint</b>.</p>
 </div>
 <div class="title">Figure 1. Creating an App Endpoint</div>
 </div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="basics"><a class="anchor" href="#basics"></a>Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Choose which database bucket to synchronize.
 Each App Endpoint is connected to exactly one bucket.</p>
+</div>
+<div class="paragraph">
+<p>You can configure the <a href="../user-management/set-up-authentication-provider.html" class="xref page">Authentication Provider</a> in a later step.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Notice that your App Endpoint starts out in a <strong>Paused</strong> state.
+We encourage you to create an <a href="#app-endpoint-access-control-data-validation">Access Control Function</a> before resuming it.
+That way you can ensure that your App Endpoint is set up with the right policies before you make it available for data sync.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -216,8 +247,17 @@ Each App Endpoint is connected to exactly one bucket.</p>
 <p>Delta Sync provides the ability to replicate only those parts of a Couchbase document that have changed.
 This can result in significant savings in bandwidth consumption as well as throughput improvements, especially useful where network bandwidth is constrained.</p>
 </div>
-<div class="paragraph">
-<p>INFO: See <a href="../../../sync-gateway/3.0/delta-sync.html" class="xref page">Delta Sync</a> for full details of how Delta Sync is implemented in the underlying Couchbase Mobile Sync Gateway product.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See <a href="../../../sync-gateway/3.0/delta-sync.html" class="xref page">Delta Sync</a> for full details of how Delta Sync is implemented in the underlying Couchbase Mobile Sync Gateway product.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -396,8 +436,17 @@ So instead of embedding channel information directly within the document body, u
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>INFO: See <a href="../../../sync-gateway/3.0/sync-function.html" class="xref page">Sync Function Reference</a> for full details how the Access Control and Data Validation function is implemented in the underlying Couchbase Mobile Sync Gateway product.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See <a href="../../../sync-gateway/3.0/sync-function.html" class="xref page">Sync Function Reference</a> for full details how the Access Control and Data Validation function is implemented in the underlying Couchbase Mobile Sync Gateway product.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

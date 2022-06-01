@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1654099312136,
+  "generated": 1654102918573,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -28,7 +28,7 @@
               "module": "app-services",
               "path": "deployment/app-endpoint.adoc",
               "url": "/cloud/app-services/deployment/app-endpoint.html",
-              "title": "Creating App Endpoints"
+              "title": "Concepts"
             },
             {
               "module": "app-services",
