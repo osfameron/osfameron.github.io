@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="366px" preserveAspectRatio="none" style="width:976px;height:366px;background:#FFFFFF;" version="1.1" viewBox="0 0 976 366" width="976px" zoomAndPan="magnify"><defs/><g><!--MD5=[cd2d2a69136bcb457c777d7f0a388268]
+cluster MyLibrary--><g id="cluster_MyLibrary"><rect fill="none" height="140" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="266" x="704" y="65.5"/><path d="M793,65.5 L793,74.7969 L783,84.7969 L704,84.7969 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="79" x="707" y="79.4951">my-library</text></g><!--MD5=[62809005bfbcca8197a527c005e3b7f6]
+cluster bucket--><g id="cluster_bucket"><path d="M777,247.5 C777,237.5 837,237.5 837,237.5 C837,237.5 897,237.5 897,247.5 L897,339.5 C897,349.5 837,349.5 837,349.5 C837,349.5 777,349.5 777,339.5 L777,247.5 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><path d="M777,247.5 C777,257.5 837,257.5 837,257.5 C837,257.5 897,257.5 897,247.5 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="54" x="810" y="272.4951">bucket</text></g><!--MD5=[63955b8f5af8bd25e363284f268579d0]
+entity getBusinessDays--><g id="elem_getBusinessDays"><path d="M728,111.5 L728,159.0938 A2.5,2.5 0 0 0 730.5,161.5938 L943.5,161.5938 A2.5,2.5 0 0 0 946,159.0938 L946,119 L936,109 L730.5,109 A2.5,2.5 0 0 0 728,111.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M936,109 L936,116.5 A2.5,2.5 0 0 0 938.5,119 L946,119 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194" x="738" y="131.9951">getBusinessDays(startDate,</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="738" y="148.292">endDate)</text></g><!--MD5=[c8a1f054d404df0a65fc25cf7fbed36b]
+entity scope--><g id="elem_scope"><polygon fill="#F1F1F1" points="793,297.5,803,287.5,881,287.5,881,323.7969,871,333.7969,793,333.7969,793,297.5" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="871" x2="881" y1="297.5" y2="287.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="793" x2="871" y1="297.5" y2="297.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="871" x2="871" y1="297.5" y2="333.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="48" x="808" y="320.4951">scope</text></g><!--MD5=[d2ef3ebb0f476a9001ba6a631a066203]
+entity n1qlUDFunction--><g id="elem_n1qlUDFunction"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="255" x="352" y="104"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="587" y="109"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="585" y="111"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="585" y="115"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="215" x="367" y="136.9951">«N1QL User-Defined Function»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="403" y="153.292">getBusinessDays(...)</text></g><!--MD5=[8fc3522a43f8c7199df5e09e5bb0188e]
+entity user--><g id="elem_user"><ellipse cx="149" cy="113.5" fill="#F1F1F1" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;"/><path d="M149,133.5 C153,133.5 156,133.5 160,129.5 C168,129.5 176,137.5 176,145.5 L176,149.5 C176,153.5 172,157.5 168,157.5 L130,157.5 C126,157.5 122,153.5 122,149.5 L122,145.5 C122,137.5 130,129.5 138,129.5 C142,133.5 145,133.5 149,133.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="133.5" y="171.9951">user</text></g><g id="elem_GMN11"><path d="M6,6 L6,61.3984 A0,0 0 0 0 6,61.3984 L145,61.3984 L149,95.62 L153,61.3984 L292,61.3984 A0,0 0 0 0 292,61.3984 L292,16 L282,6 L6,6 A0,0 0 0 0 6,6 " fill="#FFFFF0" style="stroke:#181818;stroke-width:0.5;"/><path d="M282,6 L282,16 L292,16 L282,6 " fill="#FFFFF0" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="265" x="12" y="23.0669">can access the getBusinessDays function</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162" x="12" y="38.1997">as long as s/he is working</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="12" y="53.3325">inside the "</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="100" x="83" y="53.3325">bucket.scope</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="183" y="53.3325">" context</text></g><!--MD5=[f99f17aee1b83d3c2ab474d1f7da2a89]
+link n1qlUDFunction to getBusinessDays--><g id="link_n1qlUDFunction_getBusinessDays"><path codeLine="18" d="M607.05,135.5 C607.05,135.5 722.84,135.5 722.84,135.5 " fill="none" id="n1qlUDFunction-to-getBusinessDays" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="727.84,135.5,718.84,131.5,722.84,135.5,718.84,139.5,727.84,135.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[eae8df7cf474f7b3224e735e08fb50ba]
+reverse link scope to MyLibrary--><g id="link_scope_MyLibrary"><path codeLine="28" d="M837,282.36 C837,282.36 837,261.3075 837,240.255 C837,229.7288 837,219.2025 837,211.3078 C837,209.3341 837,207.5249 837,205.9213 C837,205.8211 837,205.7217 837,205.6231 " fill="none" id="scope-backto-MyLibrary" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="837,287.36,841,278.36,837,282.36,833,278.36,837,287.36" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[226fddc1abbda551b24789e9440fd7ef]
+link user to n1qlUDFunction--><g id="link_user_n1qlUDFunction"><path codeLine="32" d="M177.75,135.5 C177.75,135.5 346.85,135.5 346.85,135.5 " fill="none" id="user-to-n1qlUDFunction" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="351.85,135.5,342.85,131.5,346.85,135.5,342.85,139.5,351.85,135.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[81fadd47a19963e1fe90c5b17e046d50]
+@startuml
+allow_mixing
+
+left to right direction
+skinparam actorStyle Awesome
+skinparam linetype polyline
+skinparam linetype ortho
+
+component "getBusinessDays(...)" <<N1QL User-Defined Function>> as n1qlUDFunction
+
+  frame "my-library" as MyLibrary {
+
+   file "getBusinessDays(startDate, \nendDate)" as getBusinessDays
+
+  }
+
+
+
+n1qlUDFunction - - -> getBusinessDays
+actor "user" as user
+
+
+
+database "bucket" as bucket {
+  node "**scope**" as scope
+}
+
+
+scope <...r.... MyLibrary
+
+
+
+user - -> n1qlUDFunction
+
+note top of user #Ivory
+  can access the getBusinessDays function
+  as long as s/he is working
+  inside the "**bucket.scope**" context
+end note
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
