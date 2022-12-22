@@ -13,7 +13,7 @@
 <meta name="description" content="Couchbase Lite for C# -- Synchronizing data changes between local and remote databases using Sync Gateway">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="couchbase-lite">
-<meta name="dcterms.identifier" content="3.0">
+<meta name="dcterms.identifier" content="3.1">
 <meta name="page-url" content="/couchbase-lite/current/csharp/replication.html">
 <meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Lite</span>
         <select class="version_list" data-component="couchbase-lite">
-          <option value="3.0" data-url="../index.html" selected>3.0</option>
+          <option value="3.1" data-url="../index.html" selected>3.1</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.0">
+      <div class="version_items hide" data-version="3.1">
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
@@ -271,12 +271,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -441,7 +441,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -619,7 +619,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -820,7 +820,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1044,7 +1044,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1250,7 +1250,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1442,6 +1442,48 @@ For example, between a local Couchbase Lite database and remote Sync Gateway dat
 </div>
 </div>
 <div class="sect1">
+<h2 id="replication-concepts"><a class="anchor" href="#replication-concepts"></a>Replication Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Couchbase Lite allows for one database for each application running on the mobile device.
+This database can contain one or more scopes.
+Each scope can contain one or more collections.</p>
+</div>
+<div class="paragraph">
+<p>To learn about Scopes and Collections, see <a href="database.html" class="xref page">Databases</a></p>
+</div>
+<div class="paragraph">
+<p>You can set up a replication scheme across any of the three data levels:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Database</dt>
+<dd>
+<p>All scopes and collections in the database are synced,
+including the <code>_default</code> scope and the <code>_default</code> collection.</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>All the collections in a named scope.</p>
+</dd>
+<dt class="hdlist1">Collection</dt>
+<dd>
+<p>A specific collection in a scope.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced against on Capella. These mappings can be <code>implicit</code> or <code>explicit</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="implicit-mapping"><a class="anchor" href="#implicit-mapping"></a>Implicit Mapping</h3>
+<div class="paragraph">
+<p>This will sync between databases that share the same keyspace names.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="replication-protocol"><a class="anchor" href="#replication-protocol"></a>Replication Protocol</h2>
 <div class="sectionbody">
 <div class="sect2">
@@ -1499,59 +1541,40 @@ So we don&#8217;t recommend to rely on that when using the replication or databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// . . . preceding code. for example . . .
-private static ListenerToken _thisListenerToken;
-var Database thisDB;
-// . . . other code . . .
-// initialize the replicator configuration
-
-var thisUrl = new URLEndpoint("wss://listener.com:4984/otherDB"); <i class="conum" data-value="1"></i><b>(1)</b>
-var config = new ReplicatorConfiguration(thisDB, thisUrl);
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
+#warning p2p-act-rep-config-type used, but contains nothing
 
 
-// Set replicator type
-thisConfig.ReplicatorType = ReplicatorType.PushAndPull;
-
+#warning autopurge-override used, but contains nothing
 // Set autopurge option
 // here we override its default
-thisConfig.EnableAutoPurge = false; <i class="conum" data-value="2"></i><b>(2)</b>
 
+
+#warning p2p-act-rep-config-cont used, but contains nothing
 // Configure Sync Mode
-thisConfig.Continuous = true; // default value
 
+
+#warning p2p-act-rep-config-self-cert used, but contains nothing
 // Configure Server Security -- only accept self-signed certs
-thisConfig.AcceptOnlySelfSignedServerCertificate = true; <i class="conum" data-value="3"></i><b>(3)</b>
 
-// Configure Client Security <i class="conum" data-value="4"></i><b>(4)</b>
+
+// Configure Client Security <i class="conum" data-value="1"></i><b>(1)</b>
+
+#warning p2p-act-rep-auth used, but contains nothing
 // Configure basic auth using user credentials
-thisConfig.Authenticator = new BasicAuthenticator("Our Username", "Our Password");
 
-/* Optionally set a conflict resolver call back */ <i class="conum" data-value="5"></i><b>(5)</b>
-// Use built-in resolver
-thisConfig.ConflictResolver = new LocalWinConflictResolver();  //
 
-// optionally use custom resolver
-thisConfig.ConflictResolver = new ConflictResolver(
-  (conflict) =&gt; {
-    /* define resolver function */
-  }
-); //
-
+#warning p2p-act-rep-start-full used, but contains nothing
 // Initialize and start a replicator
 // Initialize replicator with configuration data
-var thisReplicator = new Replicator(thisConfig); <i class="conum" data-value="6"></i><b>(6)</b>
 
-//Optionally add a change listener <i class="conum" data-value="7"></i><b>(7)</b>
-_thisListenerToken =
-  thisReplicator.AddChangeListener((sender, args) =&gt;
-    {
-      if (args.Status.Activity == ReplicatorActivityLevel.Stopped) {
-          Console.WriteLine("Replication stopped");
-      }
-    });
+#warning p2p-act-rep-add-change-listener used, but contains nothing
+#warning p2p-act-rep-add-change-listener-label used, but contains nothing
+//Optionally add a change listener <i class="conum" data-value="2"></i><b>(2)</b>
 
-// Start replicator
-thisReplicator.Start(); <i class="conum" data-value="8"></i><b>(8)</b></code></pre>
+
+#warning p2p-act-rep-start used, but contains nothing
+// Start replicator</code></pre>
 </div>
 </div>
 </div>
@@ -1567,7 +1590,7 @@ thisReplicator.Start(); <i class="conum" data-value="8"></i><b>(8)</b></code></p
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a> class&#8217;s constructor&#8201;&#8212;&#8201;<a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration__ctor_Couchbase_Lite_Database_Couchbase_Lite_Sync_IEndpoint">ReplicatorConfiguration(Database database, IEndpoint target)</a>&#8201;&#8212;&#8201;to initialize the replicator configuration with the local database&#8201;&#8212;&#8201;see also: <a href="#lbl-cfg-tgt">Configure Target</a></td>
+<td>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a> class&#8217;s constructor&#8201;&#8212;&#8201;<a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration__ctor_Couchbase_Lite_Database_Couchbase_Lite_Sync_IEndpoint">ReplicatorConfiguration(Database database, IEndpoint target)</a>&#8201;&#8212;&#8201;to initialize the replicator configuration with the local database&#8201;&#8212;&#8201;see also: <a href="#lbl-cfg-tgt">Configure Target</a></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -1640,7 +1663,7 @@ Other options are available&#8201;&#8212;&#8201;see: <a href="#lbl-client-auth">
 <h3 id="lbl-cfg-tgt"><a class="anchor" href="#lbl-cfg-tgt"></a>Configure Target</h3>
 <div class="paragraph">
 <p>Use the
-Initialize and define the replication configuration with local and remote database locations using the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a> object.</p>
+Initialize and define the replication configuration with local and remote database locations using the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a> object.</p>
 </div>
 <div class="paragraph">
 <p>The constructor provides:</p>
@@ -1672,8 +1695,9 @@ Initialize and define the replication configuration with local and remote databa
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// initialize the replicator configuration
 
-var thisUrl = new URLEndpoint("wss://l10.0.2.2:4984/anotherDB"); <i class="conum" data-value="1"></i><b>(1)</b>
-var config = new ReplicatorConfiguration(thisDB, thisUrl);</code></pre>
+var url = new URLEndpoint(new Uri("wss://10.0.2.2:4984/anotherDB")); <i class="conum" data-value="1"></i><b>(1)</b>
+var replConfig = new ReplicatorConfiguration(url);
+// Add collections to the config now</code></pre>
 </div>
 </div>
 </div>
@@ -1694,8 +1718,8 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <p>Here we define the direction and type of replication we want to initiate.</p>
 </div>
 <div class="paragraph">
-<p>We use <code><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a></code> class&#8217;s <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_ReplicatorType">ReplicatorType</a> and
-<code><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_Continuous">Continuous</a></code> parameters, to tell the replicator:</p>
+<p>We use <code><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a></code> class&#8217;s <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_ReplicatorType">ReplicatorType</a> and
+<code><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_Continuous">Continuous</a></code> parameters, to tell the replicator:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1724,11 +1748,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
-// Set replicator type
-thisConfig.ReplicatorType = ReplicatorType.PushAndPull;
-
-// Configure Sync Mode
-thisConfig.Continuous = true; // default value</code></pre>
+// Configure Sync Mode</code></pre>
 </div>
 </div>
 </div>
@@ -1782,7 +1802,7 @@ thisConfig.Continuous = true; // default value</code></pre>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Description</p></th>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_Heartbeat">Heartbeat()</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_Heartbeat">Heartbeat()</a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -1801,7 +1821,7 @@ thisConfig.Continuous = true; // default value</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttempts">MaxAttempts()</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttempts">MaxAttempts()</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Change this to limit or extend the number of retry attempts.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The maximum number of retry attempts</p>
@@ -1834,7 +1854,7 @@ thisConfig.Continuous = true; // default value</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttemptWaitTime">MaxAttemptWaitTime()</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttemptWaitTime">MaxAttemptWaitTime()</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Change this to adjust the interval between retries.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The maximum interval between retry attempts</p>
@@ -1866,20 +1886,25 @@ thisConfig.Continuous = true; // default value</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">    var url = new Uri("ws://localhost:4984/mydatabase");
-    var target = new URLEndpoint(url);
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
+            var target = new URLEndpoint(url);
 
-    var config = new ReplicatorConfiguration(database, target);
+            var config = new ReplicatorConfiguration(target);
 
-//  other config as required . . .
+            //  other config as required . . .
 
-    config.Heartbeat = TimeSpan.FromSeconds(120); //  <i class="conum" data-value="1"></i><b>(1)</b>
-    config.Maxattempts = 20; //  <i class="conum" data-value="2"></i><b>(2)</b>
-    config.MaxAttemptWaitTime = TimeSpan.FromSeconds(600); //  <i class="conum" data-value="3"></i><b>(3)</b>
+#warning replication-set-heartbeat unused?
+            config.Heartbeat = TimeSpan.FromSeconds(120); //  <i class="conum" data-value="1"></i><b>(1)</b>
 
-//  other config as required . . .
+#warning replication-set-maxattempts unused?
+            config.MaxAttempts = 20; //  <i class="conum" data-value="2"></i><b>(2)</b>
 
-    var repl = new Replicator(config);</code></pre>
+#warning replication-set-maxattemptwaittime unused?
+            config.MaxAttemptsWaitTime = TimeSpan.FromSeconds(600); //  <i class="conum" data-value="3"></i><b>(3)</b>
+
+            //  other config as required . . .
+
+            var replicator = new Replicator(config);</code></pre>
 </div>
 </div>
 </div>
@@ -1888,15 +1913,15 @@ thisConfig.Continuous = true; // default value</code></pre>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here we use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_Heartbeat">Heartbeat()</a> to set the required interval (in seconds) between the heartbeat pulses</td>
+<td>Here we use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_Heartbeat">Heartbeat()</a> to set the required interval (in seconds) between the heartbeat pulses</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Here we use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttempts">MaxAttempts()</a> to set the required number of retry attempts</td>
+<td>Here we use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttempts">MaxAttempts()</a> to set the required number of retry attempts</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Here we use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttemptWaitTime">MaxAttemptWaitTime()</a> to set the required interval between retry attempts.</td>
+<td>Here we use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_MaxAttemptWaitTime">MaxAttemptWaitTime()</a> to set the required interval between retry attempts.</td>
 </tr>
 </table>
 </div>
@@ -1946,7 +1971,7 @@ When TLS is enabled (Sync Gateway&#8217;s default) the client <em>must</em> auth
 If the server cannot provide acceptable credentials then the connection will fail.</p>
 </div>
 <div class="paragraph">
-<p>Use <code><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a></code> properties <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_AcceptOnlySelfSignedServerCertificate">AcceptOnlySelfSignedServerCertificate</a> and <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_PinnedServerCertificate">PinnedServerCertificate</a>, to tell the replicator how to verify server-supplied TLS server certificates.</p>
+<p>Use <code><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html">ReplicatorConfiguration</a></code> properties <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_AcceptOnlySelfSignedServerCertificate">AcceptOnlySelfSignedServerCertificate</a> and <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_PinnedServerCertificate">PinnedServerCertificate</a>, to tell the replicator how to verify server-supplied TLS server certificates.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1954,10 +1979,10 @@ If the server cannot provide acceptable credentials then the connection will fai
 <p>If there is a pinned certificate, nothing else matters, the server cert must <strong>exactly</strong> match the pinned certificate.</p>
 </li>
 <li>
-<p>If there are no pinned certs and <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_AcceptOnlySelfSignedServerCertificate">AcceptOnlySelfSignedServerCertificate</a> is <code>true</code> then any self-signed certificate is accepted.  Certificates that are not self signed are rejected, no matter who signed them.</p>
+<p>If there are no pinned certs and <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_AcceptOnlySelfSignedServerCertificate">AcceptOnlySelfSignedServerCertificate</a> is <code>true</code> then any self-signed certificate is accepted.  Certificates that are not self signed are rejected, no matter who signed them.</p>
 </li>
 <li>
-<p>If there are no pinned certificates and <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_AcceptOnlySelfSignedServerCertificate">AcceptOnlySelfSignedServerCertificate</a> is <code>false</code> (default), the client validates the server’s certificates against the system CA certificates.  The server must supply a chain of certificates whose root is signed by one of the certificates in the system CA bundle.</p>
+<p>If there are no pinned certificates and <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_AcceptOnlySelfSignedServerCertificate">AcceptOnlySelfSignedServerCertificate</a> is <code>false</code> (default), the client validates the server’s certificates against the system CA certificates.  The server must supply a chain of certificates whose root is signed by one of the certificates in the system CA bundle.</p>
 </li>
 </ul>
 </div>
@@ -1985,8 +2010,7 @@ If the server cannot provide acceptable credentials then the connection will fai
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept CA certs
-thisConfig.AcceptOnlySelfSignedServerCertificate = false; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept CA certs</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -2006,8 +2030,7 @@ Self signed certificates are not allowed.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept self-signed certs
-thisConfig.AcceptOnlySelfSignedServerCertificate = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept self-signed certs</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -2026,32 +2049,8 @@ Any certificates that are not self-signed are rejected.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2841-L2850">// Only CA Certs accepted
-thisConfig.AcceptOnlySelfSignedServerCertificate =
-  false; <i class="conum" data-value="1"></i><b>(1)</b>
-
-var thisCert =
-  new X509Certificate2(caData); <i class="conum" data-value="2"></i><b>(2)</b>
-
-thisConfig.PinnedServerCertificate =
-  thisCert; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2494">// Only CA Certs accepted</code></pre>
 </div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Configure to accept only CA certs</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Configure the pinned certificate using data from the byte array <code>cert</code></td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Set the certificate to be compared with that provided by the server</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -2082,7 +2081,8 @@ This is the recommended way of using basic authentication.
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
-var config = new ReplicatorConfiguration(database, target);
+var config = new ReplicatorConfiguration(target);
+config.AddCollection(collection);
 config.Authenticator = new BasicAuthenticator("john", "pass");
 
 var replicator = new Replicator(config);
@@ -2115,7 +2115,8 @@ endpoint on the Public REST API.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
-var config = new ReplicatorConfiguration(database, target);
+var config = new ReplicatorConfiguration(target);
+config.AddCollection(collection);
 config.Authenticator = new SessionAuthenticator("904ac010862f37c8dd99015a33ab5a3565fd8447");
 
 var replicator = new Replicator(config);
@@ -2140,7 +2141,7 @@ The replicator will then include those headers in every request.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var config = new ReplicatorConfiguration(database, target)
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var config = new ReplicatorConfiguration(target)
 {
     Headers = new Dictionary&lt;string, string&gt;
     {
@@ -2170,15 +2171,18 @@ For instance, high-priority documents could be pushed first, or documents in a "
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
 
-var config = new ReplicatorConfiguration(database, target);
-config.PushFilter = (document, flags) =&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+var config = new ReplicatorConfiguration(target);
+config.AddCollection(collection, new CollectionConfiguration()
 {
-    if (flags.HasFlag(DocumentFlags.Deleted)) {
-        return false;
-    }
+    PushFilter = (document, flags) =&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    {
+        if (flags.HasFlag(DocumentFlags.Deleted)) {
+            return false;
+        }
 
-    return true;
-};
+        return true;
+    }
+});
 
 // Dispose() later
 var replicator = new Replicator(config);
@@ -2222,15 +2226,18 @@ are designed to be scalable (documents are filtered on the server) whereas a pul
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
 
-var config = new ReplicatorConfiguration(database, target);
-config.PullFilter = (document, flags) =&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+var config = new ReplicatorConfiguration(target);
+config.AddCollection(collection, new CollectionConfiguration()
 {
-    if (document.GetString("type") == "draft") {
-        return false;
-    }
+    PullFilter = (document, flags) =&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    {
+        if (document.GetString("type") == "draft") {
+            return false;
+        }
 
-    return true;
-};
+        return true;
+    }
+});
 
 // Dispose() later
 var replicator = new Replicator(config);
@@ -2469,7 +2476,7 @@ Document changes subsequent to the channel reassignment will be pushed up as usu
 <div class="sect3">
 <h4 id="config"><a class="anchor" href="#config"></a>Config</h4>
 <div class="paragraph">
-<p>Auto-purge behavior is controlled primarily by the ReplicationConfiguration option <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_EnableAutoPurge">EnableAutoPurge</a>.
+<p>Auto-purge behavior is controlled primarily by the ReplicationConfiguration option <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_EnableAutoPurge">EnableAutoPurge</a>.
 Changing the state of this will impact <strong>only</strong> future replications; the replicator will not attempt to sync revisions that were auto purged on channel access removal.
 Clients wishing to sync previously removed documents must use the resetCheckpoint API to resync from the start.</p>
 </div>
@@ -2479,8 +2486,7 @@ Clients wishing to sync previously removed documents must use the resetCheckpoin
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Set autopurge option
-// here we override its default
-thisConfig.EnableAutoPurge = false; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+// here we override its default</code></pre>
 </div>
 </div>
 </div>
@@ -2498,7 +2504,7 @@ thisConfig.EnableAutoPurge = false; <i class="conum" data-value="1"></i><b>(1)</
 <h4 id="overrides"><a class="anchor" href="#overrides"></a>Overrides</h4>
 <div class="paragraph">
 <p>Where necessary, clients can override the default auto-purge behavior.
-This can be done either by setting <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_EnableAutoPurge">EnableAutoPurge</a> to false, or for finer control by applying pull-filters&#8201;&#8212;&#8201;see: <a href="#tbl-pull-filters">Table 4</a> and <a href="#lbl-repl-fltrs">Replication Filters</a>
+This can be done either by setting <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorConfiguration.html#Couchbase_Lite_Sync_ReplicatorConfiguration_EnableAutoPurge">EnableAutoPurge</a> to false, or for finer control by applying pull-filters&#8201;&#8212;&#8201;see: <a href="#tbl-pull-filters">Table 4</a> and <a href="#lbl-repl-fltrs">Replication Filters</a>
 This ensures backwards compatible with 2.8 clients that use pull filters to prevent auto purge of removed docs.</p>
 </div>
 <table id="tbl-pull-filters" class="tableblock frame-all grid-all stretch">
@@ -2590,8 +2596,8 @@ replications automatically <strong>enable</strong> delta sync.</p>
 <div class="sect2">
 <h3 id="lbl-repl-start"><a class="anchor" href="#lbl-repl-start"></a>Start Replicator</h3>
 <div class="paragraph">
-<p>Use the <code><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html">Replicator</a></code> class&#8217;s <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator__ctor_Couchbase_Lite_Sync_ReplicatorConfiguration_">(ReplicatorConfiguration config)</a> constructor, to initialize the replicator with the configuration you have defined.
-You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor</a>) before starting the replicator running using <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_Start">Start()</a>.</p>
+<p>Use the <code><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html">Replicator</a></code> class&#8217;s <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator__ctor_Couchbase_Lite_Sync_ReplicatorConfiguration_">(ReplicatorConfiguration config)</a> constructor, to initialize the replicator with the configuration you have defined.
+You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor</a>) before starting the replicator running using <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_Start">Start()</a>.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 11. Initialize and run replicator</div>
@@ -2600,10 +2606,11 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor<
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Initialize and start a replicator
 // Initialize replicator with configuration data
-var thisReplicator = new Replicator(thisConfig); <i class="conum" data-value="1"></i><b>(1)</b>
 
-// Start replicator
-thisReplicator.Start(); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+#warning p2p-act-rep-add-change-listener used, but contains nothing
+
+#warning p2p-act-rep-start used, but contains nothing
+// Start replicator</code></pre>
 </div>
 </div>
 </div>
@@ -2641,9 +2648,11 @@ However, if you do want to force the replication to start again from zero, use t
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// replicator is a Replicator instance
 if (resetCheckpointRequired_Example) {
     replicator.Start(true); <i class="conum" data-value="1"></i><b>(1)</b>
-else
-  replicator.Start(false);
-}</code></pre>
+} else { 
+    replicator.Start(false);
+}
+
+// Stop and dispose replicator later</code></pre>
 </div>
 </div>
 </div>
@@ -2675,7 +2684,7 @@ The default <code>false</code> is shown here for completeness only; it is unlike
 </dl>
 </div>
 <div class="paragraph">
-<p>You can monitor a replication’s status by using a combination of <a href="#lbl-repl-chng">Change Listeners</a> and the <code>replication.status.activity</code> property&#8201;&#8212;&#8201;see; <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Activity">Activity</a>.
+<p>You can monitor a replication’s status by using a combination of <a href="#lbl-repl-chng">Change Listeners</a> and the <code>replication.status.activity</code> property&#8201;&#8212;&#8201;see; <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Activity">Activity</a>.
 This enables you to know, for example, when the replication is actively transferring data and when it has stopped.</p>
 </div>
 <div class="paragraph">
@@ -2701,18 +2710,18 @@ Don&#8217;t forget to save the token so you can remove the listener later
 </table>
 </div>
 <div class="paragraph">
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html">Replicator</a> class to add a change listener as a callback to the Replicator (<a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_AddChangeListener_System_EventHandler_Couchbase_Lite_Sync_ReplicatorStatusChangedEventArgs__">addChangeListener()</a>)&#8201;&#8212;&#8201;see: <a href="#ex-repl-mon">Example 13</a>.
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html">Replicator</a> class to add a change listener as a callback to the Replicator (<a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_AddChangeListener_System_EventHandler_Couchbase_Lite_Sync_ReplicatorStatusChangedEventArgs__">addChangeListener()</a>)&#8201;&#8212;&#8201;see: <a href="#ex-repl-mon">Example 13</a>.
 You will then be asynchronously notified of state changes.</p>
 </div>
 <div class="paragraph">
-<p>You can remove a change listener with <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_RemoveChangeListener_Couchbase_Lite_ListenerToken_">RemoveChangeListener(ListenerToken)</a>.</p>
+<p>You can remove a change listener with <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_RemoveChangeListener_Couchbase_Lite_ListenerToken_">RemoveChangeListener(ListenerToken)</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="lbl-repl-status"><a class="anchor" href="#lbl-repl-status"></a>Replicator Status</h3>
 <div class="paragraph">
 <p>You can use the
-<a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html">ReplicatorStatus</a> struct
+<a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html">ReplicatorStatus</a> struct
 to check the replicator status.
 That is, whether it is actively transferring data or if it has stopped&#8201;&#8212;&#8201;see: <a href="#ex-repl-mon">Example 13</a>.</p>
 </div>
@@ -2722,10 +2731,10 @@ That is, whether it is actively transferring data or if it has stopped&#8201;&#8
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Activity">Activity</a>&#8201;&#8212;&#8201;stopped, offline, connecting, idle or busy&#8201;&#8212;&#8201;see states described in: <a href="#tbl-states">Table 5</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Activity">Activity</a>&#8201;&#8212;&#8201;stopped, offline, connecting, idle or busy&#8201;&#8212;&#8201;see states described in: <a href="#tbl-states">Table 5</a></p>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Progress">Progress</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Progress">Progress</a></p>
 <div class="ulist">
 <ul>
 <li>
@@ -2738,7 +2747,7 @@ That is, whether it is actively transferring data or if it has stopped&#8201;&#8
 </div>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Error">Error</a>&#8201;&#8212;&#8201;the current error, if any</p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.ReplicatorStatus.html#Couchbase_Lite_Sync_ReplicatorStatus_Error">Error</a>&#8201;&#8212;&#8201;the current error, if any</p>
 </li>
 </ul>
 </div>
@@ -2760,26 +2769,14 @@ That is, whether it is actively transferring data or if it has stopped&#8201;&#8
 <div class="tab-pane" aria-labelledby="tabset2_adding-a-change-listener">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#">_thisListenerToken =
-  thisReplicator.AddChangeListener((sender, args) =&gt;
-    {
-      if (args.Status.Activity == ReplicatorActivityLevel.Stopped) {
-          Console.WriteLine("Replication stopped");
-      }
-    });</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#">#warning p2p-act-rep-add-change-listener-label used, but contains nothing</code></pre>
 </div>
 </div>
 </div>
 <div class="tab-pane" aria-labelledby="tabset2_using-replicator-status">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#">_thisReplicator.Stop();
-while (_thisReplicator.Status.Activity != ReplicatorActivityLevel.Stopped) {
-    // Database cannot close until replicators are stopped
-    Console.WriteLine($"Waiting for replicator to stop (currently {_thisReplicator.Status.Activity})...");
-    Thread.Sleep(200);
-}
-_thisDatabase.Close();</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#"></code></pre>
 </div>
 </div>
 </div>
@@ -2913,7 +2910,7 @@ replicator.Start();</code></pre>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_IsDocumentPending_System_String_">Replicator.IsDocumentPending()</a> is quicker and more efficient.
+<a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_IsDocumentPending_System_String_">Replicator.IsDocumentPending()</a> is quicker and more efficient.
 Use it in preference to returning a list of pending document IDs, where possible.
 </td>
 </tr>
@@ -2925,13 +2922,13 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="ulist">
 <ul>
 <li>
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_GetPendingDocumentIDs">Replicator.GetPendingDocumentIDs()</a> method, which returns a list of document IDs that have local changes, but which have not yet been pushed to the server.</p>
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_GetPendingDocumentIDs">Replicator.GetPendingDocumentIDs()</a> method, which returns a list of document IDs that have local changes, but which have not yet been pushed to the server.</p>
 <div class="paragraph">
 <p>This can be very useful in tracking the progress of a push sync, enabling the app to provide a visual indicator to the end user on its status, or decide when it is safe to exit.</p>
 </div>
 </li>
 <li>
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_IsDocumentPending_System_String_">Replicator.IsDocumentPending()</a> method to quickly check whether an individual document is pending a push.</p>
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_IsDocumentPending_System_String_">Replicator.IsDocumentPending()</a> method to quickly check whether an individual document is pending a push.</p>
 </li>
 </ul>
 </div>
@@ -2940,36 +2937,36 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
-var target = new URLEndpoint(url);
-var database = new Database("myDB");
-var config = new ReplicatorConfiguration(database, target);
-config.ReplicatorType  = ReplicatorType.Push;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
+            var target = new URLEndpoint(url);
+            var database = new Database("myDB");
+            var config = new ReplicatorConfiguration(target);
+            config.AddCollection(database.GetDefaultCollection());
+            config.ReplicatorType = ReplicatorType.Push;
 
-var replicator = new Replicator(config);
+            var replicator = new Replicator(config);
 
-var mydocids =
-  new HashSet &lt;string&gt; (replicator.GetPendingDocumentIDs()); <i class="conum" data-value="1"></i><b>(1)</b>
+            var pendingDocIDs =
+              new HashSet&lt;string&gt;(replicator.GetPendingDocumentIDs(database.GetDefaultCollection())); <i class="conum" data-value="1"></i><b>(1)</b>
 
+            if (pendingDocIDs.Count &gt; 0) {
+                Console.WriteLine($"There are {pendingDocIDs.Count} documents pending");
+                replicator.AddChangeListener((sender, change) =&gt;
+                {
+                    Console.WriteLine($"Replicator activity level is " +
+                                      change.Status.Activity.ToString());
+                    // iterate and report-on previously
+                    // retrieved pending docids 'list'
+                    foreach (var docID in pendingDocIDs)
+#warning replication-push-isdocumentpending unused?
+                        if (!replicator.IsDocumentPending(docID, database.GetDefaultCollection())) <i class="conum" data-value="2"></i><b>(2)</b>
+                        {
+                            Console.WriteLine($"Doc ID {docID} now pushed");
+                        };
+                });
 
-if (mydocids.Count &gt; 0)
-{
-    Console.WriteLine($"There are {mydocids.Count} documents pending");
-    replicator.AddChangeListener((sender, change) =&gt;
-    {
-        Console.WriteLine($"Replicator activity level is " +
-                          change.Status.Activity.ToString());
-        // iterate and report-on previously
-        // retrieved pending docids 'list'
-        foreach (var thisId in mydocids)
-            if (!replicator.IsDocumentPending(thisId)) <i class="conum" data-value="2"></i><b>(2)</b>
-            {
-                Console.WriteLine($"Doc ID {thisId} now pushed");
-            };
-    });
-
-    replicator.Start();
-}</code></pre>
+                replicator.Start();
+            }</code></pre>
 </div>
 </div>
 </div>
@@ -2978,12 +2975,12 @@ if (mydocids.Count &gt; 0)
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_GetPendingDocumentIDs">Replicator.GetPendingDocumentIDs()</a> returns a list of the document IDs for all documents waiting to be pushed.
+<td><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_GetPendingDocumentIDs">Replicator.GetPendingDocumentIDs()</a> returns a list of the document IDs for all documents waiting to be pushed.
 This is a snapshot and may have changed by the time the response is received and processed.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_IsDocumentPending_System_String_">Replicator.IsDocumentPending()</a> returns <code>true</code> if the document is waiting to be pushed, and <code>false</code> otherwise.</td>
+<td><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_IsDocumentPending_System_String_">Replicator.IsDocumentPending()</a> returns <code>true</code> if the document is waiting to be pushed, and <code>false</code> otherwise.</td>
 </tr>
 </table>
 </div>
@@ -2995,7 +2992,7 @@ This is a snapshot and may have changed by the time the response is received and
 <div class="sectionbody">
 <div class="paragraph">
 <p>Stopping a replication is straightforward.
-It is done using <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_Stop">Stop()</a>.
+It is done using <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_Stop">Stop()</a>.
 This initiates an asynchronous operation and so is not necessarily immediate.
 Your app should account for this potential delay before attempting any subsequent operations.</p>
 </div>
@@ -3007,8 +3004,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Stop replication.
-thisReplicator.Stop(); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Stop replication.</code></pre>
 </div>
 </div>
 </div>
@@ -3017,7 +3013,7 @@ thisReplicator.Stop(); <i class="conum" data-value="1"></i><b>(1)</b></code></pr
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here we initiate the stopping of the replication using the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_Stop">Stop()</a> method.
+<td>Here we initiate the stopping of the replication using the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Sync.Replicator.html#Couchbase_Lite_Sync_Replicator_Stop">Stop()</a> method.
 It will stop any active <a href="#lbl-repl-chng">change listener</a> once the replication is stopped.</td>
 </tr>
 </table>
@@ -3174,14 +3170,14 @@ After completing this step, Sync Gateway is reachable over <code>https</code>/<c
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Note: `GetCertificate` is a fake method. This would be the platform-specific method
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Note: `GetCertificate` is a placeholder method. This would be the platform-specific method
 // to find and load the certificate as an instance of `X509Certificate2`.
 // For .NET Core / .NET Framework this can be loaded from the filesystem path.
-// For UWP, from the assets directory.
+// For WinUI, from the assets directory.
 // For iOS, from the main bundle.
 // For Android, from the assets directory.
 var certificate = GetCertificate("cert.cer");
-var config = new ReplicatorConfiguration(db, target)
+var config = new ReplicatorConfiguration(target)
 {
     PinnedServerCertificate = certificate
 };</code></pre>
@@ -3216,9 +3212,7 @@ You can increase the log output for activity related to replication with Sync Ga
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// deprecated
-Database.SetLogLevel(LogDomain.Replicator, LogLevel.Verbose);
-Database.SetLogLevel(LogDomain.Network, LogLevel.Verbose);</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#"></code></pre>
 </div>
 </div>
 </div>

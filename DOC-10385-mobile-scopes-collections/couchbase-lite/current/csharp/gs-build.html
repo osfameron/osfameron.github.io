@@ -14,7 +14,7 @@
 <meta name="keywords" content="mobile edge nosql api C# .net web-app device-app">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="couchbase-lite">
-<meta name="dcterms.identifier" content="3.0">
+<meta name="dcterms.identifier" content="3.1">
 <meta name="page-url" content="/couchbase-lite/current/csharp/gs-build.html">
 <meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -102,10 +102,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Lite</span>
         <select class="version_list" data-component="couchbase-lite">
-          <option value="3.0" data-url="../index.html" selected>3.0</option>
+          <option value="3.1" data-url="../index.html" selected>3.1</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.0">
+      <div class="version_items hide" data-version="3.1">
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
@@ -272,12 +272,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -442,7 +442,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -620,7 +620,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -821,7 +821,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1045,7 +1045,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1251,7 +1251,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1414,75 +1414,68 @@ This snippet demonstrates how to run basic CRUD operations, a simple Query and r
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L51-L121">
-    // using System;
-    // using Couchbase.Lite;
-    // using Couchbase.Lite.Query;
-    // using Couchbase.Lite.Sync;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L49-L111">
+// using System;
+// using Couchbase.Lite;
+// using Couchbase.Lite.Query;
+// using Couchbase.Lite.Sync;
 
-    // Get the database (and create it if it doesn't exist)
-    var database = new Database("mydb");
-    var collection = database.GetDefaultCollection();
-    
-    // Create a new document (i.e. a record) in the database
-    string id = null;
-    using (var mutable_doc = new MutableDocument())
-    {
-        mutable_doc.SetFloat("version", 2.0f)
-            .SetString("type", "SDK");
+// Get the database (and create it if it doesn't exist)
+var database = new Database("mydb");
+var collection = database.GetDefaultCollection();
 
-        // Save it to the database
-        collection.Save(mutableDoc);
-        id = mutableDoc.Id;
+// Create a new document (i.e. a record) in the database
+var id = default(string);
+using var createdDoc = new MutableDocument();
+createdDoc.SetFloat("version", 2.0f)
+    .SetString("type", "SDK");
+
+// Save it to the database
+collection.Save(createdDoc);
+id = createdDoc.Id;
+
+// Update a document
+using var doc = collection.GetDocument(id);
+using var mutableDoc = doc.ToMutable();
+createdDoc.SetString("language", "C#");
+collection.Save(createdDoc);
+
+using var docAgain = collection.GetDocument(id);
+Console.WriteLine($"Document ID :: {docAgain.Id}");
+Console.WriteLine($"Learning {docAgain.GetString("language")}");
+
+
+// Create a query to fetch documents of type SDK
+// i.e. SELECT * FROM database WHERE type = "SDK"
+using var query = QueryBuilder.Select(SelectResult.All())
+    .From(DataSource.Collection(collection))
+    .Where(Expression.Property("type").EqualTo(Expression.String("SDK")));
+
+// Run the query
+var result = query.Execute();
+Console.WriteLine($"Number of rows :: {result.AllResults().Count}");
+
+// Create replicator to push and pull changes to and from the cloud
+var targetEndpoint = new URLEndpoint(new Uri("ws://localhost:4984/getting-started-db"));
+var replConfig = new ReplicatorConfiguration(targetEndpoint);
+replConfig.AddCollection(database.GetDefaultCollection());
+
+// Add authentication
+replConfig.Authenticator = new BasicAuthenticator("john", "pass");
+
+// Create replicator (make sure to add an instance or static variable
+// named _Replicator)
+var replicator = new Replicator(replConfig);
+replicator.AddChangeListener((sender, args) =&gt;
+{
+    if (args.Status.Error != null) {
+        Console.WriteLine($"Error :: {args.Status.Error}");
     }
+});
 
-    // Update a document
-    using (var doc = collection.GetDocument(id))
-    using (var mutable_doc = doc.ToMutable())
-    {
-        mutable_doc.SetString("language", "C#");
-        collection.Save(mutableDoc);
+replicator.Start();
 
-        using (var docAgain = collection.GetDocument(id))
-        {
-            Console.WriteLine($"Document ID :: {docAgain.Id}");
-            Console.WriteLine($"Learning {docAgain.GetString("language")}");
-        }
-    }
-
-    // Create a query to fetch documents of type SDK
-    // i.e. SELECT * FROM database WHERE type = "SDK"
-    using (var query = QueryBuilder.Select(SelectResult.All())
-        .From(DataSource.Collection(collection))
-        .Where(Expression.Property("type").EqualTo(Expression.String("SDK"))))
-    {
-        // Run the query
-        var result = query.Execute();
-        Console.WriteLine($"Number of rows :: {result.AllResults().Count}");
-    }
-
-    // Create replicator to push and pull changes to and from the cloud
-    var targetEndpoint = new URLEndpoint(new Uri("ws://localhost:4984/getting-started-db"));
-    var replConfig = new ReplicatorConfiguration(database, targetEndpoint);
-
-    // Add authentication
-    replConfig.Authenticator = new BasicAuthenticator("john", "pass");
-
-    // Create replicator (make sure to add an instance or static variable
-    // named _Replicator)
-    var _Replicator = new Replicator(replConfig);
-    _Replicator.AddChangeListener((sender, args) =&gt;
-    {
-        if (args.Status.Error != null)
-        {
-            Console.WriteLine($"Error :: {args.Status.Error}");
-        }
-    });
-
-    _Replicator.Start();
-
-    // Later, stop and dispose the replicator *before* closing/disposing the
-}</code></pre>
+// Later, stop and dispose the replicator *before* closing/disposing the database</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1522,7 +1515,7 @@ The document was successfully persisted to the database.</p>
 <p><a href="#csharp:landing-p2psync.adoc" class="xref unresolved">Peer-to-Peer Sync</a></p>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net">API References</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net">API References</a></p>
 </li>
 </ul>
 </div>

@@ -13,7 +13,7 @@
 <meta name="description" content="Couchbase Lite concepts -- Data model -- Documents">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="couchbase-lite">
-<meta name="dcterms.identifier" content="3.0">
+<meta name="dcterms.identifier" content="3.1">
 <meta name="page-url" content="/couchbase-lite/current/android/document.html">
 <meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Lite</span>
         <select class="version_list" data-component="couchbase-lite">
-          <option value="3.0" data-url="../index.html" selected>3.0</option>
+          <option value="3.1" data-url="../index.html" selected>3.1</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.0">
+      <div class="version_items hide" data-version="3.1">
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
@@ -271,12 +271,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -441,7 +441,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -619,7 +619,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -820,7 +820,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1044,7 +1044,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1250,7 +1250,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1927,10 +1927,10 @@ This will auto-generate the document id.</p>
 <div class="sect2">
 <h3 id="checking-a-documents-properties"><a class="anchor" href="#checking-a-documents-properties"></a>Checking a Document&#8217;s Properties</h3>
 <div class="paragraph">
-<p>To check whether a given property exists in the document, use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Document.html#contains-java.lang.String-">`Document.Contains(String key)</a> method.</p>
+<p>To check whether a given property exists in the document, use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Document.html#contains-java.lang.String-">`Document.Contains(String key)</a> method.</p>
 </div>
 <div class="paragraph">
-<p>If you try to access a property which doesn&#8217;t exist in the document, the call will return the default value for that getter method (0 for <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Document.html#getInt-java.lang.String-">Document.getInt()</a> 0.0 for <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Document.html#getFloat-java.lang.String-">Document.getFloat()</a> etc.).</p>
+<p>If you try to access a property which doesn&#8217;t exist in the document, the call will return the default value for that getter method (0 for <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Document.html#getInt-java.lang.String-">Document.getInt()</a> 0.0 for <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Document.html#getFloat-java.lang.String-">Document.getFloat()</a> etc.).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1960,7 +1960,7 @@ Dates are a common data type, but JSON doesn&#8217;t natively support them, so t
 <div class="title">Example 1. Date Getter</div>
 <div class="content">
 <div class="paragraph">
-<p>This example sets the date on the <code>createdAt</code> property and reads it back using the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Document.html#getDate-java.lang.String-">Document.getDate()</a> accessor method.</p>
+<p>This example sets the date on the <code>createdAt</code> property and reads it back using the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Document.html#getDate-java.lang.String-">Document.getDate()</a> accessor method.</p>
 </div>
 <div class="tabset is-loading">
 <div class="ulist tabs">
@@ -2001,10 +2001,10 @@ Date date = newTask.getDate("createdAt");</code></pre>
 <div class="title">API References</div>
 <ul>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Dictionary.html">Dictionary</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Dictionary.html">Dictionary</a></p>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/MutableDictionary.html">MutableDictionary</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/MutableDictionary.html">MutableDictionary</a></p>
 </li>
 </ul>
 </div>
@@ -2126,10 +2126,10 @@ database.save(mutable_doc);</code></pre>
 <div class="title">API References</div>
 <ul>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Array.html">Array</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Array.html">Array</a></p>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/MutableArray.html">MutableArray</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/MutableArray.html">MutableArray</a></p>
 </li>
 </ul>
 </div>
@@ -2268,10 +2268,10 @@ database.save(mutable_doc);</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/MutableDocument.html#s:18CouchbaseLiteSwift15MutableDocumentMutableDocument--">MutableDocument()</a> initializer to create a new document where the document ID is randomly generated by the database.</p>
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/MutableDocument.html#s:18CouchbaseLiteSwift15MutableDocumentMutableDocument--">MutableDocument()</a> initializer to create a new document where the document ID is randomly generated by the database.</p>
 </li>
 <li>
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/MutableDocument.html#s:18CouchbaseLiteSwift15MutableDocument}MutableDocument-java.lang.String-">MutableDocument(String id)</a> initializer to create a new document with a specific ID.</p>
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/MutableDocument.html#s:18CouchbaseLiteSwift15MutableDocument}MutableDocument-java.lang.String-">MutableDocument(String id)</a> initializer to create a new document with a specific ID.</p>
 </li>
 <li>
 <p>Use the {url-api-method-collection-getdocument} method to get a document.
@@ -2337,7 +2337,7 @@ try {
 <div class="sectionbody">
 <div class="paragraph">
 <p>By default, a document is immutable when it is read from the database.
-Use the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Document.html#toMutable--">`Document.toMutable()</a> to create an updatable instance of the document.</p>
+Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Document.html#toMutable--">`Document.toMutable()</a> to create an updatable instance of the document.</p>
 </div>
 <div id="ex-update-doc" class="exampleblock">
 <div class="title">Example 7. Make a mutable document</div>
@@ -3039,7 +3039,7 @@ for (Result row: listQuery.execute()) {
 <div class="title">Example 16. Using JSON Results</div>
 <div class="content">
 <div class="paragraph">
-<p>Use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/com/couchbase/lite/Result.html#toJSON--">Result.toJSON()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
+<p>Use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Result.html#toJSON--">Result.toJSON()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
 </div>
 <div class="tabset is-loading">
 <div class="ulist tabs">

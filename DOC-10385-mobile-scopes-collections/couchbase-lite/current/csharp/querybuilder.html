@@ -14,7 +14,7 @@
 <meta name="keywords" content="sql, n1ql">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="couchbase-lite">
-<meta name="dcterms.identifier" content="3.0">
+<meta name="dcterms.identifier" content="3.1">
 <meta name="page-url" content="/couchbase-lite/current/csharp/querybuilder.html">
 <meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -102,10 +102,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Lite</span>
         <select class="version_list" data-component="couchbase-lite">
-          <option value="3.0" data-url="../index.html" selected>3.0</option>
+          <option value="3.1" data-url="../index.html" selected>3.1</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.0">
+      <div class="version_items hide" data-version="3.1">
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
@@ -272,12 +272,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -442,7 +442,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -620,7 +620,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -821,7 +821,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1045,7 +1045,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1251,7 +1251,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1541,10 +1541,9 @@ So too many indexes can hurt performance.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var db = _database;
-string[] indexProperties = new string[] {"type", "name" };
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">string[] indexProperties = new string[] { "type", "name" };
 var config = new ValueIndexConfiguration(indexProperties);
-db.CreateIndex("TypeNameIndex", config);</code></pre>
+collection.CreateIndex("TypeNameIndex", config);</code></pre>
 </div>
 </div>
 </div>
@@ -1604,10 +1603,8 @@ You can opt to retrieve entire documents, or just the specific properties you ne
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(SelectResult.All())
-    .From(DataSource.Database(db))) {
-    // All user properties will be available here
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(SelectResult.All())
+    .From(DataSource.Collection(collection));</code></pre>
 </div>
 </div>
 </div>
@@ -1677,15 +1674,15 @@ You can opt to retrieve entire documents, or just the specific properties you ne
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
-        SelectResult.Expression(Meta.ID),
-        SelectResult.Property("type"),
-        SelectResult.Property("name"))
-    .From(DataSource.Database(db))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Document ID :: {result.GetString("id")}");
-        Console.WriteLine($"Document Name :: {result.GetString("name")}");
-    }
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
+    SelectResult.Expression(Meta.ID),
+    SelectResult.Property("type"),
+    SelectResult.Property("name"))
+.From(DataSource.Collection(collection));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Document ID :: {result.GetString("id")}");
+    Console.WriteLine($"Document Name :: {result.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -1756,7 +1753,7 @@ You can chain any number of Expressions in order to implement sophisticated filt
 <div class="sect2">
 <h3 id="lbl-comp-ops"><a class="anchor" href="#lbl-comp-ops"></a>Comparison Operators</h3>
 <div class="paragraph">
-<p>The <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Query.IExpression.html#Couchbase_Lite_Query_IExpression_">Expression Comparators</a> can be used in the WHERE statement to specify on which property to match documents.
+<p>The <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Query.IExpression.html#Couchbase_Lite_Query_IExpression_">Expression Comparators</a> can be used in the WHERE statement to specify on which property to match documents.
 In the example below, we use the <code>equalTo</code> operator to query documents where the <code>type</code> property equals "hotel".</p>
 </div>
 <div class="listingblock">
@@ -1780,14 +1777,14 @@ In the example below, we use the <code>equalTo</code> operator to query document
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(SelectResult.All())
-    .From(DataSource.Database(db))
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(SelectResult.All())
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("hotel")))
-    .Limit(Expression.Int(10))) {
-    foreach (var result in query.Execute()) {
-        var dict = result.GetDictionary(db.Name);
-        Console.WriteLine($"Document Name :: {dict?.GetString("name")}");
-    }
+    .Limit(Expression.Int(10));
+
+foreach (var result in query.Execute()) {
+    var dict = result.GetDictionary(collection.Name);
+    Console.WriteLine($"Document Name :: {dict?.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -1797,12 +1794,12 @@ In the example below, we use the <code>equalTo</code> operator to query document
 <div class="sect2">
 <h3 id="lbl-coll-ops"><a class="anchor" href="#lbl-coll-ops"></a>Collection Operators</h3>
 <div class="paragraph">
-<p><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Query.ArrayFunction.html">ArrayFunction Collection Operators</a> are useful to check if a given value is present in an array.</p>
+<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Query.ArrayFunction.html">ArrayFunction Collection Operators</a> are useful to check if a given value is present in an array.</p>
 </div>
 <div class="sect3">
 <h4 id="contains-operator"><a class="anchor" href="#contains-operator"></a>CONTAINS Operator</h4>
 <div class="paragraph">
-<p>The following example uses the <code><a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Query.ArrayFunction.html">ArrayFunction</a></code> to find documents where the <code>public_likes</code> array property contains a value equal to "Armani Langworth".</p>
+<p>The following example uses the <code><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Query.ArrayFunction.html">ArrayFunction</a></code> to find documents where the <code>public_likes</code> array property contains a value equal to "Armani Langworth".</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1815,19 +1812,19 @@ In the example below, we use the <code>equalTo</code> operator to query document
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Meta.ID),
         SelectResult.Property("name"),
         SelectResult.Property("public_likes"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("hotel"))
         .And(ArrayFunction.Contains(Expression.Property("public_likes"),
-            Expression.String("Armani Langworth"))))) {
-    foreach (var result in query.Execute()) {
-        var publicLikes = result.GetArray("public_likes");
-        var jsonString = JsonConvert.SerializeObject(publicLikes);
-        Console.WriteLine($"Public Likes :: {jsonString}");
-    }
+            Expression.String("Armani Langworth"))));
+
+foreach (var result in query.Execute()) {
+    var publicLikes = result.GetArray("public_likes");
+    var jsonString = JsonConvert.SerializeObject(publicLikes);
+    Console.WriteLine($"Public Likes :: {jsonString}");
 }</code></pre>
 </div>
 </div>
@@ -1843,15 +1840,15 @@ The following example looks for documents whose <code>first</code>, <code>last</
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var values = new IExpression[]
     { Expression.Property("first"), Expression.Property("last"), Expression.Property("username") };
 
-using (var query = QueryBuilder.Select(
+using var query = QueryBuilder.Select(
         SelectResult.All())
-    .From(DataSource.Database(db))
-    .Where(Expression.String("Armani").In(values))) {
-    foreach (var result in query.Execute()) {
-        var body = result.GetDictionary(0);
-        var jsonString = JsonConvert.SerializeObject(body);
-        Console.WriteLine($"In results :: {jsonString}");
-    }
+    .From(DataSource.Collection(collection))
+    .Where(Expression.String("Armani").In(values));
+
+foreach (var result in query.Execute()) {
+    var body = result.GetDictionary(0);
+    var jsonString = JsonConvert.SerializeObject(body);
+    Console.WriteLine($"In results :: {jsonString}");
 }</code></pre>
 </div>
 </div>
@@ -1872,7 +1869,7 @@ using (var query = QueryBuilder.Select(
 <div class="sect3">
 <h4 id="lbl-string-match"><a class="anchor" href="#lbl-string-match"></a>String Matching</h4>
 <div class="paragraph">
-<p>The <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Query.IExpression.html#Couchbase_Lite_Query_IExpression_Like_Couchbase_Lite_Query_IExpression_">Like()</a> operator can be used for string matching&#8201;&#8212;&#8201;see <a href="#ex-like-case-insensitive">Example 8</a></p>
+<p>The <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Query.IExpression.html#Couchbase_Lite_Query_IExpression_Like_Couchbase_Lite_Query_IExpression_">Like()</a> operator can be used for string matching&#8201;&#8212;&#8201;see <a href="#ex-like-case-insensitive">Example 8</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1895,16 +1892,16 @@ To perform case insensitive matching, use <code>Function.lower</code> or <code>F
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Meta.ID),
         SelectResult.Property("name"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("landmark"))
         .And(Function.Lower(Expression.Property("name")).Like(Expression.String("Royal Engineers Museum"))))
-    .Limit(Expression.Int(10))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Name Property :: {result.GetString("name")}");
-    }
+    .Limit(Expression.Int(10));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Name Property :: {result.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -1933,16 +1930,16 @@ Notice that the matches may span word boundaries.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Meta.ID),
         SelectResult.Property("name"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("landmark"))
         .And(Function.Lower(Expression.Property("name")).Like(Expression.String("Eng%e%"))))
-    .Limit(Expression.Int(10))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Name Property :: {result.GetString("name")}");
-    }
+    .Limit(Expression.Int(10));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Name Property :: {result.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -1963,16 +1960,16 @@ The query returns "landmark" type documents with names such as "Engineer", "engi
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Meta.ID),
         SelectResult.Property("name"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("landmark"))
         .And(Expression.Property("name").Like(Expression.String("Royal Eng____rs Museum"))))
-    .Limit(Expression.Int(10))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Name Property :: {result.GetString("name")}");
-    }
+    .Limit(Expression.Int(10));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Name Property :: {result.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -2005,16 +2002,16 @@ The <code>regex</code> operator is case sensitive, use <code>upper</code> or <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Meta.ID),
         SelectResult.Property("name"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("landmark"))
         .And(Expression.Property("name").Regex(Expression.String("\\bEng.*e\\b"))))
-    .Limit(Expression.Int(10))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Name Property :: {result.GetString("name")}");
-    }
+    .Limit(Expression.Int(10));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Name Property :: {result.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -2057,7 +2054,7 @@ For more on the regex spec used by Couchbase&#160;Lite see <a href="http://www.c
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Query documents that have been deleted
 var query = QueryBuilder
     .Select(SelectResult.Expression(Meta.ID))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Meta.IsDeleted);</code></pre>
 </div>
 </div>
@@ -2081,21 +2078,21 @@ For example to combine airline details with route details, linked by the airline
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Expression.Property("name").From("airline")),
         SelectResult.Expression(Expression.Property("callsign").From("airline")),
         SelectResult.Expression(Expression.Property("destinationairport").From("route")),
         SelectResult.Expression(Expression.Property("stops").From("route")),
         SelectResult.Expression(Expression.Property("airline").From("route")))
-    .From(DataSource.Database(db).As("airline"))
-    .Join(Join.InnerJoin(DataSource.Database(db).As("route"))
+    .From(DataSource.Collection(collection).As("airline"))
+    .Join(Join.InnerJoin(DataSource.Collection(collection2).As("route"))
         .On(Meta.ID.From("airline").EqualTo(Expression.Property("airlineid").From("route"))))
     .Where(Expression.Property("type").From("route").EqualTo(Expression.String("route"))
         .And(Expression.Property("type").From("airline").EqualTo(Expression.String("airline")))
-        .And(Expression.Property("sourceairport").From("route").EqualTo(Expression.String("RIX"))))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Name Property :: {result.GetString("name")}");
-    }
+        .And(Expression.Property("sourceairport").From("route").EqualTo(Expression.String("RIX"))));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Name Property :: {result.GetString("name")}");
 }</code></pre>
 </div>
 </div>
@@ -2132,18 +2129,18 @@ For example to combine airline details with route details, linked by the airline
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Function.Count(Expression.All())),
         SelectResult.Property("country"),
         SelectResult.Property("tz"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("airport"))
         .And(Expression.Property("geo.alt").GreaterThanOrEqualTo(Expression.Int(300))))
-    .GroupBy(Expression.Property("country"), Expression.Property("tz"))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine(
-            $"There are {result.GetInt("$1")} airports in the {result.GetString("tz")} timezone located in {result.GetString("country")} and above 300 ft");
-    }
+    .GroupBy(Expression.Property("country"), Expression.Property("tz"));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine(
+        $"There are {result.GetInt("$1")} airports in the {result.GetString("tz")} timezone located in {result.GetString("country")} and above 300 ft");
 }</code></pre>
 </div>
 </div>
@@ -2179,16 +2176,16 @@ There are 123 airports on the America/Denver timezone located in United States a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using (var query = QueryBuilder.Select(
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var query = QueryBuilder.Select(
         SelectResult.Expression(Meta.ID),
         SelectResult.Property("title"))
-    .From(DataSource.Database(db))
+    .From(DataSource.Collection(collection))
     .Where(Expression.Property("type").EqualTo(Expression.String("hotel")))
     .OrderBy(Ordering.Property("title").Ascending())
-    .Limit(Expression.Int(10))) {
-    foreach (var result in query.Execute()) {
-        Console.WriteLine($"Title :: {result.GetString("title")}");
-    }
+    .Limit(Expression.Int(10));
+
+foreach (var result in query.Execute()) {
+    Console.WriteLine($"Title :: {result.GetString("title")}");
 }</code></pre>
 </div>
 </div>
@@ -2321,11 +2318,11 @@ To unpack these result sets you need to iterate this array.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var this_Db = new Database("hotels") ;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("hotels");
 
 var query = QueryBuilder
       .Select(SelectResult.All())
-      .From(DataSource.Database(this_Db));</code></pre>
+      .From(DataSource.Collection(database.GetDefaultCollection()));</code></pre>
 </div>
 </div>
 </div>
@@ -2396,22 +2393,19 @@ var query = QueryBuilder
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
+var hotels = new List&lt;Dictionary&lt;string, object&gt;&gt;();
 
-if (results?.Count &gt; 0)
-{
-    List&lt;Dictionary&lt;string,object&gt;&gt; hotels = new List&lt;Dictionary&lt;string,object&gt;&gt;();
-    foreach (var result in results)
-    {
+if (results?.Count &gt; 0) {
+    foreach (var result in results) {
         // get the result into our dictionary object
-        var thisDocsProps = result.GetDictionary(dbName); <i class="conum" data-value="1"></i><b>(1)</b>
+        var thisDocsProps = result.GetDictionary("hotels"); <i class="conum" data-value="1"></i><b>(1)</b>
 
-        if (thisDocsProps != null)
-        {
-            thisDocsId = thisDocsProps.GetString("id"); <i class="conum" data-value="2"></i><b>(2)</b>
-            thisDocsName = thisDocsProps.GetString("name");
-            thisDocsCity = thisDocsProps.GetString("city");
-            thisDocsType = thisDocsProps.GetString("type");
-            hotel = thisDocsProps.ToDictionary();
+        if (thisDocsProps != null) {
+            var docID = thisDocsProps.GetString("id"); <i class="conum" data-value="2"></i><b>(2)</b>
+            var docName = thisDocsProps.GetString("name");
+            var docCity = thisDocsProps.GetString("city");
+            var docType = thisDocsProps.GetString("type");
+            var hotel = thisDocsProps.ToDictionary();
             hotels.Add(hotel);
         }
 
@@ -2448,16 +2442,14 @@ You can add this dictionary to an array of returned matches, for processing else
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var this_Db = new Database("hotels") ;
-
-Dictionary&lt;string, object&gt; hotel = new Dictionary&lt;string, object&gt;();
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("hotels");
 
 List&lt;Dictionary&lt;string, object&gt;&gt; hotels = new List&lt;Dictionary&lt;string, object&gt;&gt;();
 
 var query = QueryBuilder.Select(
         SelectResult.Property("type"),
         SelectResult.Property("name"),
-        SelectResult.Property("city")).From(DataSource.Database(this_Db));</code></pre>
+        SelectResult.Property("city")).From(DataSource.Collection(database.GetDefaultCollection()));</code></pre>
 </div>
 </div>
 </div>
@@ -2516,19 +2508,18 @@ var query = QueryBuilder.Select(
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
-foreach (var result in results)
-{
+foreach (var result in results) {
 
     // get the returned array of k-v pairs into a dictionary
-    hotel = result.ToDictionary();
+    var hotel = result.ToDictionary();
 
     // add hotel dictionary to list of hotel dictionaries
     hotels.Add(hotel);
 
     // use the properties of the returned array of k-v pairs directly
-    thisDocsType = result.GetString("type");
-    thisDocsName = result.GetString("name");
-    thisDocsCity = result.GetString("city");
+    var docType = result.GetString("type");
+    var docName = result.GetString("name");
+    var docCity = result.GetString("city");
 
 }</code></pre>
 </div>
@@ -2549,11 +2540,11 @@ foreach (var result in results)
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var this_Db = new Database("hotels") ;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("hotels");
 
 var query = QueryBuilder
         .Select(SelectResult.Expression(Meta.ID).As("this_ID"))
-        .From(DataSource.Database(this_Db));</code></pre>
+        .From(DataSource.Collection(database.GetDefaultCollection()));</code></pre>
 </div>
 </div>
 </div>
@@ -2594,11 +2585,10 @@ Each result object has <code>id</code> as the key and the ID value as its value&
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
-foreach (var result in results)
-{
+foreach (var result in results) {
 
-    var thisDocsID = result.GetString("this_ID"); <i class="conum" data-value="1"></i><b>(1)</b>
-    var doc = this_Db.GetDocument(thisDocsID);
+    var docID = result.GetString("this_ID"); <i class="conum" data-value="1"></i><b>(1)</b>
+    var doc = database.GetDefaultCollection().GetDocument(docID);
 }</code></pre>
 </div>
 </div>
@@ -2623,12 +2613,12 @@ foreach (var result in results)
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var this_Db = new Database("hotels") ;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("hotels");
 
 var query =
   QueryBuilder
     .Select(SelectResult.Expression(Function.Count(Expression.All())).As("mycount")) <i class="conum" data-value="1"></i><b>(1)</b>
-    .From(DataSource.Database(this_Db));</code></pre>
+    .From(DataSource.Collection(database.GetDefaultCollection()));</code></pre>
 </div>
 </div>
 </div>
@@ -2679,14 +2669,9 @@ The key is the count name, as defined using <code>SelectResult.as</code>&#8201;&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
-var results = query.Execute().AllResults();
-
-foreach (var result in results)
-{
-
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
+foreach (var result in results) {
     var numberOfDocs = result.GetInt("mycount"); <i class="conum" data-value="1"></i><b>(1)</b>
-
 }</code></pre>
 </div>
 </div>
@@ -2713,40 +2698,35 @@ Use the <code>limit</code> and <code>offset</code> feature, to return a defined 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var this_Db = new Database("hotels") ;
-
-var thisLimit = 20;
-var thisOffset = 0;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("hotels");
+var limit = 20;
+var offset = 0;
 
 // get a count of the number of docs matching the query
 var countQuery =
     QueryBuilder
         .Select(SelectResult.Expression(Function.Count(Expression.All())).As("mycount"))
-        .From(DataSource.Database(this_Db));
+        .From(DataSource.Collection(database.GetDefaultCollection()));
 var numberOfDocs =
-    countQuery.Execute().AllResults().ElementAt(0).GetInt("mycount");
+    countQuery.Execute().First().GetInt("mycount");
 
-if (numberOfDocs &lt; thisLimit) {
-    thisLimit = numberOfDocs;
+if (numberOfDocs &lt; limit) {
+    limit = numberOfDocs;
 }
 
-while (thisOffset &lt; numberOfDocs)
-{
+while (offset &lt; numberOfDocs) {
     var listQuery =
         QueryBuilder
             .Select(SelectResult.All())
-            .From(DataSource.Database(this_Db))
-            .Limit(Expression.Int(thisLimit), Expression.Int(thisOffset)); <i class="conum" data-value="1"></i><b>(1)</b>
+            .From(DataSource.Collection(database.GetDefaultCollection()))
+            .Limit(Expression.Int(limit), Expression.Int(offset)); <i class="conum" data-value="1"></i><b>(1)</b>
 
-    foreach (var result in listQuery.Execute().AllResults())
-    {
+    foreach (var result in listQuery.Execute()) {
         // Display and or process query results batch
-
     }
 
-    thisOffset = thisOffset + thisLimit;
-
-} // end while</code></pre>
+    offset = offset + limit;
+}</code></pre>
 </div>
 </div>
 </div>
@@ -2784,41 +2764,34 @@ For more on using the QueryBuilder API, see our blog: <a href="https://blog.couc
 <div class="title">Example 29. Using JSON Results</div>
 <div class="content">
 <div class="paragraph">
-<p>Use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/api/Couchbase.Lite.Query.Result.html#Couchbase_Lite_Query_Result_ToJson">Result.ToJson()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
+<p>Use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/api/Couchbase.Lite.Query.Result.html#Couchbase_Lite_Query_Result_ToJson">Result.ToJson()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
-foreach (var result in query.Execute().AsEnumerable()) {
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">foreach (var result in query.Execute()) {
 
     // get the result into a JSON String
-            var thisDocsJSONString = result.ToJSON();
+    var docJSONString = result.ToJSON();
 
     // Get a native dictionary object using the JSON string
     var dictFromJSONstring =
           JsonConvert.
             DeserializeObject&lt;Dictionary&lt;string, object&gt;&gt;
-              (thisDocsJSONString);
+              (docJSONString);
 
     // use the created dictionary
-    if (dictFromJSONstring != null)
-    {
-        thisDocsId = dictFromJSONstring["id"].ToString();
-        thisDocsName = dictFromJSONstring["name"].ToString();
-        thisDocsCity = dictFromJSONstring["city"].ToString();
-        thisDocsType = dictFromJSONstring["type"].ToString();
+    if (dictFromJSONstring != null) {
+        var docID = dictFromJSONstring["id"].ToString();
+        var docName = dictFromJSONstring["name"].ToString();
+        var docCity = dictFromJSONstring["city"].ToString();
+        var docType = dictFromJSONstring["type"].ToString();
     }
 
     //Get a custom object using the JSON string
-    Hotel this_hotel =
-        JsonConvert.DeserializeObject&lt;Hotel&gt;(thisDocsJSONString);
+    Hotel hotel =
+        JsonConvert.DeserializeObject&lt;Hotel&gt;(docJSONString);
 
-    // Store this hotel object in a list of hotels
-    hotels.Add(
-        this_hotel.Id.ToString(),
-            this_hotel);
-
-} // end foreach result</code></pre>
+} </code></pre>
 </div>
 </div>
 </div>
@@ -2999,7 +2972,7 @@ When documents are added or updated, the index will call the prediction function
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var index = IndexBuilder.ValueIndex(ValueIndexItem.Property("label"));
-db.CreateIndex("value-index-image-classifier", index);</code></pre>
+collection.CreateIndex("value-index-image-classifier", index);</code></pre>
 </div>
 </div>
 </div>
@@ -3025,7 +2998,7 @@ It differs from the value index in that it caches the predictive results and cre
 });
 
 var index = IndexBuilder.PredictiveIndex("ImageClassifier", input);
-db.CreateIndex("predictive-index-image-classifier", index);</code></pre>
+collection.CreateIndex("predictive-index-image-classifier", index);</code></pre>
 </div>
 </div>
 </div>
@@ -3046,15 +3019,15 @@ db.CreateIndex("predictive-index-image-classifier", index);</code></pre>
 {
     ["photo"] = Expression.Property("photo")
 });
-var prediction = PredictiveModel.predict("ImageClassifier", input); <i class="conum" data-value="1"></i><b>(1)</b>
+var prediction = Function.Prediction("ImageClassifier", input); <i class="conum" data-value="1"></i><b>(1)</b>
 
-using (var q = QueryBuilder.Select(SelectResult.All())
-    .From(DataSource.Database(db))
+using var query = QueryBuilder.Select(SelectResult.All())
+    .From(DataSource.Collection(collection))
     .Where(prediction.Property("label").EqualTo(Expression.String("car"))
-        .And(prediction.Property("probability").GreaterThanOrEqualTo(Expression.Double(0.8))))) {
-    var result = q.Execute();
-    Console.WriteLine($"Number of rows: {result.Count()}");
-}</code></pre>
+        .And(prediction.Property("probability").GreaterThanOrEqualTo(Expression.Double(0.8))));
+
+var result = query.Execute();
+Console.WriteLine($"Number of rows: {result.Count()}");</code></pre>
 </div>
 </div>
 </div>

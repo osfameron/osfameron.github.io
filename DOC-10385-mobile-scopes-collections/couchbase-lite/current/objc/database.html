@@ -13,7 +13,7 @@
 <meta name="description" content="Working with Couchbase Lite Databases">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 <meta name="dcterms.subject" content="couchbase-lite">
-<meta name="dcterms.identifier" content="3.0">
+<meta name="dcterms.identifier" content="3.1">
 <meta name="page-url" content="/couchbase-lite/current/objc/database.html">
 <meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -101,10 +101,10 @@
       <div class="component_list-version">
         <span class="component_list_title">Couchbase Lite</span>
         <select class="version_list" data-component="couchbase-lite">
-          <option value="3.0" data-url="../index.html" selected>3.0</option>
+          <option value="3.1" data-url="../index.html" selected>3.1</option>
         </select>
       </div>
-      <div class="version_items hide" data-version="3.0">
+      <div class="version_items hide" data-version="3.1">
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
@@ -271,12 +271,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -441,7 +441,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -619,7 +619,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -820,7 +820,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1044,7 +1044,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1250,7 +1250,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.2/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1404,11 +1404,100 @@ Related Content&#8201;&#8212;&#8201;<a href="blob.html" class="xref page">Blobs<
 </div>
 </div>
 <div class="sect1">
+<h2 id="database-concepts"><a class="anchor" href="#database-concepts"></a>Database Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Databases created on Couchbase Lite can share the same hierarchical structure as Capella databases.
+This makes it easier to sync data between mobile applications and applications built using Capella.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-66e2d16aa54ff08438f0f86addf2e641e7d4b96d.svg" alt="Couchbase Lite Database Hierarchy">
+</div>
+<div class="title">Figure 1. Couchbase Lite Database Hierarchy</div>
+</div>
+<div class="paragraph">
+<p>Although the terminology is different, the structure can be mapped to relational database terms:</p>
+</div>
+<table class="tableblock frame-all grid-none" style="width: 70%;">
+<caption class="title">Table 1. Relational Database &#8594; Couchbase</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Relational database</th>
+<th class="tableblock halign-left valign-top">Couchbase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scope</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collection</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This structure gives you plenty of choices when it comes to partitioning your data.
+The most basic structure is to use the single default scope with a single default collection; or you could opt for a structure that allow you to split your collections into logical scopes.</p>
+</div>
+<div id="cbl-database-structure" class="imageblock kroki">
+<div class="content">
+<img src="_images/diag-b39fc970ab507424b261c14f98c439f54dce40a5.svg" alt="Couchbase Lite Examples">
+</div>
+<div class="title">Figure 2. Couchbase Lite Examples</div>
+</div>
+<div class="paragraph">
+<p>If a scope is not explicitly referenced in calls to the database, then scope is assumed to <code>_default</code>. Likewise, if no collection name is given then then the <code>_default</code> collection is assumed.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Storing local configuration</div>
+<div class="paragraph">
+<p>It&#8217;s likely that you will not need to sync all the data related for a particular application, in which case you can set up a scope that syncs data, and a second stop that doesn&#8217;t.</p>
+</div>
+<div class="paragraph">
+<p>One reason for doing this is to store local configuration data (such as the preferred screen orientation or keyboard layout). Since this information only relates to a particular device, there is no need to sync it:</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+local data scope
+</td>
+<td class="hdlist2">
+<p>Contains information pertaining to the device.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+syncing data scope
+</td>
+<td class="hdlist2">
+<p>Contains information pertaining to the user, which can be synced back to the cloud for use on the web or another device.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="open-db"><a class="anchor" href="#open-db"></a>Create or Open Database</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can create a new database and-or open an existing database, using the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabase.html">CBLDatabase</a> class.
-Just pass in a database name and optionally a <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html">CBLDatabaseConfiguration</a>&#8201;&#8212;&#8201;see <a href="#ex-dbopen">Example 1</a>.</p>
+<p>You can create a new database and-or open an existing database, using the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabase.html">CBLDatabase</a> class.
+Just pass in a database name and optionally a <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html">CBLDatabaseConfiguration</a>&#8201;&#8212;&#8201;see <a href="#ex-dbopen">Example 1</a>.</p>
 </div>
 <div class="paragraph">
 <p>Things to watch for include:</p>
@@ -1419,7 +1508,7 @@ Just pass in a database name and optionally a <a href="http://docs.couchbase.com
 <p>If the named database does not exist in the specified, or default, location then a new one is created</p>
 </li>
 <li>
-<p>The database is created in a default location unless you  specify a directory for it&#8201;&#8212;&#8201;see: <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html">CBLDatabaseConfiguration</a> and <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html#/c:objc(cs)CBLDatabaseConfiguration(py)directory">CBLDatabaseConfiguration.directory()</a></p>
+<p>The database is created in a default location unless you  specify a directory for it&#8201;&#8212;&#8201;see: <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html">CBLDatabaseConfiguration</a> and <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html#/c:objc(cs)CBLDatabaseConfiguration(py)directory">CBLDatabaseConfiguration.directory()</a></p>
 <div class="openblock">
 <div class="content">
 <div class="admonitionblock tip">
@@ -1471,7 +1560,7 @@ self.database = database;</code></pre>
 <p>You are advised to incorporate the closing of all open databases into your application workflow.</p>
 </div>
 <div class="paragraph">
-<p>Closing a database is simple, just use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)close:">CBLDatabase.Close()</a>&#8201;&#8212;&#8201;see: <a href="#ex-dbclose">Example 2</a>.
+<p>Closing a database is simple, just use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)close:">CBLDatabase.Close()</a>&#8201;&#8212;&#8201;see: <a href="#ex-dbclose">Example 2</a>.
 This also closes
 <sup class="footnote" id="_footnote_fn28">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>
 active replications, listeners and-or live queries connected to the database.</p>
@@ -1537,7 +1626,7 @@ The algorithm used to encrypt the database is 256-bit AES.</p>
 <div class="sect2">
 <h3 id="enabling"><a class="anchor" href="#enabling"></a>Enabling</h3>
 <div class="paragraph">
-<p>To enable encryption, use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html#/c:objc(cs)CBLDatabaseConfiguration(py)encryptionKey">CBLDatabaseConfiguration.encryptionKey()</a> to set the encryption key of your choice.
+<p>To enable encryption, use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabaseConfiguration.html#/c:objc(cs)CBLDatabaseConfiguration(py)encryptionKey">CBLDatabaseConfiguration.encryptionKey()</a> to set the encryption key of your choice.
 Provide this encryption key every time the database is opened&#8201;&#8212;&#8201;see <a href="#ex-sdb-encrypt">Example 3</a>.</p>
 </div>
 <div id="ex-sdb-encrypt" class="exampleblock">
@@ -1577,7 +1666,7 @@ So a database encrypted using the Objective-C SDK, and then exported, is readabl
 <div class="sect2">
 <h3 id="changing"><a class="anchor" href="#changing"></a>Changing</h3>
 <div class="paragraph">
-<p>To change an existing encryption key, open the database using its existing encryption-key and use <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)changeEncryptionKey:error:">CBLDatabase.changeEncryptionKey()</a>
+<p>To change an existing encryption key, open the database using its existing encryption-key and use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)changeEncryptionKey:error:">CBLDatabase.changeEncryptionKey()</a>
 to set the required new encryption-key value.</p>
 </div>
 </div>
@@ -1585,7 +1674,7 @@ to set the required new encryption-key value.</p>
 <h3 id="removing"><a class="anchor" href="#removing"></a>Removing</h3>
 <div class="paragraph">
 <p>To remove encryption, open the database using its existing encryption-key and use
-<a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)changeEncryptionKey:error:">CBLDatabase.changeEncryptionKey()</a>
+<a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)changeEncryptionKey:error:">CBLDatabase.changeEncryptionKey()</a>
 with a null value as the encryption key.</p>
 </div>
 </div>
@@ -1613,8 +1702,8 @@ with a null value as the encryption key.</p>
 compact the database file, removing unused documents and blobs no longer referenced by any documents.</p>
 </div>
 <div class="paragraph">
-<p>Couchbase Lite&#8217;s API provides the <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)performMaintenance:error:">CBLDatabase.performMaintenance()</a> method.
-The available maintenance operations, including <code>compact</code> are as shown in the enum <a href="http://docs.couchbase.com/mobile/3.0.2/couchbase-lite-objc/Enums/CBLMaintenanceType.html">CBLMaintenanceType</a> to accomplish this.</p>
+<p>Couchbase Lite&#8217;s API provides the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Classes/CBLDatabase.html#/c:objc(cs)CBLDatabase(im)performMaintenance:error:">CBLDatabase.performMaintenance()</a> method.
+The available maintenance operations, including <code>compact</code> are as shown in the enum <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/Enums/CBLMaintenanceType.html">CBLMaintenanceType</a> to accomplish this.</p>
 </div>
 <div class="paragraph">
 <p>This is a resource intensive operation and is not performed automatically.
