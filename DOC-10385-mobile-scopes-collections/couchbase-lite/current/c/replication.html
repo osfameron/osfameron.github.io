@@ -505,6 +505,11 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
+    <a class="menu_title menu_link" href="../csharp/scopes-collections-manage.html">Scopes and Collections</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="1">
+  <span class="menu_line">
     <a class="menu_title menu_link" href="../csharp/document.html">Documents</a>
   </span>
 </li>
@@ -1432,48 +1437,6 @@ For example, between a local Couchbase Lite database and remote Sync Gateway dat
 </div>
 <div class="paragraph">
 <p>Subsequent sections provide additional details and examples for the main configuration options.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="replication-concepts"><a class="anchor" href="#replication-concepts"></a>Replication Concepts</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Couchbase Lite allows for one database for each application running on the mobile device.
-This database can contain one or more scopes.
-Each scope can contain one or more collections.</p>
-</div>
-<div class="paragraph">
-<p>To learn about Scopes and Collections, see <a href="database.html" class="xref page">Databases</a></p>
-</div>
-<div class="paragraph">
-<p>You can set up a replication scheme across any of the three data levels:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Database</dt>
-<dd>
-<p>All scopes and collections in the database are synced,
-including the <code>_default</code> scope and the <code>_default</code> collection.</p>
-</dd>
-<dt class="hdlist1">Scope</dt>
-<dd>
-<p>All the collections in a named scope.</p>
-</dd>
-<dt class="hdlist1">Collection</dt>
-<dd>
-<p>A specific collection in a scope.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced against on Capella. These mappings can be <code>implicit</code> or <code>explicit</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="implicit-mapping"><a class="anchor" href="#implicit-mapping"></a>Implicit Mapping</h3>
-<div class="paragraph">
-<p>This will sync between databases that share the same keyspace names.</p>
-</div>
 </div>
 </div>
 </div>
