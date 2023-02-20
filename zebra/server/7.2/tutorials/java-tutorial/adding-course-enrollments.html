@@ -115,7 +115,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-server/modules/tutorials/pages/java-tutorial/adding-course-enrollments.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/tutorials/pages/java-tutorial/adding-course-enrollments.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -203,9 +203,44 @@ In this section, you&#8217;re going to add enrollment details to the student rec
 <div class="paragraph">
 <p>A quick recap: here&#8217;s the structure of our document store:</p>
 </div>
-<div class="imageblock">
+<div class="literalblock">
 <div class="content">
-<img src="../_images/student-collections.svg" alt="Bucket, scope and collections diagram for the studen record system">
+<pre>@startuml
+left to right direction
+
+
+    database "student-bucket" {
+
+        node "art-school-scope" {
+
+                folder "student-record-collection" {
+
+                    file  "Hilary's record" as hilary {
+                        file "enrollment details" as hilary_enrollment
+                    }
+
+                    file "Ashley's record" as ashley {
+                        file "enrollment details" as ashley_enrollment
+
+                    }
+
+                }
+
+                folder "course-record-collection" {
+
+                    file "ART-HISTORY-000001" as art_history
+                    file "GRAPHIC-DESIGN-000003" as graphic_design
+                    file "FINE_ART-000002" as fine_art
+                }
+
+                hilary_enrollment --&gt; art_history
+                hilary_enrollment --&gt; graphic_design
+                ashley_enrollment --&gt;fine_art
+        }
+
+    }
+
+@enduml</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -387,7 +422,7 @@ If the key does not exist then it&#8217;s a fresh document, so the item is inser
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">mvn exec:java -Dexec.mainClass="AddEnrollments" -Dexec.cleanupDaemonThreads=false</code></pre>
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">mvn exec:java -Dexec.mainClass="AddEnrollments" -Dexec.cleanupDaemonThreads=false</code></pre>
 </div>
 </div>
 <div class="paragraph">

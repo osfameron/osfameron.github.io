@@ -117,7 +117,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-server/modules/tutorials/pages/java-tutorial/creating-the-students-collection.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/tutorials/pages/java-tutorial/creating-the-students-collection.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -230,15 +230,15 @@ Following on from <a href="install-couchbase-java-sdk.html" class="xref page">In
 <p>In the <a href="install-couchbase-java-sdk.html" class="xref page">Installing the Couchbase Java SDK</a> tutorial, you created a directory structure to hold your application.
 Create the file <code>student.java</code> in the <code>java</code> directory as shown below.</p>
 </div>
-<div class="listingblock">
+<div class="literalblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">📂 ~ (your home directory)
+<pre>📂 ~ (your home directory)
   📂 student
     📃 pom.xml
     📂 src
       📂 main
         📂 java
-          📃 ConnectStudent.java ⬅ here!</code></pre>
+          📃 ConnectStudent.java ⬅ here!</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -294,7 +294,7 @@ finished working with it.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">mvn exec:java -Dexec.mainClass="ConnectStudent" -Dexec.cleanupDaemonThreads=false</code></pre>
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">mvn exec:java -Dexec.mainClass="ConnectStudent" -Dexec.cleanupDaemonThreads=false</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -334,7 +334,7 @@ Here&#8217;s Hilary Smith&#8217;s student record (minus the enrollment details �
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/tutorials/partials/hilary-smith-basic.json">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/tutorials/examples/hilary-smith-basic.json">{
   "name": "Hilary Smith",
   "date-of-birth": "21-12-1980"
 }</code></pre>
@@ -391,7 +391,7 @@ If there is no existing identifer, then a new record is created.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">mvn exec:java -Dexec.mainClass="InsertStudent" -Dexec.cleanupDaemonThreads=false</code></pre>
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">mvn exec:java -Dexec.mainClass="InsertStudent" -Dexec.cleanupDaemonThreads=false</code></pre>
 </div>
 </div>
 <div class="paragraph">

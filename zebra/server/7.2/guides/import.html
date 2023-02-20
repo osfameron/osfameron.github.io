@@ -9,7 +9,7 @@
 <title>Importing Data | Couchbase Capella Staging Docs</title>
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="How to import documents into Couchbase server.">
+<meta name="description" content="How to import documents into Couchbase.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
@@ -185,7 +185,13 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-How to import documents into Couchbase server.
+<div class="paragraph">
+<p>How to import documents into Couchbase.<br>
+This
+guide
+is for Couchbase Server.
+For Couchbase Capella, see <a href="../../../cloud/elixir/guides/import.html" class="xref page">Importing Data</a>.</p>
+</div>
 </blockquote>
 </div>
 </div>
@@ -194,8 +200,8 @@ How to import documents into Couchbase server.
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Importing data can be done from the Couchbase Server UI, via the
-<a href="#tools:cbimport.adoc" class="xref unresolved">cbimport</a> command-line tool shipped with Couchbase Server,
+<p>Importing data can be done from the Couchbase Server UI,
+via the <a href="#tools:cbimport.adoc" class="xref unresolved">cbimport</a> command-line tool shipped with Couchbase Server,
 or using the SDK to script the process.</p>
 </div>
 <div class="paragraph">
@@ -851,7 +857,7 @@ stream-json formats its output with a <code>{ key: &#8230;&#8203;, value: &#8230
 <p>First, you need the connection details for the Couchbase server.</p>
 </div>
 <div class="paragraph">
-<p>Now decide which bucket and <a href="../learn/data/scopes-and-collections.html" class="xref page">scope and collection</a> you want to import to, and create them if they don&#8217;t already exist.</p>
+<p>Now decide which bucket and <a href="../tutorials/buckets-scopes-and-collections.html" class="xref page">scope and collection</a> you want to import to, and create them if they don&#8217;t already exist.</p>
 </div>
 <div class="tabset is-loading">
 <div class="ulist tabs">

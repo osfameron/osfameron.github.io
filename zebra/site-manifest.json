@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1676908912250,
+  "generated": 1676912810546,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -622,6 +622,204 @@
               "title": "Search Capella"
             },
             {
+              "module": "guides",
+              "path": "bulk-operations.adoc",
+              "url": "/cloud/elixir/guides/bulk-operations.html",
+              "title": "Bulk Operations"
+            },
+            {
+              "module": "guides",
+              "path": "call-user-defined-function.adoc",
+              "url": "/cloud/elixir/guides/call-user-defined-function.html",
+              "title": "Calling a User-Defined Function"
+            },
+            {
+              "module": "guides",
+              "path": "cbo.adoc",
+              "url": "/cloud/elixir/guides/cbo.html",
+              "title": "Cost-Based Optimizer"
+            },
+            {
+              "module": "guides",
+              "path": "connect.adoc",
+              "url": "/cloud/elixir/guides/connect.html",
+              "title": "Connecting to Couchbase Capella"
+            },
+            {
+              "module": "guides",
+              "path": "create-index.adoc",
+              "url": "/cloud/elixir/guides/create-index.html",
+              "title": "Creating Indexes"
+            },
+            {
+              "module": "guides",
+              "path": "create-javascript-library.adoc",
+              "url": "/cloud/elixir/guides/create-javascript-library.html",
+              "title": "Creating a JavaScript Library"
+            },
+            {
+              "module": "guides",
+              "path": "create-user-defined-function.adoc",
+              "url": "/cloud/elixir/guides/create-user-defined-function.html",
+              "title": "Creating a User-Defined Function"
+            },
+            {
+              "module": "guides",
+              "path": "creating-data.adoc",
+              "url": "/cloud/elixir/guides/creating-data.html",
+              "title": "Creating Data"
+            },
+            {
+              "module": "guides",
+              "path": "defer-index.adoc",
+              "url": "/cloud/elixir/guides/defer-index.html",
+              "title": "Deferring Indexes"
+            },
+            {
+              "module": "guides",
+              "path": "delete.adoc",
+              "url": "/cloud/elixir/guides/delete.html",
+              "title": "Deleting Data with SQL++"
+            },
+            {
+              "module": "guides",
+              "path": "deleting-data.adoc",
+              "url": "/cloud/elixir/guides/deleting-data.html",
+              "title": "Deleting Data"
+            },
+            {
+              "module": "guides",
+              "path": "drop-index.adoc",
+              "url": "/cloud/elixir/guides/drop-index.html",
+              "title": "Dropping Indexes"
+            },
+            {
+              "module": "guides",
+              "path": "group-agg.adoc",
+              "url": "/cloud/elixir/guides/group-agg.html",
+              "title": "Grouping and Aggregation"
+            },
+            {
+              "module": "guides",
+              "path": "import.adoc",
+              "url": "/cloud/elixir/guides/import.html",
+              "title": "Importing Data"
+            },
+            {
+              "module": "guides",
+              "path": "index-advisor.adoc",
+              "url": "/cloud/elixir/guides/index-advisor.html",
+              "title": "Index Advisor"
+            },
+            {
+              "module": "guides",
+              "path": "indexes.adoc",
+              "url": "/cloud/elixir/guides/indexes.html",
+              "title": "Indexes"
+            },
+            {
+              "module": "guides",
+              "path": "insert.adoc",
+              "url": "/cloud/elixir/guides/insert.html",
+              "title": "Inserting Data with SQL++"
+            },
+            {
+              "module": "guides",
+              "path": "intro.adoc",
+              "url": "/cloud/elixir/guides/intro.html",
+              "title": "Developer Guides"
+            },
+            {
+              "module": "guides",
+              "path": "javascript-udfs.adoc",
+              "url": "/cloud/elixir/guides/javascript-udfs.html",
+              "title": "User-defined Functions with JavaScript"
+            },
+            {
+              "module": "guides",
+              "path": "join.adoc",
+              "url": "/cloud/elixir/guides/join.html",
+              "title": "Querying Across Relationships"
+            },
+            {
+              "module": "guides",
+              "path": "kv-operations.adoc",
+              "url": "/cloud/elixir/guides/kv-operations.html",
+              "title": "Key-Value Operations"
+            },
+            {
+              "module": "guides",
+              "path": "manipulate.adoc",
+              "url": "/cloud/elixir/guides/manipulate.html",
+              "title": "Data Manipulation Queries"
+            },
+            {
+              "module": "guides",
+              "path": "nest-unnest.adoc",
+              "url": "/cloud/elixir/guides/nest-unnest.html",
+              "title": "Nesting and Unnesting Documents"
+            },
+            {
+              "module": "guides",
+              "path": "optimize.adoc",
+              "url": "/cloud/elixir/guides/optimize.html",
+              "title": "Optimizing Performance"
+            },
+            {
+              "module": "guides",
+              "path": "place-index.adoc",
+              "url": "/cloud/elixir/guides/place-index.html",
+              "title": "Index Placement"
+            },
+            {
+              "module": "guides",
+              "path": "prep-statements.adoc",
+              "url": "/cloud/elixir/guides/prep-statements.html",
+              "title": "Prepared Statements"
+            },
+            {
+              "module": "guides",
+              "path": "query.adoc",
+              "url": "/cloud/elixir/guides/query.html",
+              "title": "Selection Queries"
+            },
+            {
+              "module": "guides",
+              "path": "reading-data.adoc",
+              "url": "/cloud/elixir/guides/reading-data.html",
+              "title": "Reading Data"
+            },
+            {
+              "module": "guides",
+              "path": "select-index.adoc",
+              "url": "/cloud/elixir/guides/select-index.html",
+              "title": "Selecting Indexes"
+            },
+            {
+              "module": "guides",
+              "path": "select.adoc",
+              "url": "/cloud/elixir/guides/select.html",
+              "title": "Selecting Data"
+            },
+            {
+              "module": "guides",
+              "path": "transactions.adoc",
+              "url": "/cloud/elixir/guides/transactions.html",
+              "title": "Couchbase Transactions"
+            },
+            {
+              "module": "guides",
+              "path": "update.adoc",
+              "url": "/cloud/elixir/guides/update.html",
+              "title": "Modifying Data with SQL++"
+            },
+            {
+              "module": "guides",
+              "path": "updating-data.adoc",
+              "url": "/cloud/elixir/guides/updating-data.html",
+              "title": "Updating Data"
+            },
+            {
               "alias": true,
               "module": "invpc",
               "path": "create-cluster.adoc",
@@ -979,6 +1177,13 @@
               "path": "index.adoc",
               "url": "/cloud/elixir/index.html",
               "title": "Welcome to Couchbase Capella"
+            },
+            {
+              "alias": true,
+              "module": "sdk",
+              "path": "development-intro.adoc",
+              "url": "/cloud/elixir/guides/kv-operations.html",
+              "title": "Key-Value Operations"
             },
             {
               "module": "security",
@@ -1673,7 +1878,7 @@
               "module": "guides",
               "path": "connect.adoc",
               "url": "/cloud/capella/guides/connect.html",
-              "title": "Connecting to Couchbase"
+              "title": "Connecting to Couchbase Capella"
             },
             {
               "module": "guides",
@@ -4864,7 +5069,7 @@
               "module": "guides",
               "path": "connect.adoc",
               "url": "/server/7.2/guides/connect.html",
-              "title": "Connecting to Couchbase"
+              "title": "Connecting to Couchbase Server"
             },
             {
               "module": "guides",

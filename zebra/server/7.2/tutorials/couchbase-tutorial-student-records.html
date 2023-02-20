@@ -115,7 +115,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-server/modules/tutorials/pages/couchbase-tutorial-student-records.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/tutorials/pages/couchbase-tutorial-student-records.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -313,9 +313,44 @@ You cannot store, for example, the enrollment records in the same table as the s
 <div class="paragraph">
 <p>The document model gives you the same decomposition advantages as the relational model, but additionally, it also supports complex types which allows for a much more flexible design.</p>
 </div>
-<div class="imageblock">
+<div class="literalblock">
 <div class="content">
-<img src="_images/student-collections.svg" alt="Bucket, scope and collections diagram for the studen record system">
+<pre>@startuml
+left to right direction
+
+
+    database "student-bucket" {
+
+        node "art-school-scope" {
+
+                folder "student-record-collection" {
+
+                    file  "Hilary's record" as hilary {
+                        file "enrollment details" as hilary_enrollment
+                    }
+
+                    file "Ashley's record" as ashley {
+                        file "enrollment details" as ashley_enrollment
+
+                    }
+
+                }
+
+                folder "course-record-collection" {
+
+                    file "ART-HISTORY-000001" as art_history
+                    file "GRAPHIC-DESIGN-000003" as graphic_design
+                    file "FINE_ART-000002" as fine_art
+                }
+
+                hilary_enrollment --&gt; art_history
+                hilary_enrollment --&gt; graphic_design
+                ashley_enrollment --&gt;fine_art
+        }
+
+    }
+
+@enduml</pre>
 </div>
 </div>
 <div class="paragraph">

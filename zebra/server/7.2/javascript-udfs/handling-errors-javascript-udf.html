@@ -108,7 +108,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/pages/handling-errors-javascript-udf.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/pages/handling-errors-javascript-udf.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -168,7 +168,6 @@
 <ul>
 <li class="crumb"><a href="../introduction/intro.html">Couchbase Server</a></li>
 <li class="crumb">Develop</li>
-<li class="crumb"><a href="../n1ql/query.html">Query</a></li>
 <li class="crumb"><a href="javascript-functions-with-couchbase.html">JavaScript Functions with Couchbase</a></li>
 <li class="crumb"><a href="handling-errors-javascript-udf.html">Handling Errors in Javascript Functions</a></li>
 </ul>
@@ -198,7 +197,7 @@ For example, if we execute a record insertion function with a key that already e
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sqlpp hljs" data-lang="sqlpp" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/execute-airline-function-with-date.n1ql">EXECUTE FUNCTION AddAirlineWithDate(1220, 'Raz Air', 'RAZ-AIR', 'United Kingdom');</code></pre>
+<pre class="highlightjs highlight"><code class="language-sqlpp hljs" data-lang="sqlpp" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/execute-airline-function-with-date.n1ql">EXECUTE FUNCTION AddAirlineWithDate(1220, 'Raz Air', 'RAZ-AIR', 'United Kingdom');</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -206,7 +205,7 @@ For example, if we execute a record insertion function with a key that already e
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/duplicate-key-error.json5">[
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/duplicate-key-error.json5">[
   {
     "code": 10109,
     "msg": "Error executing function 'AddAirlineWithDate' (MyLibrary:addAirlineWithDate)",
@@ -245,7 +244,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-with-check-return.js">function addAirlineWithCheckReturn(id, name, callsign, country) {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-with-check-return.js">function addAirlineWithCheckReturn(id, name, callsign, country) {
 
     const full_id = "airline_" + id   
     const d = new Date().toJSON();    
@@ -277,7 +276,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-with-check-failure-return-response.jsonc">[
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-with-check-failure-return-response.jsonc">[
   "failure"
 ]</code></pre>
 </div>
@@ -287,7 +286,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-with-check-throw.js">function addAirlineWithCheckThrow(id, name, callsign, country) {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-with-check-throw.js">function addAirlineWithCheckThrow(id, name, callsign, country) {
 
     const full_id = "airline_" + id   
     const d = new Date().toJSON();    
@@ -319,7 +318,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-with-check-failure-throw-response.jsonc">[
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-with-check-failure-throw-response.jsonc">[
   {
     "code": 10109,
     "msg": "Error executing function 'AddAirlineWithCheckThrow' (travel-sample/inventory/my-library:addAirlineWithCheckThrow)",
@@ -363,7 +362,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-with-check-throw-object.js">function addAirlineWithCheckThrowObject(id, name, callsign, country) {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-with-check-throw-object.js">function addAirlineWithCheckThrowObject(id, name, callsign, country) {
 
     const full_id = "airline_" + id   
     const d = new Date().toJSON();    
@@ -395,7 +394,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-with-check-failure-throw-object-response.jsonc">[
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-with-check-failure-throw-object-response.jsonc">[
   {
     "code": 10109,
     "msg": "Error executing function 'AddAirlineWithCheckThrowObject' (travel-sample/inventory/my-library:addAirlineWithCheckThrowObject)",
@@ -430,7 +429,7 @@ This gives the developer the option of responding with a more user-friendly mess
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-check-parse.js">function addAirlineWithCheck(id, name, callsign, country) {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-check-parse.js">function addAirlineWithCheck(id, name, callsign, country) {
 
     const full_id = "airline_" + id
     const d = new Date().toJSON();
@@ -470,7 +469,7 @@ This code will send back the entire message structure.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/parsed-error-in-full.json5">[
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/parsed-error-in-full.json5">[
   {
     "caller": "couchbase:2098",
     "cause": {
@@ -493,7 +492,7 @@ This code will send back the entire message structure.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-server/modules/javascript-udfs/examples/add-airline-parse-check-2.js">function addAirlineWithCheck(id, name, callsign, country) {
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/javascript-udfs/examples/add-airline-parse-check-2.js">function addAirlineWithCheck(id, name, callsign, country) {
 
     const full_id = "airline_" + id
     const d = new Date().toJSON();

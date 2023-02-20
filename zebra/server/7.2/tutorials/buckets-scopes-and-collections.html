@@ -117,7 +117,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-server/modules/tutorials/pages/buckets-scopes-and-collections.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/tutorials/pages/buckets-scopes-and-collections.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -228,14 +228,55 @@ In this section, you&#8217;ll learn how to logically partition your data in Couc
 <p>In all but the simplest cases, it&#8217;s better to provide some kind of separation between documents of different types.
 Couchbase has a simple hierarchy model which allows for such separation:</p>
 </div>
-<div class="imageblock">
+<div class="literalblock">
 <div class="content">
-<img src="_images/couchbase-hierarchy-diagram.png" alt="Couchbase data hierarchy">
+<pre>@startuml
+
+node "Couchbase cluster" as cluster
+
+database "Bucket" as bucket
+
+rectangle "Scope" as scope
+
+folder "Collection" as collection
+
+
+
+file "Document 1" as document1
+file "Document 2" as document2
+file "Document 3" as document3
+
+cluster --&gt; bucket
+bucket --&gt; scope
+scope --&gt; collection
+collection --&gt; document1
+collection --&gt; document2
+collection --&gt; document3
+
+note right of bucket
+
+ Maximum of  30 per cluster
+ 
+end note
+
+note left of scope
+
+  Maximum of 1000 per cluster
+  
+end note
+
+note right of collection
+
+  Maximum of 1000 per cluster
+  
+end note
+
+@enduml</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You&#8217;re already familiar with <code>clusters</code>, <code>nodes</code> and <code>buckets</code>.
-Inside a bucket you can also have any number of <code>scopes</code>, and inside a <code>scope</code> you can have any number of <code>collections</code>.</p>
+<p>You&#8217;re already familiar with clusters, nodes, and buckets.
+Inside a bucket you can also have any number of <em>scopes</em>, and inside a scope you can have any number of <em>collections</em>.</p>
 </div>
 <div class="paragraph">
 <p></p>
@@ -257,7 +298,8 @@ You can use the default scope to store</p>
 <strong>collections</strong>
 </td>
 <td class="hdlist2">
-<p>a collection can contain a set of  documents. A default collection (<code>_default</code>) is provided, but it is recommended that you create your own collection named to reflect the documents store inside it.</p>
+<p>a collection can contain a set of documents.
+A default collection (<code>_default</code>) is provided, but it is recommended that you create your own collection named to reflect the documents store inside it.</p>
 </td>
 </tr>
 </table>
@@ -306,9 +348,44 @@ course --o{ enrollment
 <div class="paragraph">
 <p>We can see that our equivalent document-based system could do with a little decomposition:</p>
 </div>
-<div class="imageblock">
+<div class="literalblock">
 <div class="content">
-<img src="_images/student-collections.svg" alt="Bucket, scope and collections diagram for the studen record system">
+<pre>@startuml
+left to right direction
+
+
+    database "student-bucket" {
+
+        node "art-school-scope" {
+
+                folder "student-record-collection" {
+
+                    file  "Hilary's record" as hilary {
+                        file "enrollment details" as hilary_enrollment
+                    }
+
+                    file "Ashley's record" as ashley {
+                        file "enrollment details" as ashley_enrollment
+
+                    }
+
+                }
+
+                folder "course-record-collection" {
+
+                    file "ART-HISTORY-000001" as art_history
+                    file "GRAPHIC-DESIGN-000003" as graphic_design
+                    file "FINE_ART-000002" as fine_art
+                }
+
+                hilary_enrollment --&gt; art_history
+                hilary_enrollment --&gt; graphic_design
+                ashley_enrollment --&gt;fine_art
+        }
+
+    }
+
+@enduml</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -359,7 +436,7 @@ This is why the document model and relational model are used in conjunction to g
 </table>
 </div>
 <div class="paragraph">
-<p>Now that you understand the basics of scopes and collections, return to your admininstration screen so we can add
+<p>Now that you understand the basics of scopes and collections, return to your administration screen so we can add
 them to your bucket.</p>
 </div>
 <div class="sect2">

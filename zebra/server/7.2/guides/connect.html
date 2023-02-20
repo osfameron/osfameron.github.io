@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script>(window.dataLayer=window.dataLayer||[]).push({event:'gtm.js','gtm.start':+new Date()})</script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MVPNN2"></script>
-<title>Connecting to Couchbase | Couchbase Capella Staging Docs</title>
+<title>Connecting to Couchbase Server | Couchbase Capella Staging Docs</title>
 <link rel="stylesheet" href="../../../_/css/site.css">
 <script src="../../../_/js/vendor/jquery.js"></script>
 <meta name="description" content="How to connect to a Couchbase Cluster.">
@@ -169,13 +169,13 @@
 <li class="crumb"><a href="../introduction/intro.html">Couchbase Server</a></li>
 <li class="crumb">Develop</li>
 <li class="crumb"><a href="intro.html">Developer Guides</a></li>
-<li class="crumb"><a href="connect.html">Connecting to Couchbase</a></li>
+<li class="crumb"><a href="connect.html">Connecting to Couchbase Server</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Connecting to Couchbase</h1>
+<h1 class="page">Connecting to Couchbase Server</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
@@ -185,7 +185,13 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-How to connect to a Couchbase Cluster.
+<div class="paragraph">
+<p>How to connect to a Couchbase Cluster.<br>
+This
+guide
+is for Couchbase Server.
+For Couchbase Capella, see <a href="../../../cloud/elixir/guides/connect.html" class="xref page">Connecting to Couchbase Capella</a>.</p>
+</div>
 </blockquote>
 </div>
 </div>
@@ -286,23 +292,42 @@ macOS
 </div>
 </div>
 <div class="sect1">
-<h2 id="connecting-to-couchbase-server"><a class="anchor" href="#connecting-to-couchbase-server"></a>Connecting to Couchbase Server</h2>
+<h2 id="connecting-via-the-web-console"><a class="anchor" href="#connecting-via-the-web-console"></a>Connecting via the Web Console</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To access a cluster via the Couchbase Server Web Console over an <em>unencrypted</em> connection, navigate to the Web Console address with your browser (by default, <code>http://localhost:8091</code>) and enter your credentials.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/login.png" alt="The Couchbase Admin">
+</div>
+</div>
+<div class="paragraph">
+<p>See <a href="../manage/manage-ui/manage-ui.html#authenticating-with-the-console" class="xref page">Authenticating with the Console</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p>To access a cluster via the Couchbase Server Web Console over an <em>encrypted</em> connection, navigate to the secure Web Console address with your browser (by default, <code>https://localhost:18091</code>) and enter your credentials.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="../manage/manage-security/manage-console-access.html" class="xref page">Manage Console Access</a> for more information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="connecting-via-client"><a class="anchor" href="#connecting-via-client"></a>Connecting via Client</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Couchbase Server can be configured to run with <em>unencrypted</em> or <em>encrypted</em> network access.
 When running Couchbase in a production environment, the latter is always recommended.</p>
 </div>
 <div class="sect2">
-<h3 id="basic-auth"><a class="anchor" href="#basic-auth"></a>Basic Auth</h3>
+<h3 id="basic-auth"><a class="anchor" href="#basic-auth"></a>Basic Authentication</h3>
 <div class="paragraph">
 <p>To connect to a standalone or Docker installation with <em>unencrypted</em> network access, set up a user with <a href="../learn/security/roles.html" class="xref page">appropriate access levels</a> and a secure password.</p>
 </div>
 <div class="tabset is-loading">
 <div class="ulist tabs">
 <ul>
-<li>
-<p><a id="tabset1_web-console"></a>Web Console</p>
-</li>
 <li>
 <p><a id="tabset1_cbc"></a>cbc</p>
 </li>
@@ -321,19 +346,6 @@ When running Couchbase in a production environment, the latter is always recomme
 </ul>
 </div>
 <div class="content">
-<div class="tab-pane" aria-labelledby="tabset1_web-console">
-<div class="paragraph">
-<p>To access a cluster via the Couchbase Server Web Console over an <em>unencrypted</em> connection, navigate to the Web Console address with your browser (by default, <code>localhost:8091</code>) and enter your credentials.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/login.png" alt="The Couchbase Admin">
-</div>
-</div>
-<div class="paragraph">
-<p>See <a href="../manage/manage-ui/manage-ui.html#authenticating-with-the-console" class="xref page">Authenticating with the Console</a> for more information.</p>
-</div>
-</div>
 <div class="tab-pane" aria-labelledby="tabset1_cbc">
 <div class="paragraph">
 <p>Most <code>cbc</code> sub-commands will require some form of authentication to access a cluster or perform operations on data within a bucket.</p>
@@ -516,7 +528,7 @@ If the user credentials provided are invalid, the SDK will return a <code>Authen
 </div>
 </div>
 <div class="sect2">
-<h3 id="tls"><a class="anchor" href="#tls"></a>TLS</h3>
+<h3 id="tls"><a class="anchor" href="#tls"></a>TLS Authentication</h3>
 <div class="paragraph">
 <p>To connect to a cluster configured with TLS (Transport Layer Security), for <em>encrypted</em> network access, you must supply an <a href="../learn/security/certificates.html" class="xref page">X.509 certificate</a>.
 Before using X.509 certificate based authentication, you should run through the following:</p>
@@ -535,9 +547,6 @@ Before using X.509 certificate based authentication, you should run through the 
 <div class="ulist tabs">
 <ul>
 <li>
-<p><a id="tabset2_web-console"></a>Web Console</p>
-</li>
-<li>
 <p><a id="tabset2_cbc"></a>cbc</p>
 </li>
 <li>
@@ -555,19 +564,6 @@ Before using X.509 certificate based authentication, you should run through the 
 </ul>
 </div>
 <div class="content">
-<div class="tab-pane" aria-labelledby="tabset2_web-console">
-<div class="paragraph">
-<p>To access a cluster via the Couchbase Server Web Console over an <em>encrypted</em> connection, navigate to the secure Web Console address with your browser (by default, <code><a href="https://localhost:18091" class="bare">https://localhost:18091</a></code>) and enter your credentials.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/login.png" alt="The Couchbase Admin">
-</div>
-</div>
-<div class="paragraph">
-<p>See <a href="../manage/manage-security/manage-console-access.html" class="xref page">Manage Console Access</a> for more information.</p>
-</div>
-</div>
 <div class="tab-pane" aria-labelledby="tabset2_cbc">
 <div class="olist arabic">
 <ol class="arabic">
@@ -722,191 +718,6 @@ Before using X.509 certificate based authentication, you should run through the 
 </div>
 </div>
 <div class="sect1">
-<h2 id="connecting-to-couchbase-capella"><a class="anchor" href="#connecting-to-couchbase-capella"></a>Connecting to Couchbase Capella</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To connect to the database via Couchbase Capella, create a valid account and set up some <a href="#cloud:get-started:cluster-and-data.adoc#credentials" class="xref unresolved">database credentials</a>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/capella-security-cert.png" alt="The Security Certificate">
-</div>
-</div>
-<div class="paragraph">
-<p>Download a security certificate to <a href="#cloud:get-started:cluster-and-data.adoc#connect" class="xref unresolved">connect</a> an SDK or CLI client to Capella.</p>
-</div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset3_web-console"></a>Web Console</p>
-</li>
-<li>
-<p><a id="tabset3_cbc"></a>cbc</p>
-</li>
-<li>
-<p><a id="tabset3_net"></a>.NET</p>
-</li>
-<li>
-<p><a id="tabset3_java"></a>Java</p>
-</li>
-<li>
-<p><a id="tabset3_node-js"></a>Node.js</p>
-</li>
-<li>
-<p><a id="tabset3_python"></a>Python</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset3_web-console">
-<div class="paragraph">
-<p>Navigate to <a href="https://cloud.couchbase.com/login" class="bare">https://cloud.couchbase.com/login</a> to access the Capella Web Console.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/capella-login.png" alt="The Couchbase Capella Login">
-</div>
-</div>
-<div class="paragraph">
-<p>See <a href="#cloud:get-started:cluster-and-data.adoc" class="xref unresolved">Cluster and Data</a> for more information.</p>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset3_cbc">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>To connect to Couchbase Capella using <code>cbc</code>, pass <code>-u</code> for the username, <code>-P</code> for the password and <code>-U</code> for the connection URL immediately after a sub-command.</p>
-</li>
-<li>
-<p>Provide the bucket name required in the connection URL (i.e., cb.&lt;your endpoint address&gt;.dp.cloud.couchbase.com/&lt;bucket-name&gt;).</p>
-</li>
-</ol>
-</div>
-<hr>
-<div class="paragraph">
-<p>The example below connects to a bucket on Couchbase Capella with a client certificate, and performs a <code>ping</code> to check what services are running.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell" data-source-url="file:///Users/hakimcassimally/couchbase/docs-devex/docs-devex//modules/guides/examples/connect/connect-cbc.sh#L16-L19">cbc ping -u username -P "passworD#1" \
-	-U "couchbases://cb.oawlpi4audpc6jp5.cloud.couchbase.com/travel-sample?certpath=cert.pem" \
-	--count=1 \
-	--table</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Result</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">-----------------------------------------------------------------------------------------------------------------------------------
-| type  | id             | status | latency, us | remote                                                      | local             |
------------------------------------------------------------------------------------------------------------------------------------
-| fts   | 0x7fecf9407a70 | ok     |      198657 | evb8loulphaibjnn.oawlpi4audpc6jp5.cloud.couchbase.com:18094 | 172.20.10.6:54394 |
-| kv    | 0x7fecfb00d110 | ok     |       69737 | evb8loulphaibjnn.oawlpi4audpc6jp5.cloud.couchbase.com:11207 | 172.20.10.6:54391 |
-| n1ql  | 0x7fecfb0110f0 | ok     |      210735 | evb8loulphaibjnn.oawlpi4audpc6jp5.cloud.couchbase.com:18093 | 172.20.10.6:54392 |
-| views | 0x7fecf961e2e0 | ok     |      330057 | evb8loulphaibjnn.oawlpi4audpc6jp5.cloud.couchbase.com:18092 | 172.20.10.6:54393 |
------------------------------------------------------------------------------------------------------------------------------------</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>For further details, refer to <a href="https://docs.couchbase.com/sdk-api/couchbase-c-client/md_doc_cbc.html" target="_blank" rel="noopener">cbc(1)</a>.</p>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset3_net">
-<div class="paragraph">
-<p>Call the <code>Cluster.ConnectAsync()</code> method with a Couchbase Capella endpoint, username, password, and client certificate.</p>
-</div>
-<hr>
-<div class="paragraph">
-<p>The example below connects to a Couchbase Capella instance over a secure connection with a client certificate.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">Unresolved include directive in modules/guides/pages/connect.adoc - include::dotnet-sdk:devguide:example$dotnet/Cloud.cs[]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <span class="icon"><i class="fa fa-github"></i></span> View button to see this code in context.</p>
-</div>
-<div class="paragraph">
-<p>For further details, refer to <a href="https://docs.couchbase.com/sdk-api/couchbase-net-client/api/Couchbase.Cluster.html" target="_blank" rel="noopener">Cluster</a>.</p>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset3_java">
-<div class="paragraph">
-<p>Call the <code>Cluster.connect()</code> method method with a Couchbase Capella endpoint, username, password, and client certificate.</p>
-</div>
-<hr>
-<div class="paragraph">
-<p>The example below connects to a Couchbase Capella instance over a secure connection with a client certificate.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved include directive in modules/guides/pages/connect.adoc - include::java-sdk:devguide:example$Cloud.java[]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <span class="icon"><i class="fa fa-github"></i></span> View button to see this code in context.</p>
-</div>
-<div class="paragraph">
-<p>For further details, refer to <a href="https://docs.couchbase.com/sdk-api/couchbase-java-client/com/couchbase/client/java/Cluster.html" target="_blank" rel="noopener">Cluster</a>.</p>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset3_node-js">
-<div class="paragraph">
-<p>Call the <code>connect()</code> function with a Couchbase Capella endpoint, and a <code>ConnectOptions</code> object containing the username, password and client certificate.</p>
-</div>
-<hr>
-<div class="paragraph">
-<p>The example below connects to a Couchbase Capella instance over a secure connection with a client certificate.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-nodejs hljs" data-lang="nodejs">Unresolved include directive in modules/guides/pages/connect.adoc - include::nodejs-sdk:devguide:example$nodejs/cloud.js[]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <span class="icon"><i class="fa fa-github"></i></span> View button to see this code in context.</p>
-</div>
-<div class="paragraph">
-<p>For further details, refer to <a href="https://docs.couchbase.com/sdk-api/couchbase-node-client/classes/Cluster.html" target="_blank" rel="noopener">Cluster</a>.</p>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset3_python">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Call the <code>Cluster.connect()</code> function with a Couchbase Capella endpoint, and a <code>ClusterOptions</code> object containing a <code>PasswordAutheticator</code>.</p>
-</li>
-<li>
-<p>Provide a username and password to the <code>PasswordAutheticator</code>.</p>
-</li>
-<li>
-<p>Provide a client certificate path to the <code>PasswordAutheticator</code>.</p>
-</li>
-</ol>
-</div>
-<hr>
-<div class="paragraph">
-<p>The example below connects to a Couchbase Capella instance over a secure connection with a client certificate.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">Unresolved include directive in modules/guides/pages/connect.adoc - include::python-sdk:hello-world:example$cloud.py[]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Click the <span class="icon"><i class="fa fa-github"></i></span> View button to see this code in context.</p>
-</div>
-<div class="paragraph">
-<p>For further details, refer to <a href="https://docs.couchbase.com/sdk-api/couchbase-python-client/api/couchbase.html#cluster-object" target="_blank" rel="noopener">Cluster</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="related-links"><a class="anchor" href="#related-links"></a>Related Links</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -921,7 +732,7 @@ Before using X.509 certificate based authentication, you should run through the 
 <p><a href="../learn/clusters-and-availability/clusters-and-availability.html" class="xref page">Clusters and Availability</a></p>
 </li>
 <li>
-<p><a href="../../../cloud/elixir/get-started/connect-to-cluster.html" class="xref page">Couchbase Capella</a></p>
+<p><a href="../manage/manage-security/security-management-overview.html" class="xref page">Manage Security</a></p>
 </li>
 </ul>
 </div>
