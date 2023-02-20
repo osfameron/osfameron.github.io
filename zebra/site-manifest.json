@@ -1,2481 +1,2481 @@
 {
   "version": 3,
-  "generated": 1676915270639,
+  "generated": 1676915690620,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
       "name": "cloud",
       "title": "Couchbase Capella",
-      "latest": "elixir",
+      "latest": "serverless",
       "versions": [
         {
-          "version": "elixir",
+          "version": "serverless",
           "displayVersion": "Capella Serverless (Elixir)",
-          "url": "/cloud/elixir/index.html",
+          "url": "/cloud/serverless/index.html",
           "pages": [
             {
               "alias": true,
               "module": "app-services",
               "path": "app-endpoint.adoc",
-              "url": "/cloud/elixir/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/serverless/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "module": "app-services",
               "path": "billing/billing.adoc",
-              "url": "/cloud/elixir/app-services/billing/billing.html",
+              "url": "/cloud/serverless/app-services/billing/billing.html",
               "title": "Billing"
             },
             {
               "module": "app-services",
               "path": "channels/channels.adoc",
-              "url": "/cloud/elixir/app-services/channels/channels.html",
+              "url": "/cloud/serverless/app-services/channels/channels.html",
               "title": "Channels"
             },
             {
               "module": "app-services",
               "path": "connect/connect-apps-to-endpoint.adoc",
-              "url": "/cloud/elixir/app-services/connect/connect-apps-to-endpoint.html",
+              "url": "/cloud/serverless/app-services/connect/connect-apps-to-endpoint.html",
               "title": "Connecting your Apps to an App Endpoint"
             },
             {
               "alias": true,
               "module": "app-services",
               "path": "controlling-app-endpoints.adoc",
-              "url": "/cloud/elixir/app-services/deployment/configuring-app-endpoints.html",
+              "url": "/cloud/serverless/app-services/deployment/configuring-app-endpoints.html",
               "title": "Configuring App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/access-control-data-validation.adoc",
-              "url": "/cloud/elixir/app-services/deployment/access-control-data-validation.html",
+              "url": "/cloud/serverless/app-services/deployment/access-control-data-validation.html",
               "title": "Access Control and Data Validation for App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/accessing-admin-apis.adoc",
-              "url": "/cloud/elixir/app-services/deployment/accessing-admin-apis.html",
+              "url": "/cloud/serverless/app-services/deployment/accessing-admin-apis.html",
               "title": "Granting Admin Access to REST APIs"
             },
             {
               "alias": true,
               "module": "app-services",
               "path": "deployment/configure-app-endpoint.adoc",
-              "url": "/cloud/elixir/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/serverless/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/configuring-app-endpoints.adoc",
-              "url": "/cloud/elixir/app-services/deployment/configuring-app-endpoints.html",
+              "url": "/cloud/serverless/app-services/deployment/configuring-app-endpoints.html",
               "title": "Configuring App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/creating-an-app-endpoint.adoc",
-              "url": "/cloud/elixir/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/serverless/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/creating-an-app-service.adoc",
-              "url": "/cloud/elixir/app-services/deployment/creating-an-app-service.html",
+              "url": "/cloud/serverless/app-services/deployment/creating-an-app-service.html",
               "title": "Creating an App Service"
             },
             {
               "module": "app-services",
               "path": "deployment/scaling-a-deployed-app-service.adoc",
-              "url": "/cloud/elixir/app-services/deployment/scaling-a-deployed-app-service.html",
+              "url": "/cloud/serverless/app-services/deployment/scaling-a-deployed-app-service.html",
               "title": "Scaling a Deployed App Service"
             },
             {
               "module": "app-services",
               "path": "index.adoc",
-              "url": "/cloud/elixir/app-services/index.html",
+              "url": "/cloud/serverless/app-services/index.html",
               "title": "App Services"
             },
             {
               "module": "app-services",
               "path": "migrating/on-prem-to-capella.adoc",
-              "url": "/cloud/elixir/app-services/migrating/on-prem-to-capella.html",
+              "url": "/cloud/serverless/app-services/migrating/on-prem-to-capella.html",
               "title": "Migrating Existing Self-Managed Couchbase Mobile Clusters to App Services"
             },
             {
               "module": "app-services",
               "path": "monitoring/monitoring-app-endpoints.adoc",
-              "url": "/cloud/elixir/app-services/monitoring/monitoring-app-endpoints.html",
+              "url": "/cloud/serverless/app-services/monitoring/monitoring-app-endpoints.html",
               "title": "Monitoring App Endpoints"
             },
             {
               "module": "app-services",
               "path": "monitoring/monitoring-app-services.adoc",
-              "url": "/cloud/elixir/app-services/monitoring/monitoring-app-services.html",
+              "url": "/cloud/serverless/app-services/monitoring/monitoring-app-services.html",
               "title": "Monitoring App Services"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/generated/rest-api-admin/index.adoc",
-              "url": "/cloud/elixir/app-services/references/assets/rest/generated/rest-api-admin/index.html",
+              "url": "/cloud/serverless/app-services/references/assets/rest/generated/rest-api-admin/index.html",
               "title": "{SGW}"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/generated/rest-api-metrics/index.adoc",
-              "url": "/cloud/elixir/app-services/references/assets/rest/generated/rest-api-metrics/index.html",
+              "url": "/cloud/serverless/app-services/references/assets/rest/generated/rest-api-metrics/index.html",
               "title": "{SGW}"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/generated/rest-api-public/index.adoc",
-              "url": "/cloud/elixir/app-services/references/assets/rest/generated/rest-api-public/index.html",
+              "url": "/cloud/serverless/app-services/references/assets/rest/generated/rest-api-public/index.html",
               "title": "{SGW}"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/override/asciidoc/stubs/empty.adoc",
-              "url": "/cloud/elixir/app-services/references/assets/rest/override/asciidoc/stubs/empty.html"
+              "url": "/cloud/serverless/app-services/references/assets/rest/override/asciidoc/stubs/empty.html"
             },
             {
               "module": "app-services",
               "path": "references/rest_api_admin_static.adoc",
-              "url": "/cloud/elixir/app-services/references/rest_api_admin_static.html",
+              "url": "/cloud/serverless/app-services/references/rest_api_admin_static.html",
               "title": "Admin REST API"
             },
             {
               "module": "app-services",
               "path": "references/rest_api_metrics_static.adoc",
-              "url": "/cloud/elixir/app-services/references/rest_api_metrics_static.html",
+              "url": "/cloud/serverless/app-services/references/rest_api_metrics_static.html",
               "title": "Metrics REST API"
             },
             {
               "module": "app-services",
               "path": "references/rest_api_public_static.adoc",
-              "url": "/cloud/elixir/app-services/references/rest_api_public_static.html",
+              "url": "/cloud/serverless/app-services/references/rest_api_public_static.html",
               "title": "Public REST API"
             },
             {
               "module": "app-services",
               "path": "references/rest-api-introduction.adoc",
-              "url": "/cloud/elixir/app-services/references/rest-api-introduction.html",
+              "url": "/cloud/serverless/app-services/references/rest-api-introduction.html",
               "title": "Secure Access through the REST API"
             },
             {
               "module": "app-services",
               "path": "user-management/create-app-role.adoc",
-              "url": "/cloud/elixir/app-services/user-management/create-app-role.html",
+              "url": "/cloud/serverless/app-services/user-management/create-app-role.html",
               "title": "Creating App Roles"
             },
             {
               "module": "app-services",
               "path": "user-management/create-user.adoc",
-              "url": "/cloud/elixir/app-services/user-management/create-user.html",
+              "url": "/cloud/serverless/app-services/user-management/create-user.html",
               "title": "App User Administration"
             },
             {
               "module": "app-services",
               "path": "user-management/set-up-authentication-provider.adoc",
-              "url": "/cloud/elixir/app-services/user-management/set-up-authentication-provider.html",
+              "url": "/cloud/serverless/app-services/user-management/set-up-authentication-provider.html",
               "title": "Setting up an Authentication Provider"
             },
             {
               "module": "azure-cloud",
               "path": "azure-cloud-connection-prerequisites.adoc",
-              "url": "/cloud/elixir/azure-cloud/azure-cloud-connection-prerequisites.html",
+              "url": "/cloud/serverless/azure-cloud/azure-cloud-connection-prerequisites.html",
               "title": "Couchbase Capella: Azure Cloud Connection Prerequisites"
             },
             {
               "module": "billing",
               "path": "billing.adoc",
-              "url": "/cloud/elixir/billing/billing.html",
+              "url": "/cloud/serverless/billing/billing.html",
               "title": "Billing Overview"
             },
             {
               "module": "billing",
               "path": "change-support-plan.adoc",
-              "url": "/cloud/elixir/billing/change-support-plan.html",
+              "url": "/cloud/serverless/billing/change-support-plan.html",
               "title": "Change a Database&#8217;s Plan and Support Timezone"
             },
             {
               "module": "billing",
               "path": "manage-billing.adoc",
-              "url": "/cloud/elixir/billing/manage-billing.html",
+              "url": "/cloud/serverless/billing/manage-billing.html",
               "title": "Manage Billing Information"
             },
             {
               "module": "billing",
               "path": "upgrade-account.adoc",
-              "url": "/cloud/elixir/billing/upgrade-account.html",
+              "url": "/cloud/serverless/billing/upgrade-account.html",
               "title": "Upgrade Your Account"
             },
             {
               "module": "clouds",
               "path": "cloud-providers.adoc",
-              "url": "/cloud/elixir/clouds/cloud-providers.html"
+              "url": "/cloud/serverless/clouds/cloud-providers.html"
             },
             {
               "module": "clouds",
               "path": "connect-an-sdk.adoc",
-              "url": "/cloud/elixir/clouds/connect-an-sdk.html",
+              "url": "/cloud/serverless/clouds/connect-an-sdk.html",
               "title": "Connect Your SDK"
             },
             {
               "module": "clouds",
               "path": "get-capella-host-name.adoc",
-              "url": "/cloud/elixir/clouds/get-capella-host-name.html",
+              "url": "/cloud/serverless/clouds/get-capella-host-name.html",
               "title": "Get the Capella Host Name"
             },
             {
               "module": "clouds",
               "path": "private-network.adoc",
-              "url": "/cloud/elixir/clouds/private-network.html",
+              "url": "/cloud/serverless/clouds/private-network.html",
               "title": "Configure a Private Network"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "activity-explorer.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/activity-log.html",
+              "url": "/cloud/serverless/clusters/monitoring/activity-log.html",
               "title": "Activity Log"
             },
             {
               "module": "clusters",
               "path": "allow-ip-address.adoc",
-              "url": "/cloud/elixir/clusters/allow-ip-address.html",
+              "url": "/cloud/serverless/clusters/allow-ip-address.html",
               "title": "Configure Allowed IP Addresses"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-links.adoc",
-              "url": "/cloud/elixir/clusters/analytics-service/analytics-links.html",
+              "url": "/cloud/serverless/clusters/analytics-service/analytics-links.html",
               "title": "Analytics Links"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-monitor.adoc",
-              "url": "/cloud/elixir/clusters/analytics-service/analytics-monitor.html",
+              "url": "/cloud/serverless/clusters/analytics-service/analytics-monitor.html",
               "title": "Analytics Monitor"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-service.adoc",
-              "url": "/cloud/elixir/clusters/analytics-service/analytics-service.html",
+              "url": "/cloud/serverless/clusters/analytics-service/analytics-service.html",
               "title": "Analytics Service"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-workbench.adoc",
-              "url": "/cloud/elixir/clusters/analytics-service/analytics-workbench.html",
+              "url": "/cloud/serverless/clusters/analytics-service/analytics-workbench.html",
               "title": "Analytics Workbench"
             },
             {
               "module": "clusters",
               "path": "backup-restore.adoc",
-              "url": "/cloud/elixir/clusters/backup-restore.html",
+              "url": "/cloud/serverless/clusters/backup-restore.html",
               "title": "Backup and Restore Data"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "clusters.adoc",
-              "url": "/cloud/elixir/clusters/databases.html",
+              "url": "/cloud/serverless/clusters/databases.html",
               "title": "Databases Overview"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "connect-self-managed-cluster.adoc",
-              "url": "/cloud/elixir/invpc/invpc-create-cluster.html",
+              "url": "/cloud/serverless/invpc/invpc-create-cluster.html",
               "title": "Create a Cluster"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "create-cluster.adoc",
-              "url": "/cloud/elixir/clusters/create-database.html",
+              "url": "/cloud/serverless/clusters/create-database.html",
               "title": "Create a Database"
             },
             {
               "module": "clusters",
               "path": "create-database.adoc",
-              "url": "/cloud/elixir/clusters/create-database.html",
+              "url": "/cloud/serverless/clusters/create-database.html",
               "title": "Create a Database"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "create-replication.adoc",
-              "url": "/cloud/elixir/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/serverless/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "clusters",
               "path": "data-service/data-service.adoc",
-              "url": "/cloud/elixir/clusters/data-service/data-service.html",
+              "url": "/cloud/serverless/clusters/data-service/data-service.html",
               "title": "Data Service"
             },
             {
               "module": "clusters",
               "path": "data-service/import-data-documents.adoc",
-              "url": "/cloud/elixir/clusters/data-service/import-data-documents.html",
+              "url": "/cloud/serverless/clusters/data-service/import-data-documents.html",
               "title": "Import Data"
             },
             {
               "module": "clusters",
               "path": "data-service/manage-buckets.adoc",
-              "url": "/cloud/elixir/clusters/data-service/manage-buckets.html",
+              "url": "/cloud/serverless/clusters/data-service/manage-buckets.html",
               "title": "Manage Buckets"
             },
             {
               "module": "clusters",
               "path": "data-service/manage-documents.adoc",
-              "url": "/cloud/elixir/clusters/data-service/manage-documents.html",
+              "url": "/cloud/serverless/clusters/data-service/manage-documents.html",
               "title": "Manage Documents"
             },
             {
               "module": "clusters",
               "path": "data-service/scopes-collections.adoc",
-              "url": "/cloud/elixir/clusters/data-service/scopes-collections.html",
+              "url": "/cloud/serverless/clusters/data-service/scopes-collections.html",
               "title": "Manage Scopes and Collections"
             },
             {
               "module": "clusters",
               "path": "data-service/storage-engines.adoc",
-              "url": "/cloud/elixir/clusters/data-service/storage-engines.html",
+              "url": "/cloud/serverless/clusters/data-service/storage-engines.html",
               "title": "Storage Engines"
             },
             {
               "module": "clusters",
               "path": "databases.adoc",
-              "url": "/cloud/elixir/clusters/databases.html",
+              "url": "/cloud/serverless/clusters/databases.html",
               "title": "Databases Overview"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "delete-cluster.adoc",
-              "url": "/cloud/elixir/clusters/delete-database.html",
+              "url": "/cloud/serverless/clusters/delete-database.html",
               "title": "Delete a Database"
             },
             {
               "module": "clusters",
               "path": "delete-database.adoc",
-              "url": "/cloud/elixir/clusters/delete-database.html",
+              "url": "/cloud/serverless/clusters/delete-database.html",
               "title": "Delete a Database"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "delete-replication.adoc",
-              "url": "/cloud/elixir/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/serverless/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "document-inspector.adoc",
-              "url": "/cloud/elixir/clusters/data-service/manage-documents.html",
+              "url": "/cloud/serverless/clusters/data-service/manage-documents.html",
               "title": "Manage Documents"
             },
             {
               "module": "clusters",
               "path": "eventing-service/eventing-service.adoc",
-              "url": "/cloud/elixir/clusters/eventing-service/eventing-service.html",
+              "url": "/cloud/serverless/clusters/eventing-service/eventing-service.html",
               "title": "Eventing Service"
             },
             {
               "module": "clusters",
               "path": "eventing-service/manage-functions.adoc",
-              "url": "/cloud/elixir/clusters/eventing-service/manage-functions.html",
+              "url": "/cloud/serverless/clusters/eventing-service/manage-functions.html",
               "title": "Manage Eventing Functions and Settings"
             },
             {
               "module": "clusters",
               "path": "index-service/index-service.adoc",
-              "url": "/cloud/elixir/clusters/index-service/index-service.html",
+              "url": "/cloud/serverless/clusters/index-service/index-service.html",
               "title": "Index Service"
             },
             {
               "module": "clusters",
               "path": "index-service/manage-indexes.adoc",
-              "url": "/cloud/elixir/clusters/index-service/manage-indexes.html",
+              "url": "/cloud/serverless/clusters/index-service/manage-indexes.html",
               "title": "Manage Indexes"
             },
             {
               "module": "clusters",
               "path": "manage-backup.adoc",
-              "url": "/cloud/elixir/clusters/manage-backup.html",
+              "url": "/cloud/serverless/clusters/manage-backup.html",
               "title": "Manage Backups"
             },
             {
               "module": "clusters",
               "path": "manage-database-users.adoc",
-              "url": "/cloud/elixir/clusters/manage-database-users.html",
+              "url": "/cloud/serverless/clusters/manage-database-users.html",
               "title": "Configure Database Credentials"
             },
             {
               "module": "clusters",
               "path": "manage-restore.adoc",
-              "url": "/cloud/elixir/clusters/manage-restore.html",
+              "url": "/cloud/serverless/clusters/manage-restore.html",
               "title": "Restore a Backup"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "modify-cluster.adoc",
-              "url": "/cloud/elixir/clusters/modify-database.html",
+              "url": "/cloud/serverless/clusters/modify-database.html",
               "title": "Modify a Database"
             },
             {
               "module": "clusters",
               "path": "modify-database.adoc",
-              "url": "/cloud/elixir/clusters/modify-database.html",
+              "url": "/cloud/serverless/clusters/modify-database.html",
               "title": "Modify a Database"
             },
             {
               "module": "clusters",
               "path": "monitoring/activity-log.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/activity-log.html",
+              "url": "/cloud/serverless/clusters/monitoring/activity-log.html",
               "title": "Activity Log"
             },
             {
               "module": "clusters",
               "path": "monitoring/alerts.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/alerts.html",
+              "url": "/cloud/serverless/clusters/monitoring/alerts.html",
               "title": "Alerts &amp; Notifications"
             },
             {
               "module": "clusters",
               "path": "monitoring/metrics-dashboard.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/metrics-dashboard.html",
+              "url": "/cloud/serverless/clusters/monitoring/metrics-dashboard.html",
               "title": "Database Metrics"
             },
             {
               "module": "clusters",
               "path": "monitoring/monitoring.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/monitoring.html",
+              "url": "/cloud/serverless/clusters/monitoring/monitoring.html",
               "title": "Monitoring Overview"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "pause-replication.adoc",
-              "url": "/cloud/elixir/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/serverless/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "clusters",
               "path": "query-service/query-service.adoc",
-              "url": "/cloud/elixir/clusters/query-service/query-service.html",
+              "url": "/cloud/serverless/clusters/query-service/query-service.html",
               "title": "SQL++ Query Service"
             },
             {
               "module": "clusters",
               "path": "query-service/query-workbench.adoc",
-              "url": "/cloud/elixir/clusters/query-service/query-workbench.html",
+              "url": "/cloud/serverless/clusters/query-service/query-workbench.html",
               "title": "Query Workbench"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "scale-cluster.adoc",
-              "url": "/cloud/elixir/clusters/scale-database.html",
+              "url": "/cloud/serverless/clusters/scale-database.html",
               "title": "Database Scaling"
             },
             {
               "module": "clusters",
               "path": "scale-database.adoc",
-              "url": "/cloud/elixir/clusters/scale-database.html",
+              "url": "/cloud/serverless/clusters/scale-database.html",
               "title": "Database Scaling"
             },
             {
               "module": "clusters",
               "path": "search-service/create-full-text-indexes.adoc",
-              "url": "/cloud/elixir/clusters/search-service/create-full-text-indexes.html",
+              "url": "/cloud/serverless/clusters/search-service/create-full-text-indexes.html",
               "title": "Create Full Text Indexes"
             },
             {
               "module": "clusters",
               "path": "search-service/manage-full-text-indexes.adoc",
-              "url": "/cloud/elixir/clusters/search-service/manage-full-text-indexes.html",
+              "url": "/cloud/serverless/clusters/search-service/manage-full-text-indexes.html",
               "title": "Manage Full Text Indexes"
             },
             {
               "module": "clusters",
               "path": "search-service/perform-full-text-searches.adoc",
-              "url": "/cloud/elixir/clusters/search-service/perform-full-text-searches.html",
+              "url": "/cloud/serverless/clusters/search-service/perform-full-text-searches.html",
               "title": "Perform Full Text Searches"
             },
             {
               "module": "clusters",
               "path": "search-service/search-service.adoc",
-              "url": "/cloud/elixir/clusters/search-service/search-service.html",
+              "url": "/cloud/serverless/clusters/search-service/search-service.html",
               "title": "Search Service"
             },
             {
               "module": "clusters",
               "path": "sizing.adoc",
-              "url": "/cloud/elixir/clusters/sizing.html",
+              "url": "/cloud/serverless/clusters/sizing.html",
               "title": "Sizing a Database"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "upgrade-cluster.adoc",
-              "url": "/cloud/elixir/clusters/upgrade-database.html",
+              "url": "/cloud/serverless/clusters/upgrade-database.html",
               "title": "Upgrading a Database"
             },
             {
               "module": "clusters",
               "path": "upgrade-database.adoc",
-              "url": "/cloud/elixir/clusters/upgrade-database.html",
+              "url": "/cloud/serverless/clusters/upgrade-database.html",
               "title": "Upgrading a Database"
             },
             {
               "module": "clusters",
               "path": "xdcr/manage-xdcr-replications.adoc",
-              "url": "/cloud/elixir/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/serverless/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "clusters",
               "path": "xdcr/xdcr.adoc",
-              "url": "/cloud/elixir/clusters/xdcr/xdcr.html",
+              "url": "/cloud/serverless/clusters/xdcr/xdcr.html",
               "title": "Cross Data Center Replication (XDCR)"
             },
             {
               "module": "get-started",
               "path": "configure-cluster-access.adoc",
-              "url": "/cloud/elixir/get-started/configure-cluster-access.html",
+              "url": "/cloud/serverless/get-started/configure-cluster-access.html",
               "title": "Configure Access to Your Cluster"
             },
             {
               "module": "get-started",
               "path": "configuring-app-services.adoc",
-              "url": "/cloud/elixir/get-started/configuring-app-services.html",
+              "url": "/cloud/serverless/get-started/configuring-app-services.html",
               "title": "Configure Your App Services Trial (Mobile sync)"
             },
             {
               "module": "get-started",
               "path": "connect-to-cluster.adoc",
-              "url": "/cloud/elixir/get-started/connect-to-cluster.html",
+              "url": "/cloud/serverless/get-started/connect-to-cluster.html",
               "title": "Connect to Your Cluster"
             },
             {
               "module": "get-started",
               "path": "create-account.adoc",
-              "url": "/cloud/elixir/get-started/create-account.html",
+              "url": "/cloud/serverless/get-started/create-account.html",
               "title": "Create a Free Account and Deploy Your Database"
             },
             {
               "alias": true,
               "module": "get-started",
               "path": "create-app-services-account.adoc",
-              "url": "/cloud/elixir/get-started/create-account.html",
+              "url": "/cloud/serverless/get-started/create-account.html",
               "title": "Create a Free Account and Deploy Your Database"
             },
             {
               "module": "get-started",
               "path": "decommission-resources.adoc",
-              "url": "/cloud/elixir/get-started/decommission-resources.html",
+              "url": "/cloud/serverless/get-started/decommission-resources.html",
               "title": "Remove Cloud Resources and Close Your Account"
             },
             {
               "module": "get-started",
               "path": "deploy-first-cluster.adoc",
-              "url": "/cloud/elixir/get-started/deploy-first-cluster.html",
+              "url": "/cloud/serverless/get-started/deploy-first-cluster.html",
               "title": "Deploy Your First Cluster"
             },
             {
               "alias": true,
               "module": "get-started",
               "path": "get-started.adoc",
-              "url": "/cloud/elixir/get-started/create-account.html",
+              "url": "/cloud/serverless/get-started/create-account.html",
               "title": "Create a Free Account and Deploy Your Database"
             },
             {
               "module": "get-started",
               "path": "load-data.adoc",
-              "url": "/cloud/elixir/get-started/load-data.html",
+              "url": "/cloud/serverless/get-started/load-data.html",
               "title": "Interact with Data in Your Cluster"
             },
             {
               "module": "get-started",
               "path": "own-account.adoc",
-              "url": "/cloud/elixir/get-started/own-account.html",
+              "url": "/cloud/serverless/get-started/own-account.html",
               "title": "Own Cloud Account"
             },
             {
               "module": "get-started",
               "path": "run-first-queries.adoc",
-              "url": "/cloud/elixir/get-started/run-first-queries.html",
+              "url": "/cloud/serverless/get-started/run-first-queries.html",
               "title": "Explore Sample Data with Data Tools"
             },
             {
               "module": "get-started",
               "path": "sdk-playground.adoc",
-              "url": "/cloud/elixir/get-started/sdk-playground.html",
+              "url": "/cloud/serverless/get-started/sdk-playground.html",
               "title": "Explore the SDK Playground"
             },
             {
               "module": "get-started",
               "path": "using-search.adoc",
-              "url": "/cloud/elixir/get-started/using-search.html",
+              "url": "/cloud/serverless/get-started/using-search.html",
               "title": "Search Capella"
             },
             {
               "module": "guides",
               "path": "bulk-operations.adoc",
-              "url": "/cloud/elixir/guides/bulk-operations.html",
+              "url": "/cloud/serverless/guides/bulk-operations.html",
               "title": "Bulk Operations"
             },
             {
               "module": "guides",
               "path": "call-user-defined-function.adoc",
-              "url": "/cloud/elixir/guides/call-user-defined-function.html",
+              "url": "/cloud/serverless/guides/call-user-defined-function.html",
               "title": "Calling a User-Defined Function"
             },
             {
               "module": "guides",
               "path": "cbo.adoc",
-              "url": "/cloud/elixir/guides/cbo.html",
+              "url": "/cloud/serverless/guides/cbo.html",
               "title": "Cost-Based Optimizer"
             },
             {
               "module": "guides",
               "path": "connect.adoc",
-              "url": "/cloud/elixir/guides/connect.html",
+              "url": "/cloud/serverless/guides/connect.html",
               "title": "Connecting to Couchbase Capella"
             },
             {
               "module": "guides",
               "path": "create-index.adoc",
-              "url": "/cloud/elixir/guides/create-index.html",
+              "url": "/cloud/serverless/guides/create-index.html",
               "title": "Creating Indexes"
             },
             {
               "module": "guides",
               "path": "create-javascript-library.adoc",
-              "url": "/cloud/elixir/guides/create-javascript-library.html",
+              "url": "/cloud/serverless/guides/create-javascript-library.html",
               "title": "Creating a JavaScript Library"
             },
             {
               "module": "guides",
               "path": "create-user-defined-function.adoc",
-              "url": "/cloud/elixir/guides/create-user-defined-function.html",
+              "url": "/cloud/serverless/guides/create-user-defined-function.html",
               "title": "Creating a User-Defined Function"
             },
             {
               "module": "guides",
               "path": "creating-data.adoc",
-              "url": "/cloud/elixir/guides/creating-data.html",
+              "url": "/cloud/serverless/guides/creating-data.html",
               "title": "Creating Data"
             },
             {
               "module": "guides",
               "path": "defer-index.adoc",
-              "url": "/cloud/elixir/guides/defer-index.html",
+              "url": "/cloud/serverless/guides/defer-index.html",
               "title": "Deferring Indexes"
             },
             {
               "module": "guides",
               "path": "delete.adoc",
-              "url": "/cloud/elixir/guides/delete.html",
+              "url": "/cloud/serverless/guides/delete.html",
               "title": "Deleting Data with SQL++"
             },
             {
               "module": "guides",
               "path": "deleting-data.adoc",
-              "url": "/cloud/elixir/guides/deleting-data.html",
+              "url": "/cloud/serverless/guides/deleting-data.html",
               "title": "Deleting Data"
             },
             {
               "module": "guides",
               "path": "drop-index.adoc",
-              "url": "/cloud/elixir/guides/drop-index.html",
+              "url": "/cloud/serverless/guides/drop-index.html",
               "title": "Dropping Indexes"
             },
             {
               "module": "guides",
               "path": "group-agg.adoc",
-              "url": "/cloud/elixir/guides/group-agg.html",
+              "url": "/cloud/serverless/guides/group-agg.html",
               "title": "Grouping and Aggregation"
             },
             {
               "module": "guides",
               "path": "import.adoc",
-              "url": "/cloud/elixir/guides/import.html",
+              "url": "/cloud/serverless/guides/import.html",
               "title": "Importing Data"
             },
             {
               "module": "guides",
               "path": "index-advisor.adoc",
-              "url": "/cloud/elixir/guides/index-advisor.html",
+              "url": "/cloud/serverless/guides/index-advisor.html",
               "title": "Index Advisor"
             },
             {
               "module": "guides",
               "path": "indexes.adoc",
-              "url": "/cloud/elixir/guides/indexes.html",
+              "url": "/cloud/serverless/guides/indexes.html",
               "title": "Indexes"
             },
             {
               "module": "guides",
               "path": "insert.adoc",
-              "url": "/cloud/elixir/guides/insert.html",
+              "url": "/cloud/serverless/guides/insert.html",
               "title": "Inserting Data with SQL++"
             },
             {
               "module": "guides",
               "path": "intro.adoc",
-              "url": "/cloud/elixir/guides/intro.html",
+              "url": "/cloud/serverless/guides/intro.html",
               "title": "Developer Guides"
             },
             {
               "module": "guides",
               "path": "javascript-udfs.adoc",
-              "url": "/cloud/elixir/guides/javascript-udfs.html",
+              "url": "/cloud/serverless/guides/javascript-udfs.html",
               "title": "User-defined Functions with JavaScript"
             },
             {
               "module": "guides",
               "path": "join.adoc",
-              "url": "/cloud/elixir/guides/join.html",
+              "url": "/cloud/serverless/guides/join.html",
               "title": "Querying Across Relationships"
             },
             {
               "module": "guides",
               "path": "kv-operations.adoc",
-              "url": "/cloud/elixir/guides/kv-operations.html",
+              "url": "/cloud/serverless/guides/kv-operations.html",
               "title": "Key-Value Operations"
             },
             {
               "module": "guides",
               "path": "manipulate.adoc",
-              "url": "/cloud/elixir/guides/manipulate.html",
+              "url": "/cloud/serverless/guides/manipulate.html",
               "title": "Data Manipulation Queries"
             },
             {
               "module": "guides",
               "path": "nest-unnest.adoc",
-              "url": "/cloud/elixir/guides/nest-unnest.html",
+              "url": "/cloud/serverless/guides/nest-unnest.html",
               "title": "Nesting and Unnesting Documents"
             },
             {
               "module": "guides",
               "path": "optimize.adoc",
-              "url": "/cloud/elixir/guides/optimize.html",
+              "url": "/cloud/serverless/guides/optimize.html",
               "title": "Optimizing Performance"
             },
             {
               "module": "guides",
               "path": "place-index.adoc",
-              "url": "/cloud/elixir/guides/place-index.html",
+              "url": "/cloud/serverless/guides/place-index.html",
               "title": "Index Placement"
             },
             {
               "module": "guides",
               "path": "prep-statements.adoc",
-              "url": "/cloud/elixir/guides/prep-statements.html",
+              "url": "/cloud/serverless/guides/prep-statements.html",
               "title": "Prepared Statements"
             },
             {
               "module": "guides",
               "path": "query.adoc",
-              "url": "/cloud/elixir/guides/query.html",
+              "url": "/cloud/serverless/guides/query.html",
               "title": "Selection Queries"
             },
             {
               "module": "guides",
               "path": "reading-data.adoc",
-              "url": "/cloud/elixir/guides/reading-data.html",
+              "url": "/cloud/serverless/guides/reading-data.html",
               "title": "Reading Data"
             },
             {
               "module": "guides",
               "path": "select-index.adoc",
-              "url": "/cloud/elixir/guides/select-index.html",
+              "url": "/cloud/serverless/guides/select-index.html",
               "title": "Selecting Indexes"
             },
             {
               "module": "guides",
               "path": "select.adoc",
-              "url": "/cloud/elixir/guides/select.html",
+              "url": "/cloud/serverless/guides/select.html",
               "title": "Selecting Data"
             },
             {
               "module": "guides",
               "path": "transactions.adoc",
-              "url": "/cloud/elixir/guides/transactions.html",
+              "url": "/cloud/serverless/guides/transactions.html",
               "title": "Couchbase Transactions"
             },
             {
               "module": "guides",
               "path": "update.adoc",
-              "url": "/cloud/elixir/guides/update.html",
+              "url": "/cloud/serverless/guides/update.html",
               "title": "Modifying Data with SQL++"
             },
             {
               "module": "guides",
               "path": "updating-data.adoc",
-              "url": "/cloud/elixir/guides/updating-data.html",
+              "url": "/cloud/serverless/guides/updating-data.html",
               "title": "Updating Data"
             },
             {
               "alias": true,
               "module": "invpc",
               "path": "create-cluster.adoc",
-              "url": "/cloud/elixir/invpc/invpc-create-cluster.html",
+              "url": "/cloud/serverless/invpc/invpc-create-cluster.html",
               "title": "Create a Cluster"
             },
             {
               "module": "invpc",
               "path": "invpc-analytics-links.adoc",
-              "url": "/cloud/elixir/invpc/invpc-analytics-links.html",
+              "url": "/cloud/serverless/invpc/invpc-analytics-links.html",
               "title": "Analytics Links"
             },
             {
               "module": "invpc",
               "path": "invpc-analytics-workbench.adoc",
-              "url": "/cloud/elixir/invpc/invpc-analytics-workbench.html",
+              "url": "/cloud/serverless/invpc/invpc-analytics-workbench.html",
               "title": "Analytics Workbench"
             },
             {
               "module": "invpc",
               "path": "invpc-backup-restore.adoc",
-              "url": "/cloud/elixir/invpc/invpc-backup-restore.html",
+              "url": "/cloud/serverless/invpc/invpc-backup-restore.html",
               "title": "Backup and Restore Cluster Data"
             },
             {
               "module": "invpc",
               "path": "invpc-cloud-instances.adoc",
-              "url": "/cloud/elixir/invpc/invpc-cloud-instances.html",
+              "url": "/cloud/serverless/invpc/invpc-cloud-instances.html",
               "title": "Cloud Instance Availability"
             },
             {
               "module": "invpc",
               "path": "invpc-cloud-providers.adoc",
-              "url": "/cloud/elixir/invpc/invpc-cloud-providers.html",
+              "url": "/cloud/serverless/invpc/invpc-cloud-providers.html",
               "title": "Cloud Provider Requirements"
             },
             {
               "module": "invpc",
               "path": "invpc-clouds.adoc",
-              "url": "/cloud/elixir/invpc/invpc-clouds.html",
+              "url": "/cloud/serverless/invpc/invpc-clouds.html",
               "title": "Clouds Overview"
             },
             {
               "module": "invpc",
               "path": "invpc-create-cluster.adoc",
-              "url": "/cloud/elixir/invpc/invpc-create-cluster.html",
+              "url": "/cloud/serverless/invpc/invpc-create-cluster.html",
               "title": "Create a Cluster"
             },
             {
               "module": "invpc",
               "path": "invpc-create-full-text-indexes.adoc",
-              "url": "/cloud/elixir/invpc/invpc-create-full-text-indexes.html",
+              "url": "/cloud/serverless/invpc/invpc-create-full-text-indexes.html",
               "title": "Create Full Text Indexes"
             },
             {
               "module": "invpc",
               "path": "invpc-delete-database.adoc",
-              "url": "/cloud/elixir/invpc/invpc-delete-database.html",
+              "url": "/cloud/serverless/invpc/invpc-delete-database.html",
               "title": "Delete a Database"
             },
             {
               "module": "invpc",
               "path": "invpc-index.adoc",
-              "url": "/cloud/elixir/invpc/invpc-index.html",
+              "url": "/cloud/serverless/invpc/invpc-index.html",
               "title": "Content for inVPC Customers"
             },
             {
               "module": "invpc",
               "path": "invpc-introducing-public-api.adoc",
-              "url": "/cloud/elixir/invpc/invpc-introducing-public-api.html",
+              "url": "/cloud/serverless/invpc/invpc-introducing-public-api.html",
               "title": "Overview of the Public API"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-backup.adoc",
-              "url": "/cloud/elixir/invpc/invpc-manage-backup.html",
+              "url": "/cloud/serverless/invpc/invpc-manage-backup.html",
               "title": "Manage Backups"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-clouds.adoc",
-              "url": "/cloud/elixir/invpc/invpc-manage-clouds.html",
+              "url": "/cloud/serverless/invpc/invpc-manage-clouds.html",
               "title": "Connect and Manage Clouds"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-database-users.adoc",
-              "url": "/cloud/elixir/invpc/invpc-manage-database-users.html",
+              "url": "/cloud/serverless/invpc/invpc-manage-database-users.html",
               "title": "Configure Database Credentials"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-full-text-indexes.adoc",
-              "url": "/cloud/elixir/invpc/invpc-manage-full-text-indexes.html",
+              "url": "/cloud/serverless/invpc/invpc-manage-full-text-indexes.html",
               "title": "Manage Full Text Indexes"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-restore.adoc",
-              "url": "/cloud/elixir/invpc/invpc-manage-restore.html",
+              "url": "/cloud/serverless/invpc/invpc-manage-restore.html",
               "title": "Restore a Backup"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-xdcr-replications.adoc",
-              "url": "/cloud/elixir/invpc/invpc-manage-xdcr-replications.html",
+              "url": "/cloud/serverless/invpc/invpc-manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "invpc",
               "path": "invpc-migrate.adoc",
-              "url": "/cloud/elixir/invpc/invpc-migrate.html",
+              "url": "/cloud/serverless/invpc/invpc-migrate.html",
               "title": "Migrate Data to a Cluster"
             },
             {
               "module": "invpc",
               "path": "invpc-private-network.adoc",
-              "url": "/cloud/elixir/invpc/invpc-private-network.html",
+              "url": "/cloud/serverless/invpc/invpc-private-network.html",
               "title": "Configure a Private Network"
             },
             {
               "module": "invpc",
               "path": "invpc-reference-rest-endpoints-all.adoc",
-              "url": "/cloud/elixir/invpc/invpc-reference-rest-endpoints-all.html",
+              "url": "/cloud/serverless/invpc/invpc-reference-rest-endpoints-all.html",
               "title": "Couchbase Public API"
             },
             {
               "module": "invpc",
               "path": "invpc-user-management-migration.adoc",
-              "url": "/cloud/elixir/invpc/invpc-user-management-migration.html",
+              "url": "/cloud/serverless/invpc/invpc-user-management-migration.html",
               "title": "Migration to New User Management"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "channels/channels.adoc",
-              "url": "/cloud/elixir/app-services/channels/channels.html",
+              "url": "/cloud/serverless/app-services/channels/channels.html",
               "title": "Channels"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "connect/connect-apps-to-endpoint.adoc",
-              "url": "/cloud/elixir/app-services/connect/connect-apps-to-endpoint.html",
+              "url": "/cloud/serverless/app-services/connect/connect-apps-to-endpoint.html",
               "title": "Connecting your Apps to an App Endpoint"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "deployment/configure-app-endpoint.adoc",
-              "url": "/cloud/elixir/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/serverless/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "deployment/deployment.adoc",
-              "url": "/cloud/elixir/app-services/deployment/creating-an-app-service.html",
+              "url": "/cloud/serverless/app-services/deployment/creating-an-app-service.html",
               "title": "Creating an App Service"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "index.adoc",
-              "url": "/cloud/elixir/app-services/index.html",
+              "url": "/cloud/serverless/app-services/index.html",
               "title": "App Services"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "user-management/create-user.adoc",
-              "url": "/cloud/elixir/app-services/user-management/create-user.html",
+              "url": "/cloud/serverless/app-services/user-management/create-user.html",
               "title": "App User Administration"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "user-management/set-up-authentication-provider.adoc",
-              "url": "/cloud/elixir/app-services/user-management/set-up-authentication-provider.html",
+              "url": "/cloud/serverless/app-services/user-management/set-up-authentication-provider.html",
               "title": "Setting up an Authentication Provider"
             },
             {
               "alias": true,
               "module": "organizations",
               "path": "activity-explorer.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/activity-log.html",
+              "url": "/cloud/serverless/clusters/monitoring/activity-log.html",
               "title": "Activity Log"
             },
             {
               "module": "organizations",
               "path": "manage-account.adoc",
-              "url": "/cloud/elixir/organizations/manage-account.html",
+              "url": "/cloud/serverless/organizations/manage-account.html",
               "title": "Manage Your Couchbase Capella Account"
             },
             {
               "module": "organizations",
               "path": "manage-organization-users.adoc",
-              "url": "/cloud/elixir/organizations/manage-organization-users.html",
+              "url": "/cloud/serverless/organizations/manage-organization-users.html",
               "title": "Manage Organization Users"
             },
             {
               "module": "organizations",
               "path": "manage-organizations.adoc",
-              "url": "/cloud/elixir/organizations/manage-organizations.html",
+              "url": "/cloud/serverless/organizations/manage-organizations.html",
               "title": "Manage Organizations"
             },
             {
               "module": "organizations",
               "path": "organization-projects-overview.adoc",
-              "url": "/cloud/elixir/organizations/organization-projects-overview.html",
+              "url": "/cloud/serverless/organizations/organization-projects-overview.html",
               "title": "Organization, Project, and Database Access Overview"
             },
             {
               "module": "organizations",
               "path": "organization-user-roles.adoc",
-              "url": "/cloud/elixir/organizations/organization-user-roles.html",
+              "url": "/cloud/serverless/organizations/organization-user-roles.html",
               "title": "Organization Roles"
             },
             {
               "module": "organizations",
               "path": "organizations.adoc",
-              "url": "/cloud/elixir/organizations/organizations.html",
+              "url": "/cloud/serverless/organizations/organizations.html",
               "title": "Organizations and Organization Users Overview"
             },
             {
               "module": "organizations",
               "path": "ui-auth/add-sso-auth.adoc",
-              "url": "/cloud/elixir/organizations/ui-auth/add-sso-auth.html",
+              "url": "/cloud/serverless/organizations/ui-auth/add-sso-auth.html",
               "title": "Add Federated &amp; SSO Authentication"
             },
             {
               "module": "organizations",
               "path": "ui-auth/capella-ui-auth.adoc",
-              "url": "/cloud/elixir/organizations/ui-auth/capella-ui-auth.html",
+              "url": "/cloud/serverless/organizations/ui-auth/capella-ui-auth.html",
               "title": "Capella UI Authentication"
             },
             {
               "module": "organizations",
               "path": "ui-auth/manage-identity-providers.adoc",
-              "url": "/cloud/elixir/organizations/ui-auth/manage-identity-providers.html",
+              "url": "/cloud/serverless/organizations/ui-auth/manage-identity-providers.html",
               "title": "Manage Identity Providers"
             },
             {
               "module": "organizations",
               "path": "ui-auth/manage-role-mapping.adoc",
-              "url": "/cloud/elixir/organizations/ui-auth/manage-role-mapping.html",
+              "url": "/cloud/serverless/organizations/ui-auth/manage-role-mapping.html",
               "title": "Manage Capella Role Mapping"
             },
             {
               "module": "organizations",
               "path": "ui-auth/mfa.adoc",
-              "url": "/cloud/elixir/organizations/ui-auth/mfa.html",
+              "url": "/cloud/serverless/organizations/ui-auth/mfa.html",
               "title": "Manage Multi-Factor Authentication (MFA)"
             },
             {
               "module": "organizations",
               "path": "ui-auth/sign-in-with-sso.adoc",
-              "url": "/cloud/elixir/organizations/ui-auth/sign-in-with-sso.html",
+              "url": "/cloud/serverless/organizations/ui-auth/sign-in-with-sso.html",
               "title": "Sign in to Capella with SSO"
             },
             {
               "module": "projects",
               "path": "manage-project-users.adoc",
-              "url": "/cloud/elixir/projects/manage-project-users.html",
+              "url": "/cloud/serverless/projects/manage-project-users.html",
               "title": "Manage Project Users"
             },
             {
               "module": "projects",
               "path": "manage-projects.adoc",
-              "url": "/cloud/elixir/projects/manage-projects.html",
+              "url": "/cloud/serverless/projects/manage-projects.html",
               "title": "Manage Projects"
             },
             {
               "module": "projects",
               "path": "project-roles.adoc",
-              "url": "/cloud/elixir/projects/project-roles.html",
+              "url": "/cloud/serverless/projects/project-roles.html",
               "title": "Project Roles"
             },
             {
               "module": "projects",
               "path": "projects.adoc",
-              "url": "/cloud/elixir/projects/projects.html",
+              "url": "/cloud/serverless/projects/projects.html",
               "title": "Projects Overview"
             },
             {
               "module": "public-api-guide",
               "path": "introducing-public-api.adoc",
-              "url": "/cloud/elixir/public-api-guide/introducing-public-api.html",
+              "url": "/cloud/serverless/public-api-guide/introducing-public-api.html",
               "title": "Overview of the Public API"
             },
             {
               "module": "public-api-guide",
               "path": "using-cloud-public-api.adoc",
-              "url": "/cloud/elixir/public-api-guide/using-cloud-public-api.html",
+              "url": "/cloud/serverless/public-api-guide/using-cloud-public-api.html",
               "title": "Using the Public API"
             },
             {
               "module": "reference",
               "path": "alert-reference.adoc",
-              "url": "/cloud/elixir/reference/alert-reference.html",
+              "url": "/cloud/serverless/reference/alert-reference.html",
               "title": "Alert Reference"
             },
             {
               "alias": true,
               "module": "reference",
               "path": "alerts.adoc",
-              "url": "/cloud/elixir/clusters/monitoring/monitoring.html",
+              "url": "/cloud/serverless/clusters/monitoring/monitoring.html",
               "title": "Monitoring Overview"
             },
             {
               "module": "reference",
               "path": "aws.adoc",
-              "url": "/cloud/elixir/reference/aws.html",
+              "url": "/cloud/serverless/reference/aws.html",
               "title": "Amazon Web Services (AWS)"
             },
             {
               "module": "reference",
               "path": "browser-compatibility.adoc",
-              "url": "/cloud/elixir/reference/browser-compatibility.html",
+              "url": "/cloud/serverless/reference/browser-compatibility.html",
               "title": "Supported Web Browsers"
             },
             {
               "alias": true,
               "module": "reference",
               "path": "cloud-instances.adoc",
-              "url": "/cloud/elixir/invpc/invpc-cloud-instances.html",
+              "url": "/cloud/serverless/invpc/invpc-cloud-instances.html",
               "title": "Cloud Instance Availability"
             },
             {
               "module": "reference",
               "path": "gcp.adoc",
-              "url": "/cloud/elixir/reference/gcp.html",
+              "url": "/cloud/serverless/reference/gcp.html",
               "title": "Google Cloud Platform (GCP)"
             },
             {
               "module": "reference",
               "path": "rest-endpoints-all.adoc",
-              "url": "/cloud/elixir/reference/rest-endpoints-all.html",
+              "url": "/cloud/serverless/reference/rest-endpoints-all.html",
               "title": "Couchbase Public API"
             },
             {
               "module": "reference",
               "path": "sdk-compatibility.adoc",
-              "url": "/cloud/elixir/reference/sdk-compatibility.html",
+              "url": "/cloud/serverless/reference/sdk-compatibility.html",
               "title": "SDK Compatibility With Capella"
             },
             {
               "module": "release-notes",
               "path": "release-notes.adoc",
-              "url": "/cloud/elixir/release-notes/release-notes.html",
+              "url": "/cloud/serverless/release-notes/release-notes.html",
               "title": "Couchbase Capella Release Notes"
             },
             {
               "module": "ROOT",
               "path": "index.adoc",
-              "url": "/cloud/elixir/index.html",
+              "url": "/cloud/serverless/index.html",
               "title": "Welcome to Couchbase Capella"
             },
             {
               "alias": true,
               "module": "sdk",
               "path": "development-intro.adoc",
-              "url": "/cloud/elixir/guides/kv-operations.html",
+              "url": "/cloud/serverless/guides/kv-operations.html",
               "title": "Key-Value Operations"
             },
             {
               "module": "security",
               "path": "add-aws-private-link.adoc",
-              "url": "/cloud/elixir/security/add-aws-private-link.html",
+              "url": "/cloud/serverless/security/add-aws-private-link.html",
               "title": "Add an AWS PrivateLink Connection"
             },
             {
               "alias": true,
               "module": "security",
               "path": "allow-ip-address.adoc",
-              "url": "/cloud/elixir/clusters/allow-ip-address.html",
+              "url": "/cloud/serverless/clusters/allow-ip-address.html",
               "title": "Configure Allowed IP Addresses"
             },
             {
               "module": "security",
               "path": "audit-management.adoc",
-              "url": "/cloud/elixir/security/audit-management.html",
+              "url": "/cloud/serverless/security/audit-management.html",
               "title": "Audit Management"
             },
             {
               "module": "security",
               "path": "auditing.adoc",
-              "url": "/cloud/elixir/security/auditing.html",
+              "url": "/cloud/serverless/security/auditing.html",
               "title": "Auditing"
             },
             {
               "alias": true,
               "module": "security",
               "path": "manage-database-users.adoc",
-              "url": "/cloud/elixir/clusters/manage-database-users.html",
+              "url": "/cloud/serverless/clusters/manage-database-users.html",
               "title": "Configure Database Credentials"
             },
             {
               "module": "security",
               "path": "security.adoc",
-              "url": "/cloud/elixir/security/security.html",
+              "url": "/cloud/serverless/security/security.html",
               "title": "Security Overview"
             },
             {
               "module": "support",
               "path": "feedback.adoc",
-              "url": "/cloud/elixir/support/feedback.html",
+              "url": "/cloud/serverless/support/feedback.html",
               "title": "Provide Feedback"
             },
             {
               "module": "support",
               "path": "manage-support.adoc",
-              "url": "/cloud/elixir/support/manage-support.html",
+              "url": "/cloud/serverless/support/manage-support.html",
               "title": "Request Support"
             },
             {
               "module": "support",
               "path": "support.adoc",
-              "url": "/cloud/elixir/support/support.html",
+              "url": "/cloud/serverless/support/support.html",
               "title": "Support Overview"
             }
           ]
         },
         {
-          "version": "capella",
+          "version": "provisioned",
           "displayVersion": "Capella Provisioned",
-          "url": "/cloud/capella/index.html",
+          "url": "/cloud/provisioned/index.html",
           "pages": [
             {
               "alias": true,
               "module": "app-services",
               "path": "app-endpoint.adoc",
-              "url": "/cloud/capella/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/provisioned/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "module": "app-services",
               "path": "billing/billing.adoc",
-              "url": "/cloud/capella/app-services/billing/billing.html",
+              "url": "/cloud/provisioned/app-services/billing/billing.html",
               "title": "Billing"
             },
             {
               "module": "app-services",
               "path": "channels/channels.adoc",
-              "url": "/cloud/capella/app-services/channels/channels.html",
+              "url": "/cloud/provisioned/app-services/channels/channels.html",
               "title": "Channels"
             },
             {
               "module": "app-services",
               "path": "connect/connect-apps-to-endpoint.adoc",
-              "url": "/cloud/capella/app-services/connect/connect-apps-to-endpoint.html",
+              "url": "/cloud/provisioned/app-services/connect/connect-apps-to-endpoint.html",
               "title": "Connecting your Apps to an App Endpoint"
             },
             {
               "alias": true,
               "module": "app-services",
               "path": "controlling-app-endpoints.adoc",
-              "url": "/cloud/capella/app-services/deployment/configuring-app-endpoints.html",
+              "url": "/cloud/provisioned/app-services/deployment/configuring-app-endpoints.html",
               "title": "Configuring App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/access-control-data-validation.adoc",
-              "url": "/cloud/capella/app-services/deployment/access-control-data-validation.html",
+              "url": "/cloud/provisioned/app-services/deployment/access-control-data-validation.html",
               "title": "Access Control and Data Validation for App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/accessing-admin-apis.adoc",
-              "url": "/cloud/capella/app-services/deployment/accessing-admin-apis.html",
+              "url": "/cloud/provisioned/app-services/deployment/accessing-admin-apis.html",
               "title": "Granting Admin Access to REST APIs"
             },
             {
               "alias": true,
               "module": "app-services",
               "path": "deployment/configure-app-endpoint.adoc",
-              "url": "/cloud/capella/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/provisioned/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/configuring-app-endpoints.adoc",
-              "url": "/cloud/capella/app-services/deployment/configuring-app-endpoints.html",
+              "url": "/cloud/provisioned/app-services/deployment/configuring-app-endpoints.html",
               "title": "Configuring App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/creating-an-app-endpoint.adoc",
-              "url": "/cloud/capella/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/provisioned/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "module": "app-services",
               "path": "deployment/creating-an-app-service.adoc",
-              "url": "/cloud/capella/app-services/deployment/creating-an-app-service.html",
+              "url": "/cloud/provisioned/app-services/deployment/creating-an-app-service.html",
               "title": "Creating an App Service"
             },
             {
               "module": "app-services",
               "path": "deployment/scaling-a-deployed-app-service.adoc",
-              "url": "/cloud/capella/app-services/deployment/scaling-a-deployed-app-service.html",
+              "url": "/cloud/provisioned/app-services/deployment/scaling-a-deployed-app-service.html",
               "title": "Scaling a Deployed App Service"
             },
             {
               "module": "app-services",
               "path": "index.adoc",
-              "url": "/cloud/capella/app-services/index.html",
+              "url": "/cloud/provisioned/app-services/index.html",
               "title": "App Services"
             },
             {
               "module": "app-services",
               "path": "migrating/on-prem-to-capella.adoc",
-              "url": "/cloud/capella/app-services/migrating/on-prem-to-capella.html",
+              "url": "/cloud/provisioned/app-services/migrating/on-prem-to-capella.html",
               "title": "Migrating Existing Self-Managed Couchbase Mobile Clusters to App Services"
             },
             {
               "module": "app-services",
               "path": "monitoring/monitoring-app-endpoints.adoc",
-              "url": "/cloud/capella/app-services/monitoring/monitoring-app-endpoints.html",
+              "url": "/cloud/provisioned/app-services/monitoring/monitoring-app-endpoints.html",
               "title": "Monitoring App Endpoints"
             },
             {
               "module": "app-services",
               "path": "monitoring/monitoring-app-services.adoc",
-              "url": "/cloud/capella/app-services/monitoring/monitoring-app-services.html",
+              "url": "/cloud/provisioned/app-services/monitoring/monitoring-app-services.html",
               "title": "Monitoring App Services"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/generated/rest-api-admin/index.adoc",
-              "url": "/cloud/capella/app-services/references/assets/rest/generated/rest-api-admin/index.html",
+              "url": "/cloud/provisioned/app-services/references/assets/rest/generated/rest-api-admin/index.html",
               "title": "{SGW}"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/generated/rest-api-metrics/index.adoc",
-              "url": "/cloud/capella/app-services/references/assets/rest/generated/rest-api-metrics/index.html",
+              "url": "/cloud/provisioned/app-services/references/assets/rest/generated/rest-api-metrics/index.html",
               "title": "{SGW}"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/generated/rest-api-public/index.adoc",
-              "url": "/cloud/capella/app-services/references/assets/rest/generated/rest-api-public/index.html",
+              "url": "/cloud/provisioned/app-services/references/assets/rest/generated/rest-api-public/index.html",
               "title": "{SGW}"
             },
             {
               "module": "app-services",
               "path": "references/assets/rest/override/asciidoc/stubs/empty.adoc",
-              "url": "/cloud/capella/app-services/references/assets/rest/override/asciidoc/stubs/empty.html"
+              "url": "/cloud/provisioned/app-services/references/assets/rest/override/asciidoc/stubs/empty.html"
             },
             {
               "module": "app-services",
               "path": "references/rest_api_admin_static.adoc",
-              "url": "/cloud/capella/app-services/references/rest_api_admin_static.html",
+              "url": "/cloud/provisioned/app-services/references/rest_api_admin_static.html",
               "title": "Admin REST API"
             },
             {
               "module": "app-services",
               "path": "references/rest_api_metrics_static.adoc",
-              "url": "/cloud/capella/app-services/references/rest_api_metrics_static.html",
+              "url": "/cloud/provisioned/app-services/references/rest_api_metrics_static.html",
               "title": "Metrics REST API"
             },
             {
               "module": "app-services",
               "path": "references/rest_api_public_static.adoc",
-              "url": "/cloud/capella/app-services/references/rest_api_public_static.html",
+              "url": "/cloud/provisioned/app-services/references/rest_api_public_static.html",
               "title": "Public REST API"
             },
             {
               "module": "app-services",
               "path": "references/rest-api-introduction.adoc",
-              "url": "/cloud/capella/app-services/references/rest-api-introduction.html",
+              "url": "/cloud/provisioned/app-services/references/rest-api-introduction.html",
               "title": "Secure Access through the REST API"
             },
             {
               "module": "app-services",
               "path": "user-management/create-app-role.adoc",
-              "url": "/cloud/capella/app-services/user-management/create-app-role.html",
+              "url": "/cloud/provisioned/app-services/user-management/create-app-role.html",
               "title": "Creating App Roles"
             },
             {
               "module": "app-services",
               "path": "user-management/create-user.adoc",
-              "url": "/cloud/capella/app-services/user-management/create-user.html",
+              "url": "/cloud/provisioned/app-services/user-management/create-user.html",
               "title": "App User Administration"
             },
             {
               "module": "app-services",
               "path": "user-management/set-up-authentication-provider.adoc",
-              "url": "/cloud/capella/app-services/user-management/set-up-authentication-provider.html",
+              "url": "/cloud/provisioned/app-services/user-management/set-up-authentication-provider.html",
               "title": "Setting up an Authentication Provider"
             },
             {
               "module": "azure-cloud",
               "path": "azure-cloud-connection-prerequisites.adoc",
-              "url": "/cloud/capella/azure-cloud/azure-cloud-connection-prerequisites.html",
+              "url": "/cloud/provisioned/azure-cloud/azure-cloud-connection-prerequisites.html",
               "title": "Couchbase Capella: Azure Cloud Connection Prerequisites"
             },
             {
               "module": "billing",
               "path": "billing.adoc",
-              "url": "/cloud/capella/billing/billing.html",
+              "url": "/cloud/provisioned/billing/billing.html",
               "title": "Billing Overview"
             },
             {
               "module": "billing",
               "path": "change-support-plan.adoc",
-              "url": "/cloud/capella/billing/change-support-plan.html",
+              "url": "/cloud/provisioned/billing/change-support-plan.html",
               "title": "Change a Database&#8217;s Plan and Support Timezone"
             },
             {
               "module": "billing",
               "path": "manage-billing.adoc",
-              "url": "/cloud/capella/billing/manage-billing.html",
+              "url": "/cloud/provisioned/billing/manage-billing.html",
               "title": "Manage Billing Information"
             },
             {
               "module": "billing",
               "path": "upgrade-account.adoc",
-              "url": "/cloud/capella/billing/upgrade-account.html",
+              "url": "/cloud/provisioned/billing/upgrade-account.html",
               "title": "Upgrade Your Account"
             },
             {
               "module": "clouds",
               "path": "cloud-providers.adoc",
-              "url": "/cloud/capella/clouds/cloud-providers.html"
+              "url": "/cloud/provisioned/clouds/cloud-providers.html"
             },
             {
               "module": "clouds",
               "path": "connect-an-sdk.adoc",
-              "url": "/cloud/capella/clouds/connect-an-sdk.html",
+              "url": "/cloud/provisioned/clouds/connect-an-sdk.html",
               "title": "Connect Your SDK"
             },
             {
               "module": "clouds",
               "path": "get-capella-host-name.adoc",
-              "url": "/cloud/capella/clouds/get-capella-host-name.html",
+              "url": "/cloud/provisioned/clouds/get-capella-host-name.html",
               "title": "Get the Capella Host Name"
             },
             {
               "module": "clouds",
               "path": "private-network.adoc",
-              "url": "/cloud/capella/clouds/private-network.html",
+              "url": "/cloud/provisioned/clouds/private-network.html",
               "title": "Configure a Private Network"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "activity-explorer.adoc",
-              "url": "/cloud/capella/clusters/monitoring/activity-log.html",
+              "url": "/cloud/provisioned/clusters/monitoring/activity-log.html",
               "title": "Activity Log"
             },
             {
               "module": "clusters",
               "path": "allow-ip-address.adoc",
-              "url": "/cloud/capella/clusters/allow-ip-address.html",
+              "url": "/cloud/provisioned/clusters/allow-ip-address.html",
               "title": "Configure Allowed IP Addresses"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-links.adoc",
-              "url": "/cloud/capella/clusters/analytics-service/analytics-links.html",
+              "url": "/cloud/provisioned/clusters/analytics-service/analytics-links.html",
               "title": "Analytics Links"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-monitor.adoc",
-              "url": "/cloud/capella/clusters/analytics-service/analytics-monitor.html",
+              "url": "/cloud/provisioned/clusters/analytics-service/analytics-monitor.html",
               "title": "Analytics Monitor"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-service.adoc",
-              "url": "/cloud/capella/clusters/analytics-service/analytics-service.html",
+              "url": "/cloud/provisioned/clusters/analytics-service/analytics-service.html",
               "title": "Analytics Service"
             },
             {
               "module": "clusters",
               "path": "analytics-service/analytics-workbench.adoc",
-              "url": "/cloud/capella/clusters/analytics-service/analytics-workbench.html",
+              "url": "/cloud/provisioned/clusters/analytics-service/analytics-workbench.html",
               "title": "Analytics Workbench"
             },
             {
               "module": "clusters",
               "path": "backup-restore.adoc",
-              "url": "/cloud/capella/clusters/backup-restore.html",
+              "url": "/cloud/provisioned/clusters/backup-restore.html",
               "title": "Backup and Restore Data"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "clusters.adoc",
-              "url": "/cloud/capella/clusters/databases.html",
+              "url": "/cloud/provisioned/clusters/databases.html",
               "title": "Databases Overview"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "connect-self-managed-cluster.adoc",
-              "url": "/cloud/capella/invpc/invpc-create-cluster.html",
+              "url": "/cloud/provisioned/invpc/invpc-create-cluster.html",
               "title": "Create a Cluster"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "create-cluster.adoc",
-              "url": "/cloud/capella/clusters/create-database.html",
+              "url": "/cloud/provisioned/clusters/create-database.html",
               "title": "Create a Database"
             },
             {
               "module": "clusters",
               "path": "create-database.adoc",
-              "url": "/cloud/capella/clusters/create-database.html",
+              "url": "/cloud/provisioned/clusters/create-database.html",
               "title": "Create a Database"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "create-replication.adoc",
-              "url": "/cloud/capella/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/provisioned/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "clusters",
               "path": "data-service/data-service.adoc",
-              "url": "/cloud/capella/clusters/data-service/data-service.html",
+              "url": "/cloud/provisioned/clusters/data-service/data-service.html",
               "title": "Data Service"
             },
             {
               "module": "clusters",
               "path": "data-service/import-data-documents.adoc",
-              "url": "/cloud/capella/clusters/data-service/import-data-documents.html",
+              "url": "/cloud/provisioned/clusters/data-service/import-data-documents.html",
               "title": "Import Data"
             },
             {
               "module": "clusters",
               "path": "data-service/manage-buckets.adoc",
-              "url": "/cloud/capella/clusters/data-service/manage-buckets.html",
+              "url": "/cloud/provisioned/clusters/data-service/manage-buckets.html",
               "title": "Manage Buckets"
             },
             {
               "module": "clusters",
               "path": "data-service/manage-documents.adoc",
-              "url": "/cloud/capella/clusters/data-service/manage-documents.html",
+              "url": "/cloud/provisioned/clusters/data-service/manage-documents.html",
               "title": "Manage Documents"
             },
             {
               "module": "clusters",
               "path": "data-service/scopes-collections.adoc",
-              "url": "/cloud/capella/clusters/data-service/scopes-collections.html",
+              "url": "/cloud/provisioned/clusters/data-service/scopes-collections.html",
               "title": "Manage Scopes and Collections"
             },
             {
               "module": "clusters",
               "path": "data-service/storage-engines.adoc",
-              "url": "/cloud/capella/clusters/data-service/storage-engines.html",
+              "url": "/cloud/provisioned/clusters/data-service/storage-engines.html",
               "title": "Storage Engines"
             },
             {
               "module": "clusters",
               "path": "databases.adoc",
-              "url": "/cloud/capella/clusters/databases.html",
+              "url": "/cloud/provisioned/clusters/databases.html",
               "title": "Databases Overview"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "delete-cluster.adoc",
-              "url": "/cloud/capella/clusters/delete-database.html",
+              "url": "/cloud/provisioned/clusters/delete-database.html",
               "title": "Delete a Database"
             },
             {
               "module": "clusters",
               "path": "delete-database.adoc",
-              "url": "/cloud/capella/clusters/delete-database.html",
+              "url": "/cloud/provisioned/clusters/delete-database.html",
               "title": "Delete a Database"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "delete-replication.adoc",
-              "url": "/cloud/capella/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/provisioned/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "document-inspector.adoc",
-              "url": "/cloud/capella/clusters/data-service/manage-documents.html",
+              "url": "/cloud/provisioned/clusters/data-service/manage-documents.html",
               "title": "Manage Documents"
             },
             {
               "module": "clusters",
               "path": "eventing-service/eventing-service.adoc",
-              "url": "/cloud/capella/clusters/eventing-service/eventing-service.html",
+              "url": "/cloud/provisioned/clusters/eventing-service/eventing-service.html",
               "title": "Eventing Service"
             },
             {
               "module": "clusters",
               "path": "eventing-service/manage-functions.adoc",
-              "url": "/cloud/capella/clusters/eventing-service/manage-functions.html",
+              "url": "/cloud/provisioned/clusters/eventing-service/manage-functions.html",
               "title": "Manage Eventing Functions and Settings"
             },
             {
               "module": "clusters",
               "path": "index-service/index-service.adoc",
-              "url": "/cloud/capella/clusters/index-service/index-service.html",
+              "url": "/cloud/provisioned/clusters/index-service/index-service.html",
               "title": "Index Service"
             },
             {
               "module": "clusters",
               "path": "index-service/manage-indexes.adoc",
-              "url": "/cloud/capella/clusters/index-service/manage-indexes.html",
+              "url": "/cloud/provisioned/clusters/index-service/manage-indexes.html",
               "title": "Manage Indexes"
             },
             {
               "module": "clusters",
               "path": "manage-backup.adoc",
-              "url": "/cloud/capella/clusters/manage-backup.html",
+              "url": "/cloud/provisioned/clusters/manage-backup.html",
               "title": "Manage Backups"
             },
             {
               "module": "clusters",
               "path": "manage-database-users.adoc",
-              "url": "/cloud/capella/clusters/manage-database-users.html",
+              "url": "/cloud/provisioned/clusters/manage-database-users.html",
               "title": "Configure Database Credentials"
             },
             {
               "module": "clusters",
               "path": "manage-restore.adoc",
-              "url": "/cloud/capella/clusters/manage-restore.html",
+              "url": "/cloud/provisioned/clusters/manage-restore.html",
               "title": "Restore a Backup"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "modify-cluster.adoc",
-              "url": "/cloud/capella/clusters/modify-database.html",
+              "url": "/cloud/provisioned/clusters/modify-database.html",
               "title": "Modify a Database"
             },
             {
               "module": "clusters",
               "path": "modify-database.adoc",
-              "url": "/cloud/capella/clusters/modify-database.html",
+              "url": "/cloud/provisioned/clusters/modify-database.html",
               "title": "Modify a Database"
             },
             {
               "module": "clusters",
               "path": "monitoring/activity-log.adoc",
-              "url": "/cloud/capella/clusters/monitoring/activity-log.html",
+              "url": "/cloud/provisioned/clusters/monitoring/activity-log.html",
               "title": "Activity Log"
             },
             {
               "module": "clusters",
               "path": "monitoring/alerts.adoc",
-              "url": "/cloud/capella/clusters/monitoring/alerts.html",
+              "url": "/cloud/provisioned/clusters/monitoring/alerts.html",
               "title": "Alerts &amp; Notifications"
             },
             {
               "module": "clusters",
               "path": "monitoring/metrics-dashboard.adoc",
-              "url": "/cloud/capella/clusters/monitoring/metrics-dashboard.html",
+              "url": "/cloud/provisioned/clusters/monitoring/metrics-dashboard.html",
               "title": "Database Metrics"
             },
             {
               "module": "clusters",
               "path": "monitoring/monitoring.adoc",
-              "url": "/cloud/capella/clusters/monitoring/monitoring.html",
+              "url": "/cloud/provisioned/clusters/monitoring/monitoring.html",
               "title": "Monitoring Overview"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "pause-replication.adoc",
-              "url": "/cloud/capella/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/provisioned/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "clusters",
               "path": "query-service/query-service.adoc",
-              "url": "/cloud/capella/clusters/query-service/query-service.html",
+              "url": "/cloud/provisioned/clusters/query-service/query-service.html",
               "title": "SQL++ Query Service"
             },
             {
               "module": "clusters",
               "path": "query-service/query-workbench.adoc",
-              "url": "/cloud/capella/clusters/query-service/query-workbench.html",
+              "url": "/cloud/provisioned/clusters/query-service/query-workbench.html",
               "title": "Query Workbench"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "scale-cluster.adoc",
-              "url": "/cloud/capella/clusters/scale-database.html",
+              "url": "/cloud/provisioned/clusters/scale-database.html",
               "title": "Database Scaling"
             },
             {
               "module": "clusters",
               "path": "scale-database.adoc",
-              "url": "/cloud/capella/clusters/scale-database.html",
+              "url": "/cloud/provisioned/clusters/scale-database.html",
               "title": "Database Scaling"
             },
             {
               "module": "clusters",
               "path": "search-service/create-full-text-indexes.adoc",
-              "url": "/cloud/capella/clusters/search-service/create-full-text-indexes.html",
+              "url": "/cloud/provisioned/clusters/search-service/create-full-text-indexes.html",
               "title": "Create Full Text Indexes"
             },
             {
               "module": "clusters",
               "path": "search-service/manage-full-text-indexes.adoc",
-              "url": "/cloud/capella/clusters/search-service/manage-full-text-indexes.html",
+              "url": "/cloud/provisioned/clusters/search-service/manage-full-text-indexes.html",
               "title": "Manage Full Text Indexes"
             },
             {
               "module": "clusters",
               "path": "search-service/perform-full-text-searches.adoc",
-              "url": "/cloud/capella/clusters/search-service/perform-full-text-searches.html",
+              "url": "/cloud/provisioned/clusters/search-service/perform-full-text-searches.html",
               "title": "Perform Full Text Searches"
             },
             {
               "module": "clusters",
               "path": "search-service/search-service.adoc",
-              "url": "/cloud/capella/clusters/search-service/search-service.html",
+              "url": "/cloud/provisioned/clusters/search-service/search-service.html",
               "title": "Search Service"
             },
             {
               "module": "clusters",
               "path": "sizing.adoc",
-              "url": "/cloud/capella/clusters/sizing.html",
+              "url": "/cloud/provisioned/clusters/sizing.html",
               "title": "Sizing a Database"
             },
             {
               "alias": true,
               "module": "clusters",
               "path": "upgrade-cluster.adoc",
-              "url": "/cloud/capella/clusters/upgrade-database.html",
+              "url": "/cloud/provisioned/clusters/upgrade-database.html",
               "title": "Upgrading a Database"
             },
             {
               "module": "clusters",
               "path": "upgrade-database.adoc",
-              "url": "/cloud/capella/clusters/upgrade-database.html",
+              "url": "/cloud/provisioned/clusters/upgrade-database.html",
               "title": "Upgrading a Database"
             },
             {
               "module": "clusters",
               "path": "xdcr/manage-xdcr-replications.adoc",
-              "url": "/cloud/capella/clusters/xdcr/manage-xdcr-replications.html",
+              "url": "/cloud/provisioned/clusters/xdcr/manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "clusters",
               "path": "xdcr/xdcr.adoc",
-              "url": "/cloud/capella/clusters/xdcr/xdcr.html",
+              "url": "/cloud/provisioned/clusters/xdcr/xdcr.html",
               "title": "Cross Data Center Replication (XDCR)"
             },
             {
               "module": "get-started",
               "path": "configure-cluster-access.adoc",
-              "url": "/cloud/capella/get-started/configure-cluster-access.html",
+              "url": "/cloud/provisioned/get-started/configure-cluster-access.html",
               "title": "Configure Access to Your Cluster"
             },
             {
               "module": "get-started",
               "path": "configuring-app-services.adoc",
-              "url": "/cloud/capella/get-started/configuring-app-services.html",
+              "url": "/cloud/provisioned/get-started/configuring-app-services.html",
               "title": "Configure Your App Services Trial (Mobile sync)"
             },
             {
               "module": "get-started",
               "path": "connect-to-cluster.adoc",
-              "url": "/cloud/capella/get-started/connect-to-cluster.html",
+              "url": "/cloud/provisioned/get-started/connect-to-cluster.html",
               "title": "Connect to Your Cluster"
             },
             {
               "module": "get-started",
               "path": "create-account.adoc",
-              "url": "/cloud/capella/get-started/create-account.html",
+              "url": "/cloud/provisioned/get-started/create-account.html",
               "title": "Create a Free Account and Deploy Your Database"
             },
             {
               "alias": true,
               "module": "get-started",
               "path": "create-app-services-account.adoc",
-              "url": "/cloud/capella/get-started/create-account.html",
+              "url": "/cloud/provisioned/get-started/create-account.html",
               "title": "Create a Free Account and Deploy Your Database"
             },
             {
               "module": "get-started",
               "path": "decommission-resources.adoc",
-              "url": "/cloud/capella/get-started/decommission-resources.html",
+              "url": "/cloud/provisioned/get-started/decommission-resources.html",
               "title": "Remove Cloud Resources and Close Your Account"
             },
             {
               "module": "get-started",
               "path": "deploy-first-cluster.adoc",
-              "url": "/cloud/capella/get-started/deploy-first-cluster.html",
+              "url": "/cloud/provisioned/get-started/deploy-first-cluster.html",
               "title": "Deploy Your First Cluster"
             },
             {
               "alias": true,
               "module": "get-started",
               "path": "get-started.adoc",
-              "url": "/cloud/capella/get-started/create-account.html",
+              "url": "/cloud/provisioned/get-started/create-account.html",
               "title": "Create a Free Account and Deploy Your Database"
             },
             {
               "module": "get-started",
               "path": "load-data.adoc",
-              "url": "/cloud/capella/get-started/load-data.html",
+              "url": "/cloud/provisioned/get-started/load-data.html",
               "title": "Interact with Data in Your Cluster"
             },
             {
               "module": "get-started",
               "path": "own-account.adoc",
-              "url": "/cloud/capella/get-started/own-account.html",
+              "url": "/cloud/provisioned/get-started/own-account.html",
               "title": "Own Cloud Account"
             },
             {
               "module": "get-started",
               "path": "run-first-queries.adoc",
-              "url": "/cloud/capella/get-started/run-first-queries.html",
+              "url": "/cloud/provisioned/get-started/run-first-queries.html",
               "title": "Explore Sample Data with Data Tools"
             },
             {
               "module": "get-started",
               "path": "sdk-playground.adoc",
-              "url": "/cloud/capella/get-started/sdk-playground.html",
+              "url": "/cloud/provisioned/get-started/sdk-playground.html",
               "title": "Explore the SDK Playground"
             },
             {
               "module": "get-started",
               "path": "using-search.adoc",
-              "url": "/cloud/capella/get-started/using-search.html",
+              "url": "/cloud/provisioned/get-started/using-search.html",
               "title": "Search Capella"
             },
             {
               "module": "guides",
               "path": "bulk-operations.adoc",
-              "url": "/cloud/capella/guides/bulk-operations.html",
+              "url": "/cloud/provisioned/guides/bulk-operations.html",
               "title": "Bulk Operations"
             },
             {
               "module": "guides",
               "path": "call-user-defined-function.adoc",
-              "url": "/cloud/capella/guides/call-user-defined-function.html",
+              "url": "/cloud/provisioned/guides/call-user-defined-function.html",
               "title": "Calling a User-Defined Function"
             },
             {
               "module": "guides",
               "path": "cbo.adoc",
-              "url": "/cloud/capella/guides/cbo.html",
+              "url": "/cloud/provisioned/guides/cbo.html",
               "title": "Cost-Based Optimizer"
             },
             {
               "module": "guides",
               "path": "connect.adoc",
-              "url": "/cloud/capella/guides/connect.html",
+              "url": "/cloud/provisioned/guides/connect.html",
               "title": "Connecting to Couchbase Capella"
             },
             {
               "module": "guides",
               "path": "create-index.adoc",
-              "url": "/cloud/capella/guides/create-index.html",
+              "url": "/cloud/provisioned/guides/create-index.html",
               "title": "Creating Indexes"
             },
             {
               "module": "guides",
               "path": "create-javascript-library.adoc",
-              "url": "/cloud/capella/guides/create-javascript-library.html",
+              "url": "/cloud/provisioned/guides/create-javascript-library.html",
               "title": "Creating a JavaScript Library"
             },
             {
               "module": "guides",
               "path": "create-user-defined-function.adoc",
-              "url": "/cloud/capella/guides/create-user-defined-function.html",
+              "url": "/cloud/provisioned/guides/create-user-defined-function.html",
               "title": "Creating a User-Defined Function"
             },
             {
               "module": "guides",
               "path": "creating-data.adoc",
-              "url": "/cloud/capella/guides/creating-data.html",
+              "url": "/cloud/provisioned/guides/creating-data.html",
               "title": "Creating Data"
             },
             {
               "module": "guides",
               "path": "defer-index.adoc",
-              "url": "/cloud/capella/guides/defer-index.html",
+              "url": "/cloud/provisioned/guides/defer-index.html",
               "title": "Deferring Indexes"
             },
             {
               "module": "guides",
               "path": "delete.adoc",
-              "url": "/cloud/capella/guides/delete.html",
+              "url": "/cloud/provisioned/guides/delete.html",
               "title": "Deleting Data with SQL++"
             },
             {
               "module": "guides",
               "path": "deleting-data.adoc",
-              "url": "/cloud/capella/guides/deleting-data.html",
+              "url": "/cloud/provisioned/guides/deleting-data.html",
               "title": "Deleting Data"
             },
             {
               "module": "guides",
               "path": "drop-index.adoc",
-              "url": "/cloud/capella/guides/drop-index.html",
+              "url": "/cloud/provisioned/guides/drop-index.html",
               "title": "Dropping Indexes"
             },
             {
               "module": "guides",
               "path": "group-agg.adoc",
-              "url": "/cloud/capella/guides/group-agg.html",
+              "url": "/cloud/provisioned/guides/group-agg.html",
               "title": "Grouping and Aggregation"
             },
             {
               "module": "guides",
               "path": "import.adoc",
-              "url": "/cloud/capella/guides/import.html",
+              "url": "/cloud/provisioned/guides/import.html",
               "title": "Importing Data"
             },
             {
               "module": "guides",
               "path": "index-advisor.adoc",
-              "url": "/cloud/capella/guides/index-advisor.html",
+              "url": "/cloud/provisioned/guides/index-advisor.html",
               "title": "Index Advisor"
             },
             {
               "module": "guides",
               "path": "indexes.adoc",
-              "url": "/cloud/capella/guides/indexes.html",
+              "url": "/cloud/provisioned/guides/indexes.html",
               "title": "Indexes"
             },
             {
               "module": "guides",
               "path": "insert.adoc",
-              "url": "/cloud/capella/guides/insert.html",
+              "url": "/cloud/provisioned/guides/insert.html",
               "title": "Inserting Data with SQL++"
             },
             {
               "module": "guides",
               "path": "intro.adoc",
-              "url": "/cloud/capella/guides/intro.html",
+              "url": "/cloud/provisioned/guides/intro.html",
               "title": "Developer Guides"
             },
             {
               "module": "guides",
               "path": "javascript-udfs.adoc",
-              "url": "/cloud/capella/guides/javascript-udfs.html",
+              "url": "/cloud/provisioned/guides/javascript-udfs.html",
               "title": "User-defined Functions with JavaScript"
             },
             {
               "module": "guides",
               "path": "join.adoc",
-              "url": "/cloud/capella/guides/join.html",
+              "url": "/cloud/provisioned/guides/join.html",
               "title": "Querying Across Relationships"
             },
             {
               "module": "guides",
               "path": "kv-operations.adoc",
-              "url": "/cloud/capella/guides/kv-operations.html",
+              "url": "/cloud/provisioned/guides/kv-operations.html",
               "title": "Key-Value Operations"
             },
             {
               "module": "guides",
               "path": "manipulate.adoc",
-              "url": "/cloud/capella/guides/manipulate.html",
+              "url": "/cloud/provisioned/guides/manipulate.html",
               "title": "Data Manipulation Queries"
             },
             {
               "module": "guides",
               "path": "nest-unnest.adoc",
-              "url": "/cloud/capella/guides/nest-unnest.html",
+              "url": "/cloud/provisioned/guides/nest-unnest.html",
               "title": "Nesting and Unnesting Documents"
             },
             {
               "module": "guides",
               "path": "optimize.adoc",
-              "url": "/cloud/capella/guides/optimize.html",
+              "url": "/cloud/provisioned/guides/optimize.html",
               "title": "Optimizing Performance"
             },
             {
               "module": "guides",
               "path": "place-index.adoc",
-              "url": "/cloud/capella/guides/place-index.html",
+              "url": "/cloud/provisioned/guides/place-index.html",
               "title": "Index Placement"
             },
             {
               "module": "guides",
               "path": "prep-statements.adoc",
-              "url": "/cloud/capella/guides/prep-statements.html",
+              "url": "/cloud/provisioned/guides/prep-statements.html",
               "title": "Prepared Statements"
             },
             {
               "module": "guides",
               "path": "query.adoc",
-              "url": "/cloud/capella/guides/query.html",
+              "url": "/cloud/provisioned/guides/query.html",
               "title": "Selection Queries"
             },
             {
               "module": "guides",
               "path": "reading-data.adoc",
-              "url": "/cloud/capella/guides/reading-data.html",
+              "url": "/cloud/provisioned/guides/reading-data.html",
               "title": "Reading Data"
             },
             {
               "module": "guides",
               "path": "select-index.adoc",
-              "url": "/cloud/capella/guides/select-index.html",
+              "url": "/cloud/provisioned/guides/select-index.html",
               "title": "Selecting Indexes"
             },
             {
               "module": "guides",
               "path": "select.adoc",
-              "url": "/cloud/capella/guides/select.html",
+              "url": "/cloud/provisioned/guides/select.html",
               "title": "Selecting Data"
             },
             {
               "module": "guides",
               "path": "transactions.adoc",
-              "url": "/cloud/capella/guides/transactions.html",
+              "url": "/cloud/provisioned/guides/transactions.html",
               "title": "Couchbase Transactions"
             },
             {
               "module": "guides",
               "path": "update.adoc",
-              "url": "/cloud/capella/guides/update.html",
+              "url": "/cloud/provisioned/guides/update.html",
               "title": "Modifying Data with SQL++"
             },
             {
               "module": "guides",
               "path": "updating-data.adoc",
-              "url": "/cloud/capella/guides/updating-data.html",
+              "url": "/cloud/provisioned/guides/updating-data.html",
               "title": "Updating Data"
             },
             {
               "alias": true,
               "module": "invpc",
               "path": "create-cluster.adoc",
-              "url": "/cloud/capella/invpc/invpc-create-cluster.html",
+              "url": "/cloud/provisioned/invpc/invpc-create-cluster.html",
               "title": "Create a Cluster"
             },
             {
               "module": "invpc",
               "path": "invpc-analytics-links.adoc",
-              "url": "/cloud/capella/invpc/invpc-analytics-links.html",
+              "url": "/cloud/provisioned/invpc/invpc-analytics-links.html",
               "title": "Analytics Links"
             },
             {
               "module": "invpc",
               "path": "invpc-analytics-workbench.adoc",
-              "url": "/cloud/capella/invpc/invpc-analytics-workbench.html",
+              "url": "/cloud/provisioned/invpc/invpc-analytics-workbench.html",
               "title": "Analytics Workbench"
             },
             {
               "module": "invpc",
               "path": "invpc-backup-restore.adoc",
-              "url": "/cloud/capella/invpc/invpc-backup-restore.html",
+              "url": "/cloud/provisioned/invpc/invpc-backup-restore.html",
               "title": "Backup and Restore Cluster Data"
             },
             {
               "module": "invpc",
               "path": "invpc-cloud-instances.adoc",
-              "url": "/cloud/capella/invpc/invpc-cloud-instances.html",
+              "url": "/cloud/provisioned/invpc/invpc-cloud-instances.html",
               "title": "Cloud Instance Availability"
             },
             {
               "module": "invpc",
               "path": "invpc-cloud-providers.adoc",
-              "url": "/cloud/capella/invpc/invpc-cloud-providers.html",
+              "url": "/cloud/provisioned/invpc/invpc-cloud-providers.html",
               "title": "Cloud Provider Requirements"
             },
             {
               "module": "invpc",
               "path": "invpc-clouds.adoc",
-              "url": "/cloud/capella/invpc/invpc-clouds.html",
+              "url": "/cloud/provisioned/invpc/invpc-clouds.html",
               "title": "Clouds Overview"
             },
             {
               "module": "invpc",
               "path": "invpc-create-cluster.adoc",
-              "url": "/cloud/capella/invpc/invpc-create-cluster.html",
+              "url": "/cloud/provisioned/invpc/invpc-create-cluster.html",
               "title": "Create a Cluster"
             },
             {
               "module": "invpc",
               "path": "invpc-create-full-text-indexes.adoc",
-              "url": "/cloud/capella/invpc/invpc-create-full-text-indexes.html",
+              "url": "/cloud/provisioned/invpc/invpc-create-full-text-indexes.html",
               "title": "Create Full Text Indexes"
             },
             {
               "module": "invpc",
               "path": "invpc-delete-database.adoc",
-              "url": "/cloud/capella/invpc/invpc-delete-database.html",
+              "url": "/cloud/provisioned/invpc/invpc-delete-database.html",
               "title": "Delete a Database"
             },
             {
               "module": "invpc",
               "path": "invpc-index.adoc",
-              "url": "/cloud/capella/invpc/invpc-index.html",
+              "url": "/cloud/provisioned/invpc/invpc-index.html",
               "title": "Content for inVPC Customers"
             },
             {
               "module": "invpc",
               "path": "invpc-introducing-public-api.adoc",
-              "url": "/cloud/capella/invpc/invpc-introducing-public-api.html",
+              "url": "/cloud/provisioned/invpc/invpc-introducing-public-api.html",
               "title": "Overview of the Public API"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-backup.adoc",
-              "url": "/cloud/capella/invpc/invpc-manage-backup.html",
+              "url": "/cloud/provisioned/invpc/invpc-manage-backup.html",
               "title": "Manage Backups"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-clouds.adoc",
-              "url": "/cloud/capella/invpc/invpc-manage-clouds.html",
+              "url": "/cloud/provisioned/invpc/invpc-manage-clouds.html",
               "title": "Connect and Manage Clouds"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-database-users.adoc",
-              "url": "/cloud/capella/invpc/invpc-manage-database-users.html",
+              "url": "/cloud/provisioned/invpc/invpc-manage-database-users.html",
               "title": "Configure Database Credentials"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-full-text-indexes.adoc",
-              "url": "/cloud/capella/invpc/invpc-manage-full-text-indexes.html",
+              "url": "/cloud/provisioned/invpc/invpc-manage-full-text-indexes.html",
               "title": "Manage Full Text Indexes"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-restore.adoc",
-              "url": "/cloud/capella/invpc/invpc-manage-restore.html",
+              "url": "/cloud/provisioned/invpc/invpc-manage-restore.html",
               "title": "Restore a Backup"
             },
             {
               "module": "invpc",
               "path": "invpc-manage-xdcr-replications.adoc",
-              "url": "/cloud/capella/invpc/invpc-manage-xdcr-replications.html",
+              "url": "/cloud/provisioned/invpc/invpc-manage-xdcr-replications.html",
               "title": "Manage Replications"
             },
             {
               "module": "invpc",
               "path": "invpc-migrate.adoc",
-              "url": "/cloud/capella/invpc/invpc-migrate.html",
+              "url": "/cloud/provisioned/invpc/invpc-migrate.html",
               "title": "Migrate Data to a Cluster"
             },
             {
               "module": "invpc",
               "path": "invpc-private-network.adoc",
-              "url": "/cloud/capella/invpc/invpc-private-network.html",
+              "url": "/cloud/provisioned/invpc/invpc-private-network.html",
               "title": "Configure a Private Network"
             },
             {
               "module": "invpc",
               "path": "invpc-reference-rest-endpoints-all.adoc",
-              "url": "/cloud/capella/invpc/invpc-reference-rest-endpoints-all.html",
+              "url": "/cloud/provisioned/invpc/invpc-reference-rest-endpoints-all.html",
               "title": "Couchbase Public API"
             },
             {
               "module": "invpc",
               "path": "invpc-user-management-migration.adoc",
-              "url": "/cloud/capella/invpc/invpc-user-management-migration.html",
+              "url": "/cloud/provisioned/invpc/invpc-user-management-migration.html",
               "title": "Migration to New User Management"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "channels/channels.adoc",
-              "url": "/cloud/capella/app-services/channels/channels.html",
+              "url": "/cloud/provisioned/app-services/channels/channels.html",
               "title": "Channels"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "connect/connect-apps-to-endpoint.adoc",
-              "url": "/cloud/capella/app-services/connect/connect-apps-to-endpoint.html",
+              "url": "/cloud/provisioned/app-services/connect/connect-apps-to-endpoint.html",
               "title": "Connecting your Apps to an App Endpoint"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "deployment/configure-app-endpoint.adoc",
-              "url": "/cloud/capella/app-services/deployment/creating-an-app-endpoint.html",
+              "url": "/cloud/provisioned/app-services/deployment/creating-an-app-endpoint.html",
               "title": "Creating App Endpoints"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "deployment/deployment.adoc",
-              "url": "/cloud/capella/app-services/deployment/creating-an-app-service.html",
+              "url": "/cloud/provisioned/app-services/deployment/creating-an-app-service.html",
               "title": "Creating an App Service"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "index.adoc",
-              "url": "/cloud/capella/app-services/index.html",
+              "url": "/cloud/provisioned/app-services/index.html",
               "title": "App Services"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "user-management/create-user.adoc",
-              "url": "/cloud/capella/app-services/user-management/create-user.html",
+              "url": "/cloud/provisioned/app-services/user-management/create-user.html",
               "title": "App User Administration"
             },
             {
               "alias": true,
               "module": "mobile",
               "path": "user-management/set-up-authentication-provider.adoc",
-              "url": "/cloud/capella/app-services/user-management/set-up-authentication-provider.html",
+              "url": "/cloud/provisioned/app-services/user-management/set-up-authentication-provider.html",
               "title": "Setting up an Authentication Provider"
             },
             {
               "alias": true,
               "module": "organizations",
               "path": "activity-explorer.adoc",
-              "url": "/cloud/capella/clusters/monitoring/activity-log.html",
+              "url": "/cloud/provisioned/clusters/monitoring/activity-log.html",
               "title": "Activity Log"
             },
             {
               "module": "organizations",
               "path": "manage-account.adoc",
-              "url": "/cloud/capella/organizations/manage-account.html",
+              "url": "/cloud/provisioned/organizations/manage-account.html",
               "title": "Manage Your Couchbase Capella Account"
             },
             {
               "module": "organizations",
               "path": "manage-organization-users.adoc",
-              "url": "/cloud/capella/organizations/manage-organization-users.html",
+              "url": "/cloud/provisioned/organizations/manage-organization-users.html",
               "title": "Manage Organization Users"
             },
             {
               "module": "organizations",
               "path": "manage-organizations.adoc",
-              "url": "/cloud/capella/organizations/manage-organizations.html",
+              "url": "/cloud/provisioned/organizations/manage-organizations.html",
               "title": "Manage Organizations"
             },
             {
               "module": "organizations",
               "path": "organization-projects-overview.adoc",
-              "url": "/cloud/capella/organizations/organization-projects-overview.html",
+              "url": "/cloud/provisioned/organizations/organization-projects-overview.html",
               "title": "Organization, Project, and Database Access Overview"
             },
             {
               "module": "organizations",
               "path": "organization-user-roles.adoc",
-              "url": "/cloud/capella/organizations/organization-user-roles.html",
+              "url": "/cloud/provisioned/organizations/organization-user-roles.html",
               "title": "Organization Roles"
             },
             {
               "module": "organizations",
               "path": "organizations.adoc",
-              "url": "/cloud/capella/organizations/organizations.html",
+              "url": "/cloud/provisioned/organizations/organizations.html",
               "title": "Organizations and Organization Users Overview"
             },
             {
               "module": "organizations",
               "path": "ui-auth/add-sso-auth.adoc",
-              "url": "/cloud/capella/organizations/ui-auth/add-sso-auth.html",
+              "url": "/cloud/provisioned/organizations/ui-auth/add-sso-auth.html",
               "title": "Add Federated &amp; SSO Authentication"
             },
             {
               "module": "organizations",
               "path": "ui-auth/capella-ui-auth.adoc",
-              "url": "/cloud/capella/organizations/ui-auth/capella-ui-auth.html",
+              "url": "/cloud/provisioned/organizations/ui-auth/capella-ui-auth.html",
               "title": "Capella UI Authentication"
             },
             {
               "module": "organizations",
               "path": "ui-auth/manage-identity-providers.adoc",
-              "url": "/cloud/capella/organizations/ui-auth/manage-identity-providers.html",
+              "url": "/cloud/provisioned/organizations/ui-auth/manage-identity-providers.html",
               "title": "Manage Identity Providers"
             },
             {
               "module": "organizations",
               "path": "ui-auth/manage-role-mapping.adoc",
-              "url": "/cloud/capella/organizations/ui-auth/manage-role-mapping.html",
+              "url": "/cloud/provisioned/organizations/ui-auth/manage-role-mapping.html",
               "title": "Manage Capella Role Mapping"
             },
             {
               "module": "organizations",
               "path": "ui-auth/mfa.adoc",
-              "url": "/cloud/capella/organizations/ui-auth/mfa.html",
+              "url": "/cloud/provisioned/organizations/ui-auth/mfa.html",
               "title": "Manage Multi-Factor Authentication (MFA)"
             },
             {
               "module": "organizations",
               "path": "ui-auth/sign-in-with-sso.adoc",
-              "url": "/cloud/capella/organizations/ui-auth/sign-in-with-sso.html",
+              "url": "/cloud/provisioned/organizations/ui-auth/sign-in-with-sso.html",
               "title": "Sign in to Capella with SSO"
             },
             {
               "module": "projects",
               "path": "manage-project-users.adoc",
-              "url": "/cloud/capella/projects/manage-project-users.html",
+              "url": "/cloud/provisioned/projects/manage-project-users.html",
               "title": "Manage Project Users"
             },
             {
               "module": "projects",
               "path": "manage-projects.adoc",
-              "url": "/cloud/capella/projects/manage-projects.html",
+              "url": "/cloud/provisioned/projects/manage-projects.html",
               "title": "Manage Projects"
             },
             {
               "module": "projects",
               "path": "project-roles.adoc",
-              "url": "/cloud/capella/projects/project-roles.html",
+              "url": "/cloud/provisioned/projects/project-roles.html",
               "title": "Project Roles"
             },
             {
               "module": "projects",
               "path": "projects.adoc",
-              "url": "/cloud/capella/projects/projects.html",
+              "url": "/cloud/provisioned/projects/projects.html",
               "title": "Projects Overview"
             },
             {
               "module": "public-api-guide",
               "path": "introducing-public-api.adoc",
-              "url": "/cloud/capella/public-api-guide/introducing-public-api.html",
+              "url": "/cloud/provisioned/public-api-guide/introducing-public-api.html",
               "title": "Overview of the Public API"
             },
             {
               "module": "public-api-guide",
               "path": "using-cloud-public-api.adoc",
-              "url": "/cloud/capella/public-api-guide/using-cloud-public-api.html",
+              "url": "/cloud/provisioned/public-api-guide/using-cloud-public-api.html",
               "title": "Using the Public API"
             },
             {
               "module": "reference",
               "path": "alert-reference.adoc",
-              "url": "/cloud/capella/reference/alert-reference.html",
+              "url": "/cloud/provisioned/reference/alert-reference.html",
               "title": "Alert Reference"
             },
             {
               "alias": true,
               "module": "reference",
               "path": "alerts.adoc",
-              "url": "/cloud/capella/clusters/monitoring/monitoring.html",
+              "url": "/cloud/provisioned/clusters/monitoring/monitoring.html",
               "title": "Monitoring Overview"
             },
             {
               "module": "reference",
               "path": "aws.adoc",
-              "url": "/cloud/capella/reference/aws.html",
+              "url": "/cloud/provisioned/reference/aws.html",
               "title": "Amazon Web Services (AWS)"
             },
             {
               "module": "reference",
               "path": "browser-compatibility.adoc",
-              "url": "/cloud/capella/reference/browser-compatibility.html",
+              "url": "/cloud/provisioned/reference/browser-compatibility.html",
               "title": "Supported Web Browsers"
             },
             {
               "alias": true,
               "module": "reference",
               "path": "cloud-instances.adoc",
-              "url": "/cloud/capella/invpc/invpc-cloud-instances.html",
+              "url": "/cloud/provisioned/invpc/invpc-cloud-instances.html",
               "title": "Cloud Instance Availability"
             },
             {
               "module": "reference",
               "path": "gcp.adoc",
-              "url": "/cloud/capella/reference/gcp.html",
+              "url": "/cloud/provisioned/reference/gcp.html",
               "title": "Google Cloud Platform (GCP)"
             },
             {
               "module": "reference",
               "path": "rest-endpoints-all.adoc",
-              "url": "/cloud/capella/reference/rest-endpoints-all.html",
+              "url": "/cloud/provisioned/reference/rest-endpoints-all.html",
               "title": "Couchbase Public API"
             },
             {
               "module": "reference",
               "path": "sdk-compatibility.adoc",
-              "url": "/cloud/capella/reference/sdk-compatibility.html",
+              "url": "/cloud/provisioned/reference/sdk-compatibility.html",
               "title": "SDK Compatibility With Capella"
             },
             {
               "module": "release-notes",
               "path": "release-notes.adoc",
-              "url": "/cloud/capella/release-notes/release-notes.html",
+              "url": "/cloud/provisioned/release-notes/release-notes.html",
               "title": "Couchbase Capella Release Notes"
             },
             {
               "module": "ROOT",
               "path": "index.adoc",
-              "url": "/cloud/capella/index.html",
+              "url": "/cloud/provisioned/index.html",
               "title": "Welcome to Couchbase Capella"
             },
             {
               "alias": true,
               "module": "sdk",
               "path": "development-intro.adoc",
-              "url": "/cloud/capella/guides/kv-operations.html",
+              "url": "/cloud/provisioned/guides/kv-operations.html",
               "title": "Key-Value Operations"
             },
             {
               "module": "security",
               "path": "add-aws-private-link.adoc",
-              "url": "/cloud/capella/security/add-aws-private-link.html",
+              "url": "/cloud/provisioned/security/add-aws-private-link.html",
               "title": "Add an AWS PrivateLink Connection"
             },
             {
               "alias": true,
               "module": "security",
               "path": "allow-ip-address.adoc",
-              "url": "/cloud/capella/clusters/allow-ip-address.html",
+              "url": "/cloud/provisioned/clusters/allow-ip-address.html",
               "title": "Configure Allowed IP Addresses"
             },
             {
               "module": "security",
               "path": "audit-management.adoc",
-              "url": "/cloud/capella/security/audit-management.html",
+              "url": "/cloud/provisioned/security/audit-management.html",
               "title": "Audit Management"
             },
             {
               "module": "security",
               "path": "auditing.adoc",
-              "url": "/cloud/capella/security/auditing.html",
+              "url": "/cloud/provisioned/security/auditing.html",
               "title": "Auditing"
             },
             {
               "alias": true,
               "module": "security",
               "path": "manage-database-users.adoc",
-              "url": "/cloud/capella/clusters/manage-database-users.html",
+              "url": "/cloud/provisioned/clusters/manage-database-users.html",
               "title": "Configure Database Credentials"
             },
             {
               "module": "security",
               "path": "security.adoc",
-              "url": "/cloud/capella/security/security.html",
+              "url": "/cloud/provisioned/security/security.html",
               "title": "Security Overview"
             },
             {
               "module": "support",
               "path": "feedback.adoc",
-              "url": "/cloud/capella/support/feedback.html",
+              "url": "/cloud/provisioned/support/feedback.html",
               "title": "Provide Feedback"
             },
             {
               "module": "support",
               "path": "manage-support.adoc",
-              "url": "/cloud/capella/support/manage-support.html",
+              "url": "/cloud/provisioned/support/manage-support.html",
               "title": "Request Support"
             },
             {
               "module": "support",
               "path": "support.adoc",
-              "url": "/cloud/capella/support/support.html",
+              "url": "/cloud/provisioned/support/support.html",
               "title": "Support Overview"
             }
           ]
