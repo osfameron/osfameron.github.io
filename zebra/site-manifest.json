@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1676912810546,
+  "generated": 1676915270639,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -10,6 +10,7 @@
       "versions": [
         {
           "version": "elixir",
+          "displayVersion": "Capella Serverless (Elixir)",
           "url": "/cloud/elixir/index.html",
           "pages": [
             {
@@ -1245,6 +1246,7 @@
         },
         {
           "version": "capella",
+          "displayVersion": "Capella Provisioned",
           "url": "/cloud/capella/index.html",
           "pages": [
             {
