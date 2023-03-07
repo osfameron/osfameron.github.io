@@ -6,11 +6,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script>(window.dataLayer=window.dataLayer||[]).push({event:'gtm.js','gtm.start':+new Date()})</script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MVPNN2"></script>
-<title>Couchbase Mobile - Embedded Database on the Edge | Couchbase Docs</title>
-<link rel="canonical" href="https://docs.couchbase.com/home/mobile.html">
+<title>Couchbase Mobile - Embedded Database on the Edge | Couchbase Capella Staging Docs</title>
+<link rel="canonical" href="https://docs.stage.nonprod-project-avengers.com/home/mobile.html">
 <link rel="stylesheet" href="../_/css/site.css">
 <script src="../_/js/vendor/jquery.js"></script>
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
+
+
 <meta name="dcterms.subject" content="home">
 <meta name="dcterms.identifier" content="master">
 <meta name="page-url" content="/home/mobile.html">
@@ -30,7 +32,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="navbar-brand cb-documentation" href="https://docs.couchbase.com/home/index.html">
+                  <a class="navbar-brand cb-documentation" href="..">
                     <img src="../_/img/cb-documentation.svg" alt="Couchbase Documentation" class="cb-docs" />
                     <img src="../_/img/cb-docs-hover.svg" alt="Couchbase Documentation" class="hide cb-hover-docs" />
                   </a>
@@ -52,7 +54,7 @@
               <div class="navbar-collapse collapse" id="navbar2">
                 <ul class="navbar-nav w-100 justify-content-start">
                   <li class="nav-item">
-                    <a href="https://docs.couchbase.com/home/index.html" class="nav-link">
+                    <a href=".." class="nav-link">
                       <i class="fas fa-home"></i>
                     </a>
                   </li>
@@ -74,13 +76,15 @@
                 </ul>
               </div>
               <div class="primary-action">
-                <a href="https://cloud.couchbase.com/sign-up" class="free-trial-link" onclick="(window.dataLayer=window.dataLayer||[]).push({'event':'customEvent', 'category':'CTA', 'action':'Button Click',  'label':'Free Trial'});" >
-                  <i class="fas fa-cloud"></i>
-                  Free Trial
-                </a>
-                <a class="btn btn-primary try-btn"  onclick="(window.dataLayer=window.dataLayer||[]).push({'event':'customEvent', 'category':'CTA', 'action':'Button Click',  'label':'Download'});" href="https://www.couchbase.com/downloads">
+                <a class="btn btn-primary btn-grey-reverse" onclick="(window.dataLayer=window.dataLayer||[]).push({'event':'customEvent', 'category':'CTA', 'action':'Button Click',  'label':'Download'});" href="https://www.couchbase.com/downloads">
                   Downloads
+                  <i class="far fa-arrow-to-bottom fa-fw"></i>
                 </a>
+                <a href="https://cloud.couchbase.com/sign-up" class="btn btn-primary" onclick="(window.dataLayer=window.dataLayer||[]).push({'event':'customEvent', 'category':'CTA', 'action':'Button Click',  'label':'Free Trial'});" >
+                  Start Free Trial
+                  <i class="far fa-cloud fa-fw"></i>
+                </a>
+
               </div>
 
         </nav>
@@ -118,12 +122,12 @@ Enabling you to deploy your offline-first mobile and embedded applications with 
 <p>Couchbase Lite is an embedded, NoSQL JSON Document Style database for your mobile apps.
 It natively supports all major operating systems and platforms.
 Its NoSQL client database provides CRUD, full-text search and query capabilities that runs locally on the device.<br>
-<a href="../couchbase-lite/current/index.html" class="xref page">Go to Couchbase Lite Docs</a></p>
+<a href="../couchbase-lite/3.1/index.html" class="xref page">Go to Couchbase Lite Docs</a></p>
 </div>
 <div class="paragraph column content">
 <div class="title">Sync Gateway</div>
 <p>Sync Gateway is an internet-facing synchronization mechanism designed to provide data synchronization for large-scale interactive web, mobile, and IoT applications.<br>
-<a href="#sync-gateway::introduction.adoc" class="xref unresolved">Go to Sync Gateway Docs</a></p>
+<a href="../sync-gateway/3.1/introduction.html" class="xref page">Go to Sync Gateway Docs</a></p>
 </div>
 <div class="paragraph column content">
 <div class="title">Tutorials</div>
@@ -221,7 +225,7 @@ Its NoSQL client database provides CRUD, full-text search and query capabilities
 </template>
 <script id="site-script" src="../_/js/site.js"></script>
 <script defer src="../_/js/vendor/fontawesome-icon-defs.js"></script>
-<script defer src="../_/js/vendor/fontawesome.js"></script>
+<script defer src="../_/js/vendor/fontawesome.js" data-search-pseudo-elements="true"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 </body>
 </html>
