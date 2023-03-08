@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1678198253990,
+  "generated": 1678267102405,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -5854,7 +5854,7 @@
               "module": "ROOT",
               "path": "rest_api_public_static.adoc",
               "url": "/sync-gateway/3.1/rest_api_public_static.html",
-              "title": "Public REST API (Static Page)"
+              "title": "Public REST API (Static Page&#8201;&#8212;&#8201;testing)"
             },
             {
               "module": "ROOT",

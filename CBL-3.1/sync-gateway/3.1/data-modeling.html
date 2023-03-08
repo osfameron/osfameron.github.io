@@ -2861,7 +2861,7 @@
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="rest_api_public_static.html">Public REST API (Static Page)</a>
+    <a class="menu_title menu_link" href="rest_api_public_static.html">Public REST API (Static Page&#8201;&#8212;&#8201;testing)</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
@@ -3713,7 +3713,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/couchbase/docs-sync-gateway/edit/release/3.1/modules/ROOT/pages/data-modeling.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-sync-gateway/modules/ROOT/pages/data-modeling.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -3811,13 +3811,44 @@ They do not necessarily align with constraints on the local storage and use of s
 <dl>
 <dt class="hdlist1">What to avoid</dt>
 <dd>
-<p>You should avoid designing user property names prefixed with an underscore character (<code>_</code>, ASCII <code>&amp;#095</code>).</p>
+<p>You should avoid designing user property names prefixed with an underscore character (<code>_</code>, ASCII <code>&amp;#095</code>) for the following reserved properties:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>_sync</p>
+</li>
+<li>
+<p>_id</p>
+</li>
+<li>
+<p>_rev</p>
+</li>
+<li>
+<p>_deleted</p>
+</li>
+<li>
+<p>_attachments</p>
+</li>
+<li>
+<p>_revisions</p>
+</li>
+<li>
+<p>_exp</p>
+</li>
+<li>
+<p>_purged</p>
+</li>
+<li>
+<p>_removed</p>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Why it&#8217;s an issue</dt>
 <dd>
-<p>The underscore character (<code>_</code>) is a <strong>reserved prefix</strong> for <em>Document</em> system properties, for example: the document&#8217;s identifier (<code>_id</code>) and revision property (<code>_rev</code>).</p>
+<p>The underscore character (<code>_</code>) is a <strong>reserved prefix</strong> for some  <em>Document</em> system properties, for example: the document&#8217;s identifier (<code>_id</code>) and revision property (<code>_rev</code>).</p>
 <div class="paragraph">
-<p>Any document which does contain user properties with a leading underscore will be rejected by Sync Gateway&#8201;&#8212;&#8201;see <a href="#error-code">Example 1</a> for the error details.</p>
+<p>Any document which contains user properties with a leading underscore for the reserved properties will be rejected by Sync Gateway&#8201;&#8212;&#8201;see <a href="#error-code">Example 1</a> for the error details.</p>
 </div>
 <div id="error-code" class="exampleblock">
 <div class="title">Example 1. Property prefix error message</div>
@@ -3849,7 +3880,7 @@ They do not necessarily align with constraints on the local storage and use of s
 </dd>
 <dt class="hdlist1">When you might encounter the error</dt>
 <dd>
-<p>You are especially likely to encounter the error in the following deployment situations:</p>
+<p>You may encounter the error in the following deployment situations:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -3926,15 +3957,15 @@ They do not necessarily align with constraints on the local storage and use of s
 <li>
 <p>A JSON value, termed a <em>Document</em>.</p>
 <div class="paragraph">
-<p>This JSON object is itself collection of key/value pairs, where the values may be numbers, strings, arrays or even nested objects themselves.
-As a result documents can represent highly-complex data structures in a readily parsable and self-organizing manner.</p>
+<p>This JSON object is a collection of key/value pairs. The values may be numbers, strings, arrays, or even nested objects.
+As a result, documents can represent complex data structures in a readily parsable and self-organizing manner.</p>
 </div>
 </li>
 <li>
 <p>a binary object (also known as a <em>blob</em> or <em>attachment</em>)</p>
 <div class="paragraph">
 <p>These attachments provide a means to store large media files or any other non-textual data.
-Couchbase Lite supports attachments of unlimited size, although the Sync Gateway currently imposes a 20MB limit for attachments synced to it.</p>
+Couchbase Lite supports attachments of unlimited size, although the Sync Gateway imposes a 20MB limit for attachments synced to it.</p>
 </div>
 </li>
 </ul>
@@ -3954,13 +3985,13 @@ Couchbase Lite supports attachments of unlimited size, although the Sync Gateway
 <p>A document ID</p>
 </li>
 <li>
-<p>A current revision ID (which changes every time the document is updated)</p>
+<p>A current revision ID (which changes when the document is updated)</p>
 </li>
 <li>
 <p>A history of past revision IDs (usually linear, but will form a branching tree if the document has or has had conflicts)</p>
 </li>
 <li>
-<p>A body in the form of a JSON object, i.e. a set of key/value pairs</p>
+<p>A body in the form of a JSON object (a set of key/value pairs)</p>
 </li>
 <li>
 <p>Zero or more named binary attachments</p>
@@ -3974,10 +4005,38 @@ Couchbase Lite supports attachments of unlimited size, although the Sync Gateway
 <div class="sectionbody">
 <div class="paragraph">
 <p>Couchbase&#160;Lite tracks the change history of every document as a series of revisions, like version control systems such as Git or Subversion.
-Its main purpose being to enable the replicator to determine the data to sync and any conflicts arising.</p>
+Its main purpose is to enable the replicator to determine which data to sync and any conflicts arising.</p>
 </div>
 <div class="paragraph">
 <p>Each document change is assigned a unique revision ID. The IDs of past revisions are available. The content of past revisions may be available if the revision was created locally and the database has not yet been compacted.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scopes-and-collections"><a class="anchor" href="#scopes-and-collections"></a>Scopes and Collections</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scopes and collections allow you to organize your documents within a database.</p>
+</div>
+<div class="paragraph">
+<p>You can organize your documents in collections to logically group categories of content.</p>
+</div>
+<div class="paragraph">
+<p>You can organize your collections in scopes according to content-type or deployment-phase.</p>
+</div>
+<div class="paragraph">
+<p><a href="#server:learn:data/scopes-and-collections.adoc" class="xref unresolved">Couchbase Scopes and Collections for Server</a></p>
+</div>
+<div class="paragraph">
+<p><a href="../../couchbase-lite/3.1/java/scopes-collections-manage.html" class="xref page">Couchbase Scopes and Collections for Couchbase Lite</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="channels"><a class="anchor" href="#channels"></a>Channels</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sync Gateway uses <a href="channels.html" class="xref page">Channels</a> to share a database’s documents and retain security access control.</p>
 </div>
 <hr>
 <h5 id="" class="discrete"></h5>

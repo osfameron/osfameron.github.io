@@ -2861,7 +2861,7 @@
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="rest_api_public_static.html">Public REST API (Static Page)</a>
+    <a class="menu_title menu_link" href="rest_api_public_static.html">Public REST API (Static Page&#8201;&#8212;&#8201;testing)</a>
   </span>
 </li>
 <li class="menu_list is-current-page" data-depth="2">
@@ -3713,7 +3713,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/couchbase/docs-sync-gateway/edit/release/3.1/modules/ROOT/pages/rest_api_metrics_static.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-sync-gateway/modules/ROOT/pages/rest_api_metrics_static.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -3796,713 +3796,1110 @@
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Related <em>REST API</em> topics: <a href="rest_api_public_static.html" class="xref page">Public REST API (Static Page)</a> |  <a href="rest_api_admin_static.html" class="xref page">Admin REST API (Static Page)</a></p>
+<p>Related <em>REST API</em> topics: <a href="rest_api_public_static.html" class="xref page">Public REST API (Static Page&#8201;&#8212;&#8201;testing)</a> |  <a href="rest_api_admin_static.html" class="xref page">Admin REST API (Static Page)</a></p>
 </div>
 </div>
 </div>
+<h1 id="sync-gateway" class="sect0"><a class="anchor" href="#sync-gateway"></a>Sync Gateway</h1>
 <div class="sect1">
-<h2 id="_paths"><a class="anchor" href="#_paths"></a>Paths</h2>
+<h2 id="endpoints"><a class="anchor" href="#endpoints"></a>Endpoints</h2>
 <div class="sectionbody">
+<div class="sect2 Default">
+<h3 id="default"><a class="anchor" href="#default"></a>Default</h3>
+<div class="sect3 expvarGet">
+<h4 id="get-_expvar"><a class="anchor" href="#get-_expvar"></a>GET <code>/_expvar</code></h4>
 <div class="paragraph">
-<p>This resources section groups together the available API operations under functional categories.</p>
+<p>Get all Sync Gateway statistics</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#_expvar_get">Debugging/monitoring at runtime</a></p>
-</li>
-<li>
-<p><a href="#_metrics_get">Debugging/monitoring runtime stats in Prometheus format</a></p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_expvar_get"><a class="anchor" href="#_expvar_get"></a>Debugging/monitoring at runtime</h3>
-<div class="literalblock">
+<div class="sect4">
+<h5 id="description"><a class="anchor" href="#description"></a>Description</h5>
+<div class="openblock markdown">
 <div class="content">
-<pre>GET /_expvar</pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="description"><a class="anchor" href="#description"></a>Description</h4>
 <div class="paragraph">
-<p>The <code>Expvars</code> method returns Sync Gateways' numerous statistics, and other runtime variables, in JSON format.
-Making them readily available for debugging or performance monitoring purposes.</p>
+<p>This returns a snapshot of all metrics in Sync Gateway for debugging and monitoring purposes.</p>
 </div>
 <div class="paragraph">
-<p><strong>See</strong> : <a href="stats-monitoring.html">Sync Gateway Statistics Schema</a> for more details on the metrics collected and reported by Sync Gateway.</p>
+<p>This includes per database stats, replication stats, and server stats.</p>
 </div>
 <div class="paragraph">
-<p><em>Sync Gateway Roles Required:</em></p>
+<p>Required Sync Gateway RBAC roles:
+* Sync Gateway Architect
+* Sync Gateway Dev Ops
+* External Stats Reader</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h5>
+
+</div>
+<div class="sect4">
+<h5 id="return-type"><a class="anchor" href="#return-type"></a>Return Type</h5>
 <div class="paragraph">
-<p>– Sync Gateway Dev Ops
-– External Stats Reader</p>
+<p><a href="#ExpVars"><em>ExpVars</em></a></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="responses"><a class="anchor" href="#responses"></a>Responses</h4>
+<div class="sect4">
+<h5 id="responses"><a class="anchor" href="#responses"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 70%;">
-<col style="width: 20%;">
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">HTTP Code</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">OK - indicates success</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars">ExpVars</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returned statistics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExpVars[<a href="#ExpVars"><em>ExpVars</em></a>]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="tags"><a class="anchor" href="#tags"></a>Tags</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Standard Output</p>
-</li>
-</ul>
+<div class="sect4">
+<h5 id="samples"><a class="anchor" href="#samples"></a>Samples</h5>
+
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_metrics_get"><a class="anchor" href="#_metrics_get"></a>Debugging/monitoring runtime stats in Prometheus format</h3>
-<div class="literalblock">
+<div class="sect2 Prometheus">
+<h3 id="prometheus"><a class="anchor" href="#prometheus"></a>Prometheus</h3>
+<div class="sect3 metricsGet">
+<h4 id="get-_metrics"><a class="anchor" href="#get-_metrics"></a>GET <code>/_metrics</code></h4>
+<div class="paragraph">
+<p>Debugging/monitoring runtime stats in Prometheus Exposition format</p>
+</div>
+<div class="sect4">
+<h5 id="description-2"><a class="anchor" href="#description-2"></a>Description</h5>
+<div class="openblock markdown">
 <div class="content">
-<pre>GET /_metrics</pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="description-2"><a class="anchor" href="#description-2"></a>Description</h4>
 <div class="paragraph">
-<p>The <code>_metrics</code> method returns Sync Gateway&#8217;s statistics and other runtime variables in <strong>Prometheus</strong> format.
-This makes for a convenient feed for your debugging or performance monitoring purposes.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For more details on the metrics collected and reported by Sync Gateway – see: <a href="stats-monitoring.html">Sync Gateway Statistics Schema</a>.</p>
-</li>
-<li>
-<p>For more details on Monitoring Sync Gateway using the <code>_metrics</code> feed – see: our blog on <a href="https://blog.couchbase.com/monitoring-and-visualization-of-couchbase-sync-gateway-with-prometheus-and-grafana/">Monitoring and Visualization of Couchbase Sync Gateway with Prometheus and Grafana</a></p>
-</li>
-</ul>
+<p>Returns Sync Gateway statistics and other runtime variables in Prometheus Exposition format.</p>
 </div>
 <div class="paragraph">
-<p><em>Sync Gateway Roles Required:</em></p>
+<p>Required Sync Gateway RBAC roles:
+* Sync Gateway Architect
+* Sync Gateway Dev Ops
+* External Stats Reader</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="parameters-2"><a class="anchor" href="#parameters-2"></a>Parameters</h5>
+
+</div>
+<div class="sect4">
+<h5 id="return-type-2"><a class="anchor" href="#return-type-2"></a>Return Type</h5>
 <div class="paragraph">
-<p>– Sync Gateway Dev Ops
-– External Stats Reader</p>
+<p><a href="#String">[String]</a></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="responses-2"><a class="anchor" href="#responses-2"></a>Responses</h4>
+<div class="sect4">
+<h5 id="responses-2"><a class="anchor" href="#responses-2"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 70%;">
-<col style="width: 20%;">
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">HTTP Code</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">OK - indicates success</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_metrics">Metrics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully returned stats</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String[<a href="#string">[string]</a>]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="tags-2"><a class="anchor" href="#tags-2"></a>Tags</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Prometheus</p>
-</li>
-</ul>
+<div class="sect4">
+<h5 id="samples-2"><a class="anchor" href="#samples-2"></a>Samples</h5>
+
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_definitions"><a class="anchor" href="#_definitions"></a>Definitions</h2>
+<h2 id="models"><a class="anchor" href="#models"></a>Models</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_expvars"><a class="anchor" href="#_expvars"></a>ExpVars</h3>
-<table class="tableblock frame-all grid-all stretch">
+<h3 id="ExpVars"><a class="anchor" href="#ExpVars"></a><em>ExpVars</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVars">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 61.1111%;">
-<col style="width: 22.2223%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>cb</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Variables reported by the Couchbase SDK (go_couchbase package)</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cmdline</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Built-in variables from the Go runtime, lists the command-line arguments</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>cmdline</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Built-in variables from the Go runtime, lists the command-line arguments</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">memstats</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Dumps a large amount of information about the memory heap and garbage collector</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>mc</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Variables reported by the low-level memcached API (gomemcached package)</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cb</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Variables reported by the Couchbase SDK (go_couchbase package)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>memstats</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Dumps a large amount of information about the memory heap and garbage collector</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mc</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Variables reported by the low-level memcached API (gomemcached package)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>syncGateway_changeCache</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars_syncgateway_changecache">syncGateway_changeCache</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">syncGateway_changeCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncGateway_changeCache"><em>ExpVarsSyncGatewayChangeCache</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>syncGateway_db</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars_syncgateway_db">syncGateway_db</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">syncGateway_db</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncGateway_db"><em>ExpVarsSyncGatewayDb</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>syncgateway</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Monitoring stats</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars_syncgateway">syncgateway</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">syncgateway</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway"><em>ExpVarsSyncgateway</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_syncgateway_changecache" class="paragraph">
-<p><strong>syncGateway_changeCache</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncGateway_changeCache"><a class="anchor" href="#ExpVars_syncGateway_changeCache"></a><em>ExpVarsSyncGatewayChangeCache</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncGatewayChangeCache">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 61.1111%;">
-<col style="width: 22.2223%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>lag-queue-0000ms</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Histogram of delay from Tap feed till doc is posted to changes feed</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxPending</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Max number of sequences waiting on a missing earlier sequence number</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>lag-tap-0000ms</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Histogram of delay from doc save till it shows up in Tap feed</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lag-tap-0000ms</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Histogram of delay from doc save till it shows up in Tap feed</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>lag-total-0000ms</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Histogram of total delay from doc save till posted to changes feed</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lag-queue-0000ms</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Histogram of delay from Tap feed till doc is posted to changes feed</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>maxPending</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Max number of sequences waiting on a missing earlier sequence number</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lag-total-0000ms</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Histogram of total delay from doc save till posted to changes feed</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>outOfOrder</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of out-of-order sequences posted</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outOfOrder</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of out-of-order sequences posted</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>view_queries</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of queries to channels view</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view_queries</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of queries to channels view</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_syncgateway_db" class="paragraph">
-<p><strong>syncGateway_db</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncGateway_db"><a class="anchor" href="#ExpVars_syncGateway_db"></a><em>ExpVarsSyncGatewayDb</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncGatewayDb">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 61.1111%;">
-<col style="width: 22.2223%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>channelChangesFeeds</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of calls to db.changesFeed, i.e. generating a changes feed for a single channel.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelChangesFeeds</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of calls to db.changesFeed, i.e. generating a changes feed for a single channel.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>channelLogAdds</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of entries added to channel logs</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelLogAdds</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of entries added to channel logs</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>channelLogAppends</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times entries were written to channel logs using an APPEND operation</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelLogAppends</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times entries were written to channel logs using an APPEND operation</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>channelLogCacheHits</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of requests for channel-logs that were fulfilled from the in-memory cache</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelLogCacheHits</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of requests for channel-logs that were fulfilled from the in-memory cache</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>channelLogRewriteCollisions</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of collisions while attempting to rewrite channel logs using SET</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelLogRewrites</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times entries were written to channel logs using a SET operation (rewriting the entire log)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>channelLogRewrites</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times entries were written to channel logs using a SET operation (rewriting the entire log)</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channelLogRewriteCollisions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of collisions while attempting to rewrite channel logs using SET</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>document_gets</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times a document was read from the database</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">document_gets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times a document was read from the database</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>revisionCache_adds</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of revisions added to the revision cache</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">revisionCache_adds</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of revisions added to the revision cache</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>revisionCache_hits</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times a revision-cache lookup succeeded</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">revisionCache_hits</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times a revision-cache lookup succeeded</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>revisionCache_misses</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times a revision-cache lookup failed</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">revisionCache_misses</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times a revision-cache lookup failed</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>revs_added</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of revisions added to the database (including deletions)</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">revs_added</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of revisions added to the database (including deletions)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sequence_gets</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times the database&#8217;s lastSequence was read</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sequence_gets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times the database&#8217;s lastSequence was read</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sequence_reserves</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Number of times the database&#8217;s lastSequence was incremented</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sequence_reserves</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Number of times the database&#8217;s lastSequence was incremented</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_syncgateway" class="paragraph">
-<p><strong>syncgateway</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncgateway"><a class="anchor" href="#ExpVars_syncgateway"></a><em>ExpVarsSyncgateway</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncgateway">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 61.1111%;">
-<col style="width: 22.2223%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>global</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Global Sync Gateway stats</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars_global">global</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">global</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_global"><em>ExpVarsSyncgatewayGlobal</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>per_db</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">This array contains stats for all databases declared in the config file – see the <a href="stats-monitoring.html">Sync Gateway Statistics Schema</a> for more details on the metrics collected and reported by Sync Gateway.</p>
-<p class="tableblock">The statistics for each {$db_name} database are grouped into:</p>
-<p class="tableblock">* cache related statistics
-* cbl_replication_push
-* cbl_replication_pull
-* database_related_statistics
-* delta_sync
-* gsi_views
-* security_related_statistics
-* shared_bucket_import
-* per_replication statistics for each <code>replication_id</code></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; <a href="#_expvars_per_db">per_db</a> &gt; array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">per_db</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of <a href="#ExpVars_syncgateway_per_db_inner"><em>ExpVarsSyncgatewayPerDbInner</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>This array contains stats for all databases declared in the config file&#8201;&#8212;&#8201;see the [Sync Gateway Statistics Schema](./../stats-monitoring.html) for more details on the metrics collected and reported by Sync Gateway.
+The statistics for each {$db_name} database are grouped into:
+- cache related statistics
+- collections statistics
+- cbl_replication_push
+- cbl_replication_pull
+- database_related_statistics
+- delta_sync
+- gsi_views
+- security_related_statistics
+- shared_bucket_import
+- per_replication statistics for each <code>replication_id</code></p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>per_replication</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">An array of stats for each replication declared in the config file</p>
-<p class="tableblock"><strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; <a href="#_expvars_per_replication">per_replication</a> &gt; array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">per_replication</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List of <a href="#ExpVars_syncgateway_per_replication_inner"><em>ExpVarsSyncgatewayPerReplicationInner</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>An array of stats for each replication declared in the config file
+<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_global" class="paragraph">
-<p><strong>global</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncgateway_global"><a class="anchor" href="#ExpVars_syncgateway_global"></a><em>ExpVarsSyncgatewayGlobal</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncgatewayGlobal">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 61.1111%;">
-<col style="width: 22.2223%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>resource_utilization</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Resource utilization stats</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars_global_resource_utilization">resource_utilization</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resource_utilization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_global_resource_utilization"><em>ExpVarsSyncgatewayGlobalResourceUtilization</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_global_resource_utilization" class="paragraph">
-<p><strong>resource_utilization</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncgateway_global_resource_utilization"><a class="anchor" href="#ExpVars_syncgateway_global_resource_utilization"></a><em>ExpVarsSyncgatewayGlobalResourceUtilization</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncgatewayGlobalResourceUtilization">
 <colgroup>
-<col style="width: 42.8571%;">
-<col style="width: 57.1429%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>admin_net_bytes_recv</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">admin_net_bytes_recv</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>admin_net_bytes_sent</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">admin_net_bytes_sent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>error_count</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">error_count</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_heapalloc</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_heapalloc</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_heapidle</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_heapidle</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_heapinuse</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_heapinuse</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_heapreleased</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_heapreleased</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_pausetotalns</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_pausetotalns</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_stackinuse</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_stackinuse</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_stacksys</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_stacksys</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>go_memstats_sys</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">go_memstats_sys</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>goroutines_high_watermark</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">goroutines_high_watermark</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>num_goroutines</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">num_goroutines</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>process_cpu_percent_utilization</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">process_cpu_percent_utilization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>process_memory_resident</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">process_memory_resident</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>pub_net_bytes_recv</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pub_net_bytes_recv</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>pub_net_bytes_sent</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pub_net_bytes_sent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>system_memory_total</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">system_memory_total</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>warn_count</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">warn_count</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_per_db" class="paragraph">
-<p><strong>per_db</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncgateway_per_db_inner"><a class="anchor" href="#ExpVars_syncgateway_per_db_inner"></a><em>ExpVarsSyncgatewayPerDbInner</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncgatewayPerDbInner">
 <colgroup>
-<col style="width: 42.8571%;">
-<col style="width: 57.1429%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>cache</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>database</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">database</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>per_replication</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">&lt; object &gt; array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">per_replication</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>security</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">collections</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">security</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Object">[Object]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_per_replication" class="paragraph">
-<p><strong>per_replication</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncgateway_per_replication_inner"><a class="anchor" href="#ExpVars_syncgateway_per_replication_inner"></a><em>ExpVarsSyncgatewayPerReplicationInner</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncgatewayPerReplicationInner">
 <colgroup>
-<col style="width: 42.8571%;">
-<col style="width: 57.1429%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>$replication_id</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_expvars_per_replication_replication_id">$replication_id</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$replication_id</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_replication_inner__replication_id"><em>ExpVarsSyncgatewayPerReplicationInnerReplicationId</em></a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div id="_expvars_per_replication_replication_id" class="paragraph">
-<p><strong>$replication_id</strong></p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<div class="sect2">
+<h3 id="ExpVars_syncgateway_per_replication_inner__replication_id"><a class="anchor" href="#ExpVars_syncgateway_per_replication_inner__replication_id"></a><em>ExpVarsSyncgatewayPerReplicationInnerReplicationId</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExpVarsSyncgatewayPerReplicationInnerReplicationId">
 <colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 61.1111%;">
-<col style="width: 22.2223%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sgr_active</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Whether the replication is active at this time.
-<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sgr_active</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Boolean">[Boolean]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Whether the replication is active at this time.
+<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sgr_docs_checked_sent</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The total number of documents checked for changes since replication started.
+<td class="tableblock halign-left valign-top"><p class="tableblock">sgr_docs_checked_sent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The total number of documents checked for changes since replication started.
 This represents the number of potential change notifications pushed by Sync Gateway.
 <strong>Constraints</strong>
- This is not necessarily the number of documents pushed, as a given target might already have the change.
- Used by versions 1 and 2.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+  This is not necessarily the number of documents pushed, as a given target might already have the change.
+  Used by versions 1 and 2.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sgr_num_attachment_bytes_transferred</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The total number of attachment bytes transferred since replication started.
-<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sgr_num_attachments_transferred</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The total number of attachments transferred since replication started.
+<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sgr_num_attachments_transferred</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The total number of attachments transferred since replication started.
-<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sgr_num_attachment_bytes_transferred</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The total number of attachment bytes transferred since replication started.
+<strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sgr_num_docs_failed_to_push</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The total number of documents that failed to be pushed since replication started.
-Used by versions 1 and 2.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sgr_num_docs_failed_to_push</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The total number of documents that failed to be pushed since replication started.
+Used by versions 1 and 2.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>sgr_num_docs_pushed</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The total number of documents that were pushed since replication started.
-Used by versions 1 and 2.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sgr_num_docs_pushed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Integer">[Integer]</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The total number of documents that were pushed since replication started.
+Used by versions 1 and 2.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="_metrics"><a class="anchor" href="#_metrics"></a>Metrics</h3>
 <div class="paragraph">
-<p>The Prometheus output is expected to by consumed only by a Prometheus server.
-For that reason its format is irrelevant, and a brief extract is show here for completeness and information only.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For more details on the metrics collected and reported by Sync Gateway – see: <a href="stats-monitoring.html">Sync Gateway Statistics Schema</a>.</p>
-</li>
-<li>
-<p>For more details on Monitoring Sync Gateway using the <code>_metrics</code> feed – see: our blog on <a href="https://blog.couchbase.com/monitoring-and-visualization-of-couchbase-sync-gateway-with-prometheus-and-grafana/">Monitoring and Visualization of Couchbase Sync Gateway with Prometheus and Grafana</a></p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>...
-# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
-# TYPE go_gc_duration_seconds summary
-go_gc_duration_seconds{quantile="0"} 0.0001155
-go_gc_duration_seconds{quantile="0.25"} 0.0001254
-go_gc_duration_seconds{quantile="0.5"} 0.0001597
-go_gc_duration_seconds{quantile="0.75"} 0.0001806
-go_gc_duration_seconds{quantile="1"} 0.0049731
-go_gc_duration_seconds_sum 0.006334
-go_gc_duration_seconds_count 9
-# HELP go_goroutines Number of goroutines that currently exist.
-# TYPE go_goroutines gauge
-go_goroutines 205
-...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>Type</em> : object</p>
+<p>END OF DOC</p>
 </div>
 <hr>
 <h5 id="" class="discrete"></h5>
