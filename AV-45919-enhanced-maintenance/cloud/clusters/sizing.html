@@ -237,10 +237,10 @@ Each Couchbase service utilizes resources differently, so it&#8217;s important t
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../../server/7.1/learn/services-and-indexes/services/services.html" class="xref page">Couchbase services</a></p>
+<p><a href="../../server/7.2/learn/services-and-indexes/services/services.html" class="xref page">Couchbase services</a></p>
 </li>
 <li>
-<p><a href="../../server/7.1/install/sizing-general.html" class="xref page">Couchbase Server Sizing Guidelines</a></p>
+<p><a href="../../server/7.2/install/sizing-general.html" class="xref page">Couchbase Server Sizing Guidelines</a></p>
 </li>
 </ul>
 </div>
@@ -282,25 +282,23 @@ IO2 is higher performance and more durable with better reliability.</p>
 <p>Capella databases deployed onto Google Cloud use SSD persistent disks (PD-SSD).
 These are best for high-performance database needs requiring lower latency and more IOPS than standard persistent disks provide.</p>
 </div>
+<div class="paragraph">
+<div class="title">Azure</div>
+<p>Capella databases using Microsoft Azure can choose between Premium SSD or Ultra disks.
+Azure premium SSDs are best for high-performance database needs that require lower latency and more IOPS.
+Azure ultra disks are best for intensive and transaction-heavy workloads that require low latency and consistent IOPS/throughput.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="storage"><a class="anchor" href="#storage"></a>Storage</h3>
 <div class="paragraph">
 <p>The required amount of storage for the service.
-Storage sizing is measured by the capacity you determine in GB.
-The minimum disk size is 50 GB.</p>
+Storage sizing is measured by the capacity you determine in GiB.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Capella automatically selects the optimal storage <em>type</em> available from your cloud provider to meet the I/O requirements of your configuration.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<div class="title">Azure</div>
+<p>The amount of storage depends on the chosen disk type. For example, if you want the 256 GiB of storage, you could choose the P15 disk configuration.
+If you&#8217;re using the Ultra disk type, you can choose between fixed storage size options.</p>
 </div>
 </div>
 <div class="sect2">
@@ -327,6 +325,11 @@ The storage speed is configurable based on the volume type used:</p>
 <div class="paragraph">
 <div class="title">GCP</div>
 <p>This value is automatically set by Capella based on the specified storage size and doesn&#8217;t allow for direct user customization.</p>
+</div>
+<div class="paragraph">
+<div class="title">Azure</div>
+<p>IOPS for the Premium SSD (P) disk type are based on the chosen Premium SSD disk size.
+The IOPS for the Ultra disk type can be set, but the possible range depends on the chosen storage size.</p>
 </div>
 </div>
 </div>
@@ -363,72 +366,17 @@ The storage speed is configurable based on the volume type used:</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="templates"><a class="anchor" href="#templates"></a>Configuration Templates</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Database templates provide pre-defined database configurations based on common workloads.
-Each template has a variety of different sizes, and selecting one populates the entire database configuration for you.</p>
-</div>
-<div class="paragraph">
-<p>When applying a template, the <strong>Configuration Templates</strong> page displays the services and resources that make up the template.
-Templates are a good place to start when sizing your first database in Capella.
-You can always deploy a database using a template and modify it later to match your needs.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="custom-deployment-mode"><a class="anchor" href="#custom-deployment-mode"></a>Custom Deployments</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Custom deployments provide you with granular control to size and configure your database.</p>
-</div>
-<div class="paragraph">
-<p>Custom deployments work well if you:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Already have experience with Couchbase Server.</p>
-</li>
-<li>
-<p>Want to re-create an existing Couchbase deployment using Couchbase Capella.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When using a custom deployment, click <strong>Add Service Group</strong> to add different node configurations.
-Each node configuration represents a service group row in the Deployment Configuration.</p>
-</div>
-<div class="paragraph">
-<p>The following custom configuration is available:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Which individual services run on the node.</p>
-</li>
-<li>
-<p>Number of nodes by quantity for the node configuration.</p>
-</li>
-<li>
-<p>Compute type instance that the node configuration runs on.</p>
-</li>
-<li>
-<p>Disk type for the configuration.</p>
-</li>
-<li>
-<p>Storage capacity for each node.</p>
-</li>
-<li>
-<p>Input and output operations per second (IOPS).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To learn how to create a custom deployment, see <a href="create-database.html" class="xref page">Create a Database</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Capella self-service trial has a smaller configuration for evaluation purposes.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

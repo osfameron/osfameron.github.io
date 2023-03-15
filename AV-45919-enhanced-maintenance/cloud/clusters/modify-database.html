@@ -268,6 +268,9 @@ IO2 is higher performance and more durable with better reliability.</p>
 </div>
 <div class="paragraph">
 <p><strong>GCP</strong>: PD-SSD is the only disk type and can&#8217;t be changed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Azure</strong>: Capella databases using Microsoft Azure can choose between Premium SSD or Ultra disks.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -275,6 +278,9 @@ IO2 is higher performance and more durable with better reliability.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#increase-storage">Increase storage</a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>You can&#8217;t decrease storage once it has been added to a database.</p>
+</div>
+<div class="paragraph">
+<p><strong>Azure</strong>: To increase storage, you need to choose a new disk type.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -286,6 +292,10 @@ IO2 is higher performance and more durable with better reliability.</p>
 <div class="paragraph">
 <p><strong>GCP</strong>: IOPS isn&#8217;t a directly configurable value.
 It&#8217;s set based on the amount of storage you&#8217;ve assigned to a service group: 30 read and 30 write IOPS per GB.</p>
+</div>
+<div class="paragraph">
+<p><strong>Azure</strong>: IOPS for the Premium SSD (P) disk type are based on the chosen Premium SSD disk size.
+The IOPS for the Ultra disk type can be set, but the possible range depends on the chosen storage size.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -403,7 +413,7 @@ You can&#8217;t add a service when that service already exists on the database.
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
 <p>Use the <b class="menuref">Services</b> list to select the services you want to add:</p>
@@ -430,7 +440,7 @@ For more information about sizing a database, see <a href="sizing.html" class="x
 </div>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -473,7 +483,7 @@ You can&#8217;t remove the Data Service.
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
 <p>To remove a service, click the <strong>x</strong> icon for the service you&#8217;re removing in the <strong>Services</strong> list:</p>
@@ -484,7 +494,7 @@ You can&#8217;t remove the Data Service.
 </div>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your current changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -499,7 +509,7 @@ You can&#8217;t remove the Data Service.
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-Services require a minimum of two nodes, except for the Data Service which needs three.
+Services require a minimum of two nodes, except for the Data Service, which needs three.
 A database can have up to 27 nodes.
 </td>
 </tr>
@@ -528,13 +538,13 @@ A database can have up to 27 nodes.
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
 <p>Using the <strong>Nodes</strong> list in the service group you&#8217;re modifying, choose a new number of nodes for this configuration.</p>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your current changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -564,16 +574,16 @@ A database can have up to 27 nodes.
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
-<p>Using the <strong>Compute</strong> drop-down of the service group you&#8217;re modifying, choose a new compute instance type for this configuration.</p>
+<p>Use the <strong>Compute</strong> drop-down in the service group you’re modifying to choose a new compute instance type.</p>
 <div class="paragraph">
 <p>The compute dictates the number of vCPUs and memory provisioned for each node in a service group.</p>
 </div>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your current changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -588,8 +598,13 @@ A database can have up to 27 nodes.
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-GCP supports PD-SSD.
-You can only change the disk type for databases deployed with AWS (GP3 or IO2).
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GCP</strong>: Only supports PD-SSD.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
@@ -617,13 +632,13 @@ You can only change the disk type for databases deployed with AWS (GP3 or IO2).
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
-<p>Use the <strong>Disk Type</strong> toggle to switch between GP3 and IO2 for the configuration you&#8217;re modifying.</p>
+<p>Use the <strong>Disk Type</strong> control to change disk types for the configuration you&#8217;re modifying.</p>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your current changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -638,7 +653,16 @@ You can only change the disk type for databases deployed with AWS (GP3 or IO2).
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-Storage can&#8217;t be removed from a service configuration once added.
+<div class="paragraph">
+<p>Storage can&#8217;t be removed from a service configuration once added.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Azure</strong>: You can only increase storage by choosing a new disk type.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
@@ -666,13 +690,14 @@ Storage can&#8217;t be removed from a service configuration once added.
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
-<p>Using the <strong>Storage</strong> box of the service group you&#8217;re modifying, enter the amount (GB) of storage you want per node for this configuration.</p>
+<p>Using the <strong>Storage</strong> box of the service group you&#8217;re modifying, enter the amount of storage you want per node for this configuration.
+If the database uses Azure, you must choose a new disk type to increase storage.</p>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your current changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -687,8 +712,18 @@ Storage can&#8217;t be removed from a service configuration once added.
 </td>
 <td class="content">
 <div class="title">Limitations</div>
-IOPS (Input/Output Operations per Second) isn&#8217;t a directly configurable value for databases deployed with GCP.
-Instead, it&#8217;s automatically set at 30 reads and 30 writes IOPS per GB of storage provisioned.
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GCP</strong>: IOPS (Input/Output Operations per Second) isn&#8217;t a directly configurable value.
+Instead, it&#8217;s automatically set at 30 reads and 30 writes IOPS per GB of storage provisioned.</p>
+</li>
+<li>
+<p><strong>Azure</strong>: IOPS for the Premium SSD (P) disk type are based on the chosen Premium SSD disk size.
+The IOPS for the Ultra disk type can be set, but the possible range depends on the chosen storage size.</p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
@@ -716,16 +751,17 @@ Instead, it&#8217;s automatically set at 30 reads and 30 writes IOPS per GB of s
 </div>
 </li>
 <li>
-<p>In the navigation pane, click <b class="menuref">Services</b></p>
+<p>In the navigation pane, click <b class="menuref">Services</b>.</p>
 </li>
 <li>
 <p>Using the <strong>IOPS</strong> box, enter the IOPS value for the service group you&#8217;re modifying.</p>
 <div class="paragraph">
-<p>This field isn&#8217;t shown when a database uses GCP as its cloud provider.</p>
+<p>This field isn&#8217;t shown when a database uses GCP as its cloud provider.
+If you&#8217;re using Azure&#8217;s Premium SSD disk type, you can&#8217;t change the value of this field.</p>
 </div>
 </li>
 <li>
-<p>With no other database changes to make, <a href="#apply-changes">review and apply your current changes</a>.</p>
+<p>If you have no other changes, <a href="#apply-changes">review and apply the new configuration</a>.</p>
 </li>
 </ol>
 </div>
@@ -741,7 +777,7 @@ Instead, it&#8217;s automatically set at 30 reads and 30 writes IOPS per GB of s
 <p>Review and update configuration</p>
 <div class="paragraph">
 <p>All the changes you make to a database are on the <strong>Service</strong> page.
-Review this new configuration to  that it meets your requirements.</p>
+Review this new configuration to ensure it meets your requirements.</p>
 </div>
 <div class="paragraph">
 <p>Any warnings about your proposed changes appear on the <strong>Service</strong> page and can prevent you from updating the configuration until you resolve them.
@@ -749,14 +785,14 @@ If you need to discard your changes, click <b class="button">Cancel</b>.</p>
 </div>
 </li>
 <li>
-<p>Once you have reviewed the changes, click <b class="button">Apply</b>.</p>
+<p>Once you have reviewed the changes, click <b class="button">Save</b>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>The database <a href="scale-database.html#rebalance" class="xref page">rebalances</a> and redistributes service data over the new superset of nodes.
 The amount of time taken for the new nodes to rebalance into the database depends on the service of the new nodes, and how much data is redistributed.
-The database remains up and available during the rebalance, but you can&#8217;t make further changes until the rebalancing is complete.</p>
+The database remains available during the rebalance, but you can&#8217;t make further changes until the rebalancing is complete.</p>
 </div>
 </div>
 </div>
@@ -789,7 +825,7 @@ The database remains up and available during the rebalance, but you can&#8217;t 
 <p>In the <strong>Database Name</strong> field, enter a new name for the database.</p>
 </li>
 <li>
-<p>Click <b class="button">Apply</b>.</p>
+<p>Click <b class="button">Save</b>.</p>
 </li>
 </ol>
 </div>

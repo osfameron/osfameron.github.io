@@ -245,6 +245,18 @@ You must have the <a href="../projects/project-roles.html#project-owner-role" cl
 </li>
 <li>
 <p>Select the project where you want to create a database.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To quickly find a project, type its name into the <a href="#cloud:get-started/using-search.adoc" class="xref unresolved">search box</a>.
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>Click <b class="button">Create Database</b></p>
@@ -272,6 +284,9 @@ You must have the <a href="../projects/project-roles.html#project-owner-role" cl
 <li>
 <p><a href="../reference/gcp.html" class="xref page">Google Cloud Platform (GCP)</a></p>
 </li>
+<li>
+<p><a href="../reference/azure.html" class="xref page">Microsoft Azure</a></p>
+</li>
 </ul>
 </div>
 </td>
@@ -288,7 +303,7 @@ You must have the <a href="../projects/project-roles.html#project-owner-role" cl
 <ol class="loweralpha" type="a">
 <li>
 <p>Using the <strong>Available Regions</strong> list, choose the region where you want to create this database.
-A list of supported regions is available for <a href="../reference/gcp.html#supported-regions" class="xref page">Google Cloud</a> and <a href="../reference/aws.html#supported-regions" class="xref page">AWS</a>.</p>
+A list of supported regions is available for <a href="../reference/aws.html#supported-regions" class="xref page">AWS</a>, <a href="../reference/gcp.html#supported-regions" class="xref page">Google Cloud</a>, and <a href="../reference/azure.html#supported-regions" class="xref page">Azure</a>.</p>
 </li>
 <li>
 <p>In the <strong>CIDR Block</strong> field, enter an IP range in CIDR notation.
@@ -302,11 +317,10 @@ In most cases, you can accept the default CIDR block.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Capella autogenerates the database name, but you can change it
-Use the <strong>Database Name</strong> field to enter a custom database name.</p>
+<p>Capella autogenerates the database name, but you can change it using the <strong>Database Name</strong> field.</p>
 </li>
 <li>
-<p>In the <strong>Description</strong> field, you can to enter a brief description of the database.</p>
+<p>In the <strong>Description</strong> field, you can enter a brief description of the database.</p>
 </li>
 </ol>
 </div>
@@ -314,33 +328,18 @@ Use the <strong>Database Name</strong> field to enter a custom database name.</p
 <li>
 <p>Select a <strong>Couchbase Server Version</strong>.</p>
 <div class="paragraph">
-<p>You can select Couchbase Server&#160;7.0 or Couchbase Server&#160;7.1 as the backend server for your database.
-The recommended default is <code>7.1</code></p>
+<p>If you&#8217;re using AWS or GCP as a cloud provider, you can select Couchbase Server&#160;7.0 or Couchbase Server&#160;7.1 as the backend server for your database.
+The recommended default is Couchbase Server&#160;7.1.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re using Azure, only Couchbase Server&#160;7.1 is available.</p>
 </div>
 </li>
 <li>
 <p>Configure the <strong>Service Groups</strong>:</p>
 <div class="paragraph">
-<p>In this section, you can configure the services and resources available to your database.</p>
+<p>Using service groups, you can create custom configurations with granular control over sizing and service functionality.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Templates</dt>
-<dd>
-<p>Open the <strong>Configuration Templates</strong> page by clicking the <strong>choose a template</strong> link near the top of the Configuration area.
-This page provides template options that you can apply to your database.</p>
-<div class="paragraph">
-<p>Database templates provide pre-defined database configurations based on common workloads.
-Each template has a variety of different sizes, and selecting one populates the entire database configuration for you.</p>
-</div>
-<div class="paragraph">
-<p>Read more about how to use <a href="sizing.html#templates" class="xref page">templates</a>.</p>
-</div>
-</dd>
-<dt class="hdlist1">Custom Deployments</dt>
-<dd>
-<p>You can create custom configurations that provide more granular control over sizing and service functionality.
-This option works well if you already have experience with Couchbase Server or want to re-create an existing Couchbase deployment using Couchbase Capella.</p>
 <div class="openblock">
 <div class="content">
 <div class="olist loweralpha">
@@ -348,7 +347,7 @@ This option works well if you already have experience with Couchbase Server or w
 <li>
 <p>Select the <strong>Services</strong>.</p>
 <div class="paragraph">
-<p>In a Capella, you assign <a href="../../server/7.1/learn/services-and-indexes/services/services.html" class="xref page">Couchbase Server services</a> to service groups.
+<p>In Capella, you assign <a href="../../server/7.2/learn/services-and-indexes/services/services.html" class="xref page">Couchbase Server services</a> to service groups.
 Service groups allow you to create node configurations for specified services.
 During the database creation process, a new database automatically has one service group with the <a href="data-service/data-service.html" class="xref page">Data Service</a>, which is a required service.</p>
 </div>
@@ -362,13 +361,17 @@ You can also add more service groups by clicking <b class="button">Add Service G
 <div class="paragraph">
 <p>Configure each service group with a node quantity.
 Individual service groups can have between 2 and 27 nodes but cannot collectively exceed 27 in a database.
-The service group that includes the Data Service requires at least 3 nodes and must be a multiple of 3 when using multiple availability zones.</p>
+The service group that includes the Data Service requires at least 3 nodes.</p>
+</div>
+<div class="paragraph">
+<p>If the database uses Couchbase Server&#160;7.0 with multiple availability zones, any additional nodes you add to the Data Service must be added in multiples of three.
+Databases using Couchbase Server&#160;7.1 support unequal server groups and do not have this requirement.</p>
 </div>
 </li>
 <li>
 <p>Select the <strong>Compute</strong>.</p>
 <div class="paragraph">
-<p>Provide each service group with compute instance type.
+<p>Provide each service group with a compute instance type.
 A selected compute option dictates the number of vCPUs and memory provisioned for each node in a service group.
 Compute options depend on the chosen cloud provider.</p>
 </div>
@@ -383,6 +386,9 @@ Compute options depend on the chosen cloud provider.</p>
 <li>
 <p><strong>GCP</strong>: PD-SSD only.</p>
 </li>
+<li>
+<p><strong>Azure</strong>: Choose between Premium SSD or Ultra.</p>
+</li>
 </ul>
 </div>
 </li>
@@ -390,6 +396,15 @@ Compute options depend on the chosen cloud provider.</p>
 <p>Select the <strong>Storage</strong>.</p>
 <div class="paragraph">
 <p>In each service group, enter the amount of storage your database needs per node.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Azure</strong>: The amount of storage depends on the chosen disk type.
+For example, if you want the 256 GiB of storage, you could choose the P15 disk configuration.
+If you&#8217;re using the Ultra disk type, you can choose between fixed storage size options.</p>
+</li>
+</ul>
 </div>
 </li>
 <li>
@@ -402,6 +417,11 @@ Compute options depend on the chosen cloud provider.</p>
 <li>
 <p><strong>GCP</strong>: IOPS isn&#8217;t directly configurable.
 Instead, it&#8217;s based on the amount of storage you&#8217;ve assigned to a service group: 30 read and 30 write IOPS per GB.</p>
+</li>
+<li>
+<p><strong>Azure</strong>: IOPS for the Premium SSD (P) disk type options are not configurable.
+Instead, it is set based on the chosen Premium SSD disk size.
+The IOPS for the Ultra disk type can be set, but the possible range depends on the chosen storage size.</p>
 </li>
 </ul>
 </div>
@@ -417,13 +437,10 @@ Instead, it&#8217;s based on the amount of storage you&#8217;ve assigned to a se
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For more detailed information about the node configuration options available for each cloud provider, see the Capella <a href="../reference/gcp.html#configuration-options" class="xref page">GCP</a> and <a href="../reference/aws.html#configuration-options" class="xref page">AWS</a> reference documentation.
+For more detailed information about the node configuration options available for each cloud provider, see the Capella <a href="../reference/aws.html#configuration-options" class="xref page">AWS</a>, <a href="../reference/gcp.html#configuration-options" class="xref page">GCP</a>, and <a href="../reference/azure.html#configuration-options" class="xref page">Microsoft Azure</a> reference documentation.
 </td>
 </tr>
 </table>
-</div>
-</dd>
-</dl>
 </div>
 </li>
 <li>
@@ -448,7 +465,7 @@ For more information about Capella&#8217;s support levels, see the <a href="http
 </div>
 <div class="paragraph">
 <p>If you choose the Developer Pro or Enterprise plan, you must set the <a href="../support/support.html#support-time-zones" class="xref page">Support Time Zone</a>.
-Consider factors such as when database administrators can work with Couchbase Support staff when choosing this setting.</p>
+When choosing this setting, consider factors such as when database administrators can work with Couchbase Support staff.</p>
 </div>
 </li>
 <li>
@@ -490,7 +507,7 @@ For a list of the configuration changes you can make to a deployed Capella datab
 <div class="paragraph">
 <p>Capella automatically creates the database in your chosen cloud provider and region.
 This process typically takes under five minutes, but it can take longer depending on factors like database size and cloud provider performance.
-When it&#8217;s fully deployed, the database shows a <strong>Healthy</strong> status.</p>
+When the database finishes deploying, it shows a Healthy status.</p>
 </div>
 </li>
 </ol>

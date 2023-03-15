@@ -189,7 +189,7 @@ Setting up a private network enables your application to interact with Couchbase
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Use the procedures on this page to configure a private network connection from Couchbase Capella clusters hosted with AWS or GCP to your application&#8217;s VPC.</p>
+<p>Use the procedures on this page to configure a private network connection from Couchbase Capella databases hosted with AWS, GCP, or Microsoft Azure to your application&#8217;s VPC.</p>
 </div>
 <div class="paragraph">
 <p>Using a private network (also known as network peering) provides an added layer of security for organizations by avoiding communication over the Internet.
@@ -202,8 +202,8 @@ It also results in a significant reduction in latency and egress costs.</p>
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-Capella does <em>not</em> support setting up a private network between different cloud providers.
-For example, you cannot set up private networking between a Capella cluster hosted in GCP with an application hosted on AWS.
+Capella does not support private networks between different cloud providers.
+For example, you cannot set up private networking between a Capella database hosted in GCP with an application hosted on AWS.
 </td>
 </tr>
 </table>
@@ -214,7 +214,7 @@ For example, you cannot set up private networking between a Capella cluster host
 <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Setting up a Private Network</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To set up a private network, use the instructions provided on the tab that corresponds with your Capella cluster&#8217;s cloud provider.</p>
+<p>To set up a private network, use the instructions provided on the tab that corresponds with your Capella database&#8217;s cloud provider.</p>
 </div>
 <div class="tabset is-loading">
 <div class="ulist tabs">
@@ -224,6 +224,9 @@ For example, you cannot set up private networking between a Capella cluster host
 </li>
 <li>
 <p><a id="tabset1_gcp"></a>GCP</p>
+</li>
+<li>
+<p><a id="tabset1_azure"></a>Azure</p>
 </li>
 </ul>
 </div>
@@ -256,8 +259,8 @@ For example, you cannot set up private networking between a Capella cluster host
 </div>
 </li>
 <li>
-<p>You must also ensure that your Capella cluster&#8217;s CIDR block (specified when setting up the cluster) does not overlap with the application VPC CIDR block.
-You can retrieve the CIDR block for a cluster <a href="../reference/rest-endpoints-all.html#samples-26" class="xref page">using the public API</a>.</p>
+<p>You must also ensure that your Capella database&#8217;s CIDR block (specified when setting up the database) does not overlap with the application VPC CIDR block.
+You can retrieve the CIDR block for a database <a href="../reference/rest-endpoints-all.html#samples-26" class="xref page">using the public API</a>.</p>
 </li>
 </ol>
 </div>
@@ -271,11 +274,11 @@ You can retrieve the CIDR block for a cluster <a href="../reference/rest-endpoin
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In Capella, add a new private network for your cluster.</p>
+<p>In Capella, add a new private network for your database.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Open the cluster where you want to create the new private network.</p>
+<p>Open the database where you want to create the new private network.</p>
 </li>
 <li>
 <p>Click the <strong>Connect</strong> tab.</p>
@@ -366,7 +369,7 @@ If you have multiple CIDR blocks associated with a VPC you will need to set up m
 <div class="paragraph">
 <p>Capella will set up the private network.
 This typically takes up to a minute.
-If successful you should see the private network added to the list of private networks, then you may briefly see the cluster enter a "Deploying" state while the new network is set up.</p>
+If successful you should see the private network added to the list of private networks, then you may briefly see the database enter a "Deploying" state while the new network is set up.</p>
 </div>
 <div class="paragraph">
 <p>If there&#8217;s a problem with the private network then Capella will tell you via an error message, such as in the case of overlapping CIDR blocks.</p>
@@ -400,7 +403,7 @@ If successful you should see the private network added to the list of private ne
 </div>
 </li>
 <li>
-<p>While the status of the network says "Complete" there are a final few steps you need to carry out before you can access your Capella cluster from your VPC over this private network.</p>
+<p>While the status of the network says "Complete" there are a final few steps you need to carry out before you can access your Capella database from your VPC over this private network.</p>
 <div class="paragraph">
 <p>If you click on the Private Network it will show you two commands that you must run to accept the peering request and also link your VPC to the appropriate DNS server for hostname resolution.
 You can also accept the VPC peering request in the AWS console:</p>
@@ -481,7 +484,7 @@ You can also accept the VPC peering request in the AWS console:</p>
 </div>
 </li>
 <li>
-<p>The final step is to then update the Route Table for your application VPC to ensure that all traffic destined for your Capella cluster is appropriately routed.</p>
+<p>The final step is to then update the Route Table for your application VPC to ensure that all traffic destined for your Capella database is appropriately routed.</p>
 <div class="paragraph">
 <p>First, identify the Route Table for your application VPC:</p>
 </div>
@@ -492,7 +495,7 @@ You can also accept the VPC peering request in the AWS console:</p>
 </div>
 </li>
 <li>
-<p>Then you want to edit the routes of this Route Table to add the Capella cluster as a new route.
+<p>Then you want to edit the routes of this Route Table to add the Capella database as a new route.
 Take the CIDR block of the <code>RequesterVpcInfo</code> from the VPC peering request output, in this example <code>10.0.16.0/20</code>, and enter this as the destination. The target should be the <code>VpcPeeringConnectionId</code>, in this example <code>pcx-004adebd9bf32a24f</code>.</p>
 <div class="imageblock">
 <div class="content">
@@ -501,7 +504,7 @@ Take the CIDR block of the <code>RequesterVpcInfo</code> from the VPC peering re
 </div>
 </li>
 <li>
-<p>If your VPC has any outbound security groups associated with it (i.e. limiting outbound traffic to specific IPs), then you must also add the CIDR block for your Capella cluster to the outbound security group.</p>
+<p>If your VPC has any outbound security groups associated with it (i.e. limiting outbound traffic to specific IPs), then you must also add the CIDR block for your Capella database to the outbound security group.</p>
 </li>
 </ol>
 </div>
@@ -537,11 +540,11 @@ Take the CIDR block of the <code>RequesterVpcInfo</code> from the VPC peering re
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In Capella, add a new private network for your cluster.</p>
+<p>In Capella, add a new private network for your database.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Open the cluster where you want to create the new private network.</p>
+<p>Open the database where you want to create the new private network.</p>
 </li>
 <li>
 <p>Click the <strong>Connect</strong> tab.</p>
@@ -622,7 +625,7 @@ This looks like <code>&lt;service-account-id&gt;@rock-galaxy-123456.iam.gservice
 <div class="paragraph">
 <p>Capella will set up the private network.
 This typically takes up to a minute.
-If successful you should see the private network added to the list of private networks, then you may briefly see the cluster enter a "Deploying" state while the new network is set up.</p>
+If successful you should see the private network added to the list of private networks, then you may briefly see the database enter a "Deploying" state while the new network is set up.</p>
 </div>
 <div class="paragraph">
 <p>If there&#8217;s a problem with the private network then Capella will tell you via an error message.</p>
@@ -655,7 +658,7 @@ If successful you should see the private network added to the list of private ne
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-While the status of the network says "Complete" there are some final steps you must carry out before you can access your Capella cluster from your VPC over this private network.
+While the status of the network says "Complete" there are some final steps you must carry out before you can access your Capella database from your VPC over this private network.
 </td>
 </tr>
 </table>
@@ -689,6 +692,186 @@ While the status of the network says "Complete" there are some final steps you m
 </div>
 </div>
 </div>
+<div class="tab-pane" aria-labelledby="tabset1_azure">
+<div class="paragraph">
+<p><strong>Prerequisites</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>To configure Couchbase Capella VNet peering with Microsoft Azure, you need the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An Azure user with the <a href="https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator">Global Administrator Role</a>.</p>
+</li>
+<li>
+<p>The <a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">Azure CLI</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Creating VNet peering</strong></p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Capella, start the VNet peering configuration:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the database you want to peer with your application.</p>
+</li>
+<li>
+<p>Click the <strong>Setting</strong> tab.</p>
+</li>
+<li>
+<p>In the navigation pane, click <strong>VNet Peering</strong>.</p>
+</li>
+<li>
+<p>Click <b class="button">Setup VNet Peering</b>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Confirm that you have a user with the <a href="https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator">Global Administrator Role</a>.</p>
+</li>
+<li>
+<p>Add your Azure configuration details to allow peering access:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Azure Tenant ID</dt>
+<dd>
+<p>Enter your tenant ID.
+To find your tenant ID, see <a href="https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant">How to find your Azure Active Directory tenant ID</a>.</p>
+</dd>
+<dt class="hdlist1">Azure Subscription ID</dt>
+<dd>
+<p>Enter your subscription ID.
+To find your subscription ID, see <a href="https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id#find-your-azure-subscription">Find your Azure subscription</a>.</p>
+</dd>
+<dt class="hdlist1">Resource Group Name</dt>
+<dd>
+<p>Enter the resource group name holding the resource you&#8217;re connecting with Capella.</p>
+</dd>
+<dt class="hdlist1">Virtual Network Name</dt>
+<dd>
+<p>Enter the name of the virtual network in Azure.</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Allow Peering Access</b>.</p>
+<div class="paragraph">
+<p>A new browser tab opens.
+Sign in to Azure if you have not already.</p>
+</div>
+</li>
+<li>
+<p>In Azure, accept Capella&#8217;s permissions request:</p>
+<div class="paragraph">
+<p>The Azure permissions request page is open in the new browser tab.
+Make a note of the application name and consent to the new permissions request.
+Consenting to this permission request creates a service principal that grants Capella access to the Azure tenant to perform VNet peering.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you previously set up VNet peering with the same Azure tenant, you won&#8217;t see this permissions request page as that permission is already granted.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>On accepting the new permission, you automatically return to the Capella VNet peering page.
+The Capella VNet peering pages shows a notice indicating that peering access is successful.</p>
+</div>
+</li>
+<li>
+<p>In Capella, add the <strong>Enterprise Application Object ID</strong>:</p>
+<div class="paragraph">
+<p>With consent now granted, you need to find and add the enterprise application object ID for the Capella service principal.
+You can find the enterprise application object ID in Azure by selecting <span class="menuseq"><b class="menu">Azure Active Directory</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Enterprise applications</b></span>.
+Next, select the application name&#8212;&#8203;the same name shown when accepting the Azure permissions request.
+The object ID is in the <strong>Object ID</strong> box.</p>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Next</b>.</p>
+</li>
+<li>
+<p>Copy the role assignment command shown on this page and run it using Azure CLI.</p>
+<div class="paragraph">
+<p>This command assigns a new network contributor role.
+It scopes only to your specified subscription and the virtual network within that subscription.
+On success, the details of the role assignment are output in JSON.</p>
+</div>
+</li>
+<li>
+<p>Provide network details:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">VNet Peering Name</dt>
+<dd>
+<p>Enter a descriptive VNet peering name of your choice.</p>
+</dd>
+<dt class="hdlist1">CIDR Block</dt>
+<dd>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+The virtual network CIDR block cannot overlap the CIDR that the database uses.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Enter the CIDR block from the virtual network that you created in Azure.
+You can find the CIDR block in Azure by viewing the page for the virtual network and selecting <strong>Subnets</strong>.</p>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Click <b class="button">Set Up VNet</b>.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Do not refresh the browser while Capella configures the peering connection.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Capella sets up the VNet peering connection, which can take several minutes.
+When successful, the new VNet peering connection is on the VNet peering list.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -707,8 +890,8 @@ While the status of the network says "Complete" there are some final steps you m
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The first step whenever an application connects to a Capella cluster is to resolve the hostnames of all nodes in the cluster.
-Within the Capella UI, you can see the URL for the cluster, which is an SRV record containing multiple nodes of the cluster.</p>
+<p>The first step whenever an application connects to a Capella database is to resolve the hostnames of all nodes in the database.
+Within the Capella UI, you can see the URL for the database, which is an SRV record containing multiple nodes of the database.</p>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -716,7 +899,7 @@ Within the Capella UI, you can see the URL for the cluster, which is an SRV reco
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-You can retrieve the DNS SRV record for your cluster within the <em>Wide Area Network</em> section of the <strong>Connect</strong> tab.
+You can retrieve the DNS SRV record for your database within the <em>Wide Area Network</em> section of the <strong>Connect</strong> tab.
 </td>
 </tr>
 </table>
@@ -760,7 +943,7 @@ Address: 10.0.18.110</code></pre>
 </div>
 </li>
 <li>
-<p>If the DNS resolution is working correctly then you should see the private IP of the Capella Node (i.e. an IP from the cluster&#8217;s CIDR block).
+<p>If the DNS resolution is working correctly then you should see the private IP of the Capella Node (i.e. an IP from the database&#8217;s CIDR block).
 If you see that the public IP is returned for this node then you should validate that you have:</p>
 <div class="ulist">
 <ul>
@@ -789,12 +972,12 @@ If you see that the public IP is returned for this node then you should validate
 <div class="openblock">
 <div class="content">
 <div class="paragraph">
-<p>Now that you have validated that DNS resolution is working correctly, you should validate the network connectivity between your application instances and your Capella cluster.</p>
+<p>Now that you have validated that DNS resolution is working correctly, you should validate the network connectivity between your application instances and your Capella database.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>To validate that the routing is correctly set up for your VPC, you can run a <code>traceroute</code> to one of the nodes in your cluster (retrieved from the previous DNS resolution step). For example:</p>
+<p>To validate that the routing is correctly set up for your VPC, you can run a <code>traceroute</code> to one of the nodes in your database (retrieved from the previous DNS resolution step). For example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">traceroute -T 9qvj8x-f2oxhahtz.a-lxzt-gdkzoqfuu.cloud.couchbase.com -p 18091</code></pre>
@@ -872,11 +1055,11 @@ If you see that the public IP is returned for this node then you should validate
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No Networks</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No networks are linked but the infrastructure has been provisioned for your cluster.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No networks are linked but the infrastructure has been provisioned for your database.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure Provisioning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The infrastructure is being provisioned. Note that this is an intermediate state that is only possible for the first network linked for a cluster.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The infrastructure is being provisioned. Note that this is an intermediate state that is only possible for the first network linked for a database.</p></td>
 </tr>
 </tbody>
 </table>
@@ -898,7 +1081,7 @@ If you create multiple networks in rapid succession, both the Linking and Provis
 <div class="ulist">
 <ul>
 <li>
-<p>You can set up private networks on a new deployment only after the private networking feature is enabled. Check if you are using an existing cluster and/or if the feature is enabled.</p>
+<p>You can set up private networks on a new deployment only after the private networking feature is enabled. Check if you are using an existing database and/or if the feature is enabled.</p>
 </li>
 <li>
 <p>If the private networking feature does not exist in your region, the private zone creation can fail. Check that the feature is enabled in your region.</p>

@@ -10,6 +10,7 @@
 <link rel="canonical" href="https://docs.stage.nonprod-project-avengers.com/cloud/get-started/load-data.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
+    <meta name="robots" content="noindex">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
@@ -186,8 +187,23 @@
 There are several ways to insert and interact with data in a cluster.
 </blockquote>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Unresolved include directive in modules/get-started/pages/load-data.adoc - include::partial$invpc.adoc[]</p>
+<p>This information is for anyone still using Couchbase Server 6.6, hosted in their own cloud provider&#8217;s VPC.
+It does not apply to Couchbase 7.0 or later, hosted in Couchbase&#8217;s VPC and fully managed by Couchbase.</p>
+</div>
+<div class="paragraph">
+<p>All of the information for users of Server 6.6 self-managed in their own cloud provider&#8217;s VPC, such as <em>this page</em>, can be accessed at <a href="../invpc/invpc-index.html" class="xref page">this index page</a>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>This page contains instructions that will work with <em>Couchbase&#8217;s Cloud Account</em> and with installations in <em>Your Cloud Account</em> on the Public Cloud&#8201;&#8212;&#8201;regardless of your Capella installation type, client code remains the same.</p>
@@ -281,7 +297,7 @@ These indexes can then be queried by the <a href="../clusters/query-service/quer
 </div>
 </div>
 <div class="paragraph">
-<p>Normally, a N1QL <a href="../../server/7.1/n1ql/n1ql-language-reference/createindex.html" class="xref page">CREATE INDEX</a> statement is required to create an index.
+<p>Normally, a N1QL <a href="../../server/7.2/n1ql/n1ql-language-reference/createindex.html" class="xref page">CREATE INDEX</a> statement is required to create an index.
 However, some of the sample buckets, such as <strong class="ui">Travel Sample</strong>, come with index definitions that are automatically used to build indexes on the sample data (which can be seen in the image above).
 Once the <strong class="ui">Status</strong> for each index displays as <strong class="ui">Ready</strong>, the indexes can be used to assist with different types of sample queries.</p>
 </div>
@@ -295,7 +311,7 @@ Once the <strong class="ui">Status</strong> for each index displays as <strong c
 <div class="sectionbody">
 <div class="paragraph">
 <p>On clusters running the <a href="../clusters/query-service/query-service.html" class="xref page">Query Service</a>, the Capella UI provides an interactive query tool called the <strong class="ui">Query Workbench</strong>.
-Using the Query Workbench, you can conveniently explore data, create, edit, run, and save <a href="../../server/7.1/n1ql/n1ql-language-reference/index.html" class="xref page">N1QL queries</a>, view and save query results, and explore the document structures in a bucket&#8201;&#8212;&#8201;all in a single window.</p>
+Using the Query Workbench, you can conveniently explore data, create, edit, run, and save <a href="../../server/7.2/n1ql/n1ql-language-reference/index.html" class="xref page">N1QL queries</a>, view and save query results, and explore the document structures in a bucket&#8201;&#8212;&#8201;all in a single window.</p>
 </div>
 <div class="paragraph">
 <p>The Query Workbench is available under each cluster&#8217;s <strong class="ui">Tools &gt; Query Workbench</strong> tab.</p>
@@ -379,7 +395,7 @@ To save any edits, click <b class="button">Save</b>.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Couchbase SDKs allow you to interact programmatically with the Data, Query, and other Couchbase services provided by the cluster, to create applications.
-Our <a href="../../server/7.1/sdk/overview.html" class="xref page">SDK documentation</a> contains practical examples for all of the SDKs.</p>
+Our <a href="../../server/7.2/sdk/overview.html" class="xref page">SDK documentation</a> contains practical examples for all of the SDKs.</p>
 </div>
 <div class="paragraph">
 <p>Here is a snippet of Node.js code demonstrating iterating over the results of a query against the Travel Sample bucket:</p>

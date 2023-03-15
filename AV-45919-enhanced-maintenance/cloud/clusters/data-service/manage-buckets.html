@@ -360,7 +360,7 @@ For information about each conflict resolution method, see <a href="../xdcr/xdcr
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-To learn more about durability in Couchbase Server, see the <a href="../../../server/7.1/learn/data/durability.html" class="xref page">Durability</a> page.
+To learn more about durability in Couchbase Server, see the <a href="../../../server/7.2/learn/data/durability.html" class="xref page">Durability</a> page.
 </td>
 </tr>
 </table>
@@ -432,11 +432,11 @@ When enabled, this setting allows you to specify the time to live and the unit (
 </div>
 </li>
 <li>
-<p><a id="backup-schedule"></a>Choose the backup schedule for the bucket.</p>
+<p><a id="backup-schedule"></a>Choose a backup schedule for the bucket according to the relative importance of the workload and data.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Choose <strong>Set Weekly Schedule</strong>, <strong>Set Daily Schedule</strong>, or <strong>Do Not Backup</strong> according to the relative importance of the workload and data.</p>
+<p>Select <strong>Do Not Backup</strong> to not schedule any backups.</p>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -444,15 +444,21 @@ When enabled, this setting allows you to specify the time to live and the unit (
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-The <strong>Do Not Backup</strong> option isn&#8217;t recommended for production databases.
-It&#8217;s intended for development databases or similar situations.
+<strong>Do Not Backup</strong> is not recommended for production databases.
+It&#8217;s intended for development databases or similar.
 </td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>To set a weekly incremental schedule, see the steps which follow.</p>
+</div>
 </li>
 <li>
-<p>If you&#8217;ve chosen <strong>Set Weekly Schedule</strong>, choose the <strong>Day of the week</strong> when you want Capella to take the full backup.
+<p>Choose <strong>Set Weekly Schedule</strong>.</p>
+</li>
+<li>
+<p>Choose the <strong>Day of the week</strong> when you want Capella to take the full backup.
 The default value is <code>Sunday</code>.</p>
 </li>
 <li>
@@ -460,16 +466,9 @@ The default value is <code>Sunday</code>.</p>
 <div class="paragraph">
 <p>Select a <strong>Start at</strong> time when your application isn&#8217;t using Capella heavily unless you&#8217;ve chosen a database configuration with more capacity than you need.</p>
 </div>
-<div class="paragraph">
-<p>This setting uses your local time zone.
-You can view the timezone used by your Couchbase Capella account by reviewing your <a href="../../organizations/manage-account.html" class="xref page">account preferences</a>.</p>
-</div>
 </li>
 <li>
 <p>Use the <strong>Incremental Every</strong> list to set the frequency of incremental backups.</p>
-<div class="paragraph">
-<p>Depending on your chosen schedule, this setting can range from <code>4 Hours</code> to <code>1 Day</code>.</p>
-</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -479,12 +478,12 @@ You can view the timezone used by your Couchbase Capella account by reviewing yo
 <td class="content">
 <div class="paragraph">
 <p>If you change the <strong>Start at</strong> time, the next incremental backup might happen at a different time than you expect.
-This is because Capella calculates the <strong>Incremental Value</strong> backward from the configured <strong>Start at</strong> time.</p>
+Capella calculates the <strong>Incremental Value</strong> backward from the configured <strong>Start at</strong> time.</p>
 </div>
 <div class="paragraph">
-<p>For example, suppose <strong>Incremental Every</strong> is <code>8 hours</code>, and the <strong>Start at</strong> time is 4 AM.
+<p>For example, <strong>Incremental Every</strong> is <code>8 hours</code>, and the <strong>Start at</strong> time is 4 AM.
 If the current time is 9 PM, Capella takes an incremental backup at 8 PM, an eight-hour interval backward from 4 AM.
-If you were to then change the <strong>Start at</strong> to 6 AM, you would see another incremental backup at 10 PM&#8212;&#8203;just two hours after the last backup.
+If you change the <strong>Start at</strong> to 6 AM, you would see another incremental backup at 10 PM, two hours after the last backup.
 The backup occurs at this time because Capella recalculates the eight-hour backup interval back from the new 6 AM <strong>Start at</strong> time.</p>
 </div>
 </td>
@@ -493,10 +492,18 @@ The backup occurs at this time because Capella recalculates the eight-hour backu
 </div>
 </li>
 <li>
-<p>Set the <strong>Retention Time</strong> so that it&#8217;s in line with your data retention practices.</p>
+<p>Select <strong>Cost Optimized Retention</strong>.
+When selected, the cost optimized retention policy applies to your bucket backup.
+For more information, see <a href="../backup-restore.html#cost-optimized-retention-policy" class="xref page">Cost Optimized Retention Policy</a>.</p>
+</li>
+<li>
+<p>Set a <strong>Retention Time</strong> in line with your data retention policy.</p>
 <div class="paragraph">
-<p>How long Capella can preserve each backup ranges from <code>30 Days</code> to <code>5 Years</code>.
-After the chosen retention time lapses, Capella deletes the backup.</p>
+<p>If you selected Cost Optimized Retention, the <strong>Retention Time</strong> applies only to the monthly restore point.</p>
+</div>
+<div class="paragraph">
+<p>Capella preserves each backup from <code>30 Days</code> to <code>5 Years</code>.
+After the retention time lapses, Capella schedules the backup for deletion.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -507,7 +514,7 @@ After the chosen retention time lapses, Capella deletes the backup.</p>
 <td class="content">
 <div class="paragraph">
 <p>The <strong>Retention Time</strong> setting applies to all future backups for a bucket.
-Changes to this setting don&#8217;t affect previous backups.</p>
+Changes to this setting do not affect previous backups.</p>
 </div>
 </td>
 </tr>

@@ -223,7 +223,7 @@ Couchbase Lite runs on the following platforms:</p>
 <h2 id="setting-up-the-connection"><a class="anchor" href="#setting-up-the-connection"></a>Setting up the Connection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You will need to set up the permitted addresses on your App Endpoint configuration before your mobile application can connect to it.</p>
+<p>You must to set up the permitted addresses on your App Endpoint configuration before your mobile application can connect to it.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -261,12 +261,45 @@ Couchbase Lite runs on the following platforms:</p>
 <dt class="hdlist1">Public Connection</dt>
 <dd>
 <p>This setting is created when the App Endpoint is created.
-This is the address which your mobile application will use to connection to the endpoint.</p>
+This is the address which your mobile application uses to connect to the endpoint.</p>
 </dd>
 <dt class="hdlist1">Public Certificate</dt>
 <dd>
-<p>You can copy or download the endpoint&#8217;s SSL public certificate to attach to your mobile application.</p>
+<p>The public certificate is a trusted CA signed certificate. You can copy or download the endpoint&#8217;s SSL public certificate to bundle into your mobile application.</p>
+<div class="paragraph">
+<p>Since this is a trusted certificate, certificate pinning is optional, please consult your own security policies.</p>
+</div>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Capella rotates the certificate yearly.</p>
+</div>
+<div class="paragraph">
+<p>If you have pinned the certificate, you will have to update your app to use the new certificate when the old one expires.</p>
+</div>
+<div class="paragraph">
+<p>Capella will notify you via email starting 3 months before the certificate is scheduled to expire (if you have enabled email notifications on your account.)</p>
+</div>
+<div class="paragraph">
+<p>To update your app with the new certificate ahead of the scheduled expiration, please contact Support.</p>
+</div>
+<div class="paragraph">
+<p>If, however, you do not pin the certificate, your app will continue to operate after certificate rotation with no downtime and no action required.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Endpoint for Admin Access to the database</dt>
 <dd>
 <p>To ensure your service is as secure as possible, the App Endpoint uses a separate URL for executing <a href="../references/rest_api_admin_static.html" class="xref page">REST API administration functions</a>.</p>

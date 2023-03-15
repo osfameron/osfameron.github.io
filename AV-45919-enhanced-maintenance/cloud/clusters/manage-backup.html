@@ -190,7 +190,7 @@ You can take a backup on-demand or use a configurable automatic schedule.
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Use the procedures on this page to create on-demand backups, schedule automatic backups, and manage those backups.
+<p>Use the procedures on this page to create on-demand backups, schedule automatic backups, and manage backups.
 To learn more about how backups work in Couchbase Capella, see <a href="backup-restore.html" class="xref page">Backup and Restore Data</a>.</p>
 </div>
 </div>
@@ -270,8 +270,7 @@ Backup options are unavailable to free trial clusters.
 <div class="sect3">
 <h4 id="backup-summary"><a class="anchor" href="#backup-summary"></a>Backup Summary</h4>
 <div class="paragraph">
-<p>A database&#8217;s <strong>Backups</strong> page shows a summary of the latest backups per bucket that exist for the database.
-You can sort the backup information by bucket name.</p>
+<p>A database’s <strong>Backups</strong> page shows a summary of the latest backups per bucket that exist for the database. You can sort the backup information by bucket name.</p>
 </div>
 <div class="paragraph">
 <p>Each bucket includes the following information about its most recent backup:</p>
@@ -302,7 +301,7 @@ You can sort the backup information by bucket name.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tombstones</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The number of <a href="../../server/7.1/learn/buckets-memory-and-storage/storage-settings.html#tombstones" class="xref page">tombstones</a>, or records for removed items, in the backup.
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of <a href="../../server/7.2/learn/buckets-memory-and-storage/storage-settings.html#tombstones" class="xref page">tombstones</a>, or records for removed items, in the backup.
 This number includes tombstones for deleted documents and any dropped collections.</p></td>
 </tr>
 <tr>
@@ -333,17 +332,17 @@ This number includes tombstones for deleted documents and any dropped collection
 <h3 id="configure-automatic-backups"><a class="anchor" href="#configure-automatic-backups"></a>Configure Scheduled Backups</h3>
 <div class="paragraph">
 <p>You can configure scheduled backups for buckets at any time.
-Once you set a backup schedule, the bucket automatically backs up the bucket based on the chosen schedule.
-When creating a bucket, the default setting is a <strong>Weekly Schedule</strong>.
-You can also use a <strong>Daily Schedule</strong> or <strong>No Schedule</strong>.</p>
+When you set a backup schedule, the bucket automatically backs up the bucket based on the chosen schedule.</p>
 </div>
 <div class="paragraph">
 <p>Couchbase recommends that you change each bucket&#8217;s Backup Schedule according to your <a href="https://en.wikipedia.org/wiki/Recovery_time_objective" target="_blank" rel="noopener">Recovery Time Objective</a> (RTO) and <a href="https://en.wikipedia.org/wiki/Recovery_point_objective" target="_blank" rel="noopener">Recovery Point Objective</a> (RPO).
-For example, buckets in production databases might require a much smaller backup window and a much longer backup retention period than buckets in development databases.</p>
+For example, buckets in production databases might require a much smaller backup window and a much longer backup retention time period than buckets in development databases.</p>
 </div>
 <div class="paragraph">
-<p>You can edit a bucket&#8217;s backup schedule when <a href="data-service/manage-buckets.html#edit-bucket" class="xref page">modifying a bucket</a> or from the <strong>Backup</strong> page for your database.
-To change a bucket&#8217;s backup schedule from the <strong>Backup</strong> page:</p>
+<p>You can edit a bucket&#8217;s backup schedule when <a href="data-service/manage-buckets.html#edit-bucket" class="xref page">modifying a bucket</a> or from the <strong>Backup</strong> page for your database.</p>
+</div>
+<div class="paragraph">
+<p>To change a bucket&#8217;s backup schedule from the <strong>Backup</strong> page:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -389,11 +388,11 @@ Using the <strong>Bucket</strong> list, you can select multiple buckets to bulk 
 </div>
 </li>
 <li>
-<p><a id="backup-schedule"></a>Choose the backup schedule for the bucket.</p>
+<p><a id="backup-schedule"></a>Choose a backup schedule for the bucket according to the relative importance of the workload and data.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Choose <strong>Set Weekly Schedule</strong>, <strong>Set Daily Schedule</strong>, or <strong>Do Not Backup</strong> according to the relative importance of the workload and data.</p>
+<p>Select <strong>Do Not Backup</strong> to not schedule any backups.</p>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -401,15 +400,21 @@ Using the <strong>Bucket</strong> list, you can select multiple buckets to bulk 
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-The <strong>Do Not Backup</strong> option isn&#8217;t recommended for production databases.
-It&#8217;s intended for development databases or similar situations.
+<strong>Do Not Backup</strong> is not recommended for production databases.
+It&#8217;s intended for development databases or similar.
 </td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>To set a weekly incremental schedule, see the steps which follow.</p>
+</div>
 </li>
 <li>
-<p>If you&#8217;ve chosen <strong>Set Weekly Schedule</strong>, choose the <strong>Day of the week</strong> when you want Capella to take the full backup.
+<p>Choose <strong>Set Weekly Schedule</strong>.</p>
+</li>
+<li>
+<p>Choose the <strong>Day of the week</strong> when you want Capella to take the full backup.
 The default value is <code>Sunday</code>.</p>
 </li>
 <li>
@@ -417,16 +422,9 @@ The default value is <code>Sunday</code>.</p>
 <div class="paragraph">
 <p>Select a <strong>Start at</strong> time when your application isn&#8217;t using Capella heavily unless you&#8217;ve chosen a database configuration with more capacity than you need.</p>
 </div>
-<div class="paragraph">
-<p>This setting uses your local time zone.
-You can view the timezone used by your Couchbase Capella account by reviewing your <a href="../organizations/manage-account.html" class="xref page">account preferences</a>.</p>
-</div>
 </li>
 <li>
 <p>Use the <strong>Incremental Every</strong> list to set the frequency of incremental backups.</p>
-<div class="paragraph">
-<p>Depending on your chosen schedule, this setting can range from <code>4 Hours</code> to <code>1 Day</code>.</p>
-</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -436,12 +434,12 @@ You can view the timezone used by your Couchbase Capella account by reviewing yo
 <td class="content">
 <div class="paragraph">
 <p>If you change the <strong>Start at</strong> time, the next incremental backup might happen at a different time than you expect.
-This is because Capella calculates the <strong>Incremental Value</strong> backward from the configured <strong>Start at</strong> time.</p>
+Capella calculates the <strong>Incremental Value</strong> backward from the configured <strong>Start at</strong> time.</p>
 </div>
 <div class="paragraph">
-<p>For example, suppose <strong>Incremental Every</strong> is <code>8 hours</code>, and the <strong>Start at</strong> time is 4 AM.
+<p>For example, <strong>Incremental Every</strong> is <code>8 hours</code>, and the <strong>Start at</strong> time is 4 AM.
 If the current time is 9 PM, Capella takes an incremental backup at 8 PM, an eight-hour interval backward from 4 AM.
-If you were to then change the <strong>Start at</strong> to 6 AM, you would see another incremental backup at 10 PM&#8212;&#8203;just two hours after the last backup.
+If you change the <strong>Start at</strong> to 6 AM, you would see another incremental backup at 10 PM, two hours after the last backup.
 The backup occurs at this time because Capella recalculates the eight-hour backup interval back from the new 6 AM <strong>Start at</strong> time.</p>
 </div>
 </td>
@@ -450,10 +448,18 @@ The backup occurs at this time because Capella recalculates the eight-hour backu
 </div>
 </li>
 <li>
-<p>Set the <strong>Retention Time</strong> so that it&#8217;s in line with your data retention practices.</p>
+<p>Select <strong>Cost Optimized Retention</strong>.
+When selected, the cost optimized retention policy applies to your bucket backup.
+For more information, see <a href="backup-restore.html#cost-optimized-retention-policy" class="xref page">Cost Optimized Retention Policy</a>.</p>
+</li>
+<li>
+<p>Set a <strong>Retention Time</strong> in line with your data retention policy.</p>
 <div class="paragraph">
-<p>How long Capella can preserve each backup ranges from <code>30 Days</code> to <code>5 Years</code>.
-After the chosen retention time lapses, Capella deletes the backup.</p>
+<p>If you selected Cost Optimized Retention, the <strong>Retention Time</strong> applies only to the monthly restore point.</p>
+</div>
+<div class="paragraph">
+<p>Capella preserves each backup from <code>30 Days</code> to <code>5 Years</code>.
+After the retention time lapses, Capella schedules the backup for deletion.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -464,7 +470,7 @@ After the chosen retention time lapses, Capella deletes the backup.</p>
 <td class="content">
 <div class="paragraph">
 <p>The <strong>Retention Time</strong> setting applies to all future backups for a bucket.
-Changes to this setting don&#8217;t affect previous backups.</p>
+Changes to this setting do not affect previous backups.</p>
 </div>
 </td>
 </tr>
@@ -475,7 +481,7 @@ Changes to this setting don&#8217;t affect previous backups.</p>
 </div>
 </li>
 <li>
-<p>Once you&#8217;re satisfied with the configuration, click <b class="button">Apply</b>.</p>
+<p>Click <b class="button">Apply</b>.</p>
 <div class="paragraph">
 <p>The first automatic backup occurs at the next increment of the <strong>Incremental Every</strong> value, calculated backward from the configured <strong>Start at</strong> time.</p>
 </div>
@@ -632,7 +638,7 @@ Deleting a backup is a permanent action.
 When you delete a bucket, Capella keeps its backups until their configured retention time.</p>
 </div>
 <div class="paragraph">
-<p>In Couchbase Capella, backups are deleted in the following ways:</p>
+<p>In Couchbase Capella, backups are deleted as follows:</p>
 </div>
 <div class="dlist">
 <dl>

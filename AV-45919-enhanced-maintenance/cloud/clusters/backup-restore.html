@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://docs.stage.nonprod-project-avengers.com/cloud/clusters/backup-restore.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="As part of an overall disaster recovery plan for production data, a robust scheduled backup and retention policy is recommended.">
+<meta name="description" content="Couchbase recommends a robust scheduled backup and retention time policy as part of an overall disaster recovery plan for production data.">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
@@ -185,12 +185,31 @@
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <blockquote>
-As part of an overall disaster recovery plan for production data, a robust scheduled backup and retention policy is recommended.
+Couchbase recommends a robust scheduled backup and retention time policy as part of an overall disaster recovery plan for production data.
 </blockquote>
 </div>
 <div class="paragraph">
-<p>Couchbase Capella supports scheduled and on-demand backups of bucket data.
-All buckets can have a daily or weekly <a href="manage-backup.html#configure-automatic-backups" class="xref page">backup schedule</a>.</p>
+<p>Couchbase Capella supports scheduled and on-demand backups of bucket data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="weekly-backup-schedule"><a class="anchor" href="#weekly-backup-schedule"></a>Weekly Backup Schedule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All buckets can have a <strong>Set Weekly Schedule</strong> for <a href="manage-backup.html#configure-automatic-backups" class="xref page">backing up</a>.
+The incremental options are 4, 6, 8, 12, or 24 hours.
+Alternatively, you can choose not to back up your buckets.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="daily-backup-schedule"><a class="anchor" href="#daily-backup-schedule"></a>Daily Backup Schedule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From January 2023, the <strong>Set Daily Schedule</strong> bucket backup setting has been deprecated for new Capella users and databases. Therefore, <strong>Set Daily Schedule</strong> is not available for new clusters.
+We recommend you use <strong>Set Weekly Schedule</strong>.
+However, <strong>Set Daily Schedule</strong> is still supported indefinitely if you are a current user already using <strong>Set Daily Schedule</strong> on pre-existing databases.</p>
 </div>
 </div>
 </div>
@@ -199,86 +218,258 @@ All buckets can have a daily or weekly <a href="manage-backup.html#configure-aut
 <div class="sectionbody">
 <div class="paragraph">
 <p>Capella supports scheduled and on-demand bucket backups on a per-bucket basis.
-You can schedule backups for each bucket during <a href="data-service/manage-buckets.html#add-bucket" class="xref page">bucket creation</a> and <a href="manage-backup.html#configure-automatic-backups" class="xref page">modify</a> the schedule at any time to fit your needs.
+You can schedule backups for each bucket during <a href="data-service/manage-buckets.html#add-bucket" class="xref page">bucket creation</a> and <a href="manage-backup.html#configure-automatic-backups" class="xref page">modify</a> the schedule at any time as needed.
 You can also create <a href="manage-backup.html#create-manual-backup" class="xref page">on-demand backups</a> as needed.</p>
 </div>
 <div class="paragraph">
 <p>Couchbase Capella uses its own backup utility.
-When a backup or restore job starts, Capella starts a separate compute instance that&#8217;s dedicated to running the backup utility.
-Since the backup utility runs in a separate instance and connects to the database over the cloud network, it has minimal impact on database performance.
-Once the job has finished, the instance running the backup utility is decommissioned.</p>
+When a backup or restore job begins, Capella starts a separate compute instance that is dedicated to running the backup utility.
+As the backup utility runs in a separate instance and connects to the database over the cloud network, there is minimal impact on database performance.
+When a job finishes, the instance running the backup utility is decommissioned.</p>
 </div>
-<div class="ulist">
-<div class="title">What&#8217;s not included in a backup:</div>
-<ul>
-<li>
-<p>A point-in-time snapshot of the entire database</p>
 <div class="paragraph">
-<p>Capella doesn&#8217;t support point-in-time snapshots of database data.
-While the data in a backup is per-item consistent, data items are written to the backup at slightly different times.
-The state of one item doesn&#8217;t infer the state of another item.</p>
+<p>What is not included in a backup:</p>
 </div>
-</li>
-<li>
-<p>Database settings</p>
-</li>
-</ul>
+<table id="not-included" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Point-in-time Snapshot of Database</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Capella does not support point-in-time snapshots of database data. While the data in a backup is per-item consistent, data items are written to the backup at slightly different times. The state of one item does not infer the state of another item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database Settings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For example, nodes, replication, networking, or database access.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="sect2">
-<h3 id="bucket-backup-types"><a class="anchor" href="#bucket-backup-types"></a>Bucket Backup Types</h3>
+</div>
+<div class="sect1">
+<h2 id="bucket-backup-types"><a class="anchor" href="#bucket-backup-types"></a>Bucket Backup Types</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Couchbase Capella supports Full backups and Incremental backups.
 Every Scheduled backup includes both backup types.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Full backups</dt>
-<dd>
+<div class="paragraph">
+<p>Backup types are described as follows:</p>
+</div>
+<table id="backup-types" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Full Backup</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Full backups provide the best restore performance but take the most time to complete, require the most storage, and can be demanding on database resources.
-A Full backup includes all bucket data from the time the backup was created.
-It can be about 40% of the size of the original dataset.
+A Full backup includes all bucket data from the time the backup was created and can amount to about 40% of the size of the original dataset.
 Full backups are taken automatically at the start of every <a href="#series-backup">Scheduled</a> backup series.
 You can also create Full backups <a href="manage-backup.html#create-manual-backup" class="xref page">on demand</a>.</p>
-</dd>
-<dt class="hdlist1">Incremental backups</dt>
-<dd>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Incremental Backup</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Capella creates an Incremental backup during every <a href="#series-backup">Scheduled</a> backup series.
 Incremental backups depend on Full backups to be restored.
 Incremental backups include the data that has changed since the last Scheduled backup.
 They take less time and storage space to create than a Full backup.</p>
-</dd>
-</dl>
-</div>
-<div id="series-backup" class="dlist">
-<dl>
-<dt class="hdlist1">Scheduled backup series</dt>
-<dd>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="series-backup" class="paragraph">
+<p>Scheduled Backup</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Every Scheduled backup series starts with a Full backup.
-Every following backup during the set time period uses an Incremental backup.
+Every subsequent backup during the set retention time period uses an Incremental backup.
 Scheduled backups reflect all the bucket data present when Capella automatically created the last Incremental backup in the series.
 By using both Full and Incremental backups, the Scheduled backups provide the best compromise between performance and required storage.</p>
-</dd>
-</dl>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="bucket-backup-retention"><a class="anchor" href="#bucket-backup-retention"></a>Bucket Backup Retention</h3>
+<div class="sect1">
+<h2 id="cost-optimized-retention-policy"><a class="anchor" href="#cost-optimized-retention-policy"></a>Cost Optimized Retention Policy</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Capella keeps a bucket&#8217;s scheduled backups based on the <strong>Retention Time</strong> setting in the bucket&#8217;s <a href="manage-backup.html#configure-automatic-backups" class="xref page">Backup Schedule</a>.
-Capella keeps on-demand backups for 30 days.</p>
-</div>
-<div class="paragraph">
-<p>For more information about deleting a backup, see <a href="manage-backup.html#delete-backup" class="xref page">Delete a Backup</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="administering-bucket-backups"><a class="anchor" href="#administering-bucket-backups"></a>Administering Bucket Backups</h3>
-<div class="paragraph">
-<p>For information about how to create and manage bucket backups, see <a href="manage-backup.html" class="xref page">Manage Backups</a>.</p>
+<p>You can select a cost-optimized retention policy to manage backups, and provide a trade-off between total cost of ownership (TCO) and the recovery point objective (RPO).
+RPO is the maximum acceptable amount of data loss after an unplanned data-loss incident, expressed as time.
+The frequency of backups with incremental intervals that are retained across a timeframe impacts RPO.</p>
 </div>
 <div class="paragraph">
-<p>For information about restoring a bucket backup, see <a href="manage-restore.html" class="xref page">Restore a Backup</a>.</p>
+<p>A cost-optimized retention policy enables you to save money at the expense of RPO.
+For example, where the retention of backups might be more costly than running the cluster itself.
+For the cost-optimized retention policy, the retention time is applied only to the monthly restore point, keeping all other backups for four weeks.
+This policy enables restoring from any backup within the last four weeks.
+Beyond this time, Capella retains only the monthly restore point.</p>
 </div>
+<div class="paragraph">
+<p>Weekly full backup scheduled cycles expire as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each weekly cycle expires after four weeks.</p>
+</li>
+<li>
+<p>The last backup cycle of each monthly period expires at your <strong>Retention Time</strong> setting.
+Therefore, only the last backup cycle of each monthly period is retained for the retention time you select in the <strong>Set Weekly Schedule</strong>.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+For example, suppose you start backups at mid-calendar month, on March 15. The last backup cycle of the monthly period is in the week of April 15th, and not in the last week of March.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For <strong>Set Weekly Schedule</strong>, a cycle is the weekly full backup and the incremental backups following it for that week. When the week ends, a new cycle starts.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You are able to restore:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From any backup within the last four weeks, which has been backed up incrementally every so many hours, as per your preference.</p>
+</li>
+<li>
+<p>The final backup cycle from the monthly period, from your chosen retention time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>RPO intervals and retention time periods are as follows:</p>
+</div>
+<table id="rpo-interval-retention" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">RPO Interval</th>
+<th class="tableblock halign-left valign-top">Retention Time Period</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4, 6, 8,12, or 24 hours [User Chosen]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 Weeks</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Daily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 Weeks</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Weekly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 Weeks</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Monthly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User-chosen retention time period [30 days to 5 years]</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only the monthly restore point (RPO) is retained for the user-chosen time retention period. Others are retained for 30 days.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bucket-backup-retention"><a class="anchor" href="#bucket-backup-retention"></a>Bucket Backup Retention</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Capella retains a bucket&#8217;s scheduled backups based on the <strong>Retention Time</strong> setting in the bucket&#8217;s <a href="manage-backup.html#configure-automatic-backups" class="xref page">Backup Schedule</a>.
+Retention time is from 30 days to five years.
+After the retention time lapses, Capella schedules the backup for deletion.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <strong>Retention Time</strong> setting applies to all future backups for a bucket.
+Changes to this setting don’t affect previous backups.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Capella retains on-demand backups for 30 days.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See the following pages for more information about creating, managing, and deleting bucket backups:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="manage-backup.html" class="xref page">Manage Backups</a></p>
+</li>
+<li>
+<p><a href="manage-restore.html" class="xref page">Restore a Backup</a></p>
+</li>
+<li>
+<p><a href="manage-backup.html#delete-backup" class="xref page">Delete a Backup</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

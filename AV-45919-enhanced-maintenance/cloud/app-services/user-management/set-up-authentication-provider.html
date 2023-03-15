@@ -302,11 +302,25 @@ The prefix itself is derived from the name of the OIDC provider, or optionally, 
 </div>
 <div class="sect2">
 <h3 id="oidc-authorization-step-by-step"><a class="anchor" href="#oidc-authorization-step-by-step"></a>OIDC Authorization: step by step</h3>
-<div class="imageblock kroki">
+<div class="literalblock">
+<div class="title">OIDC Authorization Sequence</div>
 <div class="content">
-<img src="https://kroki.io/mermaid/svg/eNp9klFOhEAMht89RQ-gF-BhE-MaQ6LRqHuA7kwXmoUZbAc0nt4OC4pk9a1N__7fXwalt56Coy1jJdheAGCfYujbPUluXIoCOx2bDiWx4w5DgjbuuSFAhYdTdd11Kwl23QvJwG6U2RymdqWL7F1WPJbbG3iSOLA3nIkyFq42mwlWQBMrBQ42mvB5-IMpbMaJMdFkZqfUFAyEiWNeW0TKq5lcwN3tKzhsGhgYoVTtjbp7vjf5mGwZoAyapHfZDVIEIc9CLuV6cR-8c6pHeBT-HNngoqe_c6985zOgxuC1xuN_lmdvog9nuxWdWQHztORJmAYy2pHC8tRlLFP1EtT-AkeqJ-0lsJ8roYOQ1t8mqyjzVztv82t5DKU2zSnt_e3RDkzyBY_d6oI=" alt="OIDC Authorization Sequence">
+<pre>sequenceDiagram
+  autonumber
+  actor User
+  participant mobile as Mobile App
+  participant appService as App Service
+  participant oidc as OIDC Provider
+
+  User ->> mobile: logs in
+  mobile ->> appService: initiates OIDC authentication
+  appService ->> oidc: GET call via Issuer URL
+  oidc ->> mobile: Instruction to redirect to App Service with authorization code
+  mobile ->> appService: Instruction to initiate handshake with authorization code
+  appService ->> oidc: exchange authorization code and retrieve token
+  oidc ->> appService: returns access token, id token, refresh token
+  appService ->> mobile: returns access token, refresh token and session identifier</pre>
 </div>
-<div class="title">Figure 3. OIDC Authorization Sequence</div>
 </div>
 </div>
 </div>
