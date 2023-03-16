@@ -3713,7 +3713,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/osfameron/docs-couchbase-lite/edit/release/3.0/modules/objc/pages/conflict.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/osfameron/docs-couchbase-lite/edit/FEWD-8253-CBL-C-3.0.11/modules/objc/pages/conflict.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -4150,7 +4150,7 @@ When the value is <code>null</code>, the default conflict resolution will be app
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/objc/examples/code_snippets/SampleCodeTest.m">NSURL *url = [[NSURL alloc] initWithString:@"ws://localhost:4984/getting-started-db"];
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/objc/examples/code_snippets/SampleCodeTest.m">NSURL *url = [[NSURL alloc] initWithString:@"ws://localhost:4984/getting-started-db"];
 CBLURLEndpoint *target = [[CBLURLEndpoint alloc] initWithURL:url];
 CBLReplicatorConfiguration *config = [[CBLReplicatorConfiguration alloc] initWithDatabase:self.database target:target];
 config.conflictResolver = [[LocalWinConflictResolver alloc] init];
@@ -4277,7 +4277,7 @@ In the event of conflicting keys, it will pick the key value from <code>new</cod
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/objc/examples/code_snippets/SampleCodeTest.m">CBLDocument *document = [self.database documentWithID:@"xyz"];
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/objc/examples/code_snippets/SampleCodeTest.m">CBLDocument *document = [self.database documentWithID:@"xyz"];
 CBLMutableDocument *mutableDocument = [document toMutable];
 [mutableDocument setString:@"apples" forKey:@"name"];
 

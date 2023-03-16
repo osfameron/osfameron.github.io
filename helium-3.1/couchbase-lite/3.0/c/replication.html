@@ -3713,7 +3713,7 @@
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="https://github.com/osfameron/docs-couchbase-lite/edit/release/3.0/modules/c/pages/replication.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="https://github.com/osfameron/docs-couchbase-lite/edit/FEWD-8253-CBL-C-3.0.11/modules/c/pages/replication.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -3896,7 +3896,7 @@ So we don&#8217;t recommend to rely on that when using the replication or databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
 static void simpleChangeListener(void* context,
                                  CBLReplicator* repl,
                                  const CBLReplicatorStatus* status)
@@ -4071,7 +4071,7 @@ Initialize and define the replication configuration with local and remote databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Initialize the configuration object and set db target
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Initialize the configuration object and set db target
 CBLError err;
 FLString url = FLSTR("ws://localhost:4984/db");
 CBLEndpoint* target =
@@ -4130,7 +4130,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Set replication direction and mode
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Set replication direction and mode
 config.replicatorType = kCBLReplicatorTypePull; <i class="conum" data-value="1"></i><b>(1)</b>
 config.continuous = true;
 
@@ -4274,7 +4274,7 @@ config.continuous = true;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Configure replication retries
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Configure replication retries
 config.heartbeat = 120; //  <i class="conum" data-value="1"></i><b>(1)</b>
 
 config.maxAttempts = 20; //  <i class="conum" data-value="2"></i><b>(2)</b>
@@ -4353,7 +4353,7 @@ This is the recommended way of using basic authentication.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Configure Client Authentication to Basic Authentication
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Configure Client Authentication to Basic Authentication
 // Providing username and password credentials
 if(docs_example_ShowBasicAuth) {
     CBLAuthenticator* basicAuth =
@@ -4387,7 +4387,7 @@ endpoint on the Public REST API.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">if(docs_example_ShowSessionAuth) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">if(docs_example_ShowSessionAuth) {
     CBLAuthenticator* sessionAuth =
         CBLAuth_CreateSession(FLSTR("904ac010862f37c8dd99015a33ab5a3565fd8447"),
                               FLSTR("optionalCookieName"));
@@ -4413,7 +4413,7 @@ The replicator will then include those headers in every request.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Optionally, add custom headers
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Optionally, add custom headers
 FLMutableDict customHdrs = FLMutableDict_New();
 FLMutableDict_SetString(customHdrs,
                         FLSTR("customHeaderName"),
@@ -4445,7 +4445,7 @@ For instance, high-priority documents could be pushed first, or documents in a "
 <div class="listingblock">
 <div class="title">Push Filter</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
 static bool simpleReplicationFilter(void* context,
                                     CBLDocument* argDoc,
                                     CBLDocumentFlags argFlags)
@@ -4492,7 +4492,7 @@ are designed to be scalable (documents are filtered on the server) whereas a pul
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
 static bool simpleReplicationFilter(void* context,
                                     CBLDocument* argDoc,
                                     CBLDocumentFlags argFlags)
@@ -4745,7 +4745,7 @@ Clients wishing to sync previously removed documents must use the resetCheckpoin
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">config.disableAutoPurge = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">config.disableAutoPurge = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4863,7 +4863,7 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor<
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">CBLReplicator* thisRepl =
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">CBLReplicator* thisRepl =
 CBLReplicator_Create(&amp;argConfig, &amp;err); <i class="conum" data-value="1"></i><b>(1)</b>
 
   CBLReplicator_Start(thisRepl, false); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
@@ -4901,7 +4901,7 @@ However, if you do want to force the replication to start again from zero, use t
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">CBLReplicator_Start(thisRepl, true); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">CBLReplicator_Start(thisRepl, true); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -5126,7 +5126,7 @@ Stop the listener as shown in <a href="#ex-stop-doc-listener">Example 14</a>.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate addition of a Document Replicator  listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate addition of a Document Replicator  listener
 CBLListenerToken* token_ReplDocListener =
         CBLReplicator_AddDocumentReplicationListener(
                                                     thisRepl,
@@ -5144,7 +5144,7 @@ CBLListenerToken* token_ReplDocListener =
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate removal of a listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate removal of a listener
 CBLListener_Remove(token_ReplDocListener);
 CBLListener_Remove(token_ReplChangeListener);</code></pre>
 </div>
@@ -5194,7 +5194,7 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">FLDict thisPendingIdList =
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">FLDict thisPendingIdList =
     CBLReplicator_PendingDocumentIDs(thisRepl, &amp;err); <i class="conum" data-value="1"></i><b>(1)</b>
 if(!FLDict_IsEmpty(thisPendingIdList)) {
     FLDictIterator item;
@@ -5263,7 +5263,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- show how to stop a replication
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- show how to stop a replication
 if(CBLReplicator_Status(argRepl).activity!=kCBLReplicatorStopped) {
     CBLReplicator_Stop(argRepl);
 }</code></pre>
@@ -5296,7 +5296,7 @@ It will stop any active <a href="#lbl-repl-chng">change listener</a> once the re
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
 static void simpleChangeListener(void* context,
                                  CBLReplicator* repl,
                                  const CBLReplicatorStatus* status)
@@ -5437,7 +5437,7 @@ After completing this step, Sync Gateway is reachable over <code>https</code>/<c
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/9491a6f1d2097b3fc5115f11b840938744430f87/modules/c/examples/code_snippets/main.c">char cert_buf[10000];
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/80193c5f67194541c70f14a76f1a0ac1fe6b9c14/modules/c/examples/code_snippets/main.c">char cert_buf[10000];
 FILE* cert_file = fopen("cert.pem", "r");
 size_t read = fread(cert_buf, 1, sizeof(cert_buf), cert_file);
 config.pinnedServerCertificate = (FLSlice){cert_buf, read};</code></pre>
