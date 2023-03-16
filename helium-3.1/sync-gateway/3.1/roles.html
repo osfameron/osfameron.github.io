@@ -2712,11 +2712,6 @@
     <a class="menu_title menu_link" href="sync-function.html">Sync Function</a>
   </span>
 <ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-overview.html">Overview</a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -3800,7 +3795,7 @@ Here we introduce the concept of <em>Roles</em> and the part they play in assuri
 <p><em>Related&nbspConcepts</em>:  <a href="access-control-model.html" class="xref page">Access Control Model</a>  |
 <a href="channels.html" class="xref page">Channels</a>  |
 Roles  |
-<a href="sync-function-overview.html" class="xref page">Sync Function</a>  |
+<a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a>  |
 <a href="users.html" class="xref page">Users</a></p>
 </div>
 </div>
@@ -3813,7 +3808,9 @@ Roles  |
 They enable the grouping together of <a href="users.html" class="xref page">Users</a> with similar characteristics, which makes the management of large user populations easier.</p>
 </div>
 <div class="paragraph">
-<p>Roles are granted access to channels. Any user assigned a role can access any channels (and documents within those channels) the role has been granted access to.</p>
+<p>A Role and a user assigned to a Role is granted access to a channel, a part of collections.
+The user can then access all documents assigned to that channel.
+When granting user access to admin channels statically, the user must specify the collection and corresponding channel.</p>
 </div>
 <div class="paragraph">
 <p>As an entity, roles comprise a name and a list of channels.</p>
@@ -3964,7 +3961,7 @@ It is recommended to use the <strong>REST API</strong> for production systems.</
 <div class="title">Learn more &#8230;&#8203;</div>
 <ul>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a></p>
 </li>
 <li>
 <p><a href="import-filter.html" class="xref page">Import filter</a></p>
@@ -3976,7 +3973,7 @@ It is recommended to use the <strong>REST API</strong> for production systems.</
 <p><a href="#rest-api-admin.html#/Access_Control/update_sync_function" class="xref unresolved">Add/Update Sync Function</a></p>
 </li>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function Overview</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function Overview</a></p>
 </li>
 </ul>
 </div>

@@ -2713,11 +2713,6 @@
     <a class="menu_title menu_link" href="../../../sync-gateway/3.1/sync-function.html">Sync Function</a>
   </span>
 <ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="../../../sync-gateway/3.1/sync-function-overview.html">Overview</a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -3788,13 +3783,216 @@
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
 </div><div class="sect1 pendingDocumentIds()">
+<h2 id="maint-3-1-0"><a class="anchor" href="#maint-3-1-0"></a>3.1.0&#8201;&#8212;&#8201;March 2023</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Version 3.1.0 for Swift delivers the following features and enhancements:</p>
+</div>
+<div class="sect2">
+<h3 id="enhancements"><a class="anchor" href="#enhancements"></a>Enhancements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4319">CBL-4319 - New Scope and Collection API</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4318">CBL-4318 - New ListenerToken.remove()</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4131">CBL-4131 - SQL : Enhance COLLATE syntax to support locales for UNICODE Collator++</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4098">CBL-4098 - Provide option to Save Cookie with Domain being a parent domain of the request</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4008">CBL-4008 - New QueryBuilder's FullTextIndexExpression</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3949">CBL-3949 - Support GCLB Cookies</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3651">CBL-3651 - Only send port in HTTP Host header if non-standard</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2829">CBL-2829 - New API for specifying network interface used by the replicator</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2691">CBL-2691 - New Swift QuerySortOrder to avoid API ambiguous error from Xcode 13+</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="issues-and-resolutions"><a class="anchor" href="#issues-and-resolutions"></a>Issues and Resolutions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3866">CBL-3866 - Fix WebSocket error 1006, "connection closed abnormally" crash</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3626">CBL-3626 - setDocumentExpiration hangs inside a batch transaction</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3624">CBL-3624 - Double free of BLIPIO</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3612">CBL-3612 - Sequence out of sync after out-of-memory error</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3384">CBL-3384 - Worker::childChangedStatus may lose child after enqueued</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3218">CBL-3218 - Enable F_BARRIERFSYNC in SQLite</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3192">CBL-3192 - Queries don't support result alias with dot</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3087">CBL-3087 - ARRAY_COUNT() returns incorrect result</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3075">CBL-3075 - Database could be corrupted after being copied in linux platform</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3046">CBL-3046 - Connection Timeout is set to 15000000 Milliseconds on Non Windows Platforms</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3043">CBL-3043 - QueryParser wrong for a case of JOIN</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-3013">CBL-3013 - Continuous replicator does not push docs which are being observed</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2983">CBL-2983 - Missing Objective-C Index Configuration Symbols</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2948">CBL-2948 - revpos is missing in the changed attachment body when using delta sync (Port)</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2944">CBL-2944 - LiveQuery could crash when removing the listener</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2867">CBL-2867 - Cannot update the same field again after reopening the database (Port Fix)</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2826">CBL-2826 - Losing _attachment when pushing an updated doc to SG</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2779">CBL-2779 - N1QL : Meta().&lt;property&gt; column name returned as $&lt;num&gt;</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2721">CBL-2721 - Database is closed while replicator change listener is still executing</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2693">CBL-2693 - LiveQuerier could be leaked as liveQuerierStopped() delegate might not be called</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2692">CBL-2692 - Closing db with active live query causes crash</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2676">CBL-2676 - 409 retry can result in invalid remote ancestor ID</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2637">CBL-2637 - Replication unable to continue after termination between rev and ack</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2614">CBL-2614 - Fix Memory leak when rapidly restarting replicator</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2610">CBL-2610 - Cleanup bundle folder when creating a database fails</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2592">CBL-2592 - Fix dereference of empty Optional</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2586">CBL-2586 - LiveQuerier is running after having been stopped, causing a crash</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2563">CBL-2563 - Unable to create N1QL Query with Newline</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2532">CBL-2532 - Assertion failure when stopping replicator while replicator is connecting</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2501">CBL-2501 - Replicator won't stop</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2477">CBL-2477 - Tear down DBAccess on stopped instead of on release</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2460">CBL-2460 - Different C4QueryObservers share the same C4QueryEnumerator</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2459">CBL-2459 - A second, new Query observer should be notified immediately.</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2458">CBL-2458 - Changing a Query's parameters should re-notify observers</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-2374">CBL-2374 - Slowness from reindexing the database when opening database</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="known-issues"><a class="anchor" href="#known-issues"></a>Known Issues</h3>
+<div class="paragraph">
+<p>None for this release</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deprecations"><a class="anchor" href="#deprecations"></a>Deprecations</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4316">CBL-4316 - Replicator's getPendingDocumentIds() and isDocumentPending(String id) are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4315">CBL-4315 - ReplicatorConfiguration's filters and conflict resolver properties are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4314">CBL-4314 - ReplicatorConfiguration APIs with Database object are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4313">CBL-4313 - MessageEndpointListenerConfiguration APIs using Database object are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4312">CBL-4312 - URLEndpointListenerConfiguration APIs using Database object are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4311">CBL-4311 - QueryBuilder : isNullOrMissing() and notNullOrMissing() are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4310">CBL-4310 - QueryBuilder : FullTextFunction's rank(String index) and match(String index, String query) are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4309">CBL-4309 - QueryBuilder : DataSource's database() is deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4307">CBL-4307 - DocumentChange's database property is deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4306">CBL-4306 - DatabaseChange and DatabaseChangeListener are deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4305">CBL-4305 - Database's removeChangeListener() is deprecated</a></p>
+</li>
+<li>
+<p><a href="https://issues.couchbase.com/browse/CBL-4304">CBL-4304 - Database's Document APIs are deprecated</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="maint-3-0-2"><a class="anchor" href="#maint-3-0-2"></a>3.0.2&#8201;&#8212;&#8201;August 2022</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Version 3.0.2 of Couchbase Lite for Swift delivers a number of fixes and enhancements.</p>
 </div>
 <div class="sect2">
-<h3 id="enhancements"><a class="anchor" href="#enhancements"></a>Enhancements</h3>
+<h3 id="enhancements-2"><a class="anchor" href="#enhancements-2"></a>Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -3837,7 +4035,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="known-issues"><a class="anchor" href="#known-issues"></a>Known Issues</h4>
+<h4 id="known-issues-2"><a class="anchor" href="#known-issues-2"></a>Known Issues</h4>
 <div class="paragraph">
 <p>None in this release</p>
 </div>
@@ -3852,7 +4050,7 @@
 <p>Version 3.0.1 of Couchbase Lite for Swift delivers a number of fixes and enhancements.</p>
 </div>
 <div class="sect2">
-<h3 id="enhancements-2"><a class="anchor" href="#enhancements-2"></a>Enhancements</h3>
+<h3 id="enhancements-3"><a class="anchor" href="#enhancements-3"></a>Enhancements</h3>
 <div class="paragraph">
 <div class="title">Highlights</div>
 <p>Couchbase Lite for Swift provides an enhancement to the Replicator Configuration API, which now allows you to specify the network interface to use for connecting to the remote target&#8201;&#8212;&#8201;see:
@@ -3880,7 +4078,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="known-issues-2"><a class="anchor" href="#known-issues-2"></a>Known Issues</h4>
+<h4 id="known-issues-3"><a class="anchor" href="#known-issues-3"></a>Known Issues</h4>
 <div class="paragraph">
 <p>None for this release.</p>
 </div>

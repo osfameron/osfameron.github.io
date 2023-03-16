@@ -2712,11 +2712,6 @@
     <a class="menu_title menu_link" href="sync-function.html">Sync Function</a>
   </span>
 <ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-overview.html">Overview</a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -3800,7 +3795,7 @@ Here we introduce the concept of <em>users</em> and their role in assuring secur
 <p><em>Related&nbspConcepts</em>:  <a href="access-control-model.html" class="xref page">Access Control Model</a>  |
 <a href="channels.html" class="xref page">Channels</a>  |
 <a href="roles.html" class="xref page">Roles</a>  |
-<a href="sync-function-overview.html" class="xref page">Sync Function</a>  |
+<a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a>  |
 Users</p>
 </div>
 </div>
@@ -3825,7 +3820,8 @@ You can restrict document access to specific users and-or to users with specific
 They are created and operate solely within the <em>Sync Gateway</em> ecosphere to govern access to replication data and to the Public API.</p>
 </div>
 <div class="paragraph">
-<p>Users granted access to a <a href="channels.html" class="xref page">Channel</a> can access all documents assigned to that channel.</p>
+<p>Granting access to a channel in Couchbase Sync Gateway allows users to access all documents assigned to that channel, which are part of specific collections.
+If granting users access to admin channels statically, it is necessary to specify both the corresponding collection and channel.</p>
 </div>
 <div class="paragraph">
 <p>Users can also be assigned to zero or more <a href="roles.html" class="xref page">Roles</a>.
@@ -3990,7 +3986,7 @@ $ curl -vX PUT "http://localhost:4985/mydatabase/_user/Edge1User" -H
 <div class="title">Learn more &#8230;&#8203;</div>
 <ul>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a></p>
 </li>
 <li>
 <p><a href="import-filter.html" class="xref page">Import filter</a></p>

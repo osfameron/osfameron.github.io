@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1678978263713,
+  "generated": 1678989839523,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -6123,15 +6123,9 @@
             },
             {
               "module": "ROOT",
-              "path": "sync-function-overview.adoc",
-              "url": "/sync-gateway/3.1/sync-function-overview.html",
-              "title": "Sync Function Overview"
-            },
-            {
-              "module": "ROOT",
               "path": "sync-function.adoc",
               "url": "/sync-gateway/3.1/sync-function.html",
-              "title": "Sync Function Reference"
+              "title": "Sync Function"
             },
             {
               "alias": true,

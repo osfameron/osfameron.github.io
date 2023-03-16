@@ -2712,11 +2712,6 @@
     <a class="menu_title menu_link" href="sync-function.html">Sync Function</a>
   </span>
 <ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-overview.html">Overview</a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -3804,7 +3799,9 @@
 This subset is based on application requirements, and is applied to all future mutations.</p>
 </div>
 <div class="paragraph">
-<p>Without a filter (the default), Sync Gateway imports all documents and so we recommend use of this import filter unless there is a compelling use-case against it.</p>
+<p>Import filters are defined at the collection level and are useful when working with large datasets.
+They allow you to retrieve only the necessary documents rather than the entire dataset. Import filters reduce the amount of data that needs to be processed, improving the performance of your queries and analysis.
+Sync Gateway imports all documents without a filter, so we recommend using an import filter unless there is a compelling use case against it.</p>
 </div>
 </div>
 </div>
@@ -3931,7 +3928,7 @@ If you&#8217;re running a single Couchbase Server node for development purposes 
 <div class="title">Learn more &#8230;&#8203;</div>
 <ul>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a></p>
 </li>
 <li>
 <p><a href="#">Import filter</a></p>
@@ -3943,7 +3940,7 @@ If you&#8217;re running a single Couchbase Server node for development purposes 
 <p><a href="#rest-api-admin.html#/Access_Control/update_sync_function" class="xref unresolved">Add/Update Sync Function</a></p>
 </li>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function Overview</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function Overview</a></p>
 </li>
 </ul>
 </div>

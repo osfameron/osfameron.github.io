@@ -2713,11 +2713,6 @@
     <a class="menu_title menu_link" href="sync-function.html">Sync Function</a>
   </span>
 <ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-overview.html">Overview</a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -3800,7 +3795,7 @@
 <p><em>Related&nbspConcepts</em>:  <a href="access-control-model.html" class="xref page">Access Control Model</a>  |
 Channels  |
 <a href="roles.html" class="xref page">Roles</a>  |
-<a href="sync-function-overview.html" class="xref page">Sync Function</a>  |
+<a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a>  |
 <a href="users.html" class="xref page">Users</a></p>
 </div>
 </div>
@@ -3809,7 +3804,7 @@ Channels  |
 <h2 id="concept"><a class="anchor" href="#concept"></a>Concept</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Sync Gateway uses <em>Channels</em> to make it easy to share a database&#8217;s documents across a large user base whilst retaining effective access control.
+<p>Sync Gateway uses <em>Channels</em> defined at collection level to make it easy to share a database&#8217;s documents across a large user base whilst retaining effective access control.
 They serve as a security conduit between the document and a user:</p>
 </div>
 </div>
@@ -3818,19 +3813,11 @@ They serve as a security conduit between the document and a user:</p>
 <h2 id="overview"><a class="anchor" href="#overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Every document in the database is assigned a list of channels it is distributed to.
-Every user (or role) is granted access to a list of channels.
-This dual-purpose is reflected in the way you use channels:</p>
+<p>Channels are defined at the collection level, which means that specific channels can be associated with individual collections of documents.
+This system allows users with access to a specific channel to access all documents assigned to that channel within that collection.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>By granting a user access to a channel, you are imposing access control</p>
-</li>
-<li>
-<p>By assigning a document to a channel you are imposing document routing</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>By defining channels at the collection level, it&#8217;s possible to implement detailed access control for different types of data within the database.</p>
 </div>
 <div class="paragraph">
 <p>You typically will use channels to:</p>
@@ -3860,22 +3847,9 @@ This dual-purpose is reflected in the way you use channels:</p>
 <h2 id="lbl-usecase"><a class="anchor" href="#lbl-usecase"></a>Use Case</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Consider the case where two users require, and are allowed, access to a private set of documents  and one shared set of documents — see <a href="#fig-channel-example">Figure 1</a>.</p>
-</div>
-<div id="fig-channel-example" class="imageblock">
-<div class="content">
-<img src="_images/channels-example-all.png" alt="Access Control using Channels" width="400">
-</div>
-<div class="title">Figure 1. Channels in Access Control</div>
-</div>
-<div class="paragraph">
-<p>In this case, each user is assigned to a private channel with a subset of documents that only the user can access and a shared channel that contains common documents.
-The users in this example could be replaced by roles.</p>
-</div>
-<div class="paragraph">
-<p>An example of this model could be a retail chain, where every store corresponds to a Sync Gateway User.
-Each store has a store specific channel that contains documents that are store specific like pricing, promotions, inventory etc.
-In addition, all the stores may need to have access to a common set of documents like retail locations, product catalog that are stored in a common shared channel.</p>
+<p>Imagine a database containing a collection of customer data. Within this collection, channels can be established to provide varying customer data access levels.
+For example, one channel may provide access to general customer information, while another may allow access to sensitive customer information.
+Users can then be granted access to one or both channels based on their need to access the associated data.</p>
 </div>
 </div>
 </div>
@@ -4130,7 +4104,7 @@ Indeed, a copy of channel metadata is retained for each revision of a document.<
 <div class="title">Learn more &#8230;&#8203;</div>
 <ul>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a></p>
 </li>
 <li>
 <p><a href="import-filter.html" class="xref page">Import filter</a></p>
@@ -4142,7 +4116,7 @@ Indeed, a copy of channel metadata is retained for each revision of a document.<
 <p><a href="#rest-api-admin.html#/Access_Control/update_sync_function" class="xref unresolved">Add/Update Sync Function</a></p>
 </li>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function Overview</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function Overview</a></p>
 </li>
 </ul>
 </div>

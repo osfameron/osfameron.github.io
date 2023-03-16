@@ -2712,11 +2712,6 @@
     <a class="menu_title menu_link" href="sync-function.html">Sync Function</a>
   </span>
 <ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-overview.html">Overview</a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
@@ -3799,7 +3794,7 @@ The sync function API provides several methods that you can use to validate and 
 <p><em>Related&nbspConcepts</em>:  <a href="access-control-model.html" class="xref page">Access Control Model</a>  |
 <a href="channels.html" class="xref page">Channels</a>  |
 <a href="roles.html" class="xref page">Roles</a>  |
-<a href="sync-function-overview.html" class="xref page">Sync Function</a>  |
+<a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a>  |
 <a href="users.html" class="xref page">Users</a></p>
 </div>
 </div>
@@ -3994,26 +3989,18 @@ In <em>Sync&#160;Gateway</em> 2.x these documents remain in the local database o
 <div class="sect2">
 <h3 id="concept-2"><a class="anchor" href="#concept-2"></a>Concept</h3>
 <div class="paragraph">
-<p>Sync Gateway uses <em>Channels</em> to make it easy to share a database&#8217;s documents across a large user base whilst retaining effective access control.
+<p>Sync Gateway uses <em>Channels</em> defined at collection level to make it easy to share a database&#8217;s documents across a large user base whilst retaining effective access control.
 They serve as a security conduit between the document and a user:</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="overview"><a class="anchor" href="#overview"></a>Overview</h3>
 <div class="paragraph">
-<p>Every document in the database is assigned a list of channels it is distributed to.
-Every user (or role) is granted access to a list of channels.
-This dual-purpose is reflected in the way you use channels:</p>
+<p>Channels are defined at the collection level, which means that specific channels can be associated with individual collections of documents.
+This system allows users with access to a specific channel to access all documents assigned to that channel within that collection.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>By granting a user access to a channel, you are imposing access control</p>
-</li>
-<li>
-<p>By assigning a document to a channel you are imposing document routing</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>By defining channels at the collection level, it&#8217;s possible to implement detailed access control for different types of data within the database.</p>
 </div>
 <div class="paragraph">
 <p>You typically will use channels to:</p>
@@ -4041,22 +4028,9 @@ This dual-purpose is reflected in the way you use channels:</p>
 <div class="sect2">
 <h3 id="lbl-usecase"><a class="anchor" href="#lbl-usecase"></a>Use Case</h3>
 <div class="paragraph">
-<p>Consider the case where two users require, and are allowed, access to a private set of documents  and one shared set of documents — see <a href="#fig-channel-example">Figure 1</a>.</p>
-</div>
-<div id="fig-channel-example" class="imageblock">
-<div class="content">
-<img src="_images/channels-example-all.png" alt="Access Control using Channels" width="400">
-</div>
-<div class="title">Figure 1. Channels in Access Control</div>
-</div>
-<div class="paragraph">
-<p>In this case, each user is assigned to a private channel with a subset of documents that only the user can access and a shared channel that contains common documents.
-The users in this example could be replaced by roles.</p>
-</div>
-<div class="paragraph">
-<p>An example of this model could be a retail chain, where every store corresponds to a Sync Gateway User.
-Each store has a store specific channel that contains documents that are store specific like pricing, promotions, inventory etc.
-In addition, all the stores may need to have access to a common set of documents like retail locations, product catalog that are stored in a common shared channel.</p>
+<p>Imagine a database containing a collection of customer data. Within this collection, channels can be established to provide varying customer data access levels.
+For example, one channel may provide access to general customer information, while another may allow access to sensitive customer information.
+Users can then be granted access to one or both channels based on their need to access the associated data.</p>
 </div>
 </div>
 <div class="sect2">
@@ -4312,7 +4286,8 @@ You can restrict document access to specific users and-or to users with specific
 They are created and operate solely within the <em>Sync Gateway</em> ecosphere to govern access to replication data and to the Public API.</p>
 </div>
 <div class="paragraph">
-<p>Users granted access to a <a href="channels.html" class="xref page">Channel</a> can access all documents assigned to that channel.</p>
+<p>Granting access to a channel in Couchbase Sync Gateway allows users to access all documents assigned to that channel, which are part of specific collections.
+If granting users access to admin channels statically, it is necessary to specify both the corresponding collection and channel.</p>
 </div>
 <div class="paragraph">
 <p>Users can also be assigned to zero or more <a href="roles.html" class="xref page">Roles</a>.
@@ -4342,7 +4317,9 @@ You will need to create these users on Couchbase server in order to enable acces
 They enable the grouping together of <a href="users.html" class="xref page">Users</a> with similar characteristics, which makes the management of large user populations easier.</p>
 </div>
 <div class="paragraph">
-<p>Roles are granted access to channels. Any user assigned a role can access any channels (and documents within those channels) the role has been granted access to.</p>
+<p>A Role and a user assigned to a Role is granted access to a channel, a part of collections.
+The user can then access all documents assigned to that channel.
+When granting user access to admin channels statically, the user must specify the collection and corresponding channel.</p>
 </div>
 <div class="paragraph">
 <p>As an entity, roles comprise a name and a list of channels.</p>
@@ -4377,7 +4354,7 @@ Roles have a separate namespace from users, so it’s possible to have a user an
 <div class="title">Learn more &#8230;&#8203;</div>
 <ul>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function</a></p>
 </li>
 <li>
 <p><a href="import-filter.html" class="xref page">Import filter</a></p>
@@ -4389,7 +4366,7 @@ Roles have a separate namespace from users, so it’s possible to have a user an
 <p><a href="#rest-api-admin.html#/Access_Control/update_sync_function" class="xref unresolved">Add/Update Sync Function</a></p>
 </li>
 <li>
-<p><a href="sync-function-overview.html" class="xref page">Sync Function Overview</a></p>
+<p><a href="#sync-function-overview.adoc" class="xref unresolved">Sync Function Overview</a></p>
 </li>
 </ul>
 </div>
