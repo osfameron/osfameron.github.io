@@ -3827,33 +3827,33 @@ Nodes in a sync&#160;gateway cluster should all be running on the same OS, and e
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat Enterprise Linux (RHEL)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7.x and 8.x</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Red Hat Enterprise Linux (RHEL)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8.x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.x&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CentOS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7.x and 8.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.x and 8.x&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Ubuntu</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20.04 LTS and 18.04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20.04 LTS and 22.04 LTS</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16.04&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18.04&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Debian</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10.x and 9.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.x and 11.x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8.x&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.x&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>2019<br>
-2016 (64-bit)&#8201;&#8212;&#8201;deprecated at 3.1.0</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2019 and 2022</p></td>
 </tr>
 </tbody>
 </table>
@@ -3875,15 +3875,13 @@ Nodes in a sync&#160;gateway cluster should all be running on the same OS, and e
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AWS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Amazon Linux 2 ARM v8</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>LTS</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LTS</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Azure</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ubuntu</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">20.04<br>
-18.04</p></td>
+18.04&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Google Cloud</p></td>
@@ -3891,7 +3889,7 @@ Nodes in a sync&#160;gateway cluster should all be running on the same OS, and e
 <p>Ubuntu</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">20.04<br>
-18.04</p></td>
+18.04&#8201;&#8212;&#8201;deprecated at 3.1.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Docker (Docker Hub)</p></td>
@@ -3920,16 +3918,15 @@ Nodes in a sync&#160;gateway cluster should all be running on the same OS, and e
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">macOS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11.x (Big Sur)
-10.15(Catalina)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 11 and 12</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Windows</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Desktop 10 and 11</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Apple M1 ARM64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">macOS 11 and 12</p></td>
 </tr>
 </tbody>
 </table>
@@ -3941,72 +3938,6 @@ Nodes in a sync&#160;gateway cluster should all be running on the same OS, and e
 <div class="paragraph">
 <p>Deprecated versions will be removed in a future release and we recommend that you plan to migrate away from the deprecated OS versions.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Deprecated at 2.8</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Operating System</th>
-<th class="tableblock halign-left valign-top">Deprecated Versions</th>
-<th class="tableblock halign-left valign-top">Deprecation Release</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Linux</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>RHEL 6.x<br>
-Centos 6.x<br>
-Ubuntu 14.04 LTS</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.6</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Windows Server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2012</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.8</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="end-of-life"><a class="anchor" href="#end-of-life"></a>End of Life</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Support for sync&#160;gateway on these operating systems is removed at the current major release</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Removed at 3.0.0</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Operating System</th>
-<th class="tableblock halign-left valign-top">Deprecated Versions</th>
-<th class="tableblock halign-left valign-top">Deprecation Release</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Windows Server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2012 (64-bit)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OSX</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10.14 "Mojave"</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.0</p></td>
-</tr>
-</tbody>
-</table>
 <hr>
 <h5 id="" class="discrete"></h5>
 </div>

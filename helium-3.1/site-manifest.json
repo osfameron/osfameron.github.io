@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1678989839523,
+  "generated": 1679078167229,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -2082,7 +2082,7 @@
               "module": "ROOT",
               "path": "cbl-whatsnew.adoc",
               "url": "/couchbase-lite/3.1/cbl-whatsnew.html",
-              "title": "What&#8217;s New"
+              "title": "New in 3.0"
             },
             {
               "module": "ROOT",
