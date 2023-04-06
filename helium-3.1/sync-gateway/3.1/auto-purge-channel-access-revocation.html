@@ -119,7 +119,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../../couchbase-lite/3.1/cbl-whatsnew.html">New in 3.0</a>
+    <a class="menu_title menu_link" href="../../couchbase-lite/3.1/cbl-whatsnew.html">New in 3.1</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="0">
@@ -282,12 +282,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -457,7 +457,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -635,7 +635,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -841,7 +841,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1070,7 +1070,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1281,7 +1281,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -4041,9 +4041,73 @@ Sync Function includes <code>requireAccess(“channel”)</code></p>
 </table>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ex-sync-function-auto-purge"><a class="anchor" href="#ex-sync-function-auto-purge"></a>Sync Function Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Couchbase Sync Gateway defines a Sync Function at the <code>collection</code> level.
+Defining at this level helps simplify data management and improve data reliability.
+Each collection in the system allows for only one Sync Function, which enables the specification of Access Control rules.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Default Sync Function</div>
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function (doc, oldDoc, meta) {
+   channel(CollectionName);
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here the function then calls the <code>channel</code> and passes in the name of the collection <code>(CollectionsName)</code> as an argument.</p>
+</div>
+<div class="paragraph">
+<p>By default, every document in the collection is automatically assigned to a channel with the same name as the collection. This system automatically creates a channel with the collection&#8217;s name. The assignment of all documents to the collection channel is functionally similar to assigning them to the <a href="#2.7@sync-gateway-channels.adoc#star-channel" class="xref unresolved">Star Channel</a>.</p>
+</div>
+<div class="paragraph">
+<p>To override this, use a custom sync function or a Specified Default Sync Function.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. Upgraded Default Sync Function</div>
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function (doc, oldDoc, meta) {
+channel(doc.channels);
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is the default Sync Function when you have upgraded; it remains the same as the previous version.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <h5 id="" class="discrete"></h5>
-</div>
 </div>
 </div>
 <div class="sect1">

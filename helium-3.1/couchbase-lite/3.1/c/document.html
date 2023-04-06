@@ -118,7 +118,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../cbl-whatsnew.html">New in 3.0</a>
+    <a class="menu_title menu_link" href="../cbl-whatsnew.html">New in 3.1</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="0">
@@ -281,12 +281,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -456,7 +456,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -634,7 +634,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -840,7 +840,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1069,7 +1069,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1280,7 +1280,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -3960,7 +3960,7 @@ All the CRUD examples in this document operate on a <code>collection</code> obje
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Open or create DB if it doesn't exist
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Open or create DB if it doesn't exist
 CBLError err;
 CBLDatabase* database = CBLDatabase_Open(FLSTR("mydb"), NULL, &amp;err);
 
@@ -3986,7 +3986,7 @@ CBLCollection* collection = CBLDatabase_DefaultCollection(kDatabase, NULL);</cod
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Create your new document
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Create your new document
 // The lack of 'const' indicates this document is mutable
 CBLDocument* mutableDoc = CBLDocument_Create();
 FLMutableDict properties = CBLDocument_MutableProperties(mutableDoc);</code></pre>
@@ -4006,7 +4006,7 @@ FLMutableDict properties = CBLDocument_MutableProperties(mutableDoc);</code></pr
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Create and populate mutable dictionary
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Create and populate mutable dictionary
 FLMutableDict address = FLMutableDict_New();
 FLMutableDict_SetString(address, FLSTR("street"), FLSTR("1 Main st."));
 FLMutableDict_SetString(address, FLSTR("city"), FLSTR("San Francisco"));
@@ -4026,7 +4026,7 @@ FLMutableDict_SetString(address, FLSTR("code"), FLSTR("90210"));</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Create and populate mutable array
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Create and populate mutable array
 FLMutableArray phones = FLMutableArray_New();
 FLMutableArray_AppendString(phones, FLSTR("650-000-0000"));
 FLMutableArray_AppendString(phones, FLSTR("650-000-0001"));</code></pre>
@@ -4044,7 +4044,7 @@ Each data item is stored as a key-value pair.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Initialize and populate the document
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Initialize and populate the document
 
     // Add document type and hotel name as string
 FLMutableDict_SetString(properties, FLSTR("type"), FLSTR("hotel"));
@@ -4081,7 +4081,7 @@ This will auto-generate the document id.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLError err;
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLError err;
 CBLCollection_SaveDocument(collection, mutableDoc, &amp;err);</code></pre>
 </div>
 </div>
@@ -4093,7 +4093,7 @@ CBLCollection_SaveDocument(collection, mutableDoc, &amp;err);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLError err;
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLError err;
 CBLDatabase_Close(database, &amp;err);</code></pre>
 </div>
 </div>
@@ -4105,7 +4105,7 @@ CBLDatabase_Close(database, &amp;err);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLDatabase_Release(database);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLDatabase_Release(database);
 CBLDocument_Release(mutableDoc);
 FLMutableDict_Release(address);
 FLMutableArray_Release(phones);</code></pre>
@@ -4123,7 +4123,7 @@ FLMutableArray_Release(phones);</code></pre>
 <div class="title">API References</div>
 <ul>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/C/html/group__f_l_dict.html">Fleece Dictionaries</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/C/html/group__f_l_dict.html">Fleece Dictionaries</a></p>
 </li>
 </ul>
 </div>
@@ -4132,7 +4132,7 @@ FLMutableArray_Release(phones);</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLError err;
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLError err;
 const CBLDocument *doc = CBLCollection_GetDocument(collection, FLSTR("doc1"), &amp;err);
 FLDict properties = CBLDocument_Properties(doc);
 
@@ -4173,7 +4173,7 @@ FLMutableDict_Release(mutableDict);</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Create a new mutable dictionary and populate some keys/values
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Create a new mutable dictionary and populate some keys/values
 FLMutableDict dict = FLMutableDict_New();
 FLMutableDict_SetString(dict, FLSTR("street"), FLSTR("1 Main st."));
 FLMutableDict_SetString(dict, FLSTR("city"), FLSTR("San Francisco"));
@@ -4199,7 +4199,7 @@ FLMutableDict_Release(dict);</code></pre>
 <div class="title">API References</div>
 <ul>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/C/html/group__f_l_array.html">Fleece Arrays</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/C/html/group__f_l_array.html">Fleece Arrays</a></p>
 </li>
 <li>
 <p></p>
@@ -4211,7 +4211,7 @@ FLMutableDict_Release(dict);</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLError err;
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLError err;
 const CBLDocument *doc = CBLCollection_GetDocument(collection, FLSTR("doc1"), &amp;err);
 FLDict properties = CBLDocument_Properties(doc);
 
@@ -4249,7 +4249,7 @@ while (NULL != (val = FLArrayIterator_GetValue(&amp;iter)))
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Create a new mutable array and populate data into the array
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Create a new mutable array and populate data into the array
 FLMutableArray phones = FLMutableArray_New();
 FLMutableArray_AppendString(phones, FLSTR("650-000-0000"));
 FLMutableArray_AppendString(phones, FLSTR("650-000-0001"));
@@ -4286,10 +4286,10 @@ FLMutableArray_Release(phones);</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/C/html/group__documents.html#ga226f555fffb7543558048af20b18b737">CBLDocument_Create()</a> initializer to create a new document where the document ID is randomly generated by the database.</p>
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/C/html/group__documents.html#ga226f555fffb7543558048af20b18b737">CBLDocument_Create()</a> initializer to create a new document where the document ID is randomly generated by the database.</p>
 </li>
 <li>
-<p>Use the <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/C/html/group__documents.html#gaec41cf2eab4e3ac490f11007f665a35e">CBLDocument_CreateWithID()</a> initializer to create a new document with a specific ID.</p>
+<p>Use the <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/C/html/group__documents.html#gaec41cf2eab4e3ac490f11007f665a35e">CBLDocument_CreateWithID()</a> initializer to create a new document with a specific ID.</p>
 </li>
 <li>
 <p>Use the {url-api-method-collection-getdocument} method to get a document.
@@ -4306,7 +4306,7 @@ You can use this behavior to check if a document with a given ID already exists 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">
 CBLDocument* doc = CBLDocument_CreateWithID(FLSTR("xyz"));
 FLMutableDict properties = CBLDocument_MutableProperties(doc);
 FLMutableDict_SetString(properties, FLSTR("type"), FLSTR("task"));
@@ -4332,7 +4332,7 @@ CBLDocument_Release(doc);</code></pre>
 Reference an immutable document using a <code>const</code> pointer and a mutable document using a non-const pointer to prevent developers from accidentally calling a mutable-document function on an immutable document.</p>
 </div>
 <div class="paragraph">
-<p>To make an immutable document mutable, use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/C/html/group__documents.html#ga0356b98d2f1798adc8f549510d3eef67">CBLDocument_MutableCopy()</a>.</p>
+<p>To make an immutable document mutable, use <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/C/html/group__documents.html#ga0356b98d2f1798adc8f549510d3eef67">CBLDocument_MutableCopy()</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4348,7 +4348,7 @@ _cbl_warn_unused _cbl_returns_nonnull;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">
 CBLError err;
 CBLDocument* mutableDoc = CBLCollection_GetMutableDocument(collection, FLSTR("xyz"), &amp;err);
 FLMutableDict properties = CBLDocument_MutableProperties(mutableDoc);
@@ -4385,7 +4385,7 @@ The following example persists a few documents in batch.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">
 CBLError err;
 CBLDatabase_BeginTransaction(database, &amp;err);
 char buffer[7];
@@ -4424,17 +4424,7 @@ The following example registers for changes to the document with ID <code>user.j
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">/*
-static void document_listener(void* context, const CBLDocumentChange* change) {
-CBLError err;
-    const CBLDocument* doc = CBLCollection_GetDocument(change-&gt;collection, change-&gt;docID, &amp;err);
-    FLDict properties = CBLDocument_Properties(doc);
-    FLString verified_account = FLValue_AsString(FLDict_Get(properties, FLSTR("verified_account")));
-    printf("Status :: %.*s\n", (int)verified_account.size, (const char *)verified_account.buf);
-    CBLDocument_Release(doc);
-}
-*/
-CBLListenerToken* token = CBLCollection_AddDocumentChangeListener(collection, FLSTR("user.john"),
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLListenerToken* token = CBLCollection_AddDocumentChangeListener(collection, FLSTR("user.john"),
     document_listener, NULL);</code></pre>
 </div>
 </div>
@@ -4454,11 +4444,11 @@ The purge is not replicated to Sync Gateway.</p>
 <div class="title">Example 9. Set document expiration</div>
 <div class="content">
 <div class="paragraph">
-<p>This example sets the TTL for a document to 5 minutes from the current time.</p>
+<p>This example sets the TTL for a document to 1 day from the current time.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purge the document one day from now
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purge the document one day from now
 
 // Overly simplistic for example purposes
 // NOTE: API takes milliseconds
@@ -4590,7 +4580,7 @@ This is done using the <code>init(json)</code> constructor&#8201;&#8212;&#8201;s
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">FLString json = FLSTR("[\"Hotel Ned\", \"Hotel Ted\"]");
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">FLString json = FLSTR("[\"Hotel Ned\", \"Hotel Ted\"]");
 
 // Create an array from the JSON string
 FLError err;
@@ -4643,7 +4633,7 @@ This is done using the <code>init(json)</code> constructor-- see: <a href="#ex-d
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">FLString json = FLSTR("{\"id\":\"1002\",\"type\":\"hotel\",\"name\":\"Hotel Ned\",\"city\":\"Balmain\",\"country\":\"Australia\"}");
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">FLString json = FLSTR("{\"id\":\"1002\",\"type\":\"hotel\",\"name\":\"Hotel Ned\",\"city\":\"Balmain\",\"country\":\"Australia\"}");
 
 // Create a dictionary from the JSON string
 FLError err;
@@ -4697,7 +4687,7 @@ This is done using the <code>init(json)</code> or <code>init(id: json:)</code> c
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">FLString json = FLSTR("{\"id\":\"1002\",\"type\":\"hotel\",\"name\":\"Hotel Ned\",\"city\":\"Balmain\",\"country\":\"Australia\"}");
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">FLString json = FLSTR("{\"id\":\"1002\",\"type\":\"hotel\",\"name\":\"Hotel Ned\",\"city\":\"Balmain\",\"country\":\"Australia\"}");
 
 // Create a document and set the JSON data to the document
 CBLError err;
@@ -4736,11 +4726,11 @@ CBLDocument_Release(doc);</code></pre>
 <div class="title">Example 14. Using JSON Results</div>
 <div class="content">
 <div class="paragraph">
-<p>Use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/C/html/group__json.html#ga3450acc0690101545d75986b91e4080">FLValue_ToJSON()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
+<p>Use <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/C/html/group__json.html#ga3450acc0690101545d75986b91e4080">FLValue_ToJSON()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLResultSet* results = CBLQuery_Execute(query, &amp;err);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLResultSet* results = CBLQuery_Execute(query, &amp;err);
 while(CBLResultSet_Next(results)) {
     FLDict result = CBLResultSet_ResultDict(results);
     FLStringResult json = FLValue_ToJSON((FLValue)result);

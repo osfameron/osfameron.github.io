@@ -118,7 +118,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../cbl-whatsnew.html">New in 3.0</a>
+    <a class="menu_title menu_link" href="../cbl-whatsnew.html">New in 3.1</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="0">
@@ -281,12 +281,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -456,7 +456,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -634,7 +634,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -840,7 +840,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1069,7 +1069,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1280,7 +1280,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -3890,7 +3890,8 @@ The conflict is realized only when replication propagates the incompatible chang
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-These rules apply only to conflicts arising from replication.
+The rules only apply to conflicts caused by replication.
+Conflict resolution takes place exclusively during pull replication, while push replication remains unaffected.
 </td>
 </tr>
 </table>
@@ -4079,7 +4080,7 @@ object MergeConflictResolver : ConflictResolver {
 <div class="tab-pane" aria-labelledby="tabset3_local-wins">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java#L790-L794">class LocalWinConflictResolver implements ConflictResolver {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java#L790-L794">class LocalWinConflictResolver implements ConflictResolver {
     public Document resolve(Conflict conflict) {
         return conflict.getLocalDocument();
     }
@@ -4090,7 +4091,7 @@ object MergeConflictResolver : ConflictResolver {
 <div class="tab-pane" aria-labelledby="tabset3_remote-wins">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt#L1410-L1414">// Using replConfig.setConflictResolver(new RemoteWinConflictResolver());
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt#L1410-L1414">// Using replConfig.setConflictResolver(new RemoteWinConflictResolver());
 @Suppress("unused")
 object RemoteWinsResolver : ConflictResolver {
     override fun resolve(conflict: Conflict) = conflict.remoteDocument
@@ -4101,7 +4102,7 @@ object RemoteWinsResolver : ConflictResolver {
 <div class="tab-pane" aria-labelledby="tabset3_merge">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java#L808-L814">class MergeConflictResolver implements ConflictResolver {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java#L808-L814">class MergeConflictResolver implements ConflictResolver {
     public Document resolve(Conflict conflict) {
         Map&lt;String, Object&gt; merge = conflict.getLocalDocument().toMap();
         merge.putAll(conflict.getRemoteDocument().toMap());
@@ -4223,7 +4224,7 @@ When the value is <code>null</code>, the default conflict resolution will be app
 <div class="tab-pane" aria-labelledby="tabset4_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">
 val collectionConfig = CollectionConfigurationFactory.newConfig(conflictResolver = LocalWinsResolver)
 val repl = Replicator(
     ReplicatorConfigurationFactory.newConfig(
@@ -4242,7 +4243,7 @@ thisReplicator = repl</code></pre>
 <div class="tab-pane" aria-labelledby="tabset4_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Replicator repl = new Replicator(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Replicator repl = new Replicator(
     new ReplicatorConfiguration(new URLEndpoint(targetUri))
         .addCollections(
             srcCollections,
@@ -4285,7 +4286,7 @@ Update conflicts can occur when you try to update a document that’s been updat
 <p>Another thread (perhaps the replicator) updates the document, creating a new revision with different properties.</p>
 </li>
 <li>
-<p>Your code updates the document with its modified properties, for example using <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Database.html#save-com.couchbase.lite.MutableDocument-">database.save(MutableDocument document)</a>.</p>
+<p>Your code updates the document with its modified properties, for example using <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/com/couchbase/lite/Database.html#save-com.couchbase.lite.MutableDocument-">database.save(MutableDocument document)</a>.</p>
 </li>
 </ol>
 </div>
@@ -4308,7 +4309,7 @@ So in effect, the changes from step 2 would be overwritten and lost.</p>
 <dl>
 <dt class="hdlist1">Save operations</dt>
 <dd>
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Database.html#save-com.couchbase.lite.MutableDocument-com.couchbase.lite.ConcurrencyControl-">database.save(MutableDocument document, ConcurrencyControl concurrencyControl)</a>&#8201;&#8212;&#8201;attempts to save the document with a concurrency control.</p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/com/couchbase/lite/Database.html#save-com.couchbase.lite.MutableDocument-com.couchbase.lite.ConcurrencyControl-">database.save(MutableDocument document, ConcurrencyControl concurrencyControl)</a>&#8201;&#8212;&#8201;attempts to save the document with a concurrency control.</p>
 <div class="paragraph">
 <p>The concurrency control parameter has two possible values:</p>
 </div>
@@ -4332,10 +4333,10 @@ So in effect, the changes from step 2 would be overwritten and lost.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Database.html#delete-com.couchbase.lite.Document-">database.delete(Document document)</a>: The last write will win if there is a conflict.</p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/com/couchbase/lite/Database.html#delete-com.couchbase.lite.Document-">database.delete(Document document)</a>: The last write will win if there is a conflict.</p>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Database.html#delete-com.couchbase.lite.Document-com.couchbase.lite.ConcurrencyControl-">database.delete(Document document, ConcurrencyControl concurrencyControl)</a>: attempts to delete the document with a concurrency control.</p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/com/couchbase/lite/Database.html#delete-com.couchbase.lite.Document-com.couchbase.lite.ConcurrencyControl-">database.delete(Document document, ConcurrencyControl concurrencyControl)</a>: attempts to delete the document with a concurrency control.</p>
 </li>
 </ul>
 </div>
@@ -4365,7 +4366,7 @@ In this case, the app can detect the error that is being thrown, and handle it b
 <p>Developers can hook a conflict handler when saving a document so they can easily handle the conflict in a single save method call.</p>
 </div>
 <div class="paragraph">
-<p>To implement custom conflict resolution when saving a document, apps must call the <code>save</code> method with a conflict handler block ( <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/com/couchbase/lite/Database.html#save-com.couchbase.lite.MutableDocument-com.couchbase.lite.ConflictHandler-">database.save(MutableDocument, ConflictHandler)</a>).</p>
+<p>To implement custom conflict resolution when saving a document, apps must call the <code>save</code> method with a conflict handler block ( <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/com/couchbase/lite/Database.html#save-com.couchbase.lite.MutableDocument-com.couchbase.lite.ConflictHandler-">database.save(MutableDocument, ConflictHandler)</a>).</p>
 </div>
 <div class="paragraph">
 <p>The following code snippet shows an example of merging properties from the existing document (<code>current</code>) into the one being saved (<code>new</code>).
@@ -4389,7 +4390,7 @@ In the event of conflicting keys, it will pick the key value from <code>new</cod
 <div class="tab-pane" aria-labelledby="tabset5_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val mutableDocument = collection.getDocument("xyz")?.toMutable() ?: return
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val mutableDocument = collection.getDocument("xyz")?.toMutable() ?: return
 mutableDocument.setString("name", "apples")
 collection.save(mutableDocument) { newDoc, curDoc -&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
     if (curDoc == null) {
@@ -4406,7 +4407,7 @@ collection.save(mutableDocument) { newDoc, curDoc -&gt;  <i class="conum" data-v
 <div class="tab-pane" aria-labelledby="tabset5_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Document doc = collection.getDocument("xyz");
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Document doc = collection.getDocument("xyz");
 if (doc == null) { return; }
 MutableDocument mutableDocument = doc.toMutable();
 mutableDocument.setString("name", "apples");
@@ -4457,7 +4458,7 @@ collection.save(
 <p><a href="#android:landing-p2psync.adoc" class="xref unresolved">Peer-to-Peer Sync</a></p>
 </li>
 <li>
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a></p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/">API References</a></p>
 </li>
 </ul>
 </div>

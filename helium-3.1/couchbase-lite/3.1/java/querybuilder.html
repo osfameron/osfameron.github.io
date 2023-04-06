@@ -119,7 +119,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="../cbl-whatsnew.html">New in 3.0</a>
+    <a class="menu_title menu_link" href="../cbl-whatsnew.html">New in 3.1</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="0">
@@ -282,12 +282,12 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android/">API References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android/">API References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-android-ktx">Kotlin Extensions</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -457,7 +457,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-c/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-c/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
@@ -635,7 +635,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-net/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-net/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -841,7 +841,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1070,7 +1070,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-objc/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-objc/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -1281,7 +1281,7 @@
 </li>
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.0.0/couchbase-lite-swift/index.html">API&#160;References</a>
+    <a class="menu_title menu_link" href="https://docs.couchbase.com/mobile/3.1.0/couchbase-lite-swift/index.html">API&#160;References</a>
   </span>
 </li>
 <li class="menu_list" data-depth="1">
@@ -3937,7 +3937,7 @@ You can opt to retrieve entire documents, or just the specific properties you ne
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(Expression.property("type").equalTo(Expression.string("hotel")));</code></pre>
@@ -4010,7 +4010,7 @@ You can opt to retrieve entire documents, or just the specific properties you ne
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("name"),
@@ -4094,7 +4094,7 @@ You can chain any number of Expressions in order to implement sophisticated filt
 <div class="sect2">
 <h3 id="lbl-comp-ops"><a class="anchor" href="#lbl-comp-ops"></a>Comparison Operators</h3>
 <div class="paragraph">
-<p>The <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/com/couchbase/lite/Expression.html">Expression Comparators</a> can be used in the WHERE statement to specify on which property to match documents.
+<p>The <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/com/couchbase/lite/Expression.html">Expression Comparators</a> can be used in the WHERE statement to specify on which property to match documents.
 In the example below, we use the <code>equalTo</code> operator to query documents where the <code>type</code> property equals "hotel".</p>
 </div>
 <div class="listingblock">
@@ -4118,7 +4118,7 @@ In the example below, we use the <code>equalTo</code> operator to query document
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(Expression.property("type").equalTo(Expression.string("hotel")))
@@ -4139,12 +4139,12 @@ try (ResultSet resultSet = query.execute()) {
 <div class="sect2">
 <h3 id="lbl-coll-ops"><a class="anchor" href="#lbl-coll-ops"></a>Collection Operators</h3>
 <div class="paragraph">
-<p><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/com/couchbase/lite/ArrayFunction.html">ArrayFunction Collection Operators</a> are useful to check if a given value is present in an array.</p>
+<p><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/com/couchbase/lite/ArrayFunction.html">ArrayFunction Collection Operators</a> are useful to check if a given value is present in an array.</p>
 </div>
 <div class="sect3">
 <h4 id="contains-operator"><a class="anchor" href="#contains-operator"></a>CONTAINS Operator</h4>
 <div class="paragraph">
-<p>The following example uses the <code><a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/com/couchbase/lite/ArrayFunction.html">ArrayFunction</a></code> to find documents where the <code>public_likes</code> array property contains a value equal to "Armani Langworth".</p>
+<p>The following example uses the <code><a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/com/couchbase/lite/ArrayFunction.html">ArrayFunction</a></code> to find documents where the <code>public_likes</code> array property contains a value equal to "Armani Langworth".</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4157,7 +4157,7 @@ try (ResultSet resultSet = query.execute()) {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("name"),
@@ -4182,7 +4182,7 @@ The following example looks for documents whose <code>first</code>, <code>last</
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Expression[] values = new Expression[] {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Expression[] values = new Expression[] {
     Expression.property("first"),
     Expression.property("last"),
     Expression.property("username")
@@ -4210,7 +4210,7 @@ Query query = QueryBuilder.select(SelectResult.all())
 <div class="sect3">
 <h4 id="lbl-string-match"><a class="anchor" href="#lbl-string-match"></a>String Matching</h4>
 <div class="paragraph">
-<p>The <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/com/couchbase/lite/Expression.html#like-com.couchbase.lite.Expression-">Like()</a> operator can be used for string matching&#8201;&#8212;&#8201;see <a href="#ex-like-case-insensitive">Example 7</a></p>
+<p>The <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/com/couchbase/lite/Expression.html#like-com.couchbase.lite.Expression-">Like()</a> operator can be used for string matching&#8201;&#8212;&#8201;see <a href="#ex-like-case-insensitive">Example 7</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4233,7 +4233,7 @@ To perform case insensitive matching, use <code>Function.lower</code> or <code>F
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("country"),
@@ -4274,7 +4274,7 @@ Notice that the matches may span word boundaries.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("country"),
@@ -4307,7 +4307,7 @@ The query returns "landmark" type documents with names such as "Engineer", "engi
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("country"),
@@ -4352,7 +4352,7 @@ The <code>regex</code> operator is case sensitive, use <code>upper</code> or <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("country"),
@@ -4404,7 +4404,7 @@ For more on the regex spec used by Couchbase&#160;Lite see <a href="http://www.c
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Query documents that have been deleted
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Query documents that have been deleted
 Query query = QueryBuilder
     .select(SelectResult.expression(Meta.id))
     .from(DataSource.collection(collection))
@@ -4431,7 +4431,7 @@ For example to combine airline details with route details, linked by the airline
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder.select(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder.select(
         SelectResult.expression(Expression.property("name").from("airline")),
         SelectResult.expression(Expression.property("callsign").from("airline")),
         SelectResult.expression(Expression.property("destinationairport").from("route")),
@@ -4484,7 +4484,7 @@ try (ResultSet resultSet = query.execute()) {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder.select(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder.select(
         SelectResult.expression(Function.count(Expression.string("*"))),
         SelectResult.property("country"),
         SelectResult.property("tz"))
@@ -4539,7 +4539,7 @@ There are 123 airports on the America/Denver timezone located in United States a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query query = QueryBuilder
     .select(
         SelectResult.expression(Meta.id),
         SelectResult.property("name"))
@@ -4684,7 +4684,7 @@ To unpack these result sets you need to iterate this array.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query listQuery = QueryBuilder.select(SelectResult.all())
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query listQuery = QueryBuilder.select(SelectResult.all())
     .from(DataSource.collection(collection));</code></pre>
 </div>
 </div>
@@ -4755,7 +4755,7 @@ To unpack these result sets you need to iterate this array.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Map&lt;String, Hotel&gt; hotels = new HashMap&lt;&gt;();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Map&lt;String, Hotel&gt; hotels = new HashMap&lt;&gt;();
 try (ResultSet resultSet = listQuery.execute()) {
     for (Result result: resultSet) {
         // get the k-v pairs from the 'hotel' key's value into a dictionary
@@ -4807,7 +4807,7 @@ You can add this dictionary to an array of returned matches, for processing else
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">
 Query listQuery =
     QueryBuilder.select(
             SelectResult.expression(Meta.id),
@@ -4873,7 +4873,7 @@ Query listQuery =
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">HashMap&lt;String, Hotel&gt; hotels = new HashMap&lt;&gt;();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">HashMap&lt;String, Hotel&gt; hotels = new HashMap&lt;&gt;();
 try (ResultSet resultSet = listQuery.execute()) {
     for (Result result: resultSet) {
 
@@ -4917,7 +4917,7 @@ try (ResultSet resultSet = listQuery.execute()) {
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query listQuery =
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query listQuery =
     QueryBuilder.select(SelectResult.expression(Meta.id).as("metaID"))
         .from(DataSource.collection(collection));</code></pre>
 </div>
@@ -4959,7 +4959,7 @@ Each result object has <code>id</code> as the key and the ID value as its value&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">try (ResultSet rs = listQuery.execute()) {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">try (ResultSet rs = listQuery.execute()) {
     for (Result result: rs.allResults()) {
 
         // get the ID form the result's k-v pair array
@@ -4995,7 +4995,7 @@ Each result object has <code>id</code> as the key and the ID value as its value&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Query listQuery = QueryBuilder.select(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Query listQuery = QueryBuilder.select(
         SelectResult.expression(Function.count(Expression.string("*"))).as("mycount")) <i class="conum" data-value="1"></i><b>(1)</b>
     .from(DataSource.collection(collection));</code></pre>
 </div>
@@ -5048,7 +5048,7 @@ The key is the count name, as defined using <code>SelectResult.as</code>&#8201;&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">try (ResultSet resultSet = listQuery.execute()) {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">try (ResultSet resultSet = listQuery.execute()) {
     for (Result result: resultSet) {
 
         // Retrieve count using key 'mycount'
@@ -5089,7 +5089,7 @@ Use the <code>limit</code> and <code>offset</code> feature, to return a defined 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">
 int thisOffset = 0;
 int thisLimit = 20;
 
@@ -5137,11 +5137,11 @@ For more on using the QueryBuilder API, see our blog: <a href="https://blog.couc
 <div class="title">Example 28. Using JSON Results</div>
 <div class="content">
 <div class="paragraph">
-<p>Use <a href="http://docs.couchbase.com/mobile/3.0.0/couchbase-lite-java/com/couchbase/lite/Result.html#toJSON--">Result.toJSON()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
+<p>Use <a href="http://docs.couchbase.com/mobile/3.1.0/couchbase-lite-java/com/couchbase/lite/Result.html#toJSON--">Result.toJSON()</a> to transform your result string into a JSON string, which can easily be serialized or used as required in your application. See <<ex-json>> for a working example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">        ObjectMapper mapper = new ObjectMapper();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">        ObjectMapper mapper = new ObjectMapper();
         ArrayList&lt;Hotel&gt; hotels = new ArrayList&lt;&gt;();
         HashMap&lt;String, Object&gt; dictFromJSONstring;
 
@@ -5674,7 +5674,7 @@ Predictive Query is an <a href="https://www.couchbase.com/products/editions">Ent
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">class ImageClassifierModel implements PredictiveModel {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">class ImageClassifierModel implements PredictiveModel {
     @Override
     public Dictionary predict(@NonNull Dictionary input) {
         Blob blob = input.getBlob("photo");
@@ -5777,7 +5777,7 @@ Therefore, the supported data type will be constrained by the data type that the
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Database.prediction.registerModel("ImageClassifier", new ImageClassifierModel());</code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Database.prediction.registerModel("ImageClassifier", new ImageClassifierModel());</code></pre>
 </div>
 </div>
 </div>
@@ -5813,7 +5813,7 @@ When documents are added or updated, the index will call the prediction function
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">collection.createIndex(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">collection.createIndex(
     "value-index-image-classifier",
     IndexBuilder.valueIndex(ValueIndexItem.expression(Expression.property("label"))));</code></pre>
 </div>
@@ -5835,7 +5835,7 @@ It differs from the value index in that it caches the predictive results and cre
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Map&lt;String, Object&gt; inputMap = new HashMap&lt;&gt;();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Map&lt;String, Object&gt; inputMap = new HashMap&lt;&gt;();
 inputMap.put("numbers", Expression.property("photo"));
 Expression input = Expression.map(inputMap);
 
@@ -5857,7 +5857,7 @@ collection.createIndex("predictive-index-image-classifier", index);</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Map&lt;String, Object&gt; inputProperties = new HashMap&lt;&gt;();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Map&lt;String, Object&gt; inputProperties = new HashMap&lt;&gt;();
 inputProperties.put("photo", Expression.property("photo"));
 Expression input = Expression.map(inputProperties);
 PredictionFunction prediction = Function.prediction("ImageClassifier", input); <i class="conum" data-value="1"></i><b>(1)</b>
@@ -5907,7 +5907,7 @@ The null value returned by the prediction method will be interpreted as MISSING 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">Database.prediction.unregisterModel("ImageClassifier");</code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">Database.prediction.unregisterModel("ImageClassifier");</code></pre>
 </div>
 </div>
 </div>

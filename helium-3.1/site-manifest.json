@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1679078167229,
+  "generated": 1680800728262,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -2082,7 +2082,7 @@
               "module": "ROOT",
               "path": "cbl-whatsnew.adoc",
               "url": "/couchbase-lite/3.1/cbl-whatsnew.html",
-              "title": "New in 3.0"
+              "title": "New in 3.1"
             },
             {
               "module": "ROOT",
@@ -5039,12 +5039,6 @@
             },
             {
               "module": "contribute",
-              "path": "generate-rest-api.adoc",
-              "url": "/home/contribute/generate-rest-api.html",
-              "title": "Generate REST API Documentation"
-            },
-            {
-              "module": "contribute",
               "path": "ids.adoc",
               "url": "/home/contribute/ids.html",
               "title": "Element IDs and Same-Page Cross References"
@@ -5159,6 +5153,18 @@
             },
             {
               "module": "ROOT",
+              "path": "developer.adoc",
+              "url": "/home/developer.html",
+              "title": "Couchbase for Developers"
+            },
+            {
+              "module": "ROOT",
+              "path": "index-refresh.adoc",
+              "url": "/home/index-refresh.html",
+              "title": "Couchbase Docs"
+            },
+            {
+              "module": "ROOT",
               "path": "index.adoc",
               "url": "/home/index.html",
               "title": "Couchbase Documentation"
@@ -5193,6 +5199,39 @@
               "path": "intro.adoc",
               "url": "/home/sdk.html",
               "title": "SDKs &amp; Connectors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shared-mobile",
+      "title": "Couchbase Mobile",
+      "latest": "3.0",
+      "versions": [
+        {
+          "version": "3.0",
+          "displayVersion": "3.0 BETA",
+          "url": "/shared-mobile/3.0/cbmintro.html",
+          "pages": [
+            {
+              "module": "ROOT",
+              "path": "cbmintro.adoc",
+              "url": "/shared-mobile/3.0/cbmintro.html",
+              "title": "Introduction to Couchbase Mobile"
+            },
+            {
+              "alias": true,
+              "module": "ROOT",
+              "path": "index.adoc",
+              "url": "/shared-mobile/3.0/cbmintro.html",
+              "title": "Introduction to Couchbase Mobile"
+            },
+            {
+              "module": "ROOT",
+              "path": "siteintro.adoc",
+              "url": "/shared-mobile/3.0/siteintro.html",
+              "title": "Couchbase Mobile - Embedded Database on the Edge"
             }
           ]
         }
