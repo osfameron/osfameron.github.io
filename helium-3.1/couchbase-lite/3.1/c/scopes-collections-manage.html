@@ -3799,9 +3799,6 @@ Scopes and collections allow you to organize your documents within a database.
 <div class="ulist">
 <ul>
 <li>
-<p>You can create up to 1000 collections per database.</p>
-</li>
-<li>
 <p>Document names must be unique within their collection.</p>
 </li>
 </ul>
@@ -3814,9 +3811,6 @@ Scopes and collections allow you to organize your documents within a database.
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>You can create up to 1000 scopes per database.</p>
-</li>
 <li>
 <p>Collection names must be unique within their scope.</p>
 </li>
@@ -3888,7 +3882,7 @@ Scope and collection names are case sensitive.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">
 CBLError err;
 CBLDatabase_CreateCollection(db, FLSTR("collA"), FLSTR("scopeA"), &amp;err);</code></pre>
 </div>
@@ -3905,7 +3899,14 @@ CBLDatabase_CreateCollection(db, FLSTR("collA"), FLSTR("scopeA"), &amp;err);</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// We need to add a code sample to index a collection</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// We need to add a code sample to index a collection
+    CBLValueIndexConfiguration config = {
+        kCBLN1QLLanguage,
+        FLSTR("type, name")
+    };
+
+    CBLError err;
+    CBLCollection_CreateValueIndex(collection, FLSTR("TypeNameIndex"), config, &amp;err);</code></pre>
 </div>
 </div>
 </div>
@@ -3920,7 +3921,7 @@ CBLDatabase_CreateCollection(db, FLSTR("collA"), FLSTR("scopeA"), &amp;err);</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">
 CBLError err;
 CBLDatabase_DeleteCollection(db, FLSTR("collA"), FLSTR("scopeA"), &amp;err);</code></pre>
 </div>
@@ -3937,7 +3938,7 @@ CBLDatabase_DeleteCollection(db, FLSTR("collA"), FLSTR("scopeA"), &amp;err);</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">
 CBLError err;
 
 // Get Scopes

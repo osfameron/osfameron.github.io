@@ -3888,7 +3888,7 @@ To change default settings use database&#8217;s <a href="http://docs.couchbase.c
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">Database.Log.Console.Domains = LogDomain.All; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">Database.Log.Console.Domains = LogDomain.All; <i class="conum" data-value="1"></i><b>(1)</b>
 Database.Log.Console.Level = LogLevel.Verbose; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
@@ -3977,7 +3977,7 @@ You can over ride that where necessary and output a plain text log.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var tempFolder = Path.Combine(Service.GetInstance&lt;IDefaultDirectoryResolver&gt;().DefaultDirectory(), "cbllog");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var tempFolder = Path.Combine(Service.GetInstance&lt;IDefaultDirectoryResolver&gt;().DefaultDirectory(), "cbllog");
 var config = new LogFileConfiguration(tempFolder) <i class="conum" data-value="1"></i><b>(1)</b>
 {
     MaxRotateCount = 5, <i class="conum" data-value="2"></i><b>(2)</b>
@@ -4048,7 +4048,7 @@ Further, you can no longer set a log level for a specific domain.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">class LogTestLogger : ILogger
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">class LogTestLogger : ILogger
 {
     public LogLevel Level { get; set; }
 
@@ -4074,7 +4074,7 @@ Further, you can no longer set a log level for a specific domain.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs"> Database.Log.Custom = new LogTestLogger(); <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs"> Database.Log.Custom = new LogTestLogger(); <i class="conum" data-value="1"></i><b>(1)</b>
 
  // You can also specify the level of logging the logger receives
  Database.Log.Custom = new LogTestLogger { Level = LogLevel.Warning };</code></pre>
@@ -4211,7 +4211,7 @@ This information is included for completeness only.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// This sets the overall level of console logging
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// This sets the overall level of console logging
 Database.Log.Console.Level = LogLevel.Verbose;
 
 // This flag can enable and disable specific domains

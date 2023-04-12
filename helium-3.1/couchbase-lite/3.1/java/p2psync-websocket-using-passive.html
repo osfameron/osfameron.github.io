@@ -3863,7 +3863,7 @@ You must include the initializer <code>CouchbaseLite.init(context)</code> such t
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Initialize the listener config
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Initialize the listener config
 final URLEndpointListenerConfiguration thisConfig
     = new URLEndpointListenerConfiguration(collections); <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -3985,7 +3985,7 @@ Couchbase sets no hard limit on the number of Listeners you can initialize.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Initialize the listener config
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Initialize the listener config
 final URLEndpointListenerConfiguration thisConfig
     = new URLEndpointListenerConfiguration(collections); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4017,7 +4017,7 @@ The database must be opened before the Listener is started.<br>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">thisConfig.setPort(55990); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">thisConfig.setPort(55990); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4042,7 +4042,7 @@ Ensure that firewall rules do not block any port you do specify.<br></td>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">thisConfig.setNetworkInterface("wlan0"); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">thisConfig.setNetworkInterface("wlan0"); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4072,7 +4072,7 @@ Both are valuable benefits, especially when network bandwidth is constrained.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">thisConfig.setEnableDeltaSync(false); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">thisConfig.setEnableDeltaSync(false); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4183,7 +4183,7 @@ Typically, you will configure the Listener&#8217;s TLS Identity once during the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">
 // Import a key pair from a file into a keystore
 // Create a TLSIdentity from the imported key-pair
 // This only needs to happen once.  Once the key is in the internal store
@@ -4230,7 +4230,7 @@ thisConfig.setDisableTls(false); <i class="conum" data-value="3"></i><b>(3)</b><
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">
 thisConfig.setDisableTls(false); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
@@ -4265,7 +4265,7 @@ Add to secure storage as 'couchbase-docs-cert'.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">thisConfig.setDisableTls(false); <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">thisConfig.setDisableTls(false); <i class="conum" data-value="1"></i><b>(1)</b>
 
 // Use an Anonymous Self-Signed Cert
 thisConfig.setTlsIdentity(null); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
@@ -4342,7 +4342,7 @@ To use client-supplied certificates instead&#8201;&#8212;&#8201;see: <a href="#u
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Configure Client Security using an Authenticator
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Configure Client Security using an Authenticator
 // For example, Basic Authentication <i class="conum" data-value="1"></i><b>(1)</b>
 thisConfig.setAuthenticator(new ListenerPasswordAuthenticator(
     (username, password) -&gt;
@@ -4393,7 +4393,7 @@ The logic should take the form of function or block (such as, a closure expressi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Configure the client authenticator
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Configure the client authenticator
 // to validate using ROOT CA
 // thisClientID.certs is a list containing a client cert to accept
 // and any other certs needed to complete a chain between the client cert
@@ -4440,7 +4440,7 @@ A valid client will provide one or more certificates that match a certificate in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Configure authentication using application logic
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Configure authentication using application logic
 final TLSIdentity thisCorpId = TLSIdentity.getIdentity(keyStore, "OurCorp", "sekrit".toCharArray()); <i class="conum" data-value="1"></i><b>(1)</b>
 if (thisCorpId == null) {
     throw new IllegalStateException("Cannot find corporate id");
@@ -4491,7 +4491,7 @@ It must return a boolean value; with <code>true</code> denoting the client suppl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">KeyStore thisKeyStore = KeyStore.getInstance("AndroidKeyStore");
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">KeyStore thisKeyStore = KeyStore.getInstance("AndroidKeyStore");
 thisKeyStore.load(null);
 thisKeyStore.deleteEntry(alias);</code></pre>
 </div>
@@ -4587,7 +4587,7 @@ thisKeyStore.deleteEntry(alias);</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">// Initialize the listener
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">// Initialize the listener
 final URLEndpointListener thisListener
     = new URLEndpointListener(thisConfig); <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -4613,7 +4613,7 @@ thisListener.start(); <i class="conum" data-value="2"></i><b>(2)</b></code></pre
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">int connectionCount =
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">int connectionCount =
     thisListener.getStatus().getConnectionCount(); <i class="conum" data-value="1"></i><b>(1)</b>
 
 int activeConnectionCount =
@@ -4635,7 +4635,7 @@ int activeConnectionCount =
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/java/examples/codesnippet_collection.java">thisListener.stop();</code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/java/examples/codesnippet_collection.java">thisListener.stop();</code></pre>
 </div>
 </div>
 </div>

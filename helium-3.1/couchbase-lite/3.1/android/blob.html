@@ -3865,7 +3865,7 @@ If a document&#8217;s blob is over 20 MB, the document will be replicated but no
 <div class="tab-pane" aria-labelledby="tabset1_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">getAsset("avatar.jpg")?.use { <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">getAsset("avatar.jpg")?.use { <i class="conum" data-value="1"></i><b>(1)</b>
     mDoc.setBlob("avatar", Blob("image/jpeg", it)) <i class="conum" data-value="2"></i><b>(2)</b> <i class="conum" data-value="3"></i><b>(3)</b>
     collection.save(mDoc)
 }
@@ -3878,7 +3878,7 @@ val bytes = doc?.getBlob("avatar")?.content</code></pre>
 <div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">try (InputStream is = Utils.getAsset("avatar.jpg")) { <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">try (InputStream is = Utils.getAsset("avatar.jpg")) { <i class="conum" data-value="1"></i><b>(1)</b>
     Blob blob = new Blob("image/jpeg", is);  <i class="conum" data-value="2"></i><b>(2)</b>
     newTask.setBlob("avatar", blob); <i class="conum" data-value="3"></i><b>(3)</b>
     collection.save(newTask);

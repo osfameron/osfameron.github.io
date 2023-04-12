@@ -3819,7 +3819,7 @@ When a change is detected the query automatically runs, and posts the new query 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">/*
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">/*
 static void query_change_listener(void* context, CBLQuery* query, CBLListenerToken* token) {
     CBLError err;
     CBLResultSet* results = CBLQuery_CopyCurrentResults(query, token, &amp;err);
@@ -3858,7 +3858,7 @@ Save the token in order to detach the listener and stop the query later&#8201;&#
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLListener_Remove(token); // The token received from AddChangeListener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLListener_Remove(token); // The token received from AddChangeListener
 CBLQuery_Release(query);</code></pre>
 </div>
 </div>

@@ -3792,21 +3792,6 @@ Related Content&#8201;&#8212;&#8201;<a href="querybuilder.html" class="xref page
 </div>
 </blockquote>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>N1QL is Couchbase&#8217;s implementation of the developing <strong>SQL++</strong> standard.
-As such the terms <em>N1QL</em> and <em>SQL++</em> are used interchangeably in Couchbase documentation unless explicitly stated otherwise.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3834,42 +3819,18 @@ This API uses query statements of the form shown in <a href="#ex-query-form">Exa
 </div>
 </div>
 <div class="sect1">
-<h2 id="datasource"><a class="anchor" href="#datasource"></a>Datasource</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A datasource can be:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&lt; database-name &gt; : default collection</p>
-</li>
-<li>
-<p>_ (underscore) : default collection</p>
-</li>
-<li>
-<p>&lt; scope-name &gt;.&lt; collection-name &gt; : a collection in a scope</p>
-</li>
-<li>
-<p>&lt; collection-name &gt; : a collection in the default scope</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="running"><a class="anchor" href="#running"></a>Running</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Use the N1QLQuery class to define the SQL++ query string on the database to be queried.
-Then run the query using the`.execute()` method&#8201;&#8212;&#8201;see <a href="query-resultsets.html" class="xref page">Query Resultsets</a> for how to work with result sets.</p>
+<p>The database can create a query object with the SQL++ string.
+See <a href="query-resultsets.html" class="xref page">Query Resultsets</a> for how to work with result sets.</p>
 </div>
 <div id="ex-samplerun" class="exampleblock">
 <div class="title">Example 1. Running a SQL++ Query</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let database = try Database(name: "hotel")
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let database = try Database(name: "hotel")
 
 let query = try database.createQuery("SELECT META().id AS thisId FROM _ WHERE type = 'hotel'") <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -3930,7 +3891,7 @@ OFFSET ____</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FROM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#lbl-from">FROM</a></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The data source to be queried</p>
 </div></div></td>
@@ -4175,12 +4136,34 @@ It is mandatory.</p>
 </div>
 </div>
 <div class="sect2">
+<h3 id="datasource"><a class="anchor" href="#datasource"></a>Datasource</h3>
+<div class="paragraph">
+<p>A datasource can be:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>&lt; database-name &gt; : default collection</p>
+</li>
+<li>
+<p>_ (underscore) : default collection</p>
+</li>
+<li>
+<p>&lt; scope-name &gt;.&lt; collection-name &gt; : a collection in a scope</p>
+</li>
+<li>
+<p>&lt; collection-name &gt; : a collection in the default scope</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
 <h3 id="arguments-2"><a class="anchor" href="#arguments-2"></a>Arguments</h3>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here <code>dataSource</code> is the database name against which the query is to run.
+<td>Here <code>dataSource</code> is the database name against which the query is to run or the &lt;scope&gt;.&lt;collection&gt;.
 Use <code>AS</code> to give the database an alias you can use within the query.<br>
 To use the current datasource without specifying a name, use <code>_</code> as the datasource.</td>
 </tr>
@@ -4199,6 +4182,7 @@ To use the current datasource without specifying a name, use <code>_</code> as t
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT name FROM db
+SELECT name FROM scope.collection
 SELECT store.name FROM db AS store
 SELECT store.name FROM db store
 SELECT name FROM _
@@ -4269,7 +4253,7 @@ Note: JOIN and INNER JOIN are the same, LEFT JOIN and LEFT OUTER JOIN are the sa
 
 SELECT db.prop1, other.prop2 FROM db LEFT JOIN db other ON db.key = other.key
 
-SELECT * FROM travel-sample r JOIN travel-sample a ON r.airlineid = a.meta.id WHERE a.country = "France"</code></pre>
+SELECT * FROM route r JOIN airline a ON r.airlineid = meta(a).id WHERE a.country = "France"</code></pre>
 </div>
 </div>
 <div id="ex-join" class="exampleblock">
@@ -4912,10 +4896,14 @@ propertyName = IDENTIFIER</code></pre>
 
 SELECT db.*
   FROM db
-  WHERE contact.name = "daniel"
+  WHERE collection.contact.name = "daniel"
 
-SELECT db.contact.address.city
-  FROM db
+SELECT collection.contact.address.city
+  FROM scope.collection
+  WHERE collection.contact.name = "daniel"
+
+SELECT contact.address.city
+  FROM scope.collection
   WHERE contact.name = "daniel"
 
 SELECT contact.address.city, contact.phones[0]
@@ -6715,7 +6703,7 @@ TOSTRING</code></p></td>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let database = try! Database(name: "hotel")
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let database = try! Database(name: "hotel")
 
 let query = try database.createQuery("SELECT META().id AS thisId FROM _ WHERE type = $type") <i class="conum" data-value="1"></i><b>(1)</b>
 

@@ -3808,7 +3808,7 @@ To examine how your query is working, either embed the call inside your app (see
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(Expression.property("type").equalTo(Expression.string("university")))
@@ -4134,7 +4134,7 @@ For more on indexes&#8201;&#8212;&#8201;see: <a href="indexing.html" class="xref
 <div id="like-wild-pfx-qry" class="listingblock">
 <div class="title">Like with Wildcard Prefix</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(Expression.property("type").like(Expression.string("%hotel%")) <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4166,7 +4166,7 @@ Where practical, simple changes like this can make significant differences in qu
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(Expression.property("type").like(Expression.string("hotel%")) <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4205,7 +4205,7 @@ print(try query.explain());</code></pre>
 <div id="use-like-based-queries" class="listingblock">
 <div class="title">Query</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(Function.lower(Expression.property("type").equalTo(Expression.string("hotel")))) <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4233,7 +4233,7 @@ print(try query.explain());</code></pre>
 <div class="listingblock">
 <div class="title">Query</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let query = QueryBuilder
     .select(SelectResult.all())
     .from(DataSource.collection(collection))
     .where(

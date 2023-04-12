@@ -3801,7 +3801,7 @@ This makes it easier to sync data between mobile applications and applications b
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="_images/diag-66e2d16aa54ff08438f0f86addf2e641e7d4b96d.svg" alt="Couchbase Lite Database Hierarchy">
+<img src="_images/diag-3fdbcaa11b58ac303e1aaf3ddd42f69c05cbb9e6.svg" alt="Couchbase Lite Database Hierarchy">
 </div>
 <div class="title">Figure 1. Couchbase Lite Database Hierarchy</div>
 </div>
@@ -3844,12 +3844,6 @@ The most basic structure is to use the single default scope with a single defaul
 <img src="_images/diag-b39fc970ab507424b261c14f98c439f54dce40a5.svg" alt="Couchbase Lite Examples">
 </div>
 <div class="title">Figure 2. Couchbase Lite Examples</div>
-</div>
-<div class="paragraph">
-<p>If a scope is not explicitly referenced in calls to the database, the <code>_default</code> scope is used.</p>
-</div>
-<div class="paragraph">
-<p>If no collection name is given, the <code>_default</code> collection is used.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -3933,7 +3927,7 @@ the application sandbox
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">do {
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">do {
     self.database = try Database(name: "my-database")
 } catch {
     print(error)
@@ -3986,7 +3980,7 @@ Before closing, check that any attached listeners (query/replication/change) ind
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">do {
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">do {
     try self.database.close()
 }</code></pre>
 </div>
@@ -4026,7 +4020,7 @@ Provide this encryption key every time the database is opened&#8201;&#8212;&#820
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">var config = DatabaseConfiguration()
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">var config = DatabaseConfiguration()
 config.encryptionKey = EncryptionKey.password("secretpassword")
 
 self.database = try Database(name: "my-database", config: config)</code></pre>
@@ -4127,7 +4121,7 @@ If the information in the default logging level is insufficient you can focus it
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">
 Database.log.console.domains = .database</code></pre>
 </div>
 </div>

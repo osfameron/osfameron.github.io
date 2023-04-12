@@ -3851,7 +3851,7 @@ There is no limit on the number of Listeners you may configure&#8201;&#8212;&#82
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            // Initialize the listener config
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            // Initialize the listener config
             var endpointConfig = new URLEndpointListenerConfiguration(new[] { collection }); <i class="conum" data-value="1"></i><b>(1)</b>
 
             endpointConfig.Port = 55990; <i class="conum" data-value="2"></i><b>(2)</b>
@@ -3977,7 +3977,7 @@ Couchbase sets no hard limit on the number of Listeners you can initialize.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Initialize the listener config
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Initialize the listener config
 var endpointConfig = new URLEndpointListenerConfiguration(new[] { collection }); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
@@ -4008,7 +4008,7 @@ The database must be opened before the Listener is started.<br>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.Port = 55990; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.Port = 55990; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4033,7 +4033,7 @@ Ensure that firewall rules do not block any port you do specify.<br></td>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.NetworkInterface = "10.1.1.10"; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.NetworkInterface = "10.1.1.10"; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4064,7 +4064,7 @@ Where necessary, you can identify the available interfaces at runtime, using app
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">foreach (NetworkInterface ni in NetworkInterface.GetAllNetworkInterfaces()) {
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">foreach (NetworkInterface ni in NetworkInterface.GetAllNetworkInterfaces()) {
     if (ni.NetworkInterfaceType == NetworkInterfaceType.Wireless80211 ||
         ni.NetworkInterfaceType == NetworkInterfaceType.Ethernet) {
         // do something with the interface(s)
@@ -4090,7 +4090,7 @@ Both are valuable benefits, especially when network bandwidth is constrained.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.EnableDeltaSync = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.EnableDeltaSync = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4201,7 +4201,7 @@ Typically, you will configure the Listener&#8217;s TLS Identity once during the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            endpointConfig.DisableTLS = false; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            endpointConfig.DisableTLS = false; <i class="conum" data-value="1"></i><b>(1)</b>
                 // Use CA Cert
                 // Create a TLSIdentity from an imported key-pair
                 // . . . previously declared variables include ...
@@ -4261,7 +4261,7 @@ Typically, you will configure the Listener&#8217;s TLS Identity once during the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            endpointConfig.DisableTLS = false; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            endpointConfig.DisableTLS = false; <i class="conum" data-value="1"></i><b>(1)</b>
 
 
 #warning listener-config-tls-id-set unused?
@@ -4300,7 +4300,7 @@ Add to secure storage as 'couchbase-docs-cert'.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.DisableTLS = false; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">endpointConfig.DisableTLS = false; <i class="conum" data-value="1"></i><b>(1)</b>
 // Use an Anonymous Self-Signed Cert
 endpointConfig.TlsIdentity = null; <i class="conum" data-value="2"></i><b>(2)</b>
     // Use an Anonymous Self-Signed Cert
@@ -4378,7 +4378,7 @@ To use client-supplied certificates instead&#8201;&#8212;&#8201;see: <a href="#u
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure the client authenticator
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure the client authenticator
 // Here we are using Basic Authentication) <i class="conum" data-value="1"></i><b>(1)</b>
 SecureString validPassword = new SecureString(); /* example only */
 // Get SecureString input for validPassword
@@ -4436,7 +4436,7 @@ The logic should take the form of function or block (such as, a closure expressi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure the client authenticator
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure the client authenticator
 // to validate using ROOT CA
 
 // Get the valid cert chain, in this instance from
@@ -4485,7 +4485,7 @@ A valid client will provide one or more certificates that match a certificate in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure the client authenticator
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure the client authenticator
 // to validate using application logic
 
 // Get the valid cert chain, in this instance from
@@ -4540,7 +4540,7 @@ It must return a boolean value; with <code>true</code> denoting the client suppl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#">[data-source-url=https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs]</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#"></code></pre>
 </div>
 </div>
 </div>
@@ -4634,7 +4634,7 @@ It must return a boolean value; with <code>true</code> denoting the client suppl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Initialize the listener
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Initialize the listener
 var listener = new URLEndpointListener(endpointConfig); <i class="conum" data-value="1"></i><b>(1)</b>
 
 // Start the listener
@@ -4659,7 +4659,7 @@ listener.Start(); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">ulong connectionCount = listener.Status.ConnectionCount; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">ulong connectionCount = listener.Status.ConnectionCount; <i class="conum" data-value="1"></i><b>(1)</b>
 ulong activeConnectionCount = listener.Status.ActiveConnectionCount;  <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
@@ -4678,7 +4678,7 @@ ulong activeConnectionCount = listener.Status.ActiveConnectionCount;  <i class="
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">listener.Stop();</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">listener.Stop();</code></pre>
 </div>
 </div>
 </div>

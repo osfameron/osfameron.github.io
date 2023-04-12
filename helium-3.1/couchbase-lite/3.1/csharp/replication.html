@@ -3842,33 +3842,22 @@ Each scope can contain one or more collections.</p>
 <p>To learn about Scopes and Collections, see <a href="database.html" class="xref page">Databases</a></p>
 </div>
 <div class="paragraph">
-<p>You can set up a replication scheme across any of the three data levels:</p>
+<p>You can set up a replication scheme across these data levels:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Database</dt>
 <dd>
-<p>All scopes and collections in the database are synced,
-including the <code>_default</code> scope and the <code>_default</code> collection.</p>
-</dd>
-<dt class="hdlist1">Scope</dt>
-<dd>
-<p>All the collections in a named scope.</p>
+<p>The <code>_default</code> collection is synced.</p>
 </dd>
 <dt class="hdlist1">Collection</dt>
 <dd>
-<p>A specific collection in a scope.</p>
+<p>A specific collection or a set of collections is synced.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced against on Capella. These mappings can be <code>implicit</code> or <code>explicit</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="implicit-mapping"><a class="anchor" href="#implicit-mapping"></a>Implicit Mapping</h3>
-<div class="paragraph">
-<p>This will sync between databases that share the same keyspace names.</p>
-</div>
+<p>As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced on Capella.</p>
 </div>
 </div>
 </div>
@@ -3988,7 +3977,7 @@ So we don&#8217;t recommend to rely on that when using the replication or databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
 #warning p2p-act-rep-config-type used, but contains nothing
 
 
@@ -4140,7 +4129,7 @@ Initialize and define the replication configuration with local and remote databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// initialize the replicator configuration
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// initialize the replicator configuration
 
 var url = new URLEndpoint(new Uri("wss://10.0.2.2:4984/anotherDB")); <i class="conum" data-value="1"></i><b>(1)</b>
 var replConfig = new ReplicatorConfiguration(url);
@@ -4194,7 +4183,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
 // Configure Sync Mode</code></pre>
 </div>
 </div>
@@ -4276,7 +4265,10 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="ulist">
 <ul>
 <li>
-<p>Set this to zero (0) to prevent any retry attempt</p>
+<p>Set to zero (0) to use default values</p>
+</li>
+<li>
+<p>Set to zero (1) to prevent any retry attempt</p>
 </li>
 <li>
 <p>The retry attempt count is reset when the replicator is able to connect and replicate</p>
@@ -4307,7 +4299,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <p>The maximum interval between retry attempts</p>
 </div>
 <div class="paragraph">
-<p>Whilst you can configure the <strong>maximum permitted</strong> wait time,  each individual interval is calculated by the replicator&#8217;s exponential backoff algorithm and is not configurable.</p>
+<p>While you can configure the <strong>maximum permitted</strong> wait time,  the replicator&#8217;s exponential backoff algorithm calculates each individual interval which is not configurable.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4315,7 +4307,13 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <p>Default value: 300 seconds (5 minutes)</p>
 </li>
 <li>
-<p>Zero or negative values generate a Couchbase exception, <code>InvalidArgumentException</code>.</p>
+<p>Zero sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>300 sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>A negative value generates a Couchbase exception, <code>InvalidArgumentException</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -4333,7 +4331,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
             var target = new URLEndpoint(url);
 
             var config = new ReplicatorConfiguration(target);
@@ -4457,7 +4455,7 @@ If the server cannot provide acceptable credentials then the connection will fai
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept CA certs</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept CA certs</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -4477,7 +4475,7 @@ Self signed certificates are not allowed.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept self-signed certs</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept self-signed certs</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -4496,7 +4494,7 @@ Any certificates that are not self-signed are rejected.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2524">// Only CA Certs accepted</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2526">// Only CA Certs accepted</code></pre>
 </div>
 </div>
 </div>
@@ -4526,7 +4524,7 @@ This is the recommended way of using basic authentication.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
 var config = new ReplicatorConfiguration(target);
 config.AddCollection(collection);
@@ -4560,7 +4558,7 @@ endpoint on the Public REST API.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
 var config = new ReplicatorConfiguration(target);
 config.AddCollection(collection);
@@ -4588,7 +4586,7 @@ The replicator will then include those headers in every request.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var config = new ReplicatorConfiguration(target)
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var config = new ReplicatorConfiguration(target)
 {
     Headers = new Dictionary&lt;string, string&gt;
     {
@@ -4615,7 +4613,7 @@ For instance, high-priority documents could be pushed first, or documents in a "
 <div class="listingblock">
 <div class="title">Push Filter</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
 
 var config = new ReplicatorConfiguration(target);
@@ -4670,7 +4668,7 @@ are designed to be scalable (documents are filtered on the server) whereas a pul
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var url = new Uri("ws://localhost:4984/mydatabase");
 var target = new URLEndpoint(url);
 
 var config = new ReplicatorConfiguration(target);
@@ -4715,7 +4713,10 @@ Furthermore, your callback should not make assumptions about what thread it is b
 <p>As a result, there would be a local copy of the document disjointed from the one that resides on Couchbase Server.</p>
 </div>
 <div class="paragraph">
-<p>Further updates to the document stored on Couchbase Server would not be received in pull replications and further local edits could be potentially pushed, which would result in <code>409</code> errors since access has been revoked.</p>
+<p>Further updates to the document stored on Couchbase Server would not be received in pull replications and further local edits could be pushed but the updated versions will not be visible.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="#auto-purge-on-revoke">Auto Purge on Revoke</a>.</p>
 </div>
 </div>
 </div>
@@ -4734,7 +4735,7 @@ and the
 to specify which data to pull for each user.</p>
 </div>
 <div class="paragraph">
-<p>Optionally, it&#8217;s also possible to specify a comma-separated list of channel names on Couchbase Lite&#8217;s replicator configuration object.
+<p>Optionally, it&#8217;s also possible to specify a string array of channel names on Couchbase Lite&#8217;s replicator configuration object.
 In this case, the replication from Sync Gateway will only pull documents tagged with those channels.</p>
 </div>
 </div>
@@ -4932,7 +4933,7 @@ Clients wishing to sync previously removed documents must use the resetCheckpoin
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Set autopurge option
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Set autopurge option
 // here we override its default</code></pre>
 </div>
 </div>
@@ -4942,7 +4943,7 @@ Clients wishing to sync previously removed documents must use the resetCheckpoin
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here we have opted to turn off the auto purge behavior. By default this is ON (true)</td>
+<td>Here we have opted to turn off the auto purge behavior. By default auto purge is enabled.</td>
 </tr>
 </table>
 </div>
@@ -4989,9 +4990,6 @@ This ensures backwards compatible with 2.8 clients that use pull filters to prev
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Doc remains in local database</p>
-</div>
-<div class="paragraph">
-<p>App notified of “Rejected Rev(403)” if <em>Documentlistener</em> registered</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5051,7 +5049,7 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor<
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Initialize and start a replicator
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Initialize and start a replicator
 // Initialize replicator with configuration data
 
 #warning p2p-act-rep-add-change-listener used, but contains nothing
@@ -5092,7 +5090,7 @@ However, if you do want to force the replication to start again from zero, use t
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// replicator is a Replicator instance
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// replicator is a Replicator instance
 if (resetCheckpointRequired_Example) {
     replicator.Start(true); <i class="conum" data-value="1"></i><b>(1)</b>
 } else { 
@@ -5307,7 +5305,7 @@ Stop the listener as shown in <a href="#ex-stop-doc-listener">Example 15</a>.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var token = replicator.AddDocumentReplicationListener((sender, args) =&gt;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var token = replicator.AddDocumentReplicationListener((sender, args) =&gt;
 {
     var direction = args.IsPush ? "Push" : "Pull";
     Console.WriteLine($"Replication type :: {direction}");
@@ -5336,7 +5334,7 @@ replicator.Start();</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">replicator.RemoveChangeListener(token);</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">replicator.RemoveChangeListener(token);</code></pre>
 </div>
 </div>
 </div>
@@ -5384,7 +5382,7 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
             var target = new URLEndpoint(url);
             var database = new Database("myDB");
             var config = new ReplicatorConfiguration(target);
@@ -5451,7 +5449,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Stop replication.</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Stop replication.</code></pre>
 </div>
 </div>
 </div>
@@ -5481,7 +5479,7 @@ It will stop any active <a href="#lbl-repl-chng">change listener</a> once the re
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">replicator.AddChangeListener((sender, args) =&gt;
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">replicator.AddChangeListener((sender, args) =&gt;
 {
     if (args.Status.Error != null) {
         Console.WriteLine($"Error :: {args.Status.Error}");
@@ -5617,7 +5615,7 @@ After completing this step, Sync Gateway is reachable over <code>https</code>/<c
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Note: `GetCertificate` is a placeholder method. This would be the platform-specific method
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Note: `GetCertificate` is a placeholder method. This would be the platform-specific method
 // to find and load the certificate as an instance of `X509Certificate2`.
 // For .NET Core / .NET Framework this can be loaded from the filesystem path.
 // For WinUI, from the assets directory.
@@ -5659,7 +5657,7 @@ You can increase the log output for activity related to replication with Sync Ga
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#">[data-source-url=https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs]</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#"></code></pre>
 </div>
 </div>
 </div>

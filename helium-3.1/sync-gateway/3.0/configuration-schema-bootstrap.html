@@ -3998,13 +3998,13 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 <script id="site-script" src="../../_/js/site.js"></script>
 <link rel="stylesheet" href="https://couchbase-docs.s3.amazonaws.com/assets/json-config-ui/json-config-ui.css">
 <script src="https://couchbase-docs.s3.amazonaws.com/assets/json-config-ui/json-config-ui-bundle.js"></script>
-<script>
-;(function (url, version) {
+<script id="json-config-ui-script" data-url="_attachments/sg-Bootstrap_model.yaml" data-version="">
+;(function (config) {
   JSONConfigUIBundle({
-    specs: [{ version: version, url: url }],
-    current: version
+    specs: [{ version: config.version, url: config.url }],
+    current: config.version,
   })
-})('_attachments/sg-Bootstrap_model.yaml', 'undefined')
+})(document.getElementById('json-config-ui-script').dataset)
 </script>
 <script defer src="../../_/js/vendor/fontawesome-icon-defs.js"></script>
 <script defer src="../../_/js/vendor/fontawesome.js" data-search-pseudo-elements="true"></script>

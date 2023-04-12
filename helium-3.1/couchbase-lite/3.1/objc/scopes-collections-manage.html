@@ -3799,9 +3799,6 @@ Scopes and collections allow you to organize your documents within a database.
 <div class="ulist">
 <ul>
 <li>
-<p>You can create up to 1000 collections per database.</p>
-</li>
-<li>
 <p>Document names must be unique within their collection.</p>
 </li>
 </ul>
@@ -3814,9 +3811,6 @@ Scopes and collections allow you to organize your documents within a database.
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>You can create up to 1000 scopes per database.</p>
-</li>
 <li>
 <p>Collection names must be unique within their scope.</p>
 </li>
@@ -3888,7 +3882,7 @@ Scope and collection names are case sensitive.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">NSError* error = nil;
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">NSError* error = nil;
 CBLCollection* collection = [database createCollectionWithName:@"myCollectionName"
                                                          scope:@"myScopeName"
                                                          error:&amp;error];</code></pre>
@@ -3906,7 +3900,7 @@ CBLCollection* collection = [database createCollectionWithName:@"myCollectionNam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">CBLFullTextIndexConfiguration* config = [[CBLFullTextIndexConfiguration alloc]
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">CBLFullTextIndexConfiguration* config = [[CBLFullTextIndexConfiguration alloc]
                                          initWithExpression: @[@"overview"]
                                          ignoreAccents: NO
                                          language: nil];
@@ -3926,7 +3920,7 @@ CBLCollection* collection = [database createCollectionWithName:@"myCollectionNam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">BOOL success = [database deleteCollectionWithName:@"myCollectionName"
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">BOOL success = [database deleteCollectionWithName:@"myCollectionName"
                                             scope:@"myScopeName"
                                             error:&amp;error];
 if (!success) {
@@ -3946,7 +3940,7 @@ if (!success) {
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">NSArray* scopes = [database scopes: &amp;error];
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">NSArray* scopes = [database scopes: &amp;error];
 NSArray* collections = [database collections:@"myScopeName" error:&amp;error];
 NSLog(@"I have %d scopes and %d collections", (int)scopes.count, (int)collections.count);</code></pre>
 </div>

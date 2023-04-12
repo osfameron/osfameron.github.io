@@ -3821,7 +3821,7 @@ They create and use an FTS index built from the hotel&#8217;s <code>Overview</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">string[] indexProperties = new string[] { "overview", "name" };
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">string[] indexProperties = new string[] { "overview", "name" };
 var config = new FullTextIndexConfiguration(indexProperties);
 collection.CreateIndex("overviewFTSIndex", config);</code></pre>
 </div>
@@ -3849,7 +3849,7 @@ See <a href="https://github.com/couchbasedeps/sqlite3-unicodesn/blob/HEAD/stopwo
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var query = collection.CreateQuery("SELECT * FROM _ WHERE MATCH(overviewFTSIndex, 'Michigan') ORDER BY RANK(overviewFTSIndex)");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var query = collection.CreateQuery("SELECT * FROM _ WHERE MATCH(overviewFTSIndex, 'Michigan') ORDER BY RANK(overviewFTSIndex)");
 foreach (var result in query.Execute()) {
     Console.WriteLine($"Document id {result.GetString(0)}");
 }</code></pre>
@@ -3873,7 +3873,7 @@ foreach (var result in query.Execute()) {
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var index = IndexBuilder.FullTextIndex(FullTextIndexItem.Property("overview")).IgnoreAccents(false);
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var index = IndexBuilder.FullTextIndex(FullTextIndexItem.Property("overview")).IgnoreAccents(false);
 collection.CreateIndex("overviewFTSIndex", index);</code></pre>
 </div>
 </div>
@@ -3893,7 +3893,7 @@ collection.CreateIndex("overviewFTSIndex", index);</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var whereClause = FullTextFunction.Match(Expression.FullTextIndex("overviewFTSIndex"), "'michigan'");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var whereClause = FullTextFunction.Match(Expression.FullTextIndex("overviewFTSIndex"), "'michigan'");
 
 using var query = QueryBuilder.Select(SelectResult.Expression(Meta.ID))
     .From(DataSource.Collection(collection))

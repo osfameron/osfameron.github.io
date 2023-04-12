@@ -4001,7 +4001,7 @@ Statistics on delta-sync usage are available, including the total number of revi
 <div class="tab-pane" aria-labelledby="tabset1_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val listener = URLEndpointListener(
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val listener = URLEndpointListener(
     URLEndpointListenerConfigurationFactory.newConfig(
         collections = db.collections,
         authenticator = ListenerPasswordAuthenticator { user, pwd -&gt;
@@ -4016,7 +4016,7 @@ thisListener = listener</code></pre>
 <div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">final URLEndpointListenerConfiguration thisConfig =
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">final URLEndpointListenerConfiguration thisConfig =
     new URLEndpointListenerConfiguration(collections); <i class="conum" data-value="1"></i><b>(1)</b>
 
 thisConfig.setAuthenticator(
@@ -4078,7 +4078,7 @@ thisListener.start(); <i class="conum" data-value="4"></i><b>(4)</b></code></pre
 <div class="tab-pane" aria-labelledby="tabset2_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val theListenerEndpoint: Endpoint = URLEndpoint(URI("wss://10.0.2.2:4984/db")) <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val theListenerEndpoint: Endpoint = URLEndpoint(URI("wss://10.0.2.2:4984/db")) <i class="conum" data-value="1"></i><b>(1)</b>
 val repl = Replicator(
     ReplicatorConfigurationFactory.newConfig(
         collections = mapOf(collections to null),
@@ -4095,7 +4095,7 @@ thisReplicator = repl</code></pre>
 <div class="tab-pane" aria-labelledby="tabset2_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Endpoint theListenerEndpoint
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Endpoint theListenerEndpoint
     = new URLEndpoint(new URI("wss://10.0.2.2:4984/db")); <i class="conum" data-value="1"></i><b>(1)</b>
 
 ReplicatorConfiguration thisConfig =

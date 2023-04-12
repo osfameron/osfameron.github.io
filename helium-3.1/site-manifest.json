@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1680800728262,
+  "generated": 1681315718182,
   "url": "https://docs.stage.nonprod-project-avengers.com",
   "components": [
     {
@@ -5039,6 +5039,12 @@
             },
             {
               "module": "contribute",
+              "path": "generate-rest-api.adoc",
+              "url": "/home/contribute/generate-rest-api.html",
+              "title": "Generate REST API Documentation"
+            },
+            {
+              "module": "contribute",
               "path": "ids.adoc",
               "url": "/home/contribute/ids.html",
               "title": "Element IDs and Same-Page Cross References"
@@ -5150,18 +5156,6 @@
               "path": "cloud.adoc",
               "url": "/home/cloud.html",
               "title": "Couchbase on Containers, Kubernetes, and Cloud"
-            },
-            {
-              "module": "ROOT",
-              "path": "developer.adoc",
-              "url": "/home/developer.html",
-              "title": "Couchbase for Developers"
-            },
-            {
-              "module": "ROOT",
-              "path": "index-refresh.adoc",
-              "url": "/home/index-refresh.html",
-              "title": "Couchbase Docs"
             },
             {
               "module": "ROOT",

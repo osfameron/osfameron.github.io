@@ -3851,7 +3851,7 @@ The implementation of this storage differs from platform to platform&#8201;&#821
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Set listener DB endpoint
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Set listener DB endpoint
 NSURL *url = [NSURL URLWithString:@"ws://listener.com:55990/otherDB"];
 CBLURLEndpoint *endpoint = [[CBLURLEndpoint alloc] initWithURL:url]; <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -3999,7 +3999,7 @@ Initialize and define the replication configuration with local and remote databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Set listener DB endpoint
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Set listener DB endpoint
 NSURL *url = [NSURL URLWithString:@"ws://10.0.2.2.com:55990/travel-sample"];
 CBLURLEndpoint *listener = [[CBLURLEndpoint alloc] initWithURL:url];
 
@@ -4055,7 +4055,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">replConfig.replicatorType = kCBLReplicatorTypePush;
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">replConfig.replicatorType = kCBLReplicatorTypePush;
 
 replConfig.continuous = YES;</code></pre>
 </div>
@@ -4138,7 +4138,10 @@ replConfig.continuous = YES;</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Set this to zero (0) to prevent any retry attempt</p>
+<p>Set to zero (0) to use default values</p>
+</li>
+<li>
+<p>Set to zero (1) to prevent any retry attempt</p>
 </li>
 <li>
 <p>The retry attempt count is reset when the replicator is able to connect and replicate</p>
@@ -4169,7 +4172,7 @@ replConfig.continuous = YES;</code></pre>
 <p>The maximum interval between retry attempts</p>
 </div>
 <div class="paragraph">
-<p>Whilst you can configure the <strong>maximum permitted</strong> wait time,  each individual interval is calculated by the replicator&#8217;s exponential backoff algorithm and is not configurable.</p>
+<p>While you can configure the <strong>maximum permitted</strong> wait time,  the replicator&#8217;s exponential backoff algorithm calculates each individual interval which is not configurable.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4177,7 +4180,13 @@ replConfig.continuous = YES;</code></pre>
 <p>Default value: 300 seconds (5 minutes)</p>
 </li>
 <li>
-<p>Zero or negative values generate a Couchbase exception, <code>InvalidArgumentException</code>.</p>
+<p>Zero sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>300 sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>A negative value generates a Couchbase exception, <code>InvalidArgumentException</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -4195,7 +4204,7 @@ replConfig.continuous = YES;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">id target = [[CBLURLEndpoint alloc] initWithURL:[NSURL URLWithString:@"ws://foo.cbl.com/db"]];
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">id target = [[CBLURLEndpoint alloc] initWithURL:[NSURL URLWithString:@"ws://foo.cbl.com/db"]];
 
 CBLReplicatorConfiguration *replConfig = [[CBLReplicatorConfiguration alloc] initWithTarget:target];
 [replConfig addCollection:collection config:nil];
@@ -4282,7 +4291,7 @@ If the server cannot provide acceptable credentials then the connection will fai
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Configure Server Security -- only accept CA Certs
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Configure Server Security -- only accept CA Certs
 config.acceptOnlySelfSignedServerCertificate = NO; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
@@ -4303,7 +4312,7 @@ Self signed certificates are not allowed.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Configure Server Authentication
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Configure Server Authentication
 // Here - expect and accept self-signed certs
 replConfig.acceptOnlySelfSignedServerCertificate = YES; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4324,7 +4333,7 @@ Any certificates that are not self-signed are rejected.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m#L1402-L1413">NSURL *certURL = [[NSBundle mainBundle] URLForResource:@"cert" withExtension:@"cer"];
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m#L1402-L1413">NSURL *certURL = [[NSBundle mainBundle] URLForResource:@"cert" withExtension:@"cer"];
 NSData *data = [[NSData alloc] initWithContentsOfURL:certURL];
 SecCertificateRef certificate = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)data);
 
@@ -4376,7 +4385,7 @@ replConfig.acceptOnlySelfSignedServerCertificate=false;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Here set client to use basic authentication
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Here set client to use basic authentication
 // Providing username and password credentials
 // If prompted for them by server
 replConfig.authenticator = [[CBLBasicAuthenticator alloc] initWithUsername:@"Our Username" password:@"Our Password"]; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
@@ -4414,7 +4423,7 @@ The <strong>server</strong> (listener) must have <code>disableTLS</code> set <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Check if Id exists in keychain and if so, use it
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Check if Id exists in keychain and if so, use it
 CBLTLSIdentity *identity = [CBLTLSIdentity identityWithLabel:@"doco-sync-server" error:&amp;error]; <i class="conum" data-value="1"></i><b>(1)</b>
 
 config.authenticator = [[CBLClientCertificateAuthenticator alloc] initWithIdentity:identity]; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
@@ -4450,7 +4459,7 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Apply configuration settings to the replicator
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Apply configuration settings to the replicator
 [replConfig addCollection:collection config:collectionConfig];
 self.replicator = [[CBLReplicator alloc] initWithConfig:replConfig]; <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -4707,7 +4716,7 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">
 NSURL *url = [NSURL URLWithString:@"ws://localhost:4984/db"];
 CBLURLEndpoint *target = [[CBLURLEndpoint alloc] initWithURL:url];
 CBLReplicatorConfiguration *replConfig = [[CBLReplicatorConfiguration alloc] initWithTarget:target];
@@ -4778,7 +4787,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Remove the change listener
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Remove the change listener
 [self.replicator removeChangeListenerWithToken:listenerToken];
 
 // Stop the replicator
@@ -4897,7 +4906,7 @@ In the event of conflicting keys, it will pick the key value from <code>new</cod
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">CBLDocument *doc = [collection documentWithID:@"xyz" error:&amp;error];
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">CBLDocument *doc = [collection documentWithID:@"xyz" error:&amp;error];
 CBLMutableDocument *mutableDocument = [doc toMutable];
 [mutableDocument setString:@"apples" forKey:@"name"];
 

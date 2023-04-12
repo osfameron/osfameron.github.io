@@ -3851,7 +3851,7 @@ The implementation of this storage differs from platform to platform&#8201;&#821
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
 #warning p2p-act-rep-config-type used, but contains nothing
 
 
@@ -3987,7 +3987,7 @@ Initialize and define the replication configuration with local and remote databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// initialize the replicator configuration
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// initialize the replicator configuration
 
 var url = new URLEndpoint(new Uri("wss://10.0.2.2:4984/anotherDB")); <i class="conum" data-value="1"></i><b>(1)</b>
 var replConfig = new ReplicatorConfiguration(url);
@@ -4041,7 +4041,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">
 // Configure Sync Mode</code></pre>
 </div>
 </div>
@@ -4123,7 +4123,10 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="ulist">
 <ul>
 <li>
-<p>Set this to zero (0) to prevent any retry attempt</p>
+<p>Set to zero (0) to use default values</p>
+</li>
+<li>
+<p>Set to zero (1) to prevent any retry attempt</p>
 </li>
 <li>
 <p>The retry attempt count is reset when the replicator is able to connect and replicate</p>
@@ -4154,7 +4157,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <p>The maximum interval between retry attempts</p>
 </div>
 <div class="paragraph">
-<p>Whilst you can configure the <strong>maximum permitted</strong> wait time,  each individual interval is calculated by the replicator&#8217;s exponential backoff algorithm and is not configurable.</p>
+<p>While you can configure the <strong>maximum permitted</strong> wait time,  the replicator&#8217;s exponential backoff algorithm calculates each individual interval which is not configurable.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4162,7 +4165,13 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <p>Default value: 300 seconds (5 minutes)</p>
 </li>
 <li>
-<p>Zero or negative values generate a Couchbase exception, <code>InvalidArgumentException</code>.</p>
+<p>Zero sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>300 sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>A negative value generates a Couchbase exception, <code>InvalidArgumentException</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -4180,7 +4189,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
             var target = new URLEndpoint(url);
 
             var config = new ReplicatorConfiguration(target);
@@ -4270,7 +4279,7 @@ If the server cannot provide acceptable credentials then the connection will fai
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept CA certs</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept CA certs</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -4290,7 +4299,7 @@ Self signed certificates are not allowed.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept self-signed certs</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure Server Security -- only accept self-signed certs</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -4309,7 +4318,7 @@ Any certificates that are not self-signed are rejected.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2524">// Only CA Certs accepted</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2526">// Only CA Certs accepted</code></pre>
 </div>
 </div>
 </div>
@@ -4339,7 +4348,7 @@ Any certificates that are not self-signed are rejected.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Configure basic auth using user credentials</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Configure basic auth using user credentials</code></pre>
 </div>
 </div>
 </div>
@@ -4374,7 +4383,7 @@ The <strong>server</strong> (listener) must have <code>disableTLS</code> set <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Client identity
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Client identity
 var identity =
   TLSIdentity.ImportIdentity(store,
     clientData,
@@ -4416,7 +4425,7 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Initialize and start a replicator
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Initialize and start a replicator
 // Initialize replicator with configuration data
 
 #warning p2p-act-rep-add-change-listener used, but contains nothing
@@ -4649,7 +4658,7 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">            var url = new Uri("ws://localhost:4984/mydatabase");
             var target = new URLEndpoint(url);
             var database = new Database("myDB");
             var config = new ReplicatorConfiguration(target);
@@ -4716,7 +4725,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Stop replication.</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Stop replication.</code></pre>
 </div>
 </div>
 </div>
@@ -4823,7 +4832,7 @@ In the event of conflicting keys, it will pick the key value from <code>new</cod
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">using var doc = collection.GetDocument("xyz");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">using var doc = collection.GetDocument("xyz");
 using var mutableDoc = doc.ToMutable();
 mutableDoc.SetString("name", "apples");
 collection.Save(mutableDoc, (updated, current) =&gt;

@@ -3817,15 +3817,22 @@ The operations are grouped in the following categories.</p>
 <div class="paragraph">
 <p><strong>Table of Contents</strong></p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#get__expvar">Get all Sync Gateway statistics</a></p>
+</li>
+</ul>
+</div>
 <div class="sect3">
-<h4 id="get-all-sync-gateway-statistics"><a class="anchor" href="#get-all-sync-gateway-statistics"></a>Get all Sync Gateway statistics</h4>
+<h4 id="get__expvar"><a class="anchor" href="#get__expvar"></a>Get all Sync Gateway statistics</h4>
 <div class="literalblock">
 <div class="content">
 <pre>GET /_expvar</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="-description]"><a class="anchor" href="#-description]"></a>Description</h5>
+<h5 id="get__expvar-description"><a class="anchor" href="#get__expvar-description"></a>Description</h5>
 <div class="openblock markdown">
 <div class="content">
 <div class="paragraph">
@@ -3854,7 +3861,7 @@ The operations are grouped in the following categories.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="-produces]"><a class="anchor" href="#-produces]"></a>Produces</h5>
+<h5 id="get__expvar-produces"><a class="anchor" href="#get__expvar-produces"></a>Produces</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3864,7 +3871,7 @@ The operations are grouped in the following categories.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="-responses]"><a class="anchor" href="#-responses]"></a>Responses</h5>
+<h5 id="get__expvar-responses"><a class="anchor" href="#get__expvar-responses"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3884,7 +3891,7 @@ The operations are grouped in the following categories.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Returned statistics</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars">[ExpVars]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars">ExpVars</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -3896,15 +3903,22 @@ The operations are grouped in the following categories.</p>
 <div class="paragraph">
 <p>Endpoints for use with Prometheus</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#get__metrics">Debugging/monitoring runtime stats in Prometheus Exposition format</a></p>
+</li>
+</ul>
+</div>
 <div class="sect3">
-<h4 id="debuggingmonitoring-runtime-stats-in-prometheus-exposition-format"><a class="anchor" href="#debuggingmonitoring-runtime-stats-in-prometheus-exposition-format"></a>Debugging/monitoring runtime stats in Prometheus Exposition format</h4>
+<h4 id="get__metrics"><a class="anchor" href="#get__metrics"></a>Debugging/monitoring runtime stats in Prometheus Exposition format</h4>
 <div class="literalblock">
 <div class="content">
 <pre>GET /_metrics</pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="-description]"><a class="anchor" href="#-description]"></a>Description</h5>
+<h5 id="get__metrics-description"><a class="anchor" href="#get__metrics-description"></a>Description</h5>
 <div class="openblock markdown">
 <div class="content">
 <div class="paragraph">
@@ -3930,7 +3944,7 @@ The operations are grouped in the following categories.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="-produces]"><a class="anchor" href="#-produces]"></a>Produces</h5>
+<h5 id="get__metrics-produces"><a class="anchor" href="#get__metrics-produces"></a>Produces</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3940,7 +3954,7 @@ The operations are grouped in the following categories.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="-responses]"><a class="anchor" href="#-responses]"></a>Responses</h5>
+<h5 id="get__metrics-responses"><a class="anchor" href="#get__metrics-responses"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3960,7 +3974,7 @@ The operations are grouped in the following categories.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Successfully returned stats</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#String">[String]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#String">String</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -3978,31 +3992,31 @@ The operations are grouped in the following categories.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ExpVars">[ExpVars]</a></p>
+<p><a href="#ExpVars">ExpVars</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncGateway_changeCache">[ExpVars_syncGateway_changeCache]</a></p>
+<p><a href="#ExpVars_syncGateway_changeCache">ExpVarsSyncGatewayChangeCache</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncGateway_db">[ExpVars_syncGateway_db]</a></p>
+<p><a href="#ExpVars_syncGateway_db">ExpVarsSyncGatewayDb</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncgateway">[ExpVars_syncgateway]</a></p>
+<p><a href="#ExpVars_syncgateway">ExpVarsSyncgateway</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncgateway_global">[ExpVars_syncgateway_global]</a></p>
+<p><a href="#ExpVars_syncgateway_global">ExpVarsSyncgatewayGlobal</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncgateway_global_resource_utilization">[ExpVars_syncgateway_global_resource_utilization]</a></p>
+<p><a href="#ExpVars_syncgateway_global_resource_utilization">ExpVarsSyncgatewayGlobalResourceUtilization</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncgateway_per_db_inner">[ExpVars_syncgateway_per_db_inner]</a></p>
+<p><a href="#ExpVars_syncgateway_per_db_inner">ExpVarsSyncgatewayPerDbInner</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncgateway_per_replication_inner">[ExpVars_syncgateway_per_replication_inner]</a></p>
+<p><a href="#ExpVars_syncgateway_per_replication_inner">ExpVarsSyncgatewayPerReplicationInner</a></p>
 </li>
 <li>
-<p><a href="#ExpVars_syncgateway_per_replication_inner__replication_id">[ExpVars_syncgateway_per_replication_inner__replication_id]</a></p>
+<p><a href="#ExpVars_syncgateway_per_replication_inner__replication_id">ExpVarsSyncgatewayPerReplicationInnerReplicationId</a></p>
 </li>
 </ul>
 </div>
@@ -4068,7 +4082,7 @@ The operations are grouped in the following categories.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncGateway_changeCache">[ExpVars_syncGateway_changeCache]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncGateway_changeCache">ExpVars_syncGateway_changeCache</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4076,7 +4090,7 @@ The operations are grouped in the following categories.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncGateway_db">[ExpVars_syncGateway_db]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncGateway_db">ExpVars_syncGateway_db</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4086,7 +4100,7 @@ The operations are grouped in the following categories.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Monitoring stats</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway">[ExpVars_syncgateway]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway">ExpVars_syncgateway</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -4343,7 +4357,7 @@ The operations are grouped in the following categories.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Global Sync Gateway stats</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_global">[ExpVars_syncgateway_global]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_global">ExpVars_syncgateway_global</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4364,7 +4378,7 @@ The statistics for each {$db_name} database are grouped into:
 - shared_bucket_import
 - per_replication statistics for each <code>replication_id</code></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_db_inner">[ExpVars_syncgateway_per_db_inner]</a>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_db_inner">ExpVars_syncgateway_per_db_inner</a>
 List</p></td>
 </tr>
 <tr>
@@ -4376,7 +4390,7 @@ List</p></td>
 <p>An array of stats for each replication declared in the config file
 <strong>Deprecated @ 2.8</strong>: used only by inter-sync-gateway replications version 1.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_replication_inner">[ExpVars_syncgateway_per_replication_inner]</a>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_replication_inner">ExpVars_syncgateway_per_replication_inner</a>
 List</p></td>
 </tr>
 </tbody>
@@ -4406,7 +4420,7 @@ List</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Resource utilization stats</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_global_resource_utilization">[ExpVars_syncgateway_global_resource_utilization]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_global_resource_utilization">ExpVars_syncgateway_global_resource_utilization</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -4663,7 +4677,7 @@ List</p></td>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_replication_inner__replication_id">[ExpVars_syncgateway_per_replication_inner__replication_id]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExpVars_syncgateway_per_replication_inner__replication_id">ExpVars_syncgateway_per_replication_inner__replication_id</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -3847,7 +3847,7 @@ The <code>MessageEndpointListener</code> acts as a Listener for incoming connect
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2308-L2310">var database = new Database("mydb");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2310-L2312">var database = new Database("mydb");
 var endpointConfig = new MessageEndpointListenerConfiguration(new[] { database.GetDefaultCollection() }, ProtocolType.MessageStream);
 _messageEndpointListener = new MessageEndpointListener(endpointConfig);</code></pre>
 </div>
@@ -3890,7 +3890,7 @@ This step includes inviting a Peer to a session and Peer authentication.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2216-L2220">var database = new Database("dbname");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2218-L2222">var database = new Database("dbname");
 
 // The delegate must implement the `IMessageEndpointDelegate` protocol.
 var messageEndpointTarget = new MessageEndpoint(uid: "UID:123", target: "",
@@ -3937,7 +3937,7 @@ There are two options.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2224-L2230">var replConfig = new ReplicatorConfiguration(messageEndpointTarget);
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2226-L2232">var replConfig = new ReplicatorConfiguration(messageEndpointTarget);
 replConfig.AddCollection(database.GetDefaultCollection());
 
 // Create the replicator object
@@ -3952,7 +3952,7 @@ When the application receives the callback, it must create an instance of <code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2235-L2240">/* implementation of MessageEndpointDelegate */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2237-L2242">/* implementation of MessageEndpointDelegate */
 public IMessageEndpointConnection CreateConnection(MessageEndpoint endpoint)
 {
     var connection = new ActivePeerConnection(); /* implements MessageEndpointConnection */
@@ -3965,7 +3965,7 @@ public IMessageEndpointConnection CreateConnection(MessageEndpoint endpoint)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2275-L2281">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2277-L2283">/* implementation of MessageEndpointConnection */
 public async Task Open(IReplicatorConnection connection)
 {
     _replicatorConnection = connection;
@@ -3991,7 +3991,7 @@ This message tells the listener to accept incoming data from that Peer.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2324-L2325">var connection = new PassivePeerConnection(); /* implements MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2326-L2327">var connection = new PassivePeerConnection(); /* implements MessageEndpointConnection */
 _messageEndpointListener?.Accept(connection);</code></pre>
 </div>
 </div>
@@ -4003,7 +4003,7 @@ _messageEndpointListener?.Accept(connection);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2355-L2361">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2357-L2363">/* implementation of MessageEndpointConnection */
 public Task Open(IReplicatorConnection connection)
 {
     _replicatorConnection = connection;
@@ -4061,7 +4061,7 @@ In Peer-to-Peer syncing, the remote is another Couchbase Lite database.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2285-L2291">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2287-L2293">/* implementation of MessageEndpointConnection */
 public async Task Send(Message message)
 {
     var data = message.ToByteArray();
@@ -4080,7 +4080,7 @@ If it is a recoverable error, the replicator will begin a retry process, creatin
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2259-L2260">var message = Message.FromBytes(data);
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2261-L2262">var message = Message.FromBytes(data);
 _replicatorConnection?.Receive(message);</code></pre>
 </div>
 </div>
@@ -4095,7 +4095,7 @@ _replicatorConnection?.Receive(message);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2365-L2371">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2367-L2373">/* implementation of MessageEndpointConnection */
 public async Task Send(Message message)
 {
     var data = message.ToByteArray();
@@ -4114,7 +4114,7 @@ If it is a recoverable error, the replicator will begin a retry process, creatin
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2339-L2340">var message = Message.FromBytes(data);
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2341-L2342">var message = Message.FromBytes(data);
 _replicatorConnection?.Receive(message);</code></pre>
 </div>
 </div>
@@ -4144,7 +4144,7 @@ We will cover each case below.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2252">_replicatorConnection?.Close(null);</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2254">_replicatorConnection?.Close(null);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4152,7 +4152,7 @@ We will cover each case below.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2265-L2271">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2267-L2273">/* implementation of MessageEndpointConnection */
 public async Task Close(Exception error)
 {
     // await socket.Close, etc (or do nothing if already closed)
@@ -4169,7 +4169,7 @@ public async Task Close(Exception error)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2332">_replicatorConnection?.Close(null);</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2334">_replicatorConnection?.Close(null);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4177,7 +4177,7 @@ public async Task Close(Exception error)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2345-L2351">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2347-L2353">/* implementation of MessageEndpointConnection */
 public async Task Close(Exception error)
 {
     // await socket.Close, etc (or do nothing if already closed)
@@ -4202,7 +4202,7 @@ public async Task Close(Exception error)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2317">_messageEndpointListener?.CloseAll();</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2319">_messageEndpointListener?.CloseAll();</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4210,7 +4210,7 @@ public async Task Close(Exception error)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2345-L2351">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2347-L2353">/* implementation of MessageEndpointConnection */
 public async Task Close(Exception error)
 {
     // await socket.Close, etc (or do nothing if already closed)
@@ -4227,7 +4227,7 @@ public async Task Close(Exception error)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2252">_replicatorConnection?.Close(null);</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2254">_replicatorConnection?.Close(null);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4235,7 +4235,7 @@ public async Task Close(Exception error)
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs#L2265-L2271">/* implementation of MessageEndpointConnection */
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs#L2267-L2273">/* implementation of MessageEndpointConnection */
 public async Task Close(Exception error)
 {
     // await socket.Close, etc (or do nothing if already closed)

@@ -3872,7 +3872,7 @@ There is no limit on the number of Listeners you may configure&#8201;&#8212;&#82
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Initialize the listener config <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Initialize the listener config <i class="conum" data-value="1"></i><b>(1)</b>
 CBLURLEndpointListenerConfiguration *endpointConfig = [[CBLURLEndpointListenerConfiguration alloc]
                                                initWithCollections:[NSArray arrayWithObject:collection]];
 
@@ -3998,7 +3998,7 @@ Couchbase sets no hard limit on the number of Listeners you can initialize.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Initialize the listener config <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Initialize the listener config <i class="conum" data-value="1"></i><b>(1)</b>
 CBLURLEndpointListenerConfiguration *endpointConfig = [[CBLURLEndpointListenerConfiguration alloc]
                                                initWithCollections:[NSArray arrayWithObject:collection]];</code></pre>
 </div>
@@ -4030,7 +4030,7 @@ The database must be opened before the Listener is started.<br>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.port =  55990; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.port =  55990; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4055,7 +4055,7 @@ Ensure that firewall rules do not block any port you do specify.<br></td>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.networkInterface = @"10.1.1.10"; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.networkInterface = @"10.1.1.10"; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4085,7 +4085,7 @@ Both are valuable benefits, especially when network bandwidth is constrained.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.enableDeltaSync = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.enableDeltaSync = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4196,7 +4196,7 @@ Typically, you will configure the Listener&#8217;s TLS Identity once during the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.disableTLS  = false; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.disableTLS  = false; <i class="conum" data-value="1"></i><b>(1)</b>
 
 // Use CA Cert
 // Create a TLSIdentity from a key-pair and
@@ -4245,7 +4245,7 @@ endpointConfig.tlsIdentity = tlsIdentity; <i class="conum" data-value="5"></i><b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.disableTLS  = false; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.disableTLS  = false; <i class="conum" data-value="1"></i><b>(1)</b>
 
 // Use a self-signed certificate
 NSDictionary *attrs = @{ kCBLCertAttrCommonName:@"Couchbase Inc" }; <i class="conum" data-value="2"></i><b>(2)</b>
@@ -4291,7 +4291,7 @@ Add to secure storage as 'couchbase-docs-cert'.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.disableTLS  = false; <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">endpointConfig.disableTLS  = false; <i class="conum" data-value="1"></i><b>(1)</b>
 
 // Use an anonymous self-signed cert
 endpointConfig.tlsIdentity = nil; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
@@ -4368,7 +4368,7 @@ To use client-supplied certificates instead&#8201;&#8212;&#8201;see: <a href="#u
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Configure Client Security using an Authenticator
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Configure Client Security using an Authenticator
 // For example, Basic Authentication <i class="conum" data-value="1"></i><b>(1)</b>
 endpointConfig.authenticator = [[CBLListenerPasswordAuthenticator alloc]
                         initWithBlock:^BOOL(NSString *username, NSString *password) {
@@ -4420,7 +4420,7 @@ The logic should take the form of function or block (such as, a closure expressi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">
 NSURL *certURL = [[NSBundle mainBundle] URLForResource:@"cert" withExtension:@"cer"];
 NSData *data = [[NSData alloc] initWithContentsOfURL:certURL];
 SecCertificateRef rootCertRef = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)data);
@@ -4464,7 +4464,7 @@ A valid client will provide one or more certificates that match a certificate in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">
 CBLListenerCertificateAuthenticator *listenerAuth =
 [[CBLListenerCertificateAuthenticator alloc] initWithBlock:^BOOL(NSArray *certs) {
     return [self isValidCertificates:certs];
@@ -4513,7 +4513,7 @@ It must return a boolean value; with <code>true</code> denoting the client suppl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">
 [CBLTLSIdentity deleteIdentityWithLabel:@"doco-sync-server-1" error:&amp;error];</code></pre>
 </div>
 </div>
@@ -4608,7 +4608,7 @@ It must return a boolean value; with <code>true</code> denoting the client suppl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">// Initialize the listener <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">// Initialize the listener <i class="conum" data-value="1"></i><b>(1)</b>
 self.listener = [[CBLURLEndpointListener alloc] initWithConfig:endpointConfig];
 
 // start the listener <i class="conum" data-value="2"></i><b>(2)</b>
@@ -4636,7 +4636,7 @@ if (!success) {
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">NSUInteger totalConnections = self.listener.status.connectionCount;
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">NSUInteger totalConnections = self.listener.status.connectionCount;
 NSUInteger activeConnections = self.listener.status.activeConnectionCount;</code></pre>
 </div>
 </div>
@@ -4655,7 +4655,7 @@ NSUInteger activeConnections = self.listener.status.activeConnectionCount;</code
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/objc/examples/code_snippets/SampleCodeTest.m">[self.listener stop];</code></pre>
+<pre class="highlightjs highlight"><code class="language-objc hljs" data-lang="objc" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/objc/examples/code_snippets/SampleCodeTest.m">[self.listener stop];</code></pre>
 </div>
 </div>
 </div>

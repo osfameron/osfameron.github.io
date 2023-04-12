@@ -3969,7 +3969,7 @@ The properties are presented in the value as an array of key-value pairs (proper
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
 var hotels = new List&lt;Dictionary&lt;string, object&gt;&gt;();
 
 if (results?.Count &gt; 0) {
@@ -4025,7 +4025,7 @@ You can add this dictionary to an array of returned matches, for processing else
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
 foreach (var result in results) {
 
     var docID = result.GetString("this_ID"); <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4059,7 +4059,7 @@ foreach (var result in results) {
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var results = query.Execute().AllResults();
 foreach (var result in results) {
 
     // get the returned array of k-v pairs into a dictionary
@@ -4092,7 +4092,7 @@ foreach (var result in results) {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">foreach (var result in query.Execute()) {
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">foreach (var result in query.Execute()) {
 
     // get the result into a JSON String
     var docJSONString = result.ToJSON();

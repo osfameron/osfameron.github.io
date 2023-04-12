@@ -3821,7 +3821,7 @@ They create and use an FTS index built from the hotel&#8217;s <code>Overview</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Create index with N1QL
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Create index with N1QL
 do {
     let index = FullTextIndexConfiguration(["overview"])
     try collection.createIndex(withName: "overviewFTSIndex", config: index)
@@ -3853,7 +3853,7 @@ See <a href="https://github.com/couchbasedeps/sqlite3-unicodesn/blob/HEAD/stopwo
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">
 let ftsStr = "SELECT Meta().id FROM _ WHERE MATCH(overviewFTSIndex, 'Michigan') ORDER BY RANK(overviewFTSIndex)"
 
 let query = try database.createQuery(ftsStr)
@@ -3882,7 +3882,7 @@ for result in rs {
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Create index with Querybuilder
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Create index with Querybuilder
 let index = IndexBuilder.fullTextIndex(items: FullTextIndexItem.property("overview")).ignoreAccents(false)
 try collection.createIndex(index, name: "overviewFTSIndex")</code></pre>
 </div>
@@ -3903,7 +3903,7 @@ try collection.createIndex(index, name: "overviewFTSIndex")</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let whereClause = FullTextFunction.match(Expression.fullTextIndex("overviewFTSIndex"), query: "'michigan'")
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let whereClause = FullTextFunction.match(Expression.fullTextIndex("overviewFTSIndex"), query: "'michigan'")
 let query = QueryBuilder
     .select(SelectResult.expression(Meta.id))
     .from(DataSource.collection(collection))

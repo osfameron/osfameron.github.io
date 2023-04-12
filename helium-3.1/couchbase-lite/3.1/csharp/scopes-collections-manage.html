@@ -3799,9 +3799,6 @@ Scopes and collections allow you to organize your documents within a database.
 <div class="ulist">
 <ul>
 <li>
-<p>You can create up to 1000 collections per database.</p>
-</li>
-<li>
 <p>Document names must be unique within their collection.</p>
 </li>
 </ul>
@@ -3814,9 +3811,6 @@ Scopes and collections allow you to organize your documents within a database.
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>You can create up to 1000 scopes per database.</p>
-</li>
 <li>
 <p>Collection names must be unique within their scope.</p>
 </li>
@@ -3888,7 +3882,7 @@ Scope and collection names are case sensitive.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var collectionWithDefaultScope = _Database.CreateCollection("colA");
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var collectionWithDefaultScope = _Database.CreateCollection("colA");
 var collection = _Database.CreateCollection("colA", "scopeA"); // Scope with named scopeA will be created if it's not existed. There is no public API to create a Scope. </code></pre>
 </div>
 </div>
@@ -3904,7 +3898,10 @@ var collection = _Database.CreateCollection("colA", "scopeA"); // Scope with nam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// We need to add a code sample to index a collection</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// We need to add a code sample to index a collection
+    string[] indexProperties = new string[] { "type", "name" };
+    var config = new ValueIndexConfiguration(indexProperties);
+    collection.CreateIndex("TypeNameIndex", config);</code></pre>
 </div>
 </div>
 </div>
@@ -3919,7 +3916,7 @@ var collection = _Database.CreateCollection("colA", "scopeA"); // Scope with nam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">_Database.DeleteCollection("colA", "scopeA"); // Scope with named scopeA will be deleted if there is no collections in the scope after the last collection is deleted via this API. There is no public API to remove a Scope.</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">_Database.DeleteCollection("colA", "scopeA"); // Scope with named scopeA will be deleted if there is no collections in the scope after the last collection is deleted via this API. There is no public API to remove a Scope.</code></pre>
 </div>
 </div>
 </div>
@@ -3934,7 +3931,7 @@ var collection = _Database.CreateCollection("colA", "scopeA"); // Scope with nam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Get Scopes
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Get Scopes
 var scopes = _Database.GetScopes();
 // Get Collections of a Scope named scopeA
 var scopeA = _Database.GetScope("scopeA");

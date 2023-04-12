@@ -3872,7 +3872,7 @@ There is no limit on the number of Listeners you may configure&#8201;&#8212;&#82
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">
 var config = URLEndpointListenerConfiguration(collections: [otherCollection]) <i class="conum" data-value="1"></i><b>(1)</b>
 
 /* optionally */ let wsPort: UInt16 = 55991
@@ -3999,7 +3999,7 @@ Couchbase sets no hard limit on the number of Listeners you can initialize.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">var config = URLEndpointListenerConfiguration(collections: [otherCollection]) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">var config = URLEndpointListenerConfiguration(collections: [otherCollection]) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4029,7 +4029,7 @@ The database must be opened before the Listener is started.<br>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">/* optionally */ let wsPort: UInt16 = 55991
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">/* optionally */ let wsPort: UInt16 = 55991
 /* optionally */ let wssPort: UInt16 = 55990
 config.port =  wssPort <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4056,7 +4056,7 @@ Ensure that firewall rules do not block any port you do specify.<br></td>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.networkInterface = "10.1.1.10"  <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.networkInterface = "10.1.1.10"  <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4087,7 +4087,7 @@ Where necessary, you can identify the available interfaces at runtime, using app
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">import SystemConfiguration
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">import SystemConfiguration
 // . . .
 
 class SomeClass {
@@ -4119,7 +4119,7 @@ Both are valuable benefits, especially when network bandwidth is constrained.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.enableDeltaSync = true <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.enableDeltaSync = true <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4230,7 +4230,7 @@ Typically, you will configure the Listener&#8217;s TLS Identity once during the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.disableTLS  = false <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.disableTLS  = false <i class="conum" data-value="1"></i><b>(1)</b>
 
 guard let path = Bundle.main.path(forResource: "cert", ofType: "p12") else {
     /* process error */ return
@@ -4278,7 +4278,7 @@ config.tlsIdentity = tlsIdentity    <i class="conum" data-value="4"></i><b>(4)</
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.disableTLS  = false <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.disableTLS  = false <i class="conum" data-value="1"></i><b>(1)</b>
 
 let attrs = [certAttrCommonName: "Couchbase Inc"] <i class="conum" data-value="2"></i><b>(2)</b>
 
@@ -4322,7 +4322,7 @@ Add to secure storage as 'couchbase-docs-cert'.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.disableTLS  = false <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">config.disableTLS  = false <i class="conum" data-value="1"></i><b>(1)</b>
 
 // Set the credentials the server presents the client
 // Use an anonymous self-signed cert
@@ -4400,7 +4400,7 @@ To use client-supplied certificates instead&#8201;&#8212;&#8201;see: <a href="#u
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Configure how the client is to be authenticated
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Configure how the client is to be authenticated
 // Here, use Basic Authentication
 config.authenticator = ListenerPasswordAuthenticator(authenticator: { uname, pword -&gt; Bool in
     return self.isValidCredentials(uname, password: pword)
@@ -4451,7 +4451,7 @@ The logic should take the form of function or block (such as, a closure expressi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Authenticate using Cert Authority
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Authenticate using Cert Authority
 
 // cert is a pre-populated object of type:SecCertificate representing a certificate
 let rootCertData = SecCertificateCopyData(cert) as Data <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4488,7 +4488,7 @@ A valid client will provide one or more certificates that match a certificate in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Authenticate self-signed cert using application logic
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Authenticate self-signed cert using application logic
 
 config.authenticator = ListenerCertificateAuthenticator { certs -&gt; Bool in <i class="conum" data-value="1"></i><b>(1)</b>
     // Validate the cert
@@ -4528,7 +4528,7 @@ It must return a boolean value; with <code>true</code> denoting the client suppl
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">
 try TLSIdentity.deleteIdentity(withLabel: "doco-sync-server")</code></pre>
 </div>
 </div>
@@ -4623,7 +4623,7 @@ try TLSIdentity.deleteIdentity(withLabel: "doco-sync-server")</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Initialize the listener
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">// Initialize the listener
 self.listener = URLEndpointListener(config: config) <i class="conum" data-value="1"></i><b>(1)</b>
 if self.listener == nil {
     fatalError("ListenerError Not Initialized")
@@ -4652,7 +4652,7 @@ try self.listener.start() <i class="conum" data-value="2"></i><b>(2)</b></code><
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">let totalConnections = self.listener.status.connectionCount
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">let totalConnections = self.listener.status.connectionCount
 let activeConnections = self.listener.status.activeConnectionCount</code></pre>
 </div>
 </div>
@@ -4671,7 +4671,7 @@ let activeConnections = self.listener.status.activeConnectionCount</code></pre>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/swift/examples/code_snippets/SampleCodeTest.swift">self.listener.stop()</code></pre>
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/swift/examples/code_snippets/SampleCodeTest.swift">self.listener.stop()</code></pre>
 </div>
 </div>
 </div>

@@ -4129,14 +4129,14 @@ See <a href="#ex-get-att">Example 1</a> for how to retrieve an attachment that w
 <div class="tab-pane" aria-labelledby="tabset1_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val content = document.getDictionary("_attachments")?.getBlob("avatar")?.content</code></pre>
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val content = document.getDictionary("_attachments")?.getBlob("avatar")?.content</code></pre>
 </div>
 </div>
 </div>
 <div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Dictionary attachments = document.getDictionary("_attachments");
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Dictionary attachments = document.getDictionary("_attachments");
 Blob blob = attachments != null ? attachments.getBlob("avatar") : null;
 byte[] content = blob != null ? blob.getContent() : null;</code></pre>
 </div>

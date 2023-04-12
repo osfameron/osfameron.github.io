@@ -3860,11 +3860,11 @@ package includes:</p>
 <div class="listingblock">
 <div class="title">Example of overriding configuration</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/kotlin_snippets/app/src/main/kotlin/com/couchbase/codesnippets/ListenerExamples.kt#L328-L332">        val listener8080 = URLEndpointListenerConfigurationFactory.newConfig(
-            networkInterface = "en0",
-            port = 8080
-        )
-        val listener8081 = listener8080.newConfig(port = 8081)</code></pre>
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/kotlin_snippets/app/src/main/kotlin/com/couchbase/codesnippets/ListenerExamples.kt#L328-L332">val listener8080 = URLEndpointListenerConfigurationFactory.newConfig(
+    networkInterface = "en0",
+    port = 8080
+)
+val listener8081 = listener8080.newConfig(port = 8081)</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -4004,9 +4004,9 @@ to create a <code>FullTextIndexConfiguration</code> object, overriding the recei
 <div class="tab-pane" aria-labelledby="tabset3_in-use">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/kotlin_snippets/app/src/main/kotlin/com/couchbase/codesnippets/QueryExamples.kt#L580-L582">    collection.createIndex(
-        "overviewFTSIndex",
-        FullTextIndexConfigurationFactory.newConfig("overview"))</code></pre>
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/kotlin_snippets/app/src/main/kotlin/com/couchbase/codesnippets/QueryExamples.kt#L580-L582">collection.createIndex(
+    "overviewFTSIndex",
+    FullTextIndexConfigurationFactory.newConfig("overview"))</code></pre>
 </div>
 </div>
 </div>
@@ -4044,10 +4044,10 @@ to create a <code>ValueIndexConfiguration</code> object, overriding the receiver
 <div class="tab-pane" aria-labelledby="tabset4_in-use">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/kotlin_snippets/app/src/main/kotlin/com/couchbase/codesnippets/QueryExamples.kt#L50-L53">    collection.createIndex(
-        "TypeNameIndex",
-        ValueIndexConfigurationFactory.newConfig("type", "name")
-    )</code></pre>
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/kotlin_snippets/app/src/main/kotlin/com/couchbase/codesnippets/QueryExamples.kt#L50-L53">collection.createIndex(
+    "TypeNameIndex",
+    ValueIndexConfigurationFactory.newConfig("type", "name")
+)</code></pre>
 </div>
 </div>
 </div>
@@ -4187,7 +4187,7 @@ to monitor changes to a document.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val docModDate = db.documentChangeFlow("1001", null)
-    .map { it.database.getDocument(it.documentID)?.getString("lastModified") }
+    .map { it.collection.getDocument(it.documentID)?.getString("lastModified") }
     .asLiveData()</code></pre>
 </div>
 </div>

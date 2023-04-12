@@ -3905,7 +3905,7 @@ The implementation of this storage differs from platform to platform&#8201;&#821
 <div class="tab-pane" aria-labelledby="tabset1_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">    // initialize the replicator configuration
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">    // initialize the replicator configuration
     ReplicatorConfigurationFactory.newConfig(
         target = URLEndpoint(URI("wss://listener.com:8954")), <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -3951,7 +3951,7 @@ thisToken = token</code></pre>
 <div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">    // initialize the replicator configuration
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">    // initialize the replicator configuration
     new ReplicatorConfiguration(new URLEndpoint(new URI("wss://listener.com:8954"))) <i class="conum" data-value="1"></i><b>(1)</b>
         .addCollections(collections, null)
 
@@ -4111,7 +4111,7 @@ To use cleartext, un-encrypted, network traffic (<code>http://</code> and-or <co
 <div class="tab-pane" aria-labelledby="tabset2_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// initialize the replicator configuration
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// initialize the replicator configuration
 val thisConfig = ReplicatorConfigurationFactory.newConfig(
     target = URLEndpoint(URI("wss://10.0.2.2:8954/travel-sample")), <i class="conum" data-value="1"></i><b>(1)</b>
     collections = mapOf(collections to null)
@@ -4122,7 +4122,7 @@ val thisConfig = ReplicatorConfigurationFactory.newConfig(
 <div class="tab-pane" aria-labelledby="tabset2_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// initialize the replicator configuration
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// initialize the replicator configuration
 ReplicatorConfiguration thisConfig = new ReplicatorConfiguration(
     new URLEndpoint(new URI("wss://10.0.2.2:8954/travel-sample"))) <i class="conum" data-value="1"></i><b>(1)</b>
     .addCollections(collections, null);</code></pre>
@@ -4191,7 +4191,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="tab-pane" aria-labelledby="tabset3_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Set replicator type
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Set replicator type
 type = ReplicatorType.PUSH_AND_PULL,
 
 // Configure Sync Mode
@@ -4202,7 +4202,7 @@ continuous = false, // default value</code></pre>
 <div class="tab-pane" aria-labelledby="tabset3_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Set replicator type
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Set replicator type
 .setType(ReplicatorType.PUSH_AND_PULL)
 
 // Configure Sync Mode
@@ -4290,7 +4290,10 @@ continuous = false, // default value</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Set this to zero (0) to prevent any retry attempt</p>
+<p>Set to zero (0) to use default values</p>
+</li>
+<li>
+<p>Set to zero (1) to prevent any retry attempt</p>
 </li>
 <li>
 <p>The retry attempt count is reset when the replicator is able to connect and replicate</p>
@@ -4321,7 +4324,7 @@ continuous = false, // default value</code></pre>
 <p>The maximum interval between retry attempts</p>
 </div>
 <div class="paragraph">
-<p>Whilst you can configure the <strong>maximum permitted</strong> wait time,  each individual interval is calculated by the replicator&#8217;s exponential backoff algorithm and is not configurable.</p>
+<p>While you can configure the <strong>maximum permitted</strong> wait time,  the replicator&#8217;s exponential backoff algorithm calculates each individual interval which is not configurable.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4329,7 +4332,13 @@ continuous = false, // default value</code></pre>
 <p>Default value: 300 seconds (5 minutes)</p>
 </li>
 <li>
-<p>Zero or negative values generate a Couchbase exception, <code>InvalidArgumentException</code>.</p>
+<p>Zero sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>300 sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>A negative value generates a Couchbase exception, <code>InvalidArgumentException</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -4360,7 +4369,7 @@ continuous = false, // default value</code></pre>
 <div class="tab-pane" aria-labelledby="tabset4_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val repl = Replicator(
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val repl = Replicator(
     ReplicatorConfigurationFactory.newConfig(
         target = URLEndpoint(URI("ws://localhost:4984/mydatabase")),
         collections = mapOf(collections to null),
@@ -4378,7 +4387,7 @@ thisReplicator = repl</code></pre>
 <div class="tab-pane" aria-labelledby="tabset4_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Replicator repl = new Replicator(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Replicator repl = new Replicator(
     new ReplicatorConfiguration(new URLEndpoint(new URI("ws://localhost:4984/mydatabase")))
         .addCollections(collections, null)
         //  other config as required . . .
@@ -4475,7 +4484,7 @@ If the server cannot provide acceptable credentials then the connection will fai
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Configure Server Security
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Configure Server Security
 // -- only accept CA attested certs
 acceptOnlySelfSignedServerCertificate = false, <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4497,7 +4506,7 @@ Self signed certificates are not allowed.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Configure Server Authentication --
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Configure Server Authentication --
 // only accept self-signed certs
 acceptOnlySelfSignedServerCertificate = true, <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4518,7 +4527,7 @@ Any certificates that are not self-signed are rejected.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt#L2882-L2885">// Use the pinned certificate from the byte array (cert)
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt#L2882-L2885">// Use the pinned certificate from the byte array (cert)
 pinnedServerCertificate =
 TLSIdentity.getIdentity("Our Corporate Id")?.certs?.get(0) as? X509Certificate <i class="conum" data-value="1"></i><b>(1)</b>
     ?: throw IllegalStateException("Cannot find corporate id"),</code></pre>
@@ -4558,7 +4567,7 @@ TLSIdentity.getIdentity("Our Corporate Id")?.certs?.get(0) as? X509Certificate <
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Configure Server Security
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Configure Server Security
 // -- only accept CA attested certs
 .setAcceptOnlySelfSignedServerCertificate(false); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4580,7 +4589,7 @@ Self signed certificates are not allowed.</td>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Configure Server Authentication --
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Configure Server Authentication --
 // only accept self-signed certs
 .setAcceptOnlySelfSignedServerCertificate(true) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4651,7 +4660,7 @@ config.setPinnedServerX509Certificate((X509Certificate) identity.getCerts().get(
 <div class="tab-pane" aria-labelledby="tabset8_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Configure the credentials the
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Configure the credentials the
 // client will provide if prompted
 authenticator = BasicAuthenticator("PRIVUSER", "let me in".toCharArray())  <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4660,7 +4669,7 @@ authenticator = BasicAuthenticator("PRIVUSER", "let me in".toCharArray())  <i cl
 <div class="tab-pane" aria-labelledby="tabset8_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Configure the credentials the
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Configure the credentials the
 // client will provide if prompted
 .setAuthenticator(new BasicAuthenticator("Our Username", "Our Password".toCharArray())) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
@@ -4716,7 +4725,7 @@ The <strong>server</strong> (listener) must have <code>disableTLS</code> set <co
 <div class="tab-pane" aria-labelledby="tabset9_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">        // Provide a client certificate to the server for authentication
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">        // Provide a client certificate to the server for authentication
         authenticator = ClientCertificateAuthenticator(
             TLSIdentity.getIdentity("clientId")
                 ?: throw IllegalStateException("Cannot find client id")
@@ -4733,7 +4742,7 @@ thisReplicator = repl</code></pre>
 <div class="tab-pane" aria-labelledby="tabset9_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Provide a client certificate to the server for authentication
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Provide a client certificate to the server for authentication
 TLSIdentity clientId = TLSIdentity.getIdentity("client");
 if (clientId == null) { throw new IllegalStateException("Cannot find client id"); }
 config.setAuthenticator(new ClientCertificateAuthenticator(clientId)); <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4791,7 +4800,7 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor 
 <div class="tab-pane" aria-labelledby="tabset10_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Create replicator
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Create replicator
 // Consider holding a reference somewhere
 // to prevent the Replicator from being GCed
 val repl = Replicator( <i class="conum" data-value="1"></i><b>(1)</b>
@@ -4838,7 +4847,7 @@ thisToken = token</code></pre>
 <div class="tab-pane" aria-labelledby="tabset10_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Create replicator
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Create replicator
 // Consider holding a reference somewhere
 // to prevent the Replicator from being GCed
 Replicator repl = new Replicator( <i class="conum" data-value="1"></i><b>(1)</b>
@@ -5060,7 +5069,7 @@ That is, whether it is actively transferring data or if it has stopped&#8201;&#8
 <div class="tab-pane" aria-labelledby="tabset13_adding-a-change-listener">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">ListenerToken token = repl.addChangeListener(change -&gt; {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">ListenerToken token = repl.addChangeListener(change -&gt; {
     CouchbaseLiteException err = change.getStatus().getError();
     if (err != null) { Logger.log("Error code :: " + err.getCode(), err); }
 });</code></pre>
@@ -5070,7 +5079,7 @@ That is, whether it is actively transferring data or if it has stopped&#8201;&#8
 <div class="tab-pane" aria-labelledby="tabset13_using-replicator-status">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">    ReplicatorStatus status = repl.getStatus();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">    ReplicatorStatus status = repl.getStatus();
     ReplicatorProgress progress = status.getProgress();
     Logger.log(
         "The Replicator is " + status.getActivityLevel()
@@ -5209,7 +5218,7 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="tab-pane" aria-labelledby="tabset14_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val repl = Replicator(
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val repl = Replicator(
     ReplicatorConfigurationFactory.newConfig(
         target = URLEndpoint(URI("ws://localhost:4984/mydatabase")),
         collections = mapOf(setOf(collection) to null),
@@ -5245,7 +5254,7 @@ if (pendingDocs.isNotEmpty()) {
 <div class="tab-pane" aria-labelledby="tabset14_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Replicator repl = new Replicator(
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Replicator repl = new Replicator(
     new ReplicatorConfiguration(new URLEndpoint(new URI("ws://localhost:4984/mydatabase")))
         .addCollection(collection, null)
         .setType(ReplicatorType.PUSH));
@@ -5325,7 +5334,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="tab-pane" aria-labelledby="tabset15_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Stop replication.
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Stop replication.
 repl.stop() <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
@@ -5333,7 +5342,7 @@ repl.stop() <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 <div class="tab-pane" aria-labelledby="tabset15_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Stop replication.
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Stop replication.
 repl.stop(); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
@@ -5469,7 +5478,7 @@ object MergeConflictResolver : ConflictResolver {
 <div class="tab-pane" aria-labelledby="tabset18_local-wins">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java#L790-L794">class LocalWinConflictResolver implements ConflictResolver {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java#L790-L794">class LocalWinConflictResolver implements ConflictResolver {
     public Document resolve(Conflict conflict) {
         return conflict.getLocalDocument();
     }
@@ -5480,7 +5489,7 @@ object MergeConflictResolver : ConflictResolver {
 <div class="tab-pane" aria-labelledby="tabset18_remote-wins">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt#L1410-L1414">// Using replConfig.setConflictResolver(new RemoteWinConflictResolver());
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt#L1410-L1414">// Using replConfig.setConflictResolver(new RemoteWinConflictResolver());
 @Suppress("unused")
 object RemoteWinsResolver : ConflictResolver {
     override fun resolve(conflict: Conflict) = conflict.remoteDocument
@@ -5491,7 +5500,7 @@ object RemoteWinsResolver : ConflictResolver {
 <div class="tab-pane" aria-labelledby="tabset18_merge">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java#L808-L814">class MergeConflictResolver implements ConflictResolver {
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java#L808-L814">class MergeConflictResolver implements ConflictResolver {
     public Document resolve(Conflict conflict) {
         Map&lt;String, Object&gt; merge = conflict.getLocalDocument().toMap();
         merge.putAll(conflict.getRemoteDocument().toMap());
@@ -5534,7 +5543,7 @@ In the event of conflicting keys, it will pick the key value from <code>new</cod
 <div class="tab-pane" aria-labelledby="tabset19_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val mutableDocument = collection.getDocument("xyz")?.toMutable() ?: return
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val mutableDocument = collection.getDocument("xyz")?.toMutable() ?: return
 mutableDocument.setString("name", "apples")
 collection.save(mutableDocument) { newDoc, curDoc -&gt;  <i class="conum" data-value="1"></i><b>(1)</b>
     if (curDoc == null) {
@@ -5551,7 +5560,7 @@ collection.save(mutableDocument) { newDoc, curDoc -&gt;  <i class="conum" data-v
 <div class="tab-pane" aria-labelledby="tabset19_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Document doc = collection.getDocument("xyz");
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Document doc = collection.getDocument("xyz");
 if (doc == null) { return; }
 MutableDocument mutableDocument = doc.toMutable();
 mutableDocument.setString("name", "apples");

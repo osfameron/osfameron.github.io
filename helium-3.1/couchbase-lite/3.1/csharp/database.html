@@ -3801,7 +3801,7 @@ This makes it easier to sync data between mobile applications and applications b
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="_images/diag-66e2d16aa54ff08438f0f86addf2e641e7d4b96d.svg" alt="Couchbase Lite Database Hierarchy">
+<img src="_images/diag-3fdbcaa11b58ac303e1aaf3ddd42f69c05cbb9e6.svg" alt="Couchbase Lite Database Hierarchy">
 </div>
 <div class="title">Figure 1. Couchbase Lite Database Hierarchy</div>
 </div>
@@ -3844,12 +3844,6 @@ The most basic structure is to use the single default scope with a single defaul
 <img src="_images/diag-b39fc970ab507424b261c14f98c439f54dce40a5.svg" alt="Couchbase Lite Examples">
 </div>
 <div class="title">Figure 2. Couchbase Lite Examples</div>
-</div>
-<div class="paragraph">
-<p>If a scope is not explicitly referenced in calls to the database, the <code>_default</code> scope is used.</p>
-</div>
-<div class="paragraph">
-<p>If no collection name is given, the <code>_default</code> collection is used.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -3923,7 +3917,7 @@ a platform-dependant location:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>.NET Core: <code>Path.Combine(AppContext.BaseDirectory, "CouchbaseLite")</code> (unless the app context is altered [e.g. by XUnit], this will be the same directory as the output binary)</p>
+<p>.NET Console: <code>Path.Combine(AppContext.BaseDirectory, "CouchbaseLite")</code> (unless the app context is altered [e.g. by XUnit], this will be the same directory as the output binary)</p>
 </li>
 <li>
 <p>UWP: <code>Windows.Storage.ApplicationData.Current.LocalFolder.Path</code> (Inside the installed app sandbox.
@@ -3950,7 +3944,7 @@ Note that this sandbox gets deleted sometimes when debugging from inside Visual 
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("my-database");</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">var database = new Database("my-database");</code></pre>
 </div>
 </div>
 </div>
@@ -3999,7 +3993,7 @@ Before closing, check that any attached listeners (query/replication/change) ind
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">database.Close();</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">database.Close();</code></pre>
 </div>
 </div>
 </div>
@@ -4037,7 +4031,7 @@ Provide this encryption key every time the database is opened&#8201;&#8212;&#820
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">// Create a new, or open an existing database with encryption enabled
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// Create a new, or open an existing database with encryption enabled
 var config = new DatabaseConfiguration
 {
     // Or, derive a key yourself and pass a byte array of the proper size
@@ -4105,7 +4099,7 @@ Here are the defaults for each platform:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>.NET Core: <code>Path.Combine(AppContext.BaseDirectory, "CouchbaseLite")</code> (unless the app context is altered [e.g. by XUnit], this will be the same directory as the output binary)</p>
+<p>.NET Console: <code>Path.Combine(AppContext.BaseDirectory, "CouchbaseLite")</code> (unless the app context is altered [e.g. by XUnit], this will be the same directory as the output binary)</p>
 </li>
 <li>
 <p>UWP: <code>Windows.Storage.ApplicationData.Current.LocalFolder.Path</code> (Inside the installed app sandbox.
@@ -4166,7 +4160,7 @@ If the information in the default logging level is insufficient you can focus it
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/csharp/examples/code_snippets/Program.cs">Database.Log.Console.Domains = LogDomain.Database;</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">Database.Log.Console.Domains = LogDomain.Database;</code></pre>
 </div>
 </div>
 </div>

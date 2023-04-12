@@ -3801,7 +3801,7 @@ This makes it easier to sync data between mobile applications and applications b
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="_images/diag-66e2d16aa54ff08438f0f86addf2e641e7d4b96d.svg" alt="Couchbase Lite Database Hierarchy">
+<img src="_images/diag-3fdbcaa11b58ac303e1aaf3ddd42f69c05cbb9e6.svg" alt="Couchbase Lite Database Hierarchy">
 </div>
 <div class="title">Figure 1. Couchbase Lite Database Hierarchy</div>
 </div>
@@ -3844,12 +3844,6 @@ The most basic structure is to use the single default scope with a single defaul
 <img src="_images/diag-b39fc970ab507424b261c14f98c439f54dce40a5.svg" alt="Couchbase Lite Examples">
 </div>
 <div class="title">Figure 2. Couchbase Lite Examples</div>
-</div>
-<div class="paragraph">
-<p>If a scope is not explicitly referenced in calls to the database, the <code>_default</code> scope is used.</p>
-</div>
-<div class="paragraph">
-<p>If no collection name is given, the <code>_default</code> collection is used.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -3909,7 +3903,7 @@ An exception is raised if any other API method is invoked before the initializer
 <div class="tab-pane" aria-labelledby="tabset1_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">override fun onCreate() {
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">override fun onCreate() {
     super.onCreate()
     // Initialize the Couchbase Lite system
     CouchbaseLite.init(this)
@@ -3920,7 +3914,7 @@ An exception is raised if any other API method is invoked before the initializer
 <div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">@Override
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">@Override
 public void onCreate() {
     super.onCreate();
     // Initialize the Couchbase Lite system
@@ -3997,7 +3991,7 @@ the application sandbox
 <div class="tab-pane" aria-labelledby="tabset2_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val database = Database(
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val database = Database(
     "my-db",
     DatabaseConfigurationFactory.newConfig()
 ) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
@@ -4007,7 +4001,7 @@ the application sandbox
 <div class="tab-pane" aria-labelledby="tabset2_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">DatabaseConfiguration config = new DatabaseConfiguration();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">DatabaseConfiguration config = new DatabaseConfiguration();
 config.setDirectory(customDir);
 Database database = new Database(DB_NAME, config);</code></pre>
 </div>
@@ -4074,14 +4068,14 @@ Before closing, check that any attached listeners (query/replication/change) ind
 <div class="tab-pane" aria-labelledby="tabset3_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">database.close()</code></pre>
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">database.close()</code></pre>
 </div>
 </div>
 </div>
 <div class="tab-pane" aria-labelledby="tabset3_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">database.close();</code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">database.close();</code></pre>
 </div>
 </div>
 </div>
@@ -4135,7 +4129,7 @@ Provide this encryption key every time the database is opened&#8201;&#8212;&#820
 <div class="tab-pane" aria-labelledby="tabset4_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">val db = Database(
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">val db = Database(
     "my-db",
     DatabaseConfigurationFactory.newConfig(
         encryptionKey = EncryptionKey("PASSWORD")
@@ -4147,7 +4141,7 @@ Provide this encryption key every time the database is opened&#8201;&#8212;&#820
 <div class="tab-pane" aria-labelledby="tabset4_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">DatabaseConfiguration config = new DatabaseConfiguration();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">DatabaseConfiguration config = new DatabaseConfiguration();
 config.setEncryptionKey(new EncryptionKey("PASSWORD"));
 Database database = new Database(DB_NAME, config);</code></pre>
 </div>
@@ -4287,14 +4281,14 @@ If the information in the default logging level is insufficient you can focus it
 <div class="tab-pane" aria-labelledby="tabset5_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">Database.log.console.domains = EnumSet.of(LogDomain.DATABASE) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">Database.log.console.domains = EnumSet.of(LogDomain.DATABASE) <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
 <div class="tab-pane" aria-labelledby="tabset5_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Database.log.getConsole().setDomains(LogDomain.DATABASE);</code></pre>
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Database.log.getConsole().setDomains(LogDomain.DATABASE);</code></pre>
 </div>
 </div>
 </div>

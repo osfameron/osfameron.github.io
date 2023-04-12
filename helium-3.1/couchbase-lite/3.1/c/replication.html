@@ -3841,33 +3841,22 @@ Each scope can contain one or more collections.</p>
 <p>To learn about Scopes and Collections, see <a href="database.html" class="xref page">Databases</a></p>
 </div>
 <div class="paragraph">
-<p>You can set up a replication scheme across any of the three data levels:</p>
+<p>You can set up a replication scheme across these data levels:</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Database</dt>
 <dd>
-<p>All scopes and collections in the database are synced,
-including the <code>_default</code> scope and the <code>_default</code> collection.</p>
-</dd>
-<dt class="hdlist1">Scope</dt>
-<dd>
-<p>All the collections in a named scope.</p>
+<p>The <code>_default</code> collection is synced.</p>
 </dd>
 <dt class="hdlist1">Collection</dt>
 <dd>
-<p>A specific collection in a scope.</p>
+<p>A specific collection or a set of collections is synced.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced against on Capella. These mappings can be <code>implicit</code> or <code>explicit</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="implicit-mapping"><a class="anchor" href="#implicit-mapping"></a>Implicit Mapping</h3>
-<div class="paragraph">
-<p>This will sync between databases that share the same keyspace names.</p>
-</div>
+<p>As part of the syncing setup, the Gateway has to map the Couchbase Lite database to the database being synced on Capella.</p>
 </div>
 </div>
 </div>
@@ -3987,7 +3976,7 @@ So we don&#8217;t recommend to rely on that when using the replication or databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
 static void simpleChangeListener(void* context,
                                  CBLReplicator* repl,
                                  const CBLReplicatorStatus* status)
@@ -4168,7 +4157,7 @@ Initialize and define the replication configuration with local and remote databa
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Initialize the configuration object and set db target
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Initialize the configuration object and set db target
 CBLError err;
 FLString url = FLSTR("ws://localhost:4984/db");
 CBLEndpoint* target =
@@ -4232,7 +4221,7 @@ to ensure TLS encryption&#8201;&#8212;&#8201;strongly recommended in production&
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Set replication direction and mode
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Set replication direction and mode
 replConfig.replicatorType = kCBLReplicatorTypePull; <i class="conum" data-value="1"></i><b>(1)</b>
 replConfig.continuous = true;
 
@@ -4319,7 +4308,10 @@ replConfig.continuous = true;</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Set this to zero (0) to prevent any retry attempt</p>
+<p>Set to zero (0) to use default values</p>
+</li>
+<li>
+<p>Set to zero (1) to prevent any retry attempt</p>
 </li>
 <li>
 <p>The retry attempt count is reset when the replicator is able to connect and replicate</p>
@@ -4350,7 +4342,7 @@ replConfig.continuous = true;</code></pre>
 <p>The maximum interval between retry attempts</p>
 </div>
 <div class="paragraph">
-<p>Whilst you can configure the <strong>maximum permitted</strong> wait time,  each individual interval is calculated by the replicator&#8217;s exponential backoff algorithm and is not configurable.</p>
+<p>While you can configure the <strong>maximum permitted</strong> wait time,  the replicator&#8217;s exponential backoff algorithm calculates each individual interval which is not configurable.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4358,7 +4350,13 @@ replConfig.continuous = true;</code></pre>
 <p>Default value: 300 seconds (5 minutes)</p>
 </li>
 <li>
-<p>Zero or negative values generate a Couchbase exception, <code>InvalidArgumentException</code>.</p>
+<p>Zero sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>300 sets the maximum interval between retries to the default of 300 seconds</p>
+</li>
+<li>
+<p>A negative value generates a Couchbase exception, <code>InvalidArgumentException</code></p>
 </li>
 </ul>
 </div></div></td>
@@ -4376,7 +4374,7 @@ replConfig.continuous = true;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Configure replication retries
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Configure replication retries
 replConfig.heartbeat = 120; //  <i class="conum" data-value="1"></i><b>(1)</b>
 
 replConfig.maxAttempts = 20; //  <i class="conum" data-value="2"></i><b>(2)</b>
@@ -4455,7 +4453,7 @@ This is the recommended way of using basic authentication.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Configure Client Authentication to Basic Authentication
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Configure Client Authentication to Basic Authentication
 // Providing username and password credentials
 if(docs_example_ShowBasicAuth) {
     CBLAuthenticator* basicAuth =
@@ -4489,7 +4487,7 @@ endpoint on the Public REST API.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">if(docs_example_ShowSessionAuth) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">if(docs_example_ShowSessionAuth) {
     CBLAuthenticator* sessionAuth =
         CBLAuth_CreateSession(FLSTR("904ac010862f37c8dd99015a33ab5a3565fd8447"),
                               FLSTR("optionalCookieName"));
@@ -4515,7 +4513,7 @@ The replicator will then include those headers in every request.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Optionally, add custom headers
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Optionally, add custom headers
 FLMutableDict customHdrs = FLMutableDict_New();
 FLMutableDict_SetString(customHdrs,
                         FLSTR("customHeaderName"),
@@ -4547,7 +4545,7 @@ For instance, high-priority documents could be pushed first, or documents in a "
 <div class="listingblock">
 <div class="title">Push Filter</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
 static bool simpleReplicationFilter(void* context,
                                     CBLDocument* argDoc,
                                     CBLDocumentFlags argFlags)
@@ -4596,7 +4594,7 @@ are designed to be scalable (documents are filtered on the server) whereas a pul
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple replication filter function
 static bool simpleReplicationFilter(void* context,
                                     CBLDocument* argDoc,
                                     CBLDocumentFlags argFlags)
@@ -4634,7 +4632,10 @@ static bool simpleReplicationFilter(void* context,
 <p>As a result, there would be a local copy of the document disjointed from the one that resides on Couchbase Server.</p>
 </div>
 <div class="paragraph">
-<p>Further updates to the document stored on Couchbase Server would not be received in pull replications and further local edits could be potentially pushed, which would result in <code>409</code> errors since access has been revoked.</p>
+<p>Further updates to the document stored on Couchbase Server would not be received in pull replications and further local edits could be pushed but the updated versions will not be visible.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="#auto-purge-on-revoke">Auto Purge on Revoke</a>.</p>
 </div>
 </div>
 </div>
@@ -4653,7 +4654,7 @@ and the
 to specify which data to pull for each user.</p>
 </div>
 <div class="paragraph">
-<p>Optionally, it&#8217;s also possible to specify a comma-separated list of channel names on Couchbase Lite&#8217;s replicator configuration object.
+<p>Optionally, it&#8217;s also possible to specify a string array of channel names on Couchbase Lite&#8217;s replicator configuration object.
 In this case, the replication from Sync Gateway will only pull documents tagged with those channels.</p>
 </div>
 </div>
@@ -4851,7 +4852,7 @@ Clients wishing to sync previously removed documents must use the resetCheckpoin
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">replConfig.disableAutoPurge = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">replConfig.disableAutoPurge = true; <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -4860,7 +4861,7 @@ Clients wishing to sync previously removed documents must use the resetCheckpoin
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here we have opted to turn off the auto purge behavior. By default this is ON (true)</td>
+<td>Here we have opted to turn off the auto purge behavior. By default auto purge is enabled.</td>
 </tr>
 </table>
 </div>
@@ -4907,9 +4908,6 @@ This ensures backwards compatible with 2.8 clients that use pull filters to prev
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Doc remains in local database</p>
-</div>
-<div class="paragraph">
-<p>App notified of “Rejected Rev(403)” if <em>Documentlistener</em> registered</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -4969,7 +4967,7 @@ You can, optionally, add a change listener (see <a href="#lbl-repl-mon">Monitor<
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLReplicator* replicator =
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLReplicator* replicator =
 CBLReplicator_Create(&amp;argConfig, &amp;err); <i class="conum" data-value="1"></i><b>(1)</b>
 
   CBLReplicator_Start(replicator, false); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
@@ -5007,7 +5005,7 @@ However, if you do want to force the replication to start again from zero, use t
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">CBLReplicator_Start(replicator, true); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLReplicator_Start(replicator, true); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 </div>
 </div>
 </div>
@@ -5232,7 +5230,7 @@ Stop the listener as shown in <a href="#ex-stop-doc-listener">Example 14</a>.</p
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate addition of a Document Replicator  listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate addition of a Document Replicator  listener
 CBLListenerToken* token_ReplDocListener =
         CBLReplicator_AddDocumentReplicationListener(
                                                     replicator,
@@ -5250,7 +5248,7 @@ CBLListenerToken* token_ReplDocListener =
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate removal of a listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate removal of a listener
 CBLListener_Remove(token_ReplDocListener);
 CBLListener_Remove(token_ReplChangeListener);</code></pre>
 </div>
@@ -5300,7 +5298,7 @@ Use it in preference to returning a list of pending document IDs, where possible
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">FLDict thisPendingIdList =
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">FLDict thisPendingIdList =
     CBLReplicator_PendingDocumentIDs2(replicator, collection, &amp;err); <i class="conum" data-value="1"></i><b>(1)</b>
 if(!FLDict_IsEmpty(thisPendingIdList)) {
     FLDictIterator item;
@@ -5370,7 +5368,7 @@ Your app should account for this potential delay before attempting any subsequen
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- show how to stop a replication
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- show how to stop a replication
 if(CBLReplicator_Status(argRepl).activity!=kCBLReplicatorStopped) {
     CBLReplicator_Stop(argRepl);
 }</code></pre>
@@ -5403,7 +5401,7 @@ It will stop any active <a href="#lbl-repl-chng">change listener</a> once the re
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// Purpose -- illustrate a simple change listener
 static void simpleChangeListener(void* context,
                                  CBLReplicator* repl,
                                  const CBLReplicatorStatus* status)
@@ -5544,7 +5542,7 @@ After completing this step, Sync Gateway is reachable over <code>https</code>/<c
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/c/examples/code_snippets/main.c">char cert_buf[10000];
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">char cert_buf[10000];
 FILE* cert_file = fopen("cert.pem", "r");
 size_t read = fread(cert_buf, 1, sizeof(cert_buf), cert_file);
 replConfig.pinnedServerCertificate = (FLSlice){cert_buf, read};</code></pre>

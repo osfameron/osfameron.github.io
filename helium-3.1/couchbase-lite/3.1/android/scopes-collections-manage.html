@@ -3799,9 +3799,6 @@ Scopes and collections allow you to organize your documents within a database.
 <div class="ulist">
 <ul>
 <li>
-<p>You can create up to 1000 collections per database.</p>
-</li>
-<li>
 <p>Document names must be unique within their collection.</p>
 </li>
 </ul>
@@ -3814,9 +3811,6 @@ Scopes and collections allow you to organize your documents within a database.
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>You can create up to 1000 scopes per database.</p>
-</li>
 <li>
 <p>Collection names must be unique within their scope.</p>
 </li>
@@ -3901,7 +3895,7 @@ Scope and collection names are case sensitive.
 <div class="tab-pane" aria-labelledby="tabset1_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// create the collection "Verlaine" in the default scope ("_default")
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// create the collection "Verlaine" in the default scope ("_default")
 var collection1: Collection? = db.createCollection("Verlaine")
 // both of these retrieve collection1 created above
 collection1 = db.getCollection("Verlaine")
@@ -3918,7 +3912,7 @@ collection2 = db.getScope("Television")!!.getCollection("Verlaine")</code></pre>
 <div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// create the collection "Verlaine" in the default scope ("_default")
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// create the collection "Verlaine" in the default scope ("_default")
 Collection collection1 = db.createCollection("Verlaine");
 // both of these retrieve collection1 created above
 collection1 = db.getCollection("Verlaine");
@@ -3959,7 +3953,7 @@ collection2 = db.getScope("Television").getCollection("Verlaine");</code></pre>
 <div class="tab-pane" aria-labelledby="tabset2_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// Create an index named "nameIndex1" on the property "lastName" in the collection using the IndexBuilder
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// Create an index named "nameIndex1" on the property "lastName" in the collection using the IndexBuilder
 collection.createIndex("nameIndex1", IndexBuilder.valueIndex(ValueIndexItem.property("lastName")))
 
 // Create a similar index named "nameIndex2" using and IndexConfiguration
@@ -3976,7 +3970,7 @@ indices.forEach { collection.deleteIndex(it) }</code></pre>
 <div class="tab-pane" aria-labelledby="tabset2_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">// Create an index named "nameIndex1" on the property "lastName" in the collection using the IndexBuilder
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">// Create an index named "nameIndex1" on the property "lastName" in the collection using the IndexBuilder
 collection.createIndex("nameIndex1", IndexBuilder.valueIndex(ValueIndexItem.property("lastName")));
 
 // Create a similar index named "nameIndex2" using and IndexConfiguration
@@ -4017,7 +4011,7 @@ for (String index: indices) { collection.deleteIndex(index); }</code></pre>
 <div class="tab-pane" aria-labelledby="tabset3_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">db.getCollection(collectionName, scopeName)?.let {
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">db.getCollection(collectionName, scopeName)?.let {
     db.deleteCollection(it.name, it.scope.name)
 }</code></pre>
 </div>
@@ -4026,7 +4020,7 @@ for (String index: indices) { collection.deleteIndex(index); }</code></pre>
 <div class="tab-pane" aria-labelledby="tabset3_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">Collection collection = db.getCollection(collectionName, scopeName);
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">Collection collection = db.getCollection(collectionName, scopeName);
 if (collection != null) { db.deleteCollection(collection.getName(), collection.getScope().getName()); }</code></pre>
 </div>
 </div>
@@ -4058,7 +4052,7 @@ if (collection != null) { db.deleteCollection(collection.getName(), collection.g
 <div class="tab-pane" aria-labelledby="tabset4_kotlin">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.kt">// List all of the collections in each of the scopes in the database
+<pre class="highlightjs highlight"><code class="language-Kotlin hljs" data-lang="Kotlin" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.kt">// List all of the collections in each of the scopes in the database
 db.scopes.forEach { scope -&gt;
     Logger.log("Scope :: " + scope.name)
     scope.collections.forEach {
@@ -4071,7 +4065,7 @@ db.scopes.forEach { scope -&gt;
 <div class="tab-pane" aria-labelledby="tabset4_java">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="https://github.com/osfameron/docs-couchbase-lite/blob/undefined/modules/android/examples/codesnippet_collection.java">final Set&lt;Scope&gt; scopes = db.getScopes();
+<pre class="highlightjs highlight"><code class="language-Java hljs" data-lang="Java" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/android/examples/codesnippet_collection.java">final Set&lt;Scope&gt; scopes = db.getScopes();
 for (Scope scope: scopes) {
     Logger.log("Scope :: " + scope.getName());
     final Set&lt;Collection&gt; collections = scope.getCollections();
