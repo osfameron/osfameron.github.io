@@ -3850,27 +3850,19 @@ This content introduces the <a href="#lbl-upsert-replication">Add or Update a Re
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>PUT {db}/_config/_replication</pre>
+<pre>PUT {db}/_replication</pre>
 </div>
+</div>
+<div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>Create or update a replication in the database.</p>
 </div>
 <div class="paragraph">
-<p>The <strong><em>replication</strong> endpoint is used to manage both _ad hoc</em> and <em>persistent</em> replication operations.</p>
+<p>If an existing replication is being updated, that replication must be stopped first.</p>
 </div>
 <div class="paragraph">
-<p>Using a PUT request you can update (or insert, if it doesn&#8217;t exist) a set of replication details.</p>
-</div>
-<div class="paragraph">
-<p><strong>To cancel a replication</strong>
-You can cancel continuous replications by adding the cancel field to the JSON request object and setting the value to true.</p>
-</div>
-<div class="paragraph">
-<p>Note that the structure of the request must be identical to the original for the cancellation request to be honoured.</p>
-</div>
-<div class="paragraph">
-<p>For example, if you requested continuous replication, the cancellation request must also contain the continuous field.</p>
-</div>
-<div class="paragraph">
-<p><em>Sync Gateway Roles Required (CBS 7.0.2 Developer Preview):</em></p>
+<p>Required Sync Gateway RBAC roles:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3881,50 +3873,77 @@ You can cancel continuous replications by adding the cancel field to the JSON re
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
 <col style="width: 50%;">
-<col style="width: 22.2223%;">
+<col style="width: 16.6667%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Type</th>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Path</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>db</strong><br>
-<em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Database name</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Path</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>replicationID</strong><br>
-<em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">If supplied, the &lt;i&gt;replicationID&lt;/i&gt; parameter must be a valid replication id.</p>
-<p class="tableblock">If it is not supplied for a &lt;i&gt;new&lt;/i&gt; replication*, then a random UUID is generated.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Body</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>ReplicationBody</strong><br>
-<em>optional</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">This replication request message body is a JSON document that comprises all the properties required to upsert a replication.</p>
-<p class="tableblock">If the <code>replicationID</code> matches an existing <code>replication_id</code> then the values of any properties provided in the body are used to update the existing replication&#8217;s property values.</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_replication_model">Replication_model</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>db</strong><br>
+<em>required</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The name of the database to run the operation against.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="body-parameter"><a class="anchor" href="#body-parameter"></a>Body Parameter</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Body</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>If the <code>replication_id</code> matches an existing replication then the existing configuration will be updated. Only the specified fields in the request will be used to update the existing configuration. Unspecified fields will remain untouched.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Replication">Replication</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3932,27 +3951,45 @@ You can cancel continuous replications by adding the cancel field to the JSON re
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 70%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
 <col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">HTTP Code</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">HTTP Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Replication successfully updated</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_replicationresponse">ReplicationResponse</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Updated existing configuration successfully</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>201</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Replication successfully inserted</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_replicationresponse">ReplicationResponse</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Created new replication successfully</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>There was a problem with your request</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Resource could not be found</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
 </tr>
 </tbody>
 </table>

@@ -3807,14 +3807,13 @@
 <pre>https:://{sgw-uri}/{db}/_config/import_filter</pre>
 </div>
 </div>
+<div class="openblock markdown">
+<div class="content">
 <div class="paragraph">
-<p>Use this convenience endpoint to add or update the <code>import_filter</code> Javascript function for an existing Sync Gateway database.</p>
+<p>This will allow you to update the database&#8217;s import filter.</p>
 </div>
 <div class="paragraph">
-<p>See the 'Model' below for more info</p>
-</div>
-<div class="paragraph">
-<p><em>Sync Gateway Roles Required (CBS 7.0.2 Developer Preview):</em></p>
+<p>Required Sync Gateway RBAC roles:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3822,6 +3821,8 @@
 <p>Sync Gateway Architect</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>See: <a href="import-filter.html" class="xref page">Import filter</a> for more.</p>
@@ -3831,38 +3832,147 @@
 <div class="sect1">
 <h2 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h2>
 <div class="sectionbody">
+<div class="sect3">
+<h4 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
 <col style="width: 50%;">
-<col style="width: 22.2223%;">
+<col style="width: 16.6667%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">Type</th>
-<th class="tableblock halign-left valign-middle">Name</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Path</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>db</strong><br>
-<em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Database name</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Body</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>import_filter</strong><br>
-<em>required</em></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The Javascipt code for the import filter function</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_import_filter_model">Import_filter_model</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>keyspace</strong><br>
+<em>required</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The keyspace to run the operation against.</p>
+</div>
+<div class="paragraph">
+<p>A keyspace is a dot-separated string, comprised of a database name, and optionally a named scope and collection.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="body-parameter"><a class="anchor" href="#body-parameter"></a>Body Parameter</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Body</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>The import filter to use</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong> <code>body_example</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="header-parameters"><a class="anchor" href="#header-parameters"></a>Header Parameters</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>If-Match</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>If set to a configuration&#8217;s Etag value, enables optimistic concurrency control for the request. Returns HTTP 412 if another update happened underneath this one.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>disable_oidc_validation</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock markdown">
+<div class="content">
+<div class="paragraph">
+<p>If set, will not attempt to validate the configured OpenID Connect providers are reachable.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Default:</strong> <code>false</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3870,27 +3980,45 @@
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 70%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
 <col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-middle">HTTP Code</th>
-<th class="tableblock halign-left valign-middle">Description</th>
-<th class="tableblock halign-left valign-middle">Schema</th>
+<th class="tableblock halign-left valign-top">HTTP Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Schema</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>200</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">OK</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="#_import_filter_model">Import_filter_model</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Updated import filter successfully</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>401</strong></p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">401 - Unauthorized - Error validating credentials</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">No Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>There was a problem with your request</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Resource could not be found</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">412</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Precondition Failed  The supplied If-Match header did not match the current version of the configuration.  Returned when optimistic concurrency control is used, and there has been an update to the configuration in between this update.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
 </tr>
 </tbody>
 </table>
