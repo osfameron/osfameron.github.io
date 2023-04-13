@@ -3794,7 +3794,7 @@
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The guidance and constraints documented here relate to the design of data buckets and documents that you require, or may potentially require, to replicate using sync gateway functionality.
+<p>The guidance and constraints documented here relate to the design of data buckets and documents that you require, or may potentially require, to replicate using Sync Gateway functionality.
 They do not necessarily align with constraints on the local storage and use of such documents.</p>
 </div>
 </div>
@@ -3802,48 +3802,26 @@ They do not necessarily align with constraints on the local storage and use of s
 <div class="sect1">
 <h2 id="property-naming"><a class="anchor" href="#property-naming"></a>Property Naming</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">What to avoid</dt>
-<dd>
-<p>You should avoid designing user property names prefixed with an underscore character (<code>_</code>, ASCII <code>&amp;#095</code>) for the following reserved properties:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>_sync</p>
-</li>
-<li>
-<p>_id</p>
-</li>
-<li>
-<p>_rev</p>
-</li>
-<li>
-<p>_deleted</p>
-</li>
-<li>
-<p>_attachments</p>
-</li>
-<li>
-<p>_revisions</p>
-</li>
-<li>
-<p>_exp</p>
-</li>
-<li>
-<p>_purged</p>
-</li>
-<li>
-<p>_removed</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Why it&#8217;s an issue</dt>
-<dd>
-<p>The underscore character (<code>_</code>) is a <strong>reserved prefix</strong> for some  <em>Document</em> system properties, for example: the document&#8217;s identifier (<code>_id</code>) and revision property (<code>_rev</code>).</p>
 <div class="paragraph">
-<p>Any document which contains user properties with a leading underscore for the reserved properties will be rejected by Sync Gateway&#8201;&#8212;&#8201;see <a href="#error-code">Example 1</a> for the error details.</p>
+<p>You can use an underscore prefix (<code>_</code>, ASCII <code>&amp;#095</code>) for property naming, but your name cannot match any of the <em>Document</em> system properties reserved by Sync Gateway:</p>
+</div>
+<div class="paragraph">
+<p>+
+* _sync
+* _id
+* _rev
+* _deleted
+* _attachments
+* _revisions
+* _exp
+* _purged
+* _removed</p>
+</div>
+<div class="paragraph">
+<p>Any document that matches the reserved property names listed will be rejected by Sync Gateway&#8201;&#8212;&#8201;see <a href="#error-code">Example 1</a> for the error details.</p>
+</div>
+<div class="paragraph">
+<p>+</p>
 </div>
 <div id="error-code" class="exampleblock">
 <div class="title">Example 1. Property prefix error message</div>
@@ -3855,7 +3833,8 @@ They do not necessarily align with constraints on the local storage and use of s
 </div>
 </div>
 </div>
-</dd>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Where it applies</dt>
 <dd>
 <p>This rule applies to writes performed through:</p>
