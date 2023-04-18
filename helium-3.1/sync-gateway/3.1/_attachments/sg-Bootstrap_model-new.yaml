@@ -1,0 +1,268 @@
+type: object
+properties:
+  bootstrap:
+    description: Configuration settings for interacting with Couchbase Server.
+    type: object
+    properties:
+      group_id:
+        description: The config group ID to use when discovering databases. Allows for non-homogenous configuration.
+        type: string
+        default: default
+      config_update_frequency:
+        description: |-
+          How often to poll Couchbase Server for new config changes.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+        default: 10s
+      server:
+        description: Couchbase Server connection string/URL.
+        type: string
+      username:
+        description: Username for authenticating to server.
+        type: string
+      password:
+        description: Password for authenticating to server
+        type: string
+      ca_cert_path:
+        description: Root CA cert path for TLS connection
+        type: string
+      server_tls_skip_verify:
+        description: Allow empty server CA Cert Path without attempting to use system root pool
+        type: boolean
+        default: false
+      x509_cert_path:
+        description: Cert path (public key) for X.509 bucket auth
+        type: string
+      x509_key_path:
+        description: Key path (private key) for X.509 bucket auth
+        type: string
+      use_tls_server:
+        description: Enforces a secure or non-secure server scheme
+        type: boolean
+        default: true
+    readOnly: true
+    required:
+      - server
+      - username
+      - password
+  api:
+    description: Configuration settings for modifying how the REST API is interacted with.
+    type: object
+    properties:
+      public_interface:
+        description: Network interface to bind public API to
+        type: string
+        default: ':4984'
+      admin_interface:
+        description: |-
+          Network interface to bind admin API to.
+
+          By default, this will only be accessible to the localhost.
+        type: string
+        default: 127.0.0.1:4985
+      metric_interface:
+        description: |-
+          Network interface to bind metrics API to.
+
+          By default, this will only be accessible to the localhost.
+        type: string
+        default: 127.0.0.1:4986
+      profile_interface:
+        description: Network interface to bind profiling API to
+        type: string
+      admin_interface_authentication:
+        description: Whether the admin API requires authentication
+        type: boolean
+        default: true
+      metrics_interface_authentication:
+        description: Whether the metrics API requires authentication
+        type: boolean
+        default: true
+      enable_advanced_auth_dp:
+        description: |-
+          Whether to enable the DP permissions check feature of admin auth.
+
+          Defaults to `true` if using enterprise-edition or `false` if using community-edition.
+        type: boolean
+      server_read_timeout:
+        description: |-
+          Maximum duration.Second before timing out read of the HTTP(S) request.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+      server_write_timeout:
+        description: |-
+          Maximum duration.Second before timing out write of the HTTP(S) response.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+      read_header_timeout:
+        description: |-
+          The amount of time allowed to read request headers.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+        default: 5s
+      idle_timeout:
+        description: |-
+          The maximum amount of time to wait for the next request when keep-alives are enabled.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+        default: 90s
+      pretty:
+        description: Pretty-print JSON responses
+        type: boolean
+      max_connections:
+        description: Max of incoming HTTP connections to accept
+        type: number
+        default: 0
+      compress_responses:
+        description: If false, disables compression of HTTP responses
+        type: boolean
+        default: true
+      hide_product_version:
+        description: Whether product versions removed from Server headers and REST API responses
+        type: boolean
+      https:
+        type: object
+        properties:
+          tls_minimum_version:
+            description: The minimum allowable TLS version for the REST APIs
+            type: string
+            default: tlsv1.2
+          tls_cert_path:
+            description: The TLS cert file to use for the REST APIs
+            type: string
+          tls_key_path:
+            description: The TLS key file to use for the REST APIs
+            type: string
+      cors:
+        type: object
+        properties:
+          origin:
+            description: List of allowed origins, use ['*'] to allow access from everywhere
+            type: array
+            items:
+              type: string
+          login_origin:
+            description: List of allowed login origins
+            type: array
+            items:
+              type: string
+          headers:
+            description: List of allowed headers
+            type: array
+            items:
+              type: string
+          max_age:
+            description: Maximum age of the CORS Options request
+            type: integer
+    readOnly: true
+  logging:
+    description: The configuration settings for modifying Sync Gateway logging.
+    type: object
+    properties:
+      log_file_path:
+        description: Absolute or relative path on the filesystem to the log file directory. A relative path is from the directory that contains the Sync Gateway executable file.
+        type: string
+        readOnly: true
+      redaction_level:
+        description: Redaction level to apply to log output.
+        type: string
+        default: partial
+        enum:
+          - none
+          - partial
+          - full
+          - unset
+        readOnly: true
+      console:
+        $ref: '#/components/schemas/Console-logging-config'
+      error:
+        $ref: '#/components/schemas/File-logging-config'
+      warn:
+        $ref: '#/components/schemas/File-logging-config'
+      info:
+        $ref: '#/components/schemas/File-logging-config'
+      debug:
+        $ref: '#/components/schemas/File-logging-config'
+      trace:
+        $ref: '#/components/schemas/File-logging-config'
+      stats:
+        $ref: '#/components/schemas/File-logging-config'
+  auth:
+    type: object
+    properties:
+      bcrypt_cost:
+        description: Cost to use for bcrypt password hashes
+        type: integer
+        default: 10
+        maximum: 31
+        minimum: 10
+    readOnly: true
+  replicator:
+    type: object
+    properties:
+      max_heartbeat:
+        description: |-
+          Max heartbeat value for `_changes` request.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+      blip_compression:
+        description: BLIP data compression level (0-9)
+        type: integer
+        maximum: 9
+        minimum: 0
+    readOnly: true
+  unsupported:
+    description: Settings that are not officially supported. It is highly recommended these are **not** used.
+    type: object
+    properties:
+      serverless:
+        $ref: '#/components/schemas/Serverless'
+      use_xattr_config:
+        description: Store database configurations in system xattrs
+        type: boolean
+      stats_log_frequency:
+        description: |-
+          How often should stats be written to stats logs.
+
+          This is a duration and therefore can be provided with units "h", "m", "s", "ms", "us", and "ns". For example, 5 hours, 20 minutes, and 30 seconds would be `5h20m30s`.
+        type: string
+        default: 1m
+      use_stdlib_json:
+        description: Bypass the jsoniter package and use Go's stdlib instead
+        type: boolean
+      http2:
+        type: object
+        properties:
+          enabled:
+            description: Whether HTTP2 support is enabled
+            type: boolean
+    readOnly: true
+  database_credentials:
+    description: A map of database name to credentials, that can be used instead of the bootstrap ones.
+    type: object
+    additionalProperties:
+      $ref: '#/components/schemas/CredentialsConfig'
+    readOnly: true
+  bucket_credentials:
+    description: A map of bucket names to credentials, that can be used instead of the bootstrap ones.
+    type: object
+    additionalProperties:
+      $ref: '#/components/schemas/CredentialsConfig'
+    readOnly: true
+  max_file_descriptors:
+    description: Max of open file descriptors (RLIMIT_NOFILE)
+    type: number
+    default: 5000
+    minimum: 0
+    readOnly: true
+  couchbase_keepalive_interval:
+    description: TCP keep-alive interval between SG and Couchbase server
+    type: integer
+    readOnly: true
+title: Startup-config

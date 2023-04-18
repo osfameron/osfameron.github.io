@@ -74,6 +74,11 @@
                       SDKs
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/watch?v&#x3D;dQw4w9WgXcQ">
+                      Test
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="primary-action">
@@ -3899,14 +3904,13 @@ CBLDatabase_CreateCollection(db, FLSTR("collA"), FLSTR("scopeA"), &amp;err);</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">// We need to add a code sample to index a collection
-    CBLValueIndexConfiguration config = {
-        kCBLN1QLLanguage,
-        FLSTR("type, name")
-    };
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c">CBLValueIndexConfiguration config = {
+    kCBLN1QLLanguage,
+    FLSTR("type, name")
+};
 
-    CBLError err;
-    CBLCollection_CreateValueIndex(collection, FLSTR("TypeNameIndex"), config, &amp;err);</code></pre>
+CBLError err;
+CBLCollection_CreateValueIndex(collection, FLSTR("TypeNameIndex"), config, &amp;err);</code></pre>
 </div>
 </div>
 </div>

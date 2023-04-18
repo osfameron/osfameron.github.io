@@ -74,6 +74,11 @@
                       SDKs
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/watch?v&#x3D;dQw4w9WgXcQ">
+                      Test
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="primary-action">
@@ -4043,7 +4048,7 @@ See <a href="#ex-get-att">Example 4</a> for an example decryptor callback functi
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c#L2331-L2351">// Purpose: Declare property-level encryptor callback functions
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c#L2328-L2348">// Purpose: Declare property-level encryptor callback functions
 static FLSliceResult my_cipher_function(FLSlice input) {
     FLSliceResult result = FLSliceResult_New(input.size);
     for(int i = 0; i &lt; input.size; ++i) {
@@ -4094,7 +4099,7 @@ static FLSliceResult property_decryptor(void* context, FLString documentID, FLDi
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c#L2330-L2352">// Purpose: Declare property-level encryptor callback functions
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/c/examples/code_snippets/main.c#L2327-L2349">// Purpose: Declare property-level encryptor callback functions
 static FLSliceResult my_cipher_function(FLSlice input) {
     FLSliceResult result = FLSliceResult_New(input.size);
     for(int i = 0; i &lt; input.size; ++i) {

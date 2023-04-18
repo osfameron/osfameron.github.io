@@ -74,6 +74,11 @@
                       SDKs
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/watch?v&#x3D;dQw4w9WgXcQ">
+                      Test
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="primary-action">
@@ -3898,10 +3903,9 @@ var collection = _Database.CreateCollection("colA", "scopeA"); // Scope with nam
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">// We need to add a code sample to index a collection
-    string[] indexProperties = new string[] { "type", "name" };
-    var config = new ValueIndexConfiguration(indexProperties);
-    collection.CreateIndex("TypeNameIndex", config);</code></pre>
+<pre class="highlightjs highlight"><code class="language-C# hljs" data-lang="C#" data-source-url="file:///Users/hakimcassimally/couchbase/docs-couchbase-lite/modules/csharp/examples/code_snippets/Program.cs">string[] indexProperties = new string[] { "type", "name" };
+var config = new ValueIndexConfiguration(indexProperties);
+collection.CreateIndex("TypeNameIndex", config);</code></pre>
 </div>
 </div>
 </div>
