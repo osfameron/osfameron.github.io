@@ -4036,7 +4036,80 @@
 <div class="sect2">
 <h3 id="known-issues"><a class="anchor" href="#known-issues"></a>Known Issues</h3>
 <div class="paragraph">
-<p>None for this release</p>
+<p>The following Third Party limitations apply for this version.</p>
+</div>
+<div class="sect3">
+<h4 id="using-tlsidentity-with-net-6-ios-and-mac-catalyst"><a class="anchor" href="#using-tlsidentity-with-net-6-ios-and-mac-catalyst"></a>Using <code>TLSIdentity</code> with .NET 6 iOS and Mac Catalyst</h4>
+<div class="paragraph">
+<p>In order to be able to use the <code>TLSIdentity</code> class, you must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sign the app (even for iOS simulator)</p>
+</li>
+<li>
+<p>include an Entitlements.plist file containing the following:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+&lt;key&gt;keychain-access-groups&lt;/key&gt;
+&lt;array&gt;
+&lt;string&gt;$(AppIdentifierPrefix)$(CFBundleIdentifier)&lt;/string&gt;
+&lt;/array&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Include the following in your <code>csproj</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;CodesignProvision&gt;Automatic&lt;/CodesignProvision&gt;
+&lt;EnableCodeSigning&gt;true&lt;/EnableCodeSigning&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>You may also require the following for iOS simulator targets to disable signature verification at build time:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;_RequireCodeSigning&gt;false&lt;/_RequireCodeSigning&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="tls-connections-with-android"><a class="anchor" href="#tls-connections-with-android"></a>TLS connections with Android</h4>
+<div class="paragraph">
+<p>Due to .NET runtime limitations
+(issues <a href="https://github.com/dotnet/runtime/issues/45741">45741</a> and <a href="https://github.com/dotnet/runtime/issues/84202">84202</a>)
+any TLS connection that is not trusted by the underlying Android OS will be rejected for connection.
+This means that self signed and pinned certificates will not work.</p>
+</div>
+<div class="paragraph">
+<p>You can work around this in part by using <a href="https://developer.android.com/training/articles/security-config">network security config</a> to add a trust rule for the situation.</p>
+</div>
+<div class="paragraph">
+<p>However:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An intermediate pinned certificate will not function on this platform.
+Use an exact pinned certificate instead.</p>
+</li>
+<li>
+<p>You cannot use dynamically created certs (such as those created using <code>TLSIdentity.CreateIdentity</code>) as there is no way to add them to the network security configuration at runtime.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect2">
