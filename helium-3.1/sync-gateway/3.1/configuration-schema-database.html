@@ -1301,7 +1301,6 @@ Content-Length: 120
 <div class="content">
 <pre>
 {
-   <a href="#allow_conflicts">allow_conflicts</a>: true,
    <a href="#allow_empty_password">allow_empty_password</a>: false,
    <a href="#bucket">bucket</a>: "The database name",
    <a href="#bucket_op_timeout_ms">bucket_op_timeout_ms</a>: 0,
@@ -1317,16 +1316,8 @@ Content-Length: 120
          <a href="#cache-channel_cache-max_number">max_number</a>: 50000,
          <a href="#cache-channel_cache-max_wait_pending">max_wait_pending</a>: 5000,
          <a href="#cache-channel_cache-max_wait_skipped">max_wait_skipped</a>: 3600000,
-         <a href="#cache-channel_cache-min_length">min_length</a>: 50,
-         <a href="#cache-channel_cache-query_limit">query_limit</a>: 5000
+         <a href="#cache-channel_cache-min_length">min_length</a>: 50
       },
-      <a href="#cache-channel_cache_expiry">channel_cache_expiry</a>: 0,
-      <a href="#cache-channel_cache_max_length">channel_cache_max_length</a>: 0,
-      <a href="#cache-channel_cache_min_length">channel_cache_min_length</a>: 0,
-      <a href="#cache-enable_star_channel">enable_star_channel</a>: true,
-      <a href="#cache-max_num_pending">max_num_pending</a>: 0,
-      <a href="#cache-max_wait_pending">max_wait_pending</a>: 0,
-      <a href="#cache-max_wait_skipped">max_wait_skipped</a>: 0,
       <a href="#cache-rev_cache">rev_cache</a>: {
          <a href="#cache-rev_cache-shard_count">shard_count</a>: "16",
          <a href="#cache-rev_cache-size">size</a>: "5000"
@@ -1363,12 +1354,20 @@ Content-Length: 120
       <a href="#event_handlers-max_processes">max_processes</a>: "string",
       <a href="#event_handlers-wait_for_process">wait_for_process</a>: "string"
    },
-   <a href="#feed_type">feed_type</a>: "DCP",
    <a href="#guest">guest</a>: {
       <a href="#guest-admin_channels">admin_channels</a>: [],
       <a href="#guest-admin_roles">admin_roles</a>: [],
       <a href="#guest-all_channels">all_channels</a>: [],
-      (TODO additionalProperties),
+      <a href="#guest-collection_access">collection_access</a>: {
+         <a href="#guest-collection_access-{additionalProperties}">{additionalProperties}</a>: {
+            <a href="#guest-collection_access-{additionalProperties}-{additionalProperties}">{additionalProperties}</a>: {
+               <a href="#guest-collection_access-{additionalProperties}-{additionalProperties}-admin_channels">admin_channels</a>: [],
+               <a href="#guest-collection_access-{additionalProperties}-{additionalProperties}-all_channels">all_channels</a>: [],
+               <a href="#guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels">jwt_channels</a>: [],
+               <a href="#guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated">jwt_last_updated</a>: "string"
+            }
+         }
+      },
       <a href="#guest-disabled">disabled</a>: true,
       <a href="#guest-email">email</a>: "string",
       <a href="#guest-jwt_channels">jwt_channels</a>: [],
@@ -1387,18 +1386,52 @@ Content-Length: 120
    <a href="#keypath">keypath</a>: "string",
    <a href="#kv_tls_port">kv_tls_port</a>: 11207,
    <a href="#local_doc_expiry_secs">local_doc_expiry_secs</a>: 7776000,
-   (TODO additionalProperties),
+   <a href="#local_jwt">local_jwt</a>: {
+      <a href="#local_jwt-{additionalProperties}">{additionalProperties}</a>: {
+         <a href="#local_jwt-{additionalProperties}-algorithms">algorithms</a>: [],
+         <a href="#local_jwt-{additionalProperties}-channels_claim">channels_claim</a>: "string",
+         <a href="#local_jwt-{additionalProperties}-client_id">client_id</a>: "string",
+         <a href="#local_jwt-{additionalProperties}-disable_session">disable_session</a>: true,
+         <a href="#local_jwt-{additionalProperties}-issuer">issuer</a>: "string",
+         <a href="#local_jwt-{additionalProperties}-keys">keys</a>: [],
+         <a href="#local_jwt-{additionalProperties}-register">register</a>: true,
+         <a href="#local_jwt-{additionalProperties}-roles_claim">roles_claim</a>: "string",
+         <a href="#local_jwt-{additionalProperties}-user_prefix">user_prefix</a>: "string",
+         <a href="#local_jwt-{additionalProperties}-username_claim">username_claim</a>: "string"
+      }
+   },
    <a href="#max_concurrent_query_ops">max_concurrent_query_ops</a>: 1000,
    <a href="#name">name</a>: "string",
    <a href="#num_index_replicas">num_index_replicas</a>: 1,
    <a href="#offline">offline</a>: false,
    <a href="#oidc">oidc</a>: {
       <a href="#oidc-default_provider">default_provider</a>: "string",
-      (TODO additionalProperties)
+      <a href="#oidc-providers">providers</a>: {
+         <a href="#oidc-providers-{additionalProperties}">{additionalProperties}</a>: {
+            <a href="#oidc-providers-{additionalProperties}-InsecureSkipVerify">InsecureSkipVerify</a>: false,
+            <a href="#oidc-providers-{additionalProperties}-IsDefault">IsDefault</a>: true,
+            <a href="#oidc-providers-{additionalProperties}-Name">Name</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-allow_unsigned_provider_tokens">allow_unsigned_provider_tokens</a>: true,
+            <a href="#oidc-providers-{additionalProperties}-callback_url">callback_url</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-channels_claim">channels_claim</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-client_id">client_id</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-disable_callback_state">disable_callback_state</a>: false,
+            <a href="#oidc-providers-{additionalProperties}-disable_cfg_validation">disable_cfg_validation</a>: false,
+            <a href="#oidc-providers-{additionalProperties}-disable_session">disable_session</a>: true,
+            <a href="#oidc-providers-{additionalProperties}-discovery_url">discovery_url</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-include_access">include_access</a>: true,
+            <a href="#oidc-providers-{additionalProperties}-issuer">issuer</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-register">register</a>: true,
+            <a href="#oidc-providers-{additionalProperties}-roles_claim">roles_claim</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-scope">scope</a>: [],
+            <a href="#oidc-providers-{additionalProperties}-user_prefix">user_prefix</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-username_claim">username_claim</a>: "string",
+            <a href="#oidc-providers-{additionalProperties}-validation_key">validation_key</a>: "string"
+         }
+      }
    },
    <a href="#old_rev_expiry_seconds">old_rev_expiry_seconds</a>: 300,
    <a href="#password">password</a>: "string",
-   <a href="#pool">pool</a>: "default",
    <a href="#query_pagination_limit">query_pagination_limit</a>: 5000,
    replications: {
       <a href="#replications-replication_id">replication_id</a>: {
@@ -1415,22 +1448,24 @@ Content-Length: 120
          <a href="#replications-replication_id-filter">filter</a>: "string",
          <a href="#replications-replication_id-initial_state">initial_state</a>: "running",
          <a href="#replications-replication_id-max_backoff_time">max_backoff_time</a>: 5,
-         <a href="#replications-replication_id-password">password</a>: "string",
          <a href="#replications-replication_id-purge_on_removal">purge_on_removal</a>: false,
          <a href="#replications-replication_id-query_params">query_params</a>: [],
          <a href="#replications-replication_id-remote">remote</a>: "string",
          <a href="#replications-replication_id-remote_password">remote_password</a>: "string",
          <a href="#replications-replication_id-remote_username">remote_username</a>: "string",
          <a href="#replications-replication_id-replication_id">replication_id</a>: "string",
-         <a href="#replications-replication_id-run_as">run_as</a>: "string",
-         <a href="#replications-replication_id-username">username</a>: "string"
+         <a href="#replications-replication_id-run_as">run_as</a>: "string"
       }
    },
-   <a href="#rev_cache_size">rev_cache_size</a>: 0,
    <a href="#revs_limit">revs_limit</a>: 100,
    roles: (unknown),
    <a href="#scopes">scopes</a>: {
-      (TODO additionalProperties)
+      <a href="#scopes-additionalProperties">additionalProperties</a>: {
+         <a href="#scopes-additionalProperties-{additionalProperties}">{additionalProperties}</a>: {
+            <a href="#scopes-additionalProperties-{additionalProperties}-import_filter">import_filter</a>: "function(doc) { if (doc.type != 'mobile') { return false; } return true; }",
+            <a href="#scopes-additionalProperties-{additionalProperties}-sync">sync</a>: "function(doc){channel(doc.channels);}"
+         }
+      }
    },
    <a href="#send_www_authentice_header">send_www_authentice_header</a>: true,
    <a href="#serve_insecure_attachment_types">serve_insecure_attachment_types</a>: false,
@@ -1475,23 +1510,6 @@ Content-Length: 120
    <a href="#view_query_timeout_secs">view_query_timeout_secs</a>: 75
 }
 </pre>
-<h3 id="allow_conflicts" class="discrete"><code>allow_conflicts</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>boolean</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>This controls whether to allow conflicting document revisions.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <h3 id="allow_empty_password" class="discrete"><code>allow_empty_password</code></h3>
 <div class="dlist">
 <dl>
@@ -1746,150 +1764,6 @@ Content-Length: 120
 <div class="openblock">
 <div class="content">
 <p>The minimum number of entries to maintain in the cache per channel.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-channel_cache-query_limit" class="discrete"><code>cache.channel_cache.query_limit</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>integer</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated in favour of the database setting <code>query_pagination_limit</code></strong></p>
-<p>The limit used for channel queries.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-channel_cache_expiry" class="discrete"><code>cache.channel_cache_expiry</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>integer</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.expiry_seconds</code> instead</strong></p>
-<p>The time (seconds) to keep entries in cache beyond the minimum retained.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-channel_cache_max_length" class="discrete"><code>cache.channel_cache_max_length</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>number</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.max_length</code> instead</strong></p>
-<p>The maximum number of entries maintained in cache per channel.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-channel_cache_min_length" class="discrete"><code>cache.channel_cache_min_length</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>integer</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.min_length</code> instead</strong></p>
-<p>The minimum number of entries maintained in cache per channel.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-enable_star_channel" class="discrete"><code>cache.enable_star_channel</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>boolean</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.enable_star_channel</code> instead</strong></p>
-<p>Used to control whether Sync Gateway should use the all documents (*) channel.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-max_num_pending" class="discrete"><code>cache.max_num_pending</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>integer</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.max_num_pending</code> instead</strong></p>
-<p>The max number of pending sequences before skipping.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-max_wait_pending" class="discrete"><code>cache.max_wait_pending</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>number</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.max_wait_pending</code> instead</strong></p>
-<p>The maximum time (in milliseconds) for waiting for a pending sequence before skipping it.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="cache-max_wait_skipped" class="discrete"><code>cache.max_wait_skipped</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>number</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.channel_cache.max_wait_skipped</code> instead</strong></p>
-<p>The maximum time (in milliseconds) for waiting for pending sequences before skipping.</p>
 </div>
 </div>
 </dd>
@@ -2336,23 +2210,6 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h3 id="feed_type" class="discrete"><code>feed_type</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>string</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>The type of feed to use to communicate with Couchbase Server.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <h3 id="guest" class="discrete"><code>guest</code></h3>
 <div class="dlist">
 <dl>
@@ -2417,6 +2274,126 @@ Content-Length: 120
 <div class="content">
 <p>All the channels that the user has been granted access to for the default collection.</p>
 <p>Access could have been granted through the sync function, roles, or explicitly on the user under the <code>admin_channels</code> property.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access" class="discrete"><code>guest.collection_access</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>A set of access grants by scope and collection.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access-{additionalProperties}" class="discrete"><code>guest.collection_access.{additionalProperties}</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>An object keyed by scope, containing a set of collections.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}" class="discrete"><code>guest.collection_access.{additionalProperties}.{additionalProperties}</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>An object keyed by collection name, defines access for the collection.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-admin_channels" class="discrete"><code>guest.collection_access.{additionalProperties}.{additionalProperties}.admin_channels</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>array</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>A list of channels to explicitly grant to the user.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-all_channels" class="discrete"><code>guest.collection_access.{additionalProperties}.{additionalProperties}.all_channels</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>array</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>All the channels that the user has been granted access to.</p>
+<p>Access could have been granted through the sync function, roles, or explicitly on the user under the <code>admin_channels</code> property.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels" class="discrete"><code>guest.collection_access.{additionalProperties}.{additionalProperties}.jwt_channels</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>array</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The channels that the user has been granted access to through channels_claim.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated" class="discrete"><code>guest.collection_access.{additionalProperties}.{additionalProperties}.jwt_last_updated</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The last time that the user's JWT roles/channels were updated.</p>
 </div>
 </div>
 </dd>
@@ -2720,6 +2697,213 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
+<h3 id="local_jwt" class="discrete"><code>local_jwt</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Configuration for Local JWT authentication.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}" class="discrete"><code>local_jwt.{additionalProperties}</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The providers name.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-algorithms" class="discrete"><code>local_jwt.{additionalProperties}.algorithms</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>array</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The JWT signing algorithms to accept for authentication.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-channels_claim" class="discrete"><code>local_jwt.{additionalProperties}.channels_claim</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>If set, the value(s) of the given JSON Web Token claim will be added to the user's channels.</p>
+<p>The value of this claim must be either a string or an array of strings, any other type will result in an error.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-client_id" class="discrete"><code>local_jwt.{additionalProperties}.client_id</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The value to match against the &quot;aud&quot; claim of JWTs. Set to an empty string to disable audience validation.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-disable_session" class="discrete"><code>local_jwt.{additionalProperties}.disable_session</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Disable Sync Gateway session creation on successful JWT authentication.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-issuer" class="discrete"><code>local_jwt.{additionalProperties}.issuer</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The value to match against the &quot;iss&quot; claim of JWTs.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-keys" class="discrete"><code>local_jwt.{additionalProperties}.keys</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>array</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The JSON Web Keys to use to validate JWTs.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-register" class="discrete"><code>local_jwt.{additionalProperties}.register</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>If to register a new Sync Gateway user account when a user logs in with a JWT.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-roles_claim" class="discrete"><code>local_jwt.{additionalProperties}.roles_claim</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>If set, the value(s) of the given JSON Web Token claim will be added to the user's roles.</p>
+<p>The value of this claim must be either a string or an array of strings, any other type will result in an error.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-user_prefix" class="discrete"><code>local_jwt.{additionalProperties}.user_prefix</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>This is the username prefix for all users created through this provider.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="local_jwt-{additionalProperties}-username_claim" class="discrete"><code>local_jwt.{additionalProperties}.username_claim</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Allows a different OpenID Connect field to be specified instead of the Subject (<code>sub</code>).</p>
+<p>The field name to use can be specified here.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
 <h3 id="max_concurrent_query_ops" class="discrete"><code>max_concurrent_query_ops</code></h3>
 <div class="dlist">
 <dl>
@@ -2822,6 +3006,368 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
+<h3 id="oidc-providers" class="discrete"><code>oidc.providers</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>List of OpenID Connect issuers.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}" class="discrete"><code>oidc.providers.{additionalProperties}</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The providers name.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-InsecureSkipVerify" class="discrete"><code>oidc.providers.{additionalProperties}.InsecureSkipVerify</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Determines whether the TLS certificate verification should be disabled for this provider.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-IsDefault" class="discrete"><code>oidc.providers.{additionalProperties}.IsDefault</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Indicates if this is the default OpenID Connect provider.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-Name" class="discrete"><code>oidc.providers.{additionalProperties}.Name</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The name of the OpenID Connect Provider.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-allow_unsigned_provider_tokens" class="discrete"><code>oidc.providers.{additionalProperties}.allow_unsigned_provider_tokens</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Allows users accept unsigned tokens from providers.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-callback_url" class="discrete"><code>oidc.providers.{additionalProperties}.callback_url</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The URL that the OpenID Connect will redirect to after authentication.</p>
+<p>If not provided, a callback URL will be generated.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-channels_claim" class="discrete"><code>oidc.providers.{additionalProperties}.channels_claim</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>If set, the value(s) of the given OpenID Connect authentication token claim will be added to the user's channels.</p>
+<p>The value of this claim must be either a string or an array of strings, any other type will result in an error.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-client_id" class="discrete"><code>oidc.providers.{additionalProperties}.client_id</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The OpenID Connect provider client ID.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-disable_callback_state" class="discrete"><code>oidc.providers.{additionalProperties}.disable_callback_state</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Controls whether to maintain state between the auth request and callback endpoints (<code>/_oidc</code> and <code>/_oidc_callback</code>).</p>
+<p><strong>This is not recommended as it would cause OpenID Connect authentication to be vulnerable to Cross-Site Request Forgery (CSRF, XSRF).</strong></p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-disable_cfg_validation" class="discrete"><code>oidc.providers.{additionalProperties}.disable_cfg_validation</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>This bypasses the configuration validation based on the OpenID Connect specifications. This may be required for some OpenID providers that don't strictly adhere to the specifications.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-disable_session" class="discrete"><code>oidc.providers.{additionalProperties}.disable_session</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Disable Sync Gateway session creation on successful OpenID Connect authentication.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-discovery_url" class="discrete"><code>oidc.providers.{additionalProperties}.discovery_url</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The non-standard discovery endpoint.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-include_access" class="discrete"><code>oidc.providers.{additionalProperties}.include_access</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>This is whether the <code>_oidc_callback</code> response should include the OpenID Connect access token and associated fields (such as <code>token_type</code>, and <code>expires_in</code>).</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-issuer" class="discrete"><code>oidc.providers.{additionalProperties}.issuer</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The URL for the OpenID Connect issuer.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-register" class="discrete"><code>oidc.providers.{additionalProperties}.register</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>boolean</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>If to register a new Sync Gateway user account when a user logs in with OpenID Connect.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-roles_claim" class="discrete"><code>oidc.providers.{additionalProperties}.roles_claim</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>If set, the value(s) of the given OpenID Connect authentication token claim will be added to the user's roles.</p>
+<p>The value of this claim must be either a string or an array of strings, any other type will result in an error.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-scope" class="discrete"><code>oidc.providers.{additionalProperties}.scope</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>array</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The scope sent for the OpenID Connect request.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-user_prefix" class="discrete"><code>oidc.providers.{additionalProperties}.user_prefix</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>This is the username prefix for all users created through this provider.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-username_claim" class="discrete"><code>oidc.providers.{additionalProperties}.username_claim</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Allows a different OpenID Connect field to be specified instead of the Subject (<code>sub</code>).</p>
+<p>The field name to use can be specified here.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="oidc-providers-{additionalProperties}-validation_key" class="discrete"><code>oidc.providers.{additionalProperties}.validation_key</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The OpenID Connect provider client secret.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
 <h3 id="old_rev_expiry_seconds" class="discrete"><code>old_rev_expiry_seconds</code></h3>
 <div class="dlist">
 <dl>
@@ -2851,23 +3397,6 @@ Content-Length: 120
 <div class="openblock">
 <div class="content">
 <p>The password for authenticating to the server.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="pool" class="discrete"><code>pool</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>string</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>This field is unsupported and ignored.</p>
 </div>
 </div>
 </dd>
@@ -3183,26 +3712,6 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h3 id="replications-replication_id-password" class="discrete"><code>replications.replication_id.password</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>string</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>This has been deprecated in favour of <code>remote_password</code>.</strong></p>
-<p>This is the password to use to authenticate with the remote.</p>
-<p>This password will be redacted in the replication config.</p>
-<p>This can only be used for a pull replication.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <h3 id="replications-replication_id-purge_on_removal" class="discrete"><code>replications.replication_id.purge_on_removal</code></h3>
 <div class="dlist">
 <dl>
@@ -3341,43 +3850,6 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h3 id="replications-replication_id-username" class="discrete"><code>replications.replication_id.username</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>string</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>This has been deprecated in favour of <code>remote_username</code>.</strong></p>
-<p>This is the username to use to authenticate with the remote.</p>
-<p>This can only be used for a pull replication.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h3 id="rev_cache_size" class="discrete"><code>rev_cache_size</code></h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>number</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p><strong>Deprecated, please use the database setting <code>cache.rev_cache.size</code> instead</strong></p>
-<p>The maximum number of revisions to store in the revision cache.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
 <h3 id="revs_limit" class="discrete"><code>revs_limit</code></h3>
 <div class="dlist">
 <dl>
@@ -3408,6 +3880,75 @@ The function should return the new documents body. This can be the winning revis
 <div class="openblock">
 <div class="content">
 <p>Scope and collection specific config.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="scopes-additionalProperties" class="discrete"><code>scopes.additionalProperties</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>A map of all the collections with their corresponding configs for this scope</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="scopes-additionalProperties-{additionalProperties}" class="discrete"><code>scopes.additionalProperties.{additionalProperties}</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>object</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The configuration for the individual collection</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="scopes-additionalProperties-{additionalProperties}-import_filter" class="discrete"><code>scopes.additionalProperties.{additionalProperties}.import_filter</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>This is the function that all imported documents in this collection are ran through in order to filter out what to import and what not to import. This allows you to control what is made available to Couchbase Mobile clients. If it is not set, then no documents are filtered when imported.</p>
+<p><code>import_docs</code> in the database config must be true to make this field applicable.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h3 id="scopes-additionalProperties-{additionalProperties}-sync" class="discrete"><code>scopes.additionalProperties.{additionalProperties}.sync</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>string</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>The Javascript function that newly created documents in this collection are ran through.</p>
 </div>
 </div>
 </dd>
