@@ -3015,116 +3015,166 @@ A list of the metrics provided by the Analytics Service.
 </div>
 <div class="openblock">
 <div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 60%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Metric</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unit</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_io_reads_total</code></p>
-<p class="tableblock">Total number of IO reads.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_io_writes_total</code></p>
-<p class="tableblock">Total number of IO writes.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_heap_memory_committed_bytes</code></p>
-<p class="tableblock">Heap memory committed in bytes.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_heap_memory_used_bytes</code></p>
-<p class="tableblock">Heap memory used in bytes.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_direct_memory_used_bytes</code></p>
-<p class="tableblock">Direct memory used in bytes.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_virtual_buffer_cache_used_pages</code></p>
-<p class="tableblock">Total number of used memory pages in the virtual buffer cache.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_gc_count_total</code></p>
-<p class="tableblock">Total number of garbage collections.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_gc_time_milliseconds_total</code></p>
-<p class="tableblock">Total time of garbage collections in milliseconds.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_pending_flush_ops</code></p>
-<p class="tableblock">Total number of pending flush operations.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_pending_merge_ops</code></p>
-<p class="tableblock">Total number of pending merge operations.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_pending_replicate_ops</code></p>
-<p class="tableblock">Total number of pending replication operations.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_disk_used_bytes_total</code></p>
-<p class="tableblock">Total disk used in bytes.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_thread_count</code></p>
-<p class="tableblock">Number of threads in use.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_system_load_average</code></p>
-<p class="tableblock">System work load.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_failed_to_parse_records_count</code></p>
-<p class="tableblock">Number of records which failed to parse.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbas_incoming_records_count</code></p>
-<p class="tableblock">Number of incoming records.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
+<h2 id="cbas_io_reads_total" class="discrete"><code>cbas_io_reads_total</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of IO reads.</p>
+</div>
+<h2 id="cbas_io_writes_total" class="discrete"><code>cbas_io_writes_total</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of IO writes.</p>
+</div>
+<h2 id="cbas_heap_memory_committed_bytes" class="discrete"><code>cbas_heap_memory_committed_bytes</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Heap memory committed in bytes.</p>
+</div>
+<h2 id="cbas_heap_memory_used_bytes" class="discrete"><code>cbas_heap_memory_used_bytes</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Heap memory used in bytes.</p>
+</div>
+<h2 id="cbas_direct_memory_used_bytes" class="discrete"><code>cbas_direct_memory_used_bytes</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Direct memory used in bytes.</p>
+</div>
+<h2 id="cbas_virtual_buffer_cache_used_pages" class="discrete"><code>cbas_virtual_buffer_cache_used_pages</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of used memory pages in the virtual buffer cache.</p>
+</div>
+<h2 id="cbas_gc_count_total" class="discrete"><code>cbas_gc_count_total</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of garbage collections.</p>
+</div>
+<h2 id="cbas_gc_time_milliseconds_total" class="discrete"><code>cbas_gc_time_milliseconds_total</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total time of garbage collections in milliseconds.</p>
+</div>
+<h2 id="cbas_pending_flush_ops" class="discrete"><code>cbas_pending_flush_ops</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of pending flush operations.</p>
+</div>
+<h2 id="cbas_pending_merge_ops" class="discrete"><code>cbas_pending_merge_ops</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of pending merge operations.</p>
+</div>
+<h2 id="cbas_pending_replicate_ops" class="discrete"><code>cbas_pending_replicate_ops</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total number of pending replication operations.</p>
+</div>
+<h2 id="cbas_disk_used_bytes_total" class="discrete"><code>cbas_disk_used_bytes_total</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Total disk used in bytes.</p>
+</div>
+<h2 id="cbas_thread_count" class="discrete"><code>cbas_thread_count</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Number of threads in use.</p>
+</div>
+<h2 id="cbas_system_load_average" class="discrete"><code>cbas_system_load_average</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: System work load.</p>
+</div>
+<h2 id="cbas_failed_to_parse_records_count" class="discrete"><code>cbas_failed_to_parse_records_count</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Number of records which failed to parse.</p>
+</div>
+<h2 id="cbas_incoming_records_count" class="discrete"><code>cbas_incoming_records_count</code></h2>
+<div class="paragraph">
+<p><strong>Type</strong>: gauge</p>
+</div>
+<div class="paragraph">
+<p><strong>Unit</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong>: Number of incoming records.</p>
+</div>
 </div>
 </div>
 </article>

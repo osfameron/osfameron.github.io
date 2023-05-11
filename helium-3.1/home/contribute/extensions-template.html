@@ -6,17 +6,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <script>(window.dataLayer=window.dataLayer||[]).push({event:'gtm.js','gtm.start':+new Date()})</script>
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MVPNN2"></script>
-<title>Database Configuration | Couchbase Capella Staging Docs</title>
-<link rel="canonical" href="https://docs.stage.nonprod-project-avengers.com/sync-gateway/3.1/configuration-schema-database.html">
+<title>Demo of template extension | Couchbase Capella Staging Docs</title>
+<link rel="canonical" href="https://docs.stage.nonprod-project-avengers.com/home/contribute/extensions-template.html">
 <link rel="stylesheet" href="../../_/css/site.css">
 <script src="../../_/js/vendor/jquery.js"></script>
-<meta name="description" content="Using Sync Gateway&#x27;s Admin REST API to configure and manage databases">
 <link rel="schema.dcterms" href="https://purl.org/dc/terms/">
 
 
-<meta name="dcterms.subject" content="sync-gateway">
-<meta name="dcterms.identifier" content="3.1">
-<meta name="page-url" content="/sync-gateway/3.1/configuration-schema-database.html">
+<meta name="dcterms.subject" content="home">
+<meta name="dcterms.identifier" content="master">
+<meta name="page-url" content="/home/contribute/extensions-template.html">
 <meta name="generator" content="Antora 3.0.1">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
 </head>
@@ -60,17 +59,17 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../home/server.html">
+                    <a class="nav-link" href="../server.html">
                       Server
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../home/mobile.html">
+                    <a class="nav-link" href="../mobile.html">
                       Mobile
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../../home/sdk.html">
+                    <a class="nav-link" href="../sdk.html">
                       SDKs
                     </a>
                   </li>
@@ -92,178 +91,61 @@
     </div>
    </div>
 </header>
-<div class="body container">
+<div class="body container openapi">
 <aside class="nav left-sidebar">
   <div class="nav-container">
     <a href="#" class="menu-expand-toggle"><span>Navigation</span><i class="fas fa-times-circle"></i><i class="fas fa-chevron-circle-left"></i></a>
 <div class="components">
   <div class="components_group-title">
-    <a href="../../home/mobile.html">Mobile</a>
+    Home
   </div>
   <ul class="components_list">
     <li class="components_list-items">
       <div class="component_list-version">
-        <span class="component_list_title">Sync Gateway</span>
-        <select class="version_list" data-component="sync-gateway">
-          <option value="3.1" data-url="index.html" selected>3.1</option>
-        </select>
+        <span class="component_list_title">Home</span>
       </div>
-      <div class="version_items hide" data-version="3.1">
+      <div class="version_items hide" data-version="master">
 <ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="introduction.html">Introduction</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="whatsnew.html"><strong><em>New in 3.1</em></strong></a>
-  </span>
-</li>
 <li class="menu_list is-parent closed" data-depth="0">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Start Here!</span>
+    <span class="menu_title menu_text">Contributing to the Documentation</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="1">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="index.html">Quick Links</a>
+    <a class="menu_title menu_link" href="index.html">Overview</a>
   </span>
 </li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="get-started-prepare.html">Prepare</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="get-started-install.html">Install</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="get-started-verify-install.html">Verify</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="data-modeling.html">Data Modeling</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Configuration</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-overview.html">Overview</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-schema-bootstrap.html">Bootstrap</a>
-  </span>
-</li>
-<li class="menu_list is-current-page" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link is-current-page" href="configuration-schema-database.html">Database</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-schema-db-security.html">Database Security</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-schema-access-control.html">Access Control</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-schema-import-filter.html">Import Filter</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-schema-isgr.html">Inter-Sync&#160;Gateway Replication</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-properties-legacy.html">Legacy Pre-3.0 Configuration</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-javascript-functions.html">Javascript Functions</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="configuration-environment-variables.html">Environment Variables</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Security</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="secure-sgw-access.html">Secure Access</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="authentication-users.html">User Authentication</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="authentication-certs.html">TLS Cert Authentication</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Access Control</span>
-  </span>
-<ul class="menu_row">
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="access-control-concepts.html">Concepts</a>
+    <span class="menu_title menu_text">Setting Up Your Workspace</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-model.html">Access Control Model</a>
+    <a class="menu_title menu_link" href="install-git-and-editor.html">Install Git and an AsciiDoc Editor</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="channels.html">Channels</a>
+    <a class="menu_title menu_link" href="install-antora.html">Install Antora</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="roles.html">Roles</a>
+    <a class="menu_title menu_link" href="playbook.html">Get the Site Playbook Project</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="users.html">Users</a>
+    <a class="menu_title menu_link" href="set-up-repository.html">Set Up Your Local Repository</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="build-site.html">Build the Site</a>
   </span>
 </li>
 </ul>
@@ -271,413 +153,149 @@
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="sync-function.html">Sync Function</a>
+    <span class="menu_title menu_text">Contributing Workflow</span>
   </span>
 <ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="workflow-overview.html">Overview</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="repositories.html">Repository Organization</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="create-branches.html">Create a Working Branch</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="edit-pages.html">Edit Existing Documentation</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="add-pages.html">Add a New Documentation Page</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="update-nav.html">Update a Navigation File</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="test-site.html">Test Changes Locally</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="send-pr.html">Send Changes for Review</a>
+  </span>
+</li>
+</ul>
+</li>
+<li class="menu_list is-parent closed" data-depth="1">
+  <span class="menu_line">
+    <span class="in-toggle"></span>
+    <span class="menu_title menu_text">Writing Documentation</span>
+  </span>
+<ul class="menu_row">
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="asciidoc-overview.html">Overview</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="pages.html">Standard Document Structure</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="basics.html">AsciiDoc Basics</a>
+  </span>
+</li>
 <li class="menu_list is-parent closed" data-depth="2">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="sync-function-api.html">API Reference</a>
+    <a class="menu_title menu_link" href="cross-references.html">Cross References</a>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="3">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-access-cmd.html">access()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-channel-cmd.html">channel()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-expiry-cmd.html">expiry()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-require-access-cmd.html">requireAccess()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-require-admin-cmd.html">requireAdmin()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-require-role-cmd.html">requireRole()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-require-user-cmd.html">requireUser()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-role-cmd.html">role()</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="3">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-function-api-throw-cmd.html">throw()</a>
+    <a class="menu_title menu_link" href="ids.html">IDs and Same-Page Cross References</a>
   </span>
 </li>
 </ul>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="code-blocks.html">Code Blocks and Callouts</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="tabs.html">Tabs Sets</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="attributes-and-roles.html">Attributes and Roles</a>
+  </span>
+</li>
+<li class="menu_list" data-depth="2">
+  <span class="menu_line">
+    <a class="menu_title menu_link" href="includes.html">Include Examples and Partials</a>
+  </span>
 </li>
 </ul>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <a class="menu_title menu_link" href="access-control-how.html">How-to</a>
+    <span class="menu_title menu_text">Conventions &amp; Styles</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-how-create-users.html">Create Users</a>
+    <a class="menu_title menu_link" href="component-configuration.html">Component Structure and Configuration</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-how-create-roles.html">Create Roles</a>
+    <a class="menu_title menu_link" href="nav-menus-and-files.html">Navigation Menus and Files</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-how-assign-users-to-roles.html">Assign User to Role</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-how-control-document-access.html">Control Document Access</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-how-verify-access.html">Verify Access</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="access-control-how-use-xattrs-for-access-grants.html">Use XATTRS for Access Grants</a>
+    <a class="menu_title menu_link" href="style-and-voice.html">Content Style and Voice</a>
   </span>
 </li>
 </ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="auto-purge-channel-access-revocation.html">Auto-Purge Channel Access Revocation</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">REST API</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="rest-api-access.html">Secure Access</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="rest-api-admin.html">Admin REST API</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="rest-api-metrics.html">Metrics REST API</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="rest-api.html">Public REST API</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="rest-api-access-rbac-roles.html">RBAC Role - Endpoint Cross-Reference</a>
-  </span>
 </li>
 <li class="menu_list is-parent closed" data-depth="1">
   <span class="menu_line">
     <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Static API Pages</span>
+    <span class="menu_title menu_text">Technical details</span>
   </span>
 <ul class="menu_row">
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="rest_api_admin_static.html">Admin REST API (Static Page)</a>
+    <a class="menu_title menu_link" href="generate-rest-api.html">Generate REST API Documentation</a>
   </span>
 </li>
 <li class="menu_list" data-depth="2">
   <span class="menu_line">
-    <a class="menu_title menu_link" href="rest_api_public_static.html">Public REST API (Static Page)</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="rest_api_metrics_static.html">Metrics REST API (Static Page)</a>
+    <a class="menu_title menu_link" href="extensions.html">Site Extensions</a>
   </span>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Sync</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-with-couchbase-server.html">Sync with Server</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-using-app.html">Sync with Application</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Inter-Sync Gateway Replication</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-inter-syncgateway-overview.html">Overview</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-inter-syncgateway-run.html">Initialize</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-inter-syncgateway-manage.html">Manage</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-inter-syncgateway-monitor.html">Monitor</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sync-inter-syncgateway-conflict-resolution.html">Inter Syncgateway Conflict Resolution</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="delta-sync.html">Delta Sync</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="import-filter.html">Import Filter</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Manage</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="revisions.html">Revisions</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="managing-tombstones.html">Tombstones</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="resync.html">Resync</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="stats-monitoring.html">Stats Monitoring</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="database-offline.html">Database Offline</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="1">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Logging and Troubleshooting</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="logging.html">Logging</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="2">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="sgcollect-info.html">SG Collect Info</a>
-  </span>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Deploy</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="deployment.html">Overview</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="command-line-options.html">Command Line Options</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="load-balancer.html">Load Balancer</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="os-level-tuning.html">OS Level Tuning</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="webhooks.html">Webhooks</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="changes-feed.html">Changes Feed</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="stats-prometheus.html">Prometheus Feed</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="indexing.html">Indexing</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="setting-up-dr-cluster.html">Disaster Recovery</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="upgrading.html">Upgrade</a>
-  </span>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Use Kubernetes</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="deploy-cluster-to-kubernetes.html">Deploy</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="#operator:ROOT:tutorial-sync-gateway-manage.adoc">Manage a Sync Gateway Cluster</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="#operator:ROOT:tutorial-sync-gateway-clients.adoc">Expose Sync Gateway to Couchbase Lite clients</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Server Compatibility</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="server-compatibility-collections.html">Collections</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="server-compatibility-eventing.html">Eventing</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="server-compatibility-transactions.html">Transactions</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="server-compatibility-xdcr.html">XDCR</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list is-parent closed" data-depth="0">
-  <span class="menu_line">
-    <span class="in-toggle"></span>
-    <span class="menu_title menu_text">Product Notes</span>
-  </span>
-<ul class="menu_row">
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="release-notes.html">Release Notes</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="supported-environments.html">Supported Environments</a>
-  </span>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="compatibility.html">Compatibility Matrix</a>
-  </span>
-</li>
-</ul>
-</li>
-<li class="menu_list" data-depth="1">
-  <span class="menu_line">
-    <a class="menu_title menu_link" href="glossary.html">Glossary</a>
-  </span>
 </li>
 </ul>
       </div>
@@ -688,11 +306,11 @@
 </aside>
 <aside class="toc sidebar"
       data-title="Contents"
-      data-levels="2">
+      data-levels="1">
   <div class="sidebar-box">
     <div class="tools" role="navigation">
 <ul>
-<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-sync-gateway/modules/ROOT/pages/configuration-schema-database.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-site/home/modules/contribute/pages/extensions-template.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
 </ul>
 </div>
     <div class="toc-menu"></div>
@@ -750,552 +368,172 @@
 <div class="article-header">
 <nav class="crumbs" aria-label="breadcrumbs">
 <ul>
-<li class="crumb"><a href="index.html">Sync Gateway</a></li>
-<li class="crumb">Configuration</li>
-<li class="crumb"><a href="configuration-schema-database.html">Database</a></li>
+<li class="crumb"><a href="extensions-template.html">Demo of template extension</a></li>
 </ul>
 </nav>
 </div>
 <article class="doc">
 <div class="page-heading-title">
-<h1 class="page">Database Configuration</h1>
+<h1 class="page">Demo of template extension</h1>
 </div>
 <div class="contributor-list-box">
 <span class="last-commit-date" id="commitdate">    </span>
 <ul id="contributorList"></ul>
 <span  id="otherContributor"> + </span>
-</div><div id="preamble">
+</div><div class="sect1">
+<h2 id="metrics-example"><a class="anchor" href="#metrics-example"></a>Metrics example</h2>
 <div class="sectionbody">
-<div class="quoteblock abstract">
-<blockquote>
 <div class="paragraph">
-<p>Using Sync Gateway&#8217;s Admin REST API to configure and manage databases<br></p>
+<p>A (partial) listing of <code>kv-metrics.json</code>.
+Relating to <a href="https://issues.couchbase.com/browse/DOC-10720">DOC-10720</a></p>
 </div>
-</blockquote>
+<div class="openblock">
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 60%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_bg_batch_size</code></p>
+<p class="tableblock">Batch size for background fetches</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">count</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_bg_load_seconds</code></p>
+<p class="tableblock">bg fetches waiting for disk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_bg_wait_seconds</code></p>
+<p class="tableblock">bg fetches waiting in the dispatcher queue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_cmd_duration_seconds</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_cmd_lookup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">count</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>kv_cmd_lookup_10s_count</code></p>
+<p class="tableblock">The number of lookup operations performed within the last 10 seconds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">count</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="yaml-support"><a class="anchor" href="#yaml-support"></a>YAML support</h2>
+<div class="sectionbody">
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Try: A successful test</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="included-template"><a class="anchor" href="#included-template"></a>Included template</h2>
+<div class="sectionbody">
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>This is a included Handlebars template!</p>
 </div>
 <div class="paragraph">
-<p><em>Related  topics</em>:  <a href="configuration-overview.html" class="xref page">Overview</a>  |  <a href="configuration-schema-bootstrap.html" class="xref page">Bootstrap</a>  |  Database  |  <a href="#configuration-schema-db-security&.adoc#8212;&#8203;page}" class="xref unresolved">Database Security</a>  |  <a href="configuration-schema-access-control.html" class="xref page">Access Control</a> |  <a href="configuration-schema-import-filter.html" class="xref page">Import</a> |  <a href="configuration-schema-isgr.html" class="xref page">Inter-Sync Gateway Replication</a></p>
+<p>Type: gauge</p>
 </div>
-<div class="admonitionblock important">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="datafile-not-found"><a class="anchor" href="#datafile-not-found"></a>Datafile not found</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following should give an error</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>ERROR (template-block): Data file example$this-file-does-not-exist.json not resolved</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="helpers-and-partials"><a class="anchor" href="#helpers-and-partials"></a>Helpers and Partials</h2>
+<div class="sectionbody">
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Hello from the foo helper!</p>
+</div>
+<div class="paragraph">
+<p>This is some text from a partial</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="each-openapi-helper"><a class="anchor" href="#each-openapi-helper"></a>each-openapi helper.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This handlebars Block Helper should work with both YAML and JSON.</p>
+</div>
+<div class="paragraph">
+<p>This requires output collated into a single file, for example using:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">redocly bundle \
+    ~/couchbase/sync_gateway/docs/api/admin.yaml \
+    --dereferenced \
+    --ext json \
+    --output bundled-admin.json</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Pass in a schema node, in this example <code>components.schemas.Database</code>.
+The macro descends into each <code>properties</code> object and generates a table of contents.</p>
+</div>
+<div class="paragraph">
+<p>In addition, we pass the contents of each node in turn to the Handlebars template contained in the <code>{{#each-openapi}}</code> block.</p>
+</div>
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div class="title">Pre-3.0 Legacy Configuration Equivalents</div>
-<div class="paragraph">
-<p>This content describes configuration for Sync Gateway 3.0 and higher&#8201;&#8212;&#8201;for legacy configuration, see: <a href="configuration-properties-legacy.html" class="xref page">Legacy Pre-3.0 Configuration</a></p>
-</div>
+handling <code>additionalProperties</code> is not yet implemented.
 </td>
 </tr>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>From <em>Sync&#160;Gateway</em> 3.0 you can use the Admin REST API to provision persistent configuration changes.
-This content introduces the <a href="#lbl-create-db">Create Database</a> and <a href="#lbl-configure-db">Configure Database</a> endpoints for convenience&#8201;&#8212;&#8201;see <a href="rest-api-admin.html#/Database_Configuration/" class="xref page">Database Configuration</a> for a full description of the endpoints available.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="lbl-create-db"><a class="anchor" href="#lbl-create-db"></a>Create Database</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre>PUT {url}/{dbname}/</pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<p>This is to create a new database for Sync Gateway.</p>
-<p>The new database name will be the name specified in the URL, not what is specified in the request body database configuration.</p>
-<p>If the bucket is not provided in the database configuration, Sync Gateway will attempt to find and use the database name as the bucket.</p>
-<p>By default, the new database will be brought online immediately. This can be avoided by including <code>&quot;offline&quot;: true</code> in the configuration in the request body.</p>
-<p>Required Sync Gateway RBAC roles:</p>
-<ul>
-<li>Sync Gateway Architect</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h3>
-
-</div>
-<div class="sect2">
-<h3 id="path-parameters"><a class="anchor" href="#path-parameters"></a>Path Parameters</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>db</strong><br>
-<em>required</em></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<p>The name of the database to run the operation against.</p>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="body-parameter"><a class="anchor" href="#body-parameter"></a>Body Parameter</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Body</strong><br>
-<em>optional</em></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<p>The configuration to use for the new database</p>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#DatabaseConfig">DatabaseConfig</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="query-parameters"><a class="anchor" href="#query-parameters"></a>Query Parameters</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>disable_oidc_validation</strong><br>
-<em>optional</em></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<p>If set, will not attempt to validate the configured OpenID Connect providers are reachable.</p>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Default:</strong> <code>false</code></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="responses"><a class="anchor" href="#responses"></a>Responses</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 60%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">HTTP Code</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Database created successfully</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>There was a problem with your request</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An authentication failure occurred</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A database already exists for this bucket</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">412</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A database under that name already exists</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A server error occurred</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="example"><a class="anchor" href="#example"></a>Example</h3>
-<div class="exampleblock">
-<div class="title">Example 1. Create database</div>
-<div class="content">
-<div class="paragraph">
-<p>Here we create a new sync&#160;gateway database.</p>
-</div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset1_curl"></a>Curl</p>
-</li>
-<li>
-<p><a id="tabset1_http"></a>HTTP</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset1_curl">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl --location --request PUT 'http://127.0.0.1:4985/traveldb/' \ <i class="conum" data-value="1"></i><b>(1)</b>
---header 'Authorization: Basic c3luY19nYXRld2F5OnBhc3N3b3Jk' \ <i class="conum" data-value="2"></i><b>(2)</b>
---header 'Content-Type: application/json' \
---data-raw '{
-"bucket": "todo", <i class="conum" data-value="3"></i><b>(3)</b>
-"num_index_replicas": 0}'</code></pre>
-</div>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset1_http">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-http hljs" data-lang="http">PUT /traveldb/ HTTP/1.1 <i class="conum" data-value="1"></i><b>(1)</b>
-Host: 127.0.0.1:4985
-Authorization: Basic c3luY19nYXRld2F5OnBhc3N3b3Jk <i class="conum" data-value="2"></i><b>(2)</b>
-Content-Type: application/json
-Content-Length: 44
-
-{
-"bucket": "todo", <i class="conum" data-value="3"></i><b>(3)</b>
-"num_index_replicas": 0}</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here we create a sync&#160;gateway database called <code>traveldb</code></td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Note we are using Basic Authentication here to authenticate against an existing Couchbase Server RBAC user</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Here we point to the Couchbase Server bucket called <code>todo</code></td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="lbl-configure-db"><a class="anchor" href="#lbl-configure-db"></a>Configure Database</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre>PUT {url}/{db}/_config</pre>
-</div>
-</div>
-<div class="openblock">
-<div class="content">
-<p>This is used to update the database configuration fields specified. Only the fields specified in the request will have their values replaced.</p>
-<p>The bucket and database name cannot be changed. If these need to be changed, the database will need to be deleted then recreated with the new settings.</p>
-<p>Required Sync Gateway RBAC roles:</p>
-<ul>
-<li>Sync Gateway Architect</li>
-<li>Sync Gateway Application</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="parameters-2"><a class="anchor" href="#parameters-2"></a>Parameters</h3>
-
-</div>
-<div class="sect2">
-<h3 id="path-parameters-2"><a class="anchor" href="#path-parameters-2"></a>Path Parameters</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>db</strong><br>
-<em>required</em></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<p>The name of the database to run the operation against.</p>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="body-parameter-2"><a class="anchor" href="#body-parameter-2"></a>Body Parameter</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Body</strong><br>
-<em>optional</em></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<p>The database configuration fields to update</p>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#DatabaseConfig">DatabaseConfig</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="header-parameters"><a class="anchor" href="#header-parameters"></a>Header Parameters</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 50%;">
-<col style="width: 16.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>If-Match</strong><br>
-<em>optional</em></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<p>If set to a configuration's Etag value, enables optimistic concurrency control for the request. Returns HTTP 412 if another update happened underneath this one.</p>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="responses-2"><a class="anchor" href="#responses-2"></a>Responses</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 60%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">HTTP Code</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Database configuration successfully updated</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>There was a problem with your request</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Not Found</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">412</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Precondition Failed  The supplied If-Match header did not match the current version of the configuration.  Returned when optimistic concurrency control is used, and there has been an update to the configuration in between this update.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="example-2"><a class="anchor" href="#example-2"></a>Example</h3>
-<div class="exampleblock">
-<div class="title">Example 2. Configure database</div>
-<div class="content">
-<div class="paragraph">
-<p>Here we configure an existing sync&#160;gateway database.</p>
-</div>
-<div class="tabset is-loading">
-<div class="ulist tabs">
-<ul>
-<li>
-<p><a id="tabset2_curl"></a>Curl</p>
-</li>
-<li>
-<p><a id="tabset2_http"></a>HTTP</p>
-</li>
-</ul>
-</div>
-<div class="content">
-<div class="tab-pane" aria-labelledby="tabset2_curl">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl --location --request PUT 'http://127.0.0.1:4985/traveldb/_config/' \ <i class="conum" data-value="1"></i><b>(1)</b>
---header 'Authorization: Basic c3luY19nYXRld2F5OnBhc3N3b3Jk' \ <i class="conum" data-value="2"></i><b>(2)</b>
---header 'Content-Type: application/json' \
---data-raw '{
-  "enable_shared_bucket_access": true,
-  "import_docs": true
-}' <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
-</div>
-</div>
-</div>
-<div class="tab-pane" aria-labelledby="tabset2_http">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-http hljs" data-lang="http">PUT /traveldb/_config/ HTTP/1.1  <i class="conum" data-value="1"></i><b>(1)</b>
-Host: 127.0.0.1:4985
-Authorization: Basic c3luY19nYXRld2F5OnBhc3N3b3Jk  <i class="conum" data-value="2"></i><b>(2)</b>
-Content-Type: application/json
-Content-Length: 120
-
-{
-"enable_shared_bucket_access": true,
-"import_docs": true
-} <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Here we choose to configure (<code>_config</code>) a sync&#160;gateway database called <code>traveldb</code></td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Note we are using Basic Authentication here to authenticate against an existing Couchbase Server RBAC user</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Here we toggle a couple of database properties</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_database"><a class="anchor" href="#_database"></a>Schema</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section shows Sync Gateway&#8217;s database configuration settings in schema format for convenience in constructing JSON models for use in the Admin REST API.</p>
-</div>
-<div class="paragraph">
-<p>The configuration settings described here are provisioned through the <a href="rest-api-admin.html#/Database_Configuration/" class="xref page">Database Configuration</a> endpoints.</p>
 </div>
 <div class="openblock">
 <div class="content">
@@ -1309,7 +547,7 @@ Content-Length: 120
       <a href="#cache-channel_cache">channel_cache</a>: {
          <a href="#cache-channel_cache-compact_high_watermark_pct">compact_high_watermark_pct</a>: 80,
          <a href="#cache-channel_cache-compact_low_watermark_pct">compact_low_watermark_pct</a>: 60,
-         <a href="#cache-channel_cache-enable_star_channel">enable_star_channel</a>: true,
+         <a href="#cache-channel_cache-enable_star_channel">enable_star_channel</a>: false,
          <a href="#cache-channel_cache-expiry_seconds">expiry_seconds</a>: 60,
          <a href="#cache-channel_cache-max_length">max_length</a>: 500,
          <a href="#cache-channel_cache-max_num_pending">max_num_pending</a>: 10000,
@@ -1326,11 +564,6 @@ Content-Length: 120
    <a href="#certpath">certpath</a>: "string",
    <a href="#client_partition_window_secs">client_partition_window_secs</a>: 2592000,
    <a href="#compact_interval_days">compact_interval_days</a>: 1,
-   <a href="#cors">cors</a>: {
-      <a href="#cors-headers">headers</a>: [],
-      <a href="#cors-login_origin">login_origin</a>: [],
-      <a href="#cors-origin">origin</a>: []
-   },
    <a href="#delta_sync">delta_sync</a>: {
       <a href="#delta_sync-enabled">enabled</a>: false,
       <a href="#delta_sync-rev_max_age_seconds">rev_max_age_seconds</a>: 86400
@@ -1342,9 +575,7 @@ Content-Length: 120
          <a href="#event_handlers-db_state_changed-filter">filter</a>: "string",
          <a href="#event_handlers-db_state_changed-handler">handler</a>: "string",
          <a href="#event_handlers-db_state_changed-options">options</a>: {
-            <a href="#event_handlers-db_state_changed-options-{additionalProperties}">{additionalProperties...}</a>: {
-
-            }
+            <a href="#event_handlers-db_state_changed-options-additionalProperties">additionalProperties</a>: (unknown)
          },
          <a href="#event_handlers-db_state_changed-timeout">timeout</a>: 0,
          <a href="#event_handlers-db_state_changed-url">url</a>: "string"
@@ -1353,9 +584,7 @@ Content-Length: 120
          <a href="#event_handlers-document_changed-filter">filter</a>: "string",
          <a href="#event_handlers-document_changed-handler">handler</a>: "string",
          <a href="#event_handlers-document_changed-options">options</a>: {
-            <a href="#event_handlers-document_changed-options-{additionalProperties}">{additionalProperties...}</a>: {
-
-            }
+            <a href="#event_handlers-document_changed-options-additionalProperties">additionalProperties</a>: (unknown)
          },
          <a href="#event_handlers-document_changed-timeout">timeout</a>: 0,
          <a href="#event_handlers-document_changed-url">url</a>: "string"
@@ -1469,12 +698,10 @@ Content-Length: 120
    <a href="#revs_limit">revs_limit</a>: 100,
    roles: (unknown),
    <a href="#scopes">scopes</a>: {
-      <a href="#scopes-{additionalProperties}">{additionalProperties...}</a>: {
-         <a href="#scopes-{additionalProperties}-collections">collections</a>: {
-            <a href="#scopes-{additionalProperties}-collections-{additionalProperties}">{additionalProperties...}</a>: {
-               <a href="#scopes-{additionalProperties}-collections-{additionalProperties}-import_filter">import_filter</a>: "function(doc) { if (doc.type != 'mobile') { return false; } return true; }",
-               <a href="#scopes-{additionalProperties}-collections-{additionalProperties}-sync">sync</a>: "function(doc){channel("collection name");}"
-            }
+      <a href="#scopes-additionalProperties">additionalProperties</a>: {
+         <a href="#scopes-additionalProperties-{additionalProperties}">{additionalProperties...}</a>: {
+            <a href="#scopes-additionalProperties-{additionalProperties}-import_filter">import_filter</a>: "function(doc) { if (doc.type != 'mobile') { return false; } return true; }",
+            <a href="#scopes-additionalProperties-{additionalProperties}-sync">sync</a>: "function(doc){channel(doc.channels);}"
          }
       }
    },
@@ -1521,7 +748,7 @@ Content-Length: 120
    <a href="#view_query_timeout_secs">view_query_timeout_secs</a>: 75
 }
 </pre>
-<h4 id="allow_empty_password" class="discrete"><code>allow_empty_password</code></h4>
+<h3 id="allow_empty_password" class="discrete"><code>allow_empty_password</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1538,7 +765,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="bucket" class="discrete"><code>bucket</code></h4>
+<h3 id="bucket" class="discrete"><code>bucket</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1555,7 +782,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="bucket_op_timeout_ms" class="discrete"><code>bucket_op_timeout_ms</code></h4>
+<h3 id="bucket_op_timeout_ms" class="discrete"><code>bucket_op_timeout_ms</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1572,7 +799,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cacertpath" class="discrete"><code>cacertpath</code></h4>
+<h3 id="cacertpath" class="discrete"><code>cacertpath</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1589,7 +816,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache" class="discrete"><code>cache.channel_cache</code></h4>
+<h3 id="cache-channel_cache" class="discrete"><code>cache.channel_cache</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1606,7 +833,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-compact_high_watermark_pct" class="discrete"><code>cache.channel_cache.compact_high_watermark_pct</code></h4>
+<h3 id="cache-channel_cache-compact_high_watermark_pct" class="discrete"><code>cache.channel_cache.compact_high_watermark_pct</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1625,7 +852,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-compact_low_watermark_pct" class="discrete"><code>cache.channel_cache.compact_low_watermark_pct</code></h4>
+<h3 id="cache-channel_cache-compact_low_watermark_pct" class="discrete"><code>cache.channel_cache.compact_low_watermark_pct</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1644,7 +871,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-enable_star_channel" class="discrete"><code>cache.channel_cache.enable_star_channel</code></h4>
+<h3 id="cache-channel_cache-enable_star_channel" class="discrete"><code>cache.channel_cache.enable_star_channel</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1661,7 +888,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-expiry_seconds" class="discrete"><code>cache.channel_cache.expiry_seconds</code></h4>
+<h3 id="cache-channel_cache-expiry_seconds" class="discrete"><code>cache.channel_cache.expiry_seconds</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1678,7 +905,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-max_length" class="discrete"><code>cache.channel_cache.max_length</code></h4>
+<h3 id="cache-channel_cache-max_length" class="discrete"><code>cache.channel_cache.max_length</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1695,7 +922,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-max_num_pending" class="discrete"><code>cache.channel_cache.max_num_pending</code></h4>
+<h3 id="cache-channel_cache-max_num_pending" class="discrete"><code>cache.channel_cache.max_num_pending</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1712,7 +939,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-max_number" class="discrete"><code>cache.channel_cache.max_number</code></h4>
+<h3 id="cache-channel_cache-max_number" class="discrete"><code>cache.channel_cache.max_number</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1729,7 +956,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-max_wait_pending" class="discrete"><code>cache.channel_cache.max_wait_pending</code></h4>
+<h3 id="cache-channel_cache-max_wait_pending" class="discrete"><code>cache.channel_cache.max_wait_pending</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1746,7 +973,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-max_wait_skipped" class="discrete"><code>cache.channel_cache.max_wait_skipped</code></h4>
+<h3 id="cache-channel_cache-max_wait_skipped" class="discrete"><code>cache.channel_cache.max_wait_skipped</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1763,7 +990,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-channel_cache-min_length" class="discrete"><code>cache.channel_cache.min_length</code></h4>
+<h3 id="cache-channel_cache-min_length" class="discrete"><code>cache.channel_cache.min_length</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1780,7 +1007,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-rev_cache" class="discrete"><code>cache.rev_cache</code></h4>
+<h3 id="cache-rev_cache" class="discrete"><code>cache.rev_cache</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1797,7 +1024,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-rev_cache-shard_count" class="discrete"><code>cache.rev_cache.shard_count</code></h4>
+<h3 id="cache-rev_cache-shard_count" class="discrete"><code>cache.rev_cache.shard_count</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1814,7 +1041,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cache-rev_cache-size" class="discrete"><code>cache.rev_cache.size</code></h4>
+<h3 id="cache-rev_cache-size" class="discrete"><code>cache.rev_cache.size</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1831,7 +1058,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="certpath" class="discrete"><code>certpath</code></h4>
+<h3 id="certpath" class="discrete"><code>certpath</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1848,7 +1075,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="client_partition_window_secs" class="discrete"><code>client_partition_window_secs</code></h4>
+<h3 id="client_partition_window_secs" class="discrete"><code>client_partition_window_secs</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1866,7 +1093,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="compact_interval_days" class="discrete"><code>compact_interval_days</code></h4>
+<h3 id="compact_interval_days" class="discrete"><code>compact_interval_days</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1884,75 +1111,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="cors" class="discrete"><code>cors</code></h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>object</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>CORS configuration for this database; if present, overrides server's config.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h4 id="cors-headers" class="discrete"><code>cors.headers</code></h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>array</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>List of allowed headers</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h4 id="cors-login_origin" class="discrete"><code>cors.login_origin</code></h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>array</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>List of allowed login origins</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h4 id="cors-origin" class="discrete"><code>cors.origin</code></h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>array</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>List of allowed origins, use ['*'] to allow access from everywhere</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h4 id="delta_sync" class="discrete"><code>delta_sync</code></h4>
+<h3 id="delta_sync" class="discrete"><code>delta_sync</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1970,7 +1129,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="delta_sync-enabled" class="discrete"><code>delta_sync.enabled</code></h4>
+<h3 id="delta_sync-enabled" class="discrete"><code>delta_sync.enabled</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1988,7 +1147,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="delta_sync-rev_max_age_seconds" class="discrete"><code>delta_sync.rev_max_age_seconds</code></h4>
+<h3 id="delta_sync-rev_max_age_seconds" class="discrete"><code>delta_sync.rev_max_age_seconds</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2006,7 +1165,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="disable_password_auth" class="discrete"><code>disable_password_auth</code></h4>
+<h3 id="disable_password_auth" class="discrete"><code>disable_password_auth</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2023,7 +1182,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="enable_shared_bucket_access" class="discrete"><code>enable_shared_bucket_access</code></h4>
+<h3 id="enable_shared_bucket_access" class="discrete"><code>enable_shared_bucket_access</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2040,7 +1199,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers" class="discrete"><code>event_handlers</code></h4>
+<h3 id="event_handlers" class="discrete"><code>event_handlers</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2057,7 +1216,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-db_state_changed-filter" class="discrete"><code>event_handlers.db_state_changed.filter</code></h4>
+<h3 id="event_handlers-db_state_changed-filter" class="discrete"><code>event_handlers.db_state_changed.filter</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2074,7 +1233,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-db_state_changed-handler" class="discrete"><code>event_handlers.db_state_changed.handler</code></h4>
+<h3 id="event_handlers-db_state_changed-handler" class="discrete"><code>event_handlers.db_state_changed.handler</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2091,7 +1250,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-db_state_changed-options" class="discrete"><code>event_handlers.db_state_changed.options</code></h4>
+<h3 id="event_handlers-db_state_changed-options" class="discrete"><code>event_handlers.db_state_changed.options</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2108,13 +1267,10 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-db_state_changed-options-{additionalProperties}" class="discrete"><code>event_handlers.db_state_changed.options.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="event_handlers-db_state_changed-options-additionalProperties" class="discrete"><code>event_handlers.db_state_changed.options.additionalProperties</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
-<dd>
-<p>object</p>
-</dd>
 <dt class="hdlist1">Description</dt>
 <dd>
 <div class="openblock">
@@ -2125,7 +1281,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-db_state_changed-timeout" class="discrete"><code>event_handlers.db_state_changed.timeout</code></h4>
+<h3 id="event_handlers-db_state_changed-timeout" class="discrete"><code>event_handlers.db_state_changed.timeout</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2142,7 +1298,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-db_state_changed-url" class="discrete"><code>event_handlers.db_state_changed.url</code></h4>
+<h3 id="event_handlers-db_state_changed-url" class="discrete"><code>event_handlers.db_state_changed.url</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2159,7 +1315,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-document_changed-filter" class="discrete"><code>event_handlers.document_changed.filter</code></h4>
+<h3 id="event_handlers-document_changed-filter" class="discrete"><code>event_handlers.document_changed.filter</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2176,7 +1332,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-document_changed-handler" class="discrete"><code>event_handlers.document_changed.handler</code></h4>
+<h3 id="event_handlers-document_changed-handler" class="discrete"><code>event_handlers.document_changed.handler</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2193,7 +1349,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-document_changed-options" class="discrete"><code>event_handlers.document_changed.options</code></h4>
+<h3 id="event_handlers-document_changed-options" class="discrete"><code>event_handlers.document_changed.options</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2210,13 +1366,10 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-document_changed-options-{additionalProperties}" class="discrete"><code>event_handlers.document_changed.options.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="event_handlers-document_changed-options-additionalProperties" class="discrete"><code>event_handlers.document_changed.options.additionalProperties</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
-<dd>
-<p>object</p>
-</dd>
 <dt class="hdlist1">Description</dt>
 <dd>
 <div class="openblock">
@@ -2227,7 +1380,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-document_changed-timeout" class="discrete"><code>event_handlers.document_changed.timeout</code></h4>
+<h3 id="event_handlers-document_changed-timeout" class="discrete"><code>event_handlers.document_changed.timeout</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2244,7 +1397,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-document_changed-url" class="discrete"><code>event_handlers.document_changed.url</code></h4>
+<h3 id="event_handlers-document_changed-url" class="discrete"><code>event_handlers.document_changed.url</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2261,7 +1414,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-max_processes" class="discrete"><code>event_handlers.max_processes</code></h4>
+<h3 id="event_handlers-max_processes" class="discrete"><code>event_handlers.max_processes</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2278,7 +1431,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="event_handlers-wait_for_process" class="discrete"><code>event_handlers.wait_for_process</code></h4>
+<h3 id="event_handlers-wait_for_process" class="discrete"><code>event_handlers.wait_for_process</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2295,7 +1448,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest" class="discrete"><code>guest</code></h4>
+<h3 id="guest" class="discrete"><code>guest</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2312,7 +1465,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-admin_channels" class="discrete"><code>guest.admin_channels</code></h4>
+<h3 id="guest-admin_channels" class="discrete"><code>guest.admin_channels</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2329,7 +1482,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-admin_roles" class="discrete"><code>guest.admin_roles</code></h4>
+<h3 id="guest-admin_roles" class="discrete"><code>guest.admin_roles</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2346,7 +1499,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-all_channels" class="discrete"><code>guest.all_channels</code></h4>
+<h3 id="guest-all_channels" class="discrete"><code>guest.all_channels</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2364,7 +1517,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access" class="discrete"><code>guest.collection_access</code></h4>
+<h3 id="guest-collection_access" class="discrete"><code>guest.collection_access</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2381,7 +1534,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access-{additionalProperties}" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="guest-collection_access-{additionalProperties}" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2398,7 +1551,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access-{additionalProperties}-{additionalProperties}" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2415,7 +1568,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access-{additionalProperties}-{additionalProperties}-admin_channels" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.admin_channels</code></h4>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-admin_channels" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.admin_channels</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2432,7 +1585,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access-{additionalProperties}-{additionalProperties}-all_channels" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.all_channels</code></h4>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-all_channels" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.all_channels</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2450,7 +1603,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_channels</code></h4>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_channels</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2467,7 +1620,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_last_updated</code></h4>
+<h3 id="guest-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated" class="discrete"><code>guest.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_last_updated</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2484,7 +1637,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-disabled" class="discrete"><code>guest.disabled</code></h4>
+<h3 id="guest-disabled" class="discrete"><code>guest.disabled</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2501,7 +1654,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-email" class="discrete"><code>guest.email</code></h4>
+<h3 id="guest-email" class="discrete"><code>guest.email</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2518,7 +1671,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-jwt_channels" class="discrete"><code>guest.jwt_channels</code></h4>
+<h3 id="guest-jwt_channels" class="discrete"><code>guest.jwt_channels</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2535,7 +1688,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-jwt_issuer" class="discrete"><code>guest.jwt_issuer</code></h4>
+<h3 id="guest-jwt_issuer" class="discrete"><code>guest.jwt_issuer</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2552,7 +1705,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-jwt_last_updated" class="discrete"><code>guest.jwt_last_updated</code></h4>
+<h3 id="guest-jwt_last_updated" class="discrete"><code>guest.jwt_last_updated</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2569,7 +1722,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-jwt_roles" class="discrete"><code>guest.jwt_roles</code></h4>
+<h3 id="guest-jwt_roles" class="discrete"><code>guest.jwt_roles</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2586,7 +1739,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-name" class="discrete"><code>guest.name</code></h4>
+<h3 id="guest-name" class="discrete"><code>guest.name</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2604,7 +1757,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-password" class="discrete"><code>guest.password</code></h4>
+<h3 id="guest-password" class="discrete"><code>guest.password</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2622,7 +1775,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="guest-roles" class="discrete"><code>guest.roles</code></h4>
+<h3 id="guest-roles" class="discrete"><code>guest.roles</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2640,7 +1793,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="import_backup_old_rev" class="discrete"><code>import_backup_old_rev</code></h4>
+<h3 id="import_backup_old_rev" class="discrete"><code>import_backup_old_rev</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2657,7 +1810,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="import_docs" class="discrete"><code>import_docs</code></h4>
+<h3 id="import_docs" class="discrete"><code>import_docs</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2676,7 +1829,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="import_filter" class="discrete"><code>import_filter</code></h4>
+<h3 id="import_filter" class="discrete"><code>import_filter</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2687,15 +1840,14 @@ Content-Length: 120
 <dd>
 <div class="openblock">
 <div class="content">
-<p>This is the function that all imported documents in the default scope and collection are ran through in order to filter out what to import and what not to import. This allows you to control what is made available to Couchbase Mobile clients. If it is not set, then no documents are filtered when imported.</p>
+<p>This is the function that all imported documents in the _default scope and collection are ran through in order to filter out what to import and what not to import. This allows you to control what is made available to Couchbase Mobile clients. If it is not set, then no documents are filtered when imported.</p>
 <p><code>import_docs</code> must be true to make this field applicable.</p>
-<p>If <code>scopes</code> parameter is set, this is ignored.</p>
 </div>
 </div>
 </dd>
 </dl>
 </div>
-<h4 id="import_partitions" class="discrete"><code>import_partitions</code></h4>
+<h3 id="import_partitions" class="discrete"><code>import_partitions</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2715,7 +1867,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="javascript_timeout_secs" class="discrete"><code>javascript_timeout_secs</code></h4>
+<h3 id="javascript_timeout_secs" class="discrete"><code>javascript_timeout_secs</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2732,7 +1884,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="keypath" class="discrete"><code>keypath</code></h4>
+<h3 id="keypath" class="discrete"><code>keypath</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2749,7 +1901,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="kv_tls_port" class="discrete"><code>kv_tls_port</code></h4>
+<h3 id="kv_tls_port" class="discrete"><code>kv_tls_port</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2766,7 +1918,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_doc_expiry_secs" class="discrete"><code>local_doc_expiry_secs</code></h4>
+<h3 id="local_doc_expiry_secs" class="discrete"><code>local_doc_expiry_secs</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2783,7 +1935,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt" class="discrete"><code>local_jwt</code></h4>
+<h3 id="local_jwt" class="discrete"><code>local_jwt</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2800,7 +1952,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="local_jwt-{additionalProperties}" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2817,7 +1969,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-algorithms" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.algorithms</code></h4>
+<h3 id="local_jwt-{additionalProperties}-algorithms" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.algorithms</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2834,7 +1986,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-channels_claim" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.channels_claim</code></h4>
+<h3 id="local_jwt-{additionalProperties}-channels_claim" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.channels_claim</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2852,7 +2004,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-client_id" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.client_id</code></h4>
+<h3 id="local_jwt-{additionalProperties}-client_id" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.client_id</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2869,7 +2021,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-disable_session" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.disable_session</code></h4>
+<h3 id="local_jwt-{additionalProperties}-disable_session" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.disable_session</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2886,7 +2038,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-issuer" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.issuer</code></h4>
+<h3 id="local_jwt-{additionalProperties}-issuer" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.issuer</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2903,7 +2055,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-keys" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.keys</code></h4>
+<h3 id="local_jwt-{additionalProperties}-keys" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.keys</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2920,7 +2072,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-register" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.register</code></h4>
+<h3 id="local_jwt-{additionalProperties}-register" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.register</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2937,7 +2089,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-roles_claim" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.roles_claim</code></h4>
+<h3 id="local_jwt-{additionalProperties}-roles_claim" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.roles_claim</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2955,7 +2107,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-user_prefix" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.user_prefix</code></h4>
+<h3 id="local_jwt-{additionalProperties}-user_prefix" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.user_prefix</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2972,7 +2124,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="local_jwt-{additionalProperties}-username_claim" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.username_claim</code></h4>
+<h3 id="local_jwt-{additionalProperties}-username_claim" class="discrete"><code>local_jwt.{additionalProperties&#8230;&#8203;}.username_claim</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2990,7 +2142,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="max_concurrent_query_ops" class="discrete"><code>max_concurrent_query_ops</code></h4>
+<h3 id="max_concurrent_query_ops" class="discrete"><code>max_concurrent_query_ops</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3007,7 +2159,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="name" class="discrete"><code>name</code></h4>
+<h3 id="name" class="discrete"><code>name</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3024,7 +2176,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="num_index_replicas" class="discrete"><code>num_index_replicas</code></h4>
+<h3 id="num_index_replicas" class="discrete"><code>num_index_replicas</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3041,7 +2193,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="offline" class="discrete"><code>offline</code></h4>
+<h3 id="offline" class="discrete"><code>offline</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3058,7 +2210,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc" class="discrete"><code>oidc</code></h4>
+<h3 id="oidc" class="discrete"><code>oidc</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3075,7 +2227,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-default_provider" class="discrete"><code>oidc.default_provider</code></h4>
+<h3 id="oidc-default_provider" class="discrete"><code>oidc.default_provider</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3092,7 +2244,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers" class="discrete"><code>oidc.providers</code></h4>
+<h3 id="oidc-providers" class="discrete"><code>oidc.providers</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3109,7 +2261,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="oidc-providers-{additionalProperties}" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3126,7 +2278,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-InsecureSkipVerify" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.InsecureSkipVerify</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-InsecureSkipVerify" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.InsecureSkipVerify</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3143,7 +2295,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-IsDefault" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.IsDefault</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-IsDefault" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.IsDefault</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3160,7 +2312,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-Name" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.Name</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-Name" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.Name</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3177,7 +2329,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-allow_unsigned_provider_tokens" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.allow_unsigned_provider_tokens</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-allow_unsigned_provider_tokens" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.allow_unsigned_provider_tokens</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3194,7 +2346,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-callback_url" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.callback_url</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-callback_url" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.callback_url</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3212,7 +2364,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-channels_claim" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.channels_claim</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-channels_claim" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.channels_claim</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3230,7 +2382,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-client_id" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.client_id</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-client_id" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.client_id</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3247,7 +2399,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-disable_callback_state" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.disable_callback_state</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-disable_callback_state" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.disable_callback_state</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3265,7 +2417,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-disable_cfg_validation" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.disable_cfg_validation</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-disable_cfg_validation" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.disable_cfg_validation</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3282,7 +2434,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-disable_session" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.disable_session</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-disable_session" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.disable_session</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3299,7 +2451,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-discovery_url" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.discovery_url</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-discovery_url" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.discovery_url</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3316,7 +2468,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-include_access" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.include_access</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-include_access" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.include_access</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3333,7 +2485,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-issuer" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.issuer</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-issuer" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.issuer</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3350,7 +2502,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-register" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.register</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-register" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.register</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3367,7 +2519,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-roles_claim" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.roles_claim</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-roles_claim" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.roles_claim</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3385,7 +2537,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-scope" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.scope</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-scope" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.scope</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3402,7 +2554,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-user_prefix" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.user_prefix</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-user_prefix" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.user_prefix</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3419,7 +2571,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-username_claim" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.username_claim</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-username_claim" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.username_claim</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3437,7 +2589,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="oidc-providers-{additionalProperties}-validation_key" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.validation_key</code></h4>
+<h3 id="oidc-providers-{additionalProperties}-validation_key" class="discrete"><code>oidc.providers.{additionalProperties&#8230;&#8203;}.validation_key</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3454,7 +2606,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="old_rev_expiry_seconds" class="discrete"><code>old_rev_expiry_seconds</code></h4>
+<h3 id="old_rev_expiry_seconds" class="discrete"><code>old_rev_expiry_seconds</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3471,7 +2623,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="password" class="discrete"><code>password</code></h4>
+<h3 id="password" class="discrete"><code>password</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3488,7 +2640,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="query_pagination_limit" class="discrete"><code>query_pagination_limit</code></h4>
+<h3 id="query_pagination_limit" class="discrete"><code>query_pagination_limit</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3505,7 +2657,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id" class="discrete"><code>replications.replication_id</code></h4>
+<h3 id="replications-replication_id" class="discrete"><code>replications.replication_id</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3522,7 +2674,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-adhoc" class="discrete"><code>replications.replication_id.adhoc</code></h4>
+<h3 id="replications-replication_id-adhoc" class="discrete"><code>replications.replication_id.adhoc</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3540,7 +2692,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-batch_size" class="discrete"><code>replications.replication_id.batch_size</code></h4>
+<h3 id="replications-replication_id-batch_size" class="discrete"><code>replications.replication_id.batch_size</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3557,7 +2709,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-collections_enabled" class="discrete"><code>replications.replication_id.collections_enabled</code></h4>
+<h3 id="replications-replication_id-collections_enabled" class="discrete"><code>replications.replication_id.collections_enabled</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3575,7 +2727,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-collections_local" class="discrete"><code>replications.replication_id.collections_local</code></h4>
+<h3 id="replications-replication_id-collections_local" class="discrete"><code>replications.replication_id.collections_local</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3593,7 +2745,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-collections_remote" class="discrete"><code>replications.replication_id.collections_remote</code></h4>
+<h3 id="replications-replication_id-collections_remote" class="discrete"><code>replications.replication_id.collections_remote</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3612,7 +2764,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-conflict_resolution_type" class="discrete"><code>replications.replication_id.conflict_resolution_type</code></h4>
+<h3 id="replications-replication_id-conflict_resolution_type" class="discrete"><code>replications.replication_id.conflict_resolution_type</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3643,7 +2795,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-continuous" class="discrete"><code>replications.replication_id.continuous</code></h4>
+<h3 id="replications-replication_id-continuous" class="discrete"><code>replications.replication_id.continuous</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3661,7 +2813,7 @@ Content-Length: 120
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-custom_conflict_resolver" class="discrete"><code>replications.replication_id.custom_conflict_resolver</code></h4>
+<h3 id="replications-replication_id-custom_conflict_resolver" class="discrete"><code>replications.replication_id.custom_conflict_resolver</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3696,7 +2848,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-direction" class="discrete"><code>replications.replication_id.direction</code></h4>
+<h3 id="replications-replication_id-direction" class="discrete"><code>replications.replication_id.direction</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3720,7 +2872,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-enable_delta_sync" class="discrete"><code>replications.replication_id.enable_delta_sync</code></h4>
+<h3 id="replications-replication_id-enable_delta_sync" class="discrete"><code>replications.replication_id.enable_delta_sync</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3740,7 +2892,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-filter" class="discrete"><code>replications.replication_id.filter</code></h4>
+<h3 id="replications-replication_id-filter" class="discrete"><code>replications.replication_id.filter</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3759,7 +2911,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-initial_state" class="discrete"><code>replications.replication_id.initial_state</code></h4>
+<h3 id="replications-replication_id-initial_state" class="discrete"><code>replications.replication_id.initial_state</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3778,7 +2930,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-max_backoff_time" class="discrete"><code>replications.replication_id.max_backoff_time</code></h4>
+<h3 id="replications-replication_id-max_backoff_time" class="discrete"><code>replications.replication_id.max_backoff_time</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3798,7 +2950,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-purge_on_removal" class="discrete"><code>replications.replication_id.purge_on_removal</code></h4>
+<h3 id="replications-replication_id-purge_on_removal" class="discrete"><code>replications.replication_id.purge_on_removal</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3816,7 +2968,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-query_params" class="discrete"><code>replications.replication_id.query_params</code></h4>
+<h3 id="replications-replication_id-query_params" class="discrete"><code>replications.replication_id.query_params</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3839,7 +2991,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-remote" class="discrete"><code>replications.replication_id.remote</code></h4>
+<h3 id="replications-replication_id-remote" class="discrete"><code>replications.replication_id.remote</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3863,7 +3015,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-remote_password" class="discrete"><code>replications.replication_id.remote_password</code></h4>
+<h3 id="replications-replication_id-remote_password" class="discrete"><code>replications.replication_id.remote_password</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3882,7 +3034,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-remote_username" class="discrete"><code>replications.replication_id.remote_username</code></h4>
+<h3 id="replications-replication_id-remote_username" class="discrete"><code>replications.replication_id.remote_username</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3900,7 +3052,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-replication_id" class="discrete"><code>replications.replication_id.replication_id</code></h4>
+<h3 id="replications-replication_id-replication_id" class="discrete"><code>replications.replication_id.replication_id</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3919,7 +3071,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="replications-replication_id-run_as" class="discrete"><code>replications.replication_id.run_as</code></h4>
+<h3 id="replications-replication_id-run_as" class="discrete"><code>replications.replication_id.run_as</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3936,7 +3088,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="revs_limit" class="discrete"><code>revs_limit</code></h4>
+<h3 id="revs_limit" class="discrete"><code>revs_limit</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3954,7 +3106,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="scopes" class="discrete"><code>scopes</code></h4>
+<h3 id="scopes" class="discrete"><code>scopes</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3965,13 +3117,13 @@ The function should return the new documents body. This can be the winning revis
 <dd>
 <div class="openblock">
 <div class="content">
-<p>An object keyed by scope name containing config for the specific collection.</p>
+<p>Scope and collection specific config.</p>
 </div>
 </div>
 </dd>
 </dl>
 </div>
-<h4 id="scopes-{additionalProperties}" class="discrete"><code>scopes.{additionalProperties&#8230;&#8203;}</code></h4>
+<h3 id="scopes-additionalProperties" class="discrete"><code>scopes.additionalProperties</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3982,13 +3134,13 @@ The function should return the new documents body. This can be the winning revis
 <dd>
 <div class="openblock">
 <div class="content">
-<p>Scope-specific configuration.</p>
+<p>A map of all the collections with their corresponding configs for this scope</p>
 </div>
 </div>
 </dd>
 </dl>
 </div>
-<h4 id="scopes-{additionalProperties}-collections" class="discrete"><code>scopes.{additionalProperties&#8230;&#8203;}.collections</code></h4>
+<h3 id="scopes-additionalProperties-{additionalProperties}" class="discrete"><code>scopes.additionalProperties.{additionalProperties&#8230;&#8203;}</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -3999,30 +3151,13 @@ The function should return the new documents body. This can be the winning revis
 <dd>
 <div class="openblock">
 <div class="content">
-<p>An object keyed by collection name containing config for the specific collection.</p>
+<p>The configuration for the individual collection</p>
 </div>
 </div>
 </dd>
 </dl>
 </div>
-<h4 id="scopes-{additionalProperties}-collections-{additionalProperties}" class="discrete"><code>scopes.{additionalProperties&#8230;&#8203;}.collections.{additionalProperties&#8230;&#8203;}</code></h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Type</dt>
-<dd>
-<p>object</p>
-</dd>
-<dt class="hdlist1">Description</dt>
-<dd>
-<div class="openblock">
-<div class="content">
-<p>Collection-specific configuration.</p>
-</div>
-</div>
-</dd>
-</dl>
-</div>
-<h4 id="scopes-{additionalProperties}-collections-{additionalProperties}-import_filter" class="discrete"><code>scopes.{additionalProperties&#8230;&#8203;}.collections.{additionalProperties&#8230;&#8203;}.import_filter</code></h4>
+<h3 id="scopes-additionalProperties-{additionalProperties}-import_filter" class="discrete"><code>scopes.additionalProperties.{additionalProperties&#8230;&#8203;}.import_filter</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4040,7 +3175,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="scopes-{additionalProperties}-collections-{additionalProperties}-sync" class="discrete"><code>scopes.{additionalProperties&#8230;&#8203;}.collections.{additionalProperties&#8230;&#8203;}.sync</code></h4>
+<h3 id="scopes-additionalProperties-{additionalProperties}-sync" class="discrete"><code>scopes.additionalProperties.{additionalProperties&#8230;&#8203;}.sync</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4057,7 +3192,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="send_www_authentice_header" class="discrete"><code>send_www_authentice_header</code></h4>
+<h3 id="send_www_authentice_header" class="discrete"><code>send_www_authentice_header</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4074,7 +3209,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="serve_insecure_attachment_types" class="discrete"><code>serve_insecure_attachment_types</code></h4>
+<h3 id="serve_insecure_attachment_types" class="discrete"><code>serve_insecure_attachment_types</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4092,7 +3227,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="server" class="discrete"><code>server</code></h4>
+<h3 id="server" class="discrete"><code>server</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4109,7 +3244,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="session_cookie_http_only" class="discrete"><code>session_cookie_http_only</code></h4>
+<h3 id="session_cookie_http_only" class="discrete"><code>session_cookie_http_only</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4126,7 +3261,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="session_cookie_name" class="discrete"><code>session_cookie_name</code></h4>
+<h3 id="session_cookie_name" class="discrete"><code>session_cookie_name</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4143,7 +3278,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="session_cookie_secure" class="discrete"><code>session_cookie_secure</code></h4>
+<h3 id="session_cookie_secure" class="discrete"><code>session_cookie_secure</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4161,7 +3296,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="sgreplicate_enabled" class="discrete"><code>sgreplicate_enabled</code></h4>
+<h3 id="sgreplicate_enabled" class="discrete"><code>sgreplicate_enabled</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4178,7 +3313,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="sgreplicate_websocket_heartbeat_secs" class="discrete"><code>sgreplicate_websocket_heartbeat_secs</code></h4>
+<h3 id="sgreplicate_websocket_heartbeat_secs" class="discrete"><code>sgreplicate_websocket_heartbeat_secs</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4195,7 +3330,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="slow_query_warning_threshold" class="discrete"><code>slow_query_warning_threshold</code></h4>
+<h3 id="slow_query_warning_threshold" class="discrete"><code>slow_query_warning_threshold</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4212,7 +3347,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="suspendable" class="discrete"><code>suspendable</code></h4>
+<h3 id="suspendable" class="discrete"><code>suspendable</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4230,7 +3365,7 @@ The function should return the new documents body. This can be the winning revis
 </dd>
 </dl>
 </div>
-<h4 id="sync" class="discrete"><code>sync</code></h4>
+<h3 id="sync" class="discrete"><code>sync</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4241,14 +3376,13 @@ The function should return the new documents body. This can be the winning revis
 <dd>
 <div class="openblock">
 <div class="content">
-<p>The Javascript function that newly created documents are ran through for the default scope and collection.
-If <code>scopes</code> parameter is set, this is ignored.</p>
+<p>The Javascript function that newly created documents are ran through for the _default scope and collection.</p>
 </div>
 </div>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported" class="discrete"><code>unsupported</code></h4>
+<h3 id="unsupported" class="discrete"><code>unsupported</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4265,7 +3399,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-api_endpoints-enable_couchbase_bucket_flush" class="discrete"><code>unsupported.api_endpoints.enable_couchbase_bucket_flush</code></h4>
+<h3 id="unsupported-api_endpoints-enable_couchbase_bucket_flush" class="discrete"><code>unsupported.api_endpoints.enable_couchbase_bucket_flush</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4283,7 +3417,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-dcp_read_buffer" class="discrete"><code>unsupported.dcp_read_buffer</code></h4>
+<h3 id="unsupported-dcp_read_buffer" class="discrete"><code>unsupported.dcp_read_buffer</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4300,7 +3434,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-force_api_forbidden_errors" class="discrete"><code>unsupported.force_api_forbidden_errors</code></h4>
+<h3 id="unsupported-force_api_forbidden_errors" class="discrete"><code>unsupported.force_api_forbidden_errors</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4317,7 +3451,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-guest_read_only" class="discrete"><code>unsupported.guest_read_only</code></h4>
+<h3 id="unsupported-guest_read_only" class="discrete"><code>unsupported.guest_read_only</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4334,7 +3468,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-kv_buffer" class="discrete"><code>unsupported.kv_buffer</code></h4>
+<h3 id="unsupported-kv_buffer" class="discrete"><code>unsupported.kv_buffer</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4351,7 +3485,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-oidc_test_provider-enabled" class="discrete"><code>unsupported.oidc_test_provider.enabled</code></h4>
+<h3 id="unsupported-oidc_test_provider-enabled" class="discrete"><code>unsupported.oidc_test_provider.enabled</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4368,7 +3502,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-oidc_tls_skip_verify" class="discrete"><code>unsupported.oidc_tls_skip_verify</code></h4>
+<h3 id="unsupported-oidc_tls_skip_verify" class="discrete"><code>unsupported.oidc_tls_skip_verify</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4385,7 +3519,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-remote_config_tls_skip_verify" class="discrete"><code>unsupported.remote_config_tls_skip_verify</code></h4>
+<h3 id="unsupported-remote_config_tls_skip_verify" class="discrete"><code>unsupported.remote_config_tls_skip_verify</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4402,7 +3536,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-sgr_tls_skip_verify" class="discrete"><code>unsupported.sgr_tls_skip_verify</code></h4>
+<h3 id="unsupported-sgr_tls_skip_verify" class="discrete"><code>unsupported.sgr_tls_skip_verify</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4419,7 +3553,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-user_views-enabled" class="discrete"><code>unsupported.user_views.enabled</code></h4>
+<h3 id="unsupported-user_views-enabled" class="discrete"><code>unsupported.user_views.enabled</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4436,7 +3570,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-warning_thresholds-access_and_role_grants_per_doc" class="discrete"><code>unsupported.warning_thresholds.access_and_role_grants_per_doc</code></h4>
+<h3 id="unsupported-warning_thresholds-access_and_role_grants_per_doc" class="discrete"><code>unsupported.warning_thresholds.access_and_role_grants_per_doc</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4453,7 +3587,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-warning_thresholds-channel_name_size" class="discrete"><code>unsupported.warning_thresholds.channel_name_size</code></h4>
+<h3 id="unsupported-warning_thresholds-channel_name_size" class="discrete"><code>unsupported.warning_thresholds.channel_name_size</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4470,7 +3604,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-warning_thresholds-channels_per_doc" class="discrete"><code>unsupported.warning_thresholds.channels_per_doc</code></h4>
+<h3 id="unsupported-warning_thresholds-channels_per_doc" class="discrete"><code>unsupported.warning_thresholds.channels_per_doc</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4487,7 +3621,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-warning_thresholds-channels_per_user" class="discrete"><code>unsupported.warning_thresholds.channels_per_user</code></h4>
+<h3 id="unsupported-warning_thresholds-channels_per_user" class="discrete"><code>unsupported.warning_thresholds.channels_per_user</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4504,7 +3638,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="unsupported-warning_thresholds-xattr_size_bytes" class="discrete"><code>unsupported.warning_thresholds.xattr_size_bytes</code></h4>
+<h3 id="unsupported-warning_thresholds-xattr_size_bytes" class="discrete"><code>unsupported.warning_thresholds.xattr_size_bytes</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4521,7 +3655,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="use_views" class="discrete"><code>use_views</code></h4>
+<h3 id="use_views" class="discrete"><code>use_views</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4538,7 +3672,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="user_xattr_key" class="discrete"><code>user_xattr_key</code></h4>
+<h3 id="user_xattr_key" class="discrete"><code>user_xattr_key</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4555,7 +3689,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="username" class="discrete"><code>username</code></h4>
+<h3 id="username" class="discrete"><code>username</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4572,7 +3706,7 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-<h4 id="view_query_timeout_secs" class="discrete"><code>view_query_timeout_secs</code></h4>
+<h3 id="view_query_timeout_secs" class="discrete"><code>view_query_timeout_secs</code></h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -4589,70 +3723,6 @@ If <code>scopes</code> parameter is set, this is ignored.</p>
 </dd>
 </dl>
 </div>
-</div>
-</div>
-<hr>
-<h5 id="" class="discrete"></h5>
-</div>
-</div>
-<div class="sect1">
-<h2 id="related-content"><a class="anchor" href="#related-content"></a>Related Content</h2>
-<div class="sectionbody">
-<div class="card-row three-column-row">
-<div class="sect5 column">
-<h6 id="-2"><a class="anchor" href="#-2"></a></h6>
-<div class="ulist">
-<div class="title">API Topics</div>
-<ul>
-<li>
-<p><a href="rest-api.html" class="xref page">Public REST API</a></p>
-</li>
-<li>
-<p><a href="rest-api-admin.html" class="xref page">Admin REST API</a></p>
-</li>
-<li>
-<p><a href="rest-api-metrics.html" class="xref page">Metrics REST API</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5 column">
-<h6 id="-3"><a class="anchor" href="#-3"></a></h6>
-<div class="ulist">
-<div class="title">Reference</div>
-<ul>
-<li>
-<p><a href="configuration-schema-bootstrap.html" class="xref page">Bootstrap</a></p>
-</li>
-<li>
-<p><a href="#">Database</a></p>
-</li>
-<li>
-<p><a href="configuration-schema-db-security.html" class="xref page">Database Security</a></p>
-</li>
-<li>
-<p><a href="configuration-schema-access-control.html" class="xref page">Access Control</a></p>
-</li>
-<li>
-<p><a href="configuration-schema-import-filter.html" class="xref page">Import Filter</a></p>
-</li>
-<li>
-<p><a href="configuration-schema-isgr.html" class="xref page">Inter-Sync&#160;Gateway Replication</a></p>
-</li>
-<li>
-<p><a href="configuration-properties-legacy.html" class="xref page">Legacy Pre-3.0 Configuration</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5 column">
-<h6 id="-4"><a class="anchor" href="#-4"></a></h6>
-<div class="paragraph">
-<div class="title">Community</div>
-<p><a href="https://forums.couchbase.com/c/mobile/14">Mobile Forum</a> |
-<a href="https://blog.couchbase.com/">Blog</a> |
-<a href="https://blog.couchbase.com/category/couchbase-mobile/?ref=blog-menu">Blog (Mobile)</a> |
-<a href="https://docs.couchbase.com/tutorials/">Tutorials</a></p>
 </div>
 </div>
 </div>

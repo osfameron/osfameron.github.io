@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
-<loc>https://docs.stage.nonprod-project-avengers.com/sitemap-couchbase-lite.xml</loc>
-</sitemap>
-<sitemap>
 <loc>https://docs.stage.nonprod-project-avengers.com/sitemap-home.xml</loc>
-</sitemap>
-<sitemap>
-<loc>https://docs.stage.nonprod-project-avengers.com/sitemap-shared-mobile.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.stage.nonprod-project-avengers.com/sitemap-sync-gateway.xml</loc>

@@ -870,7 +870,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
       <a href="#bootstrap-x509_key_path">x509_key_path</a>: "string"
    },
    <a href="#bucket_credentials">bucket_credentials</a>: {
-      <a href="#bucket_credentials-{additionalProperties}">{additionalProperties}</a>: {
+      <a href="#bucket_credentials-{additionalProperties}">{additionalProperties...}</a>: {
          <a href="#bucket_credentials-{additionalProperties}-password">password</a>: "string",
          <a href="#bucket_credentials-{additionalProperties}-username">username</a>: "string",
          <a href="#bucket_credentials-{additionalProperties}-x509_cert_path">x509_cert_path</a>: "string",
@@ -879,7 +879,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
    },
    <a href="#couchbase_keepalive_interval">couchbase_keepalive_interval</a>: 0,
    <a href="#database_credentials">database_credentials</a>: {
-      <a href="#database_credentials-{additionalProperties}">{additionalProperties}</a>: {
+      <a href="#database_credentials-{additionalProperties}">{additionalProperties...}</a>: {
          <a href="#database_credentials-{additionalProperties}-password">password</a>: "string",
          <a href="#database_credentials-{additionalProperties}-username">username</a>: "string",
          <a href="#database_credentials-{additionalProperties}-x509_cert_path">x509_cert_path</a>: "string",
@@ -967,6 +967,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
    <a href="#max_file_descriptors">max_file_descriptors</a>: 5000,
    replicator: {
       <a href="#replicator-blip_compression">blip_compression</a>: 0,
+      <a href="#replicator-max_concurrent_replications">max_concurrent_replications</a>: 0,
       <a href="#replicator-max_heartbeat">max_heartbeat</a>: "string"
    },
    <a href="#unsupported">unsupported</a>: {
@@ -983,7 +984,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
    }
 }
 </pre>
-<h3 id="api" class="discrete"><code>api</code></h3>
+<h4 id="api" class="discrete"><code>api</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1000,7 +1001,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-admin_interface" class="discrete"><code>api.admin_interface</code></h3>
+<h4 id="api-admin_interface" class="discrete"><code>api.admin_interface</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1018,7 +1019,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-admin_interface_authentication" class="discrete"><code>api.admin_interface_authentication</code></h3>
+<h4 id="api-admin_interface_authentication" class="discrete"><code>api.admin_interface_authentication</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1035,7 +1036,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-compress_responses" class="discrete"><code>api.compress_responses</code></h3>
+<h4 id="api-compress_responses" class="discrete"><code>api.compress_responses</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1052,7 +1053,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-cors-headers" class="discrete"><code>api.cors.headers</code></h3>
+<h4 id="api-cors-headers" class="discrete"><code>api.cors.headers</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1069,7 +1070,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-cors-login_origin" class="discrete"><code>api.cors.login_origin</code></h3>
+<h4 id="api-cors-login_origin" class="discrete"><code>api.cors.login_origin</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1086,7 +1087,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-cors-max_age" class="discrete"><code>api.cors.max_age</code></h3>
+<h4 id="api-cors-max_age" class="discrete"><code>api.cors.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1103,7 +1104,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-cors-origin" class="discrete"><code>api.cors.origin</code></h3>
+<h4 id="api-cors-origin" class="discrete"><code>api.cors.origin</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1120,7 +1121,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-enable_advanced_auth_dp" class="discrete"><code>api.enable_advanced_auth_dp</code></h3>
+<h4 id="api-enable_advanced_auth_dp" class="discrete"><code>api.enable_advanced_auth_dp</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1138,7 +1139,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-hide_product_version" class="discrete"><code>api.hide_product_version</code></h3>
+<h4 id="api-hide_product_version" class="discrete"><code>api.hide_product_version</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1155,7 +1156,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-https-tls_cert_path" class="discrete"><code>api.https.tls_cert_path</code></h3>
+<h4 id="api-https-tls_cert_path" class="discrete"><code>api.https.tls_cert_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1172,7 +1173,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-https-tls_key_path" class="discrete"><code>api.https.tls_key_path</code></h3>
+<h4 id="api-https-tls_key_path" class="discrete"><code>api.https.tls_key_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1189,7 +1190,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-https-tls_minimum_version" class="discrete"><code>api.https.tls_minimum_version</code></h3>
+<h4 id="api-https-tls_minimum_version" class="discrete"><code>api.https.tls_minimum_version</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1206,7 +1207,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-idle_timeout" class="discrete"><code>api.idle_timeout</code></h3>
+<h4 id="api-idle_timeout" class="discrete"><code>api.idle_timeout</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1224,7 +1225,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-max_connections" class="discrete"><code>api.max_connections</code></h3>
+<h4 id="api-max_connections" class="discrete"><code>api.max_connections</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1241,7 +1242,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-metric_interface" class="discrete"><code>api.metric_interface</code></h3>
+<h4 id="api-metric_interface" class="discrete"><code>api.metric_interface</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1259,7 +1260,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-metrics_interface_authentication" class="discrete"><code>api.metrics_interface_authentication</code></h3>
+<h4 id="api-metrics_interface_authentication" class="discrete"><code>api.metrics_interface_authentication</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1276,7 +1277,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-pretty" class="discrete"><code>api.pretty</code></h3>
+<h4 id="api-pretty" class="discrete"><code>api.pretty</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1293,7 +1294,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-profile_interface" class="discrete"><code>api.profile_interface</code></h3>
+<h4 id="api-profile_interface" class="discrete"><code>api.profile_interface</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1310,7 +1311,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-public_interface" class="discrete"><code>api.public_interface</code></h3>
+<h4 id="api-public_interface" class="discrete"><code>api.public_interface</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1327,7 +1328,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-read_header_timeout" class="discrete"><code>api.read_header_timeout</code></h3>
+<h4 id="api-read_header_timeout" class="discrete"><code>api.read_header_timeout</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1345,7 +1346,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-server_read_timeout" class="discrete"><code>api.server_read_timeout</code></h3>
+<h4 id="api-server_read_timeout" class="discrete"><code>api.server_read_timeout</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1363,7 +1364,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="api-server_write_timeout" class="discrete"><code>api.server_write_timeout</code></h3>
+<h4 id="api-server_write_timeout" class="discrete"><code>api.server_write_timeout</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1381,7 +1382,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="auth-bcrypt_cost" class="discrete"><code>auth.bcrypt_cost</code></h3>
+<h4 id="auth-bcrypt_cost" class="discrete"><code>auth.bcrypt_cost</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1398,7 +1399,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap" class="discrete"><code>bootstrap</code></h3>
+<h4 id="bootstrap" class="discrete"><code>bootstrap</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1415,7 +1416,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-ca_cert_path" class="discrete"><code>bootstrap.ca_cert_path</code></h3>
+<h4 id="bootstrap-ca_cert_path" class="discrete"><code>bootstrap.ca_cert_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1432,7 +1433,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-config_update_frequency" class="discrete"><code>bootstrap.config_update_frequency</code></h3>
+<h4 id="bootstrap-config_update_frequency" class="discrete"><code>bootstrap.config_update_frequency</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1450,7 +1451,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-group_id" class="discrete"><code>bootstrap.group_id</code></h3>
+<h4 id="bootstrap-group_id" class="discrete"><code>bootstrap.group_id</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1467,7 +1468,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-password" class="discrete"><code>bootstrap.password</code></h3>
+<h4 id="bootstrap-password" class="discrete"><code>bootstrap.password</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1484,7 +1485,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-server" class="discrete"><code>bootstrap.server</code></h3>
+<h4 id="bootstrap-server" class="discrete"><code>bootstrap.server</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1501,7 +1502,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-server_tls_skip_verify" class="discrete"><code>bootstrap.server_tls_skip_verify</code></h3>
+<h4 id="bootstrap-server_tls_skip_verify" class="discrete"><code>bootstrap.server_tls_skip_verify</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1518,7 +1519,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-use_tls_server" class="discrete"><code>bootstrap.use_tls_server</code></h3>
+<h4 id="bootstrap-use_tls_server" class="discrete"><code>bootstrap.use_tls_server</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1535,7 +1536,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-username" class="discrete"><code>bootstrap.username</code></h3>
+<h4 id="bootstrap-username" class="discrete"><code>bootstrap.username</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1552,7 +1553,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-x509_cert_path" class="discrete"><code>bootstrap.x509_cert_path</code></h3>
+<h4 id="bootstrap-x509_cert_path" class="discrete"><code>bootstrap.x509_cert_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1569,7 +1570,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bootstrap-x509_key_path" class="discrete"><code>bootstrap.x509_key_path</code></h3>
+<h4 id="bootstrap-x509_key_path" class="discrete"><code>bootstrap.x509_key_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1586,7 +1587,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bucket_credentials" class="discrete"><code>bucket_credentials</code></h3>
+<h4 id="bucket_credentials" class="discrete"><code>bucket_credentials</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1603,7 +1604,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bucket_credentials-{additionalProperties}" class="discrete"><code>bucket_credentials.{additionalProperties}</code></h3>
+<h4 id="bucket_credentials-{additionalProperties}" class="discrete"><code>bucket_credentials.{additionalProperties&#8230;&#8203;}</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1620,7 +1621,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bucket_credentials-{additionalProperties}-password" class="discrete"><code>bucket_credentials.{additionalProperties}.password</code></h3>
+<h4 id="bucket_credentials-{additionalProperties}-password" class="discrete"><code>bucket_credentials.{additionalProperties&#8230;&#8203;}.password</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1637,7 +1638,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bucket_credentials-{additionalProperties}-username" class="discrete"><code>bucket_credentials.{additionalProperties}.username</code></h3>
+<h4 id="bucket_credentials-{additionalProperties}-username" class="discrete"><code>bucket_credentials.{additionalProperties&#8230;&#8203;}.username</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1654,7 +1655,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bucket_credentials-{additionalProperties}-x509_cert_path" class="discrete"><code>bucket_credentials.{additionalProperties}.x509_cert_path</code></h3>
+<h4 id="bucket_credentials-{additionalProperties}-x509_cert_path" class="discrete"><code>bucket_credentials.{additionalProperties&#8230;&#8203;}.x509_cert_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1671,7 +1672,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="bucket_credentials-{additionalProperties}-x509_key_path" class="discrete"><code>bucket_credentials.{additionalProperties}.x509_key_path</code></h3>
+<h4 id="bucket_credentials-{additionalProperties}-x509_key_path" class="discrete"><code>bucket_credentials.{additionalProperties&#8230;&#8203;}.x509_key_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1688,7 +1689,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="couchbase_keepalive_interval" class="discrete"><code>couchbase_keepalive_interval</code></h3>
+<h4 id="couchbase_keepalive_interval" class="discrete"><code>couchbase_keepalive_interval</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1705,7 +1706,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="database_credentials" class="discrete"><code>database_credentials</code></h3>
+<h4 id="database_credentials" class="discrete"><code>database_credentials</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1722,7 +1723,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="database_credentials-{additionalProperties}" class="discrete"><code>database_credentials.{additionalProperties}</code></h3>
+<h4 id="database_credentials-{additionalProperties}" class="discrete"><code>database_credentials.{additionalProperties&#8230;&#8203;}</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1739,7 +1740,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="database_credentials-{additionalProperties}-password" class="discrete"><code>database_credentials.{additionalProperties}.password</code></h3>
+<h4 id="database_credentials-{additionalProperties}-password" class="discrete"><code>database_credentials.{additionalProperties&#8230;&#8203;}.password</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1756,7 +1757,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="database_credentials-{additionalProperties}-username" class="discrete"><code>database_credentials.{additionalProperties}.username</code></h3>
+<h4 id="database_credentials-{additionalProperties}-username" class="discrete"><code>database_credentials.{additionalProperties&#8230;&#8203;}.username</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1773,7 +1774,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="database_credentials-{additionalProperties}-x509_cert_path" class="discrete"><code>database_credentials.{additionalProperties}.x509_cert_path</code></h3>
+<h4 id="database_credentials-{additionalProperties}-x509_cert_path" class="discrete"><code>database_credentials.{additionalProperties&#8230;&#8203;}.x509_cert_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1790,7 +1791,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="database_credentials-{additionalProperties}-x509_key_path" class="discrete"><code>database_credentials.{additionalProperties}.x509_key_path</code></h3>
+<h4 id="database_credentials-{additionalProperties}-x509_key_path" class="discrete"><code>database_credentials.{additionalProperties&#8230;&#8203;}.x509_key_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1807,7 +1808,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging" class="discrete"><code>logging</code></h3>
+<h4 id="logging" class="discrete"><code>logging</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1824,7 +1825,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-collation_buffer_size" class="discrete"><code>logging.console.collation_buffer_size</code></h3>
+<h4 id="logging-console-collation_buffer_size" class="discrete"><code>logging.console.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1841,7 +1842,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-color_enabled" class="discrete"><code>logging.console.color_enabled</code></h3>
+<h4 id="logging-console-color_enabled" class="discrete"><code>logging.console.color_enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1858,7 +1859,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-enabled" class="discrete"><code>logging.console.enabled</code></h3>
+<h4 id="logging-console-enabled" class="discrete"><code>logging.console.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1875,7 +1876,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-file_output" class="discrete"><code>logging.console.file_output</code></h3>
+<h4 id="logging-console-file_output" class="discrete"><code>logging.console.file_output</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1892,7 +1893,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-log_keys" class="discrete"><code>logging.console.log_keys</code></h3>
+<h4 id="logging-console-log_keys" class="discrete"><code>logging.console.log_keys</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1909,7 +1910,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-log_level" class="discrete"><code>logging.console.log_level</code></h3>
+<h4 id="logging-console-log_level" class="discrete"><code>logging.console.log_level</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1926,7 +1927,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-rotation-localtime" class="discrete"><code>logging.console.rotation.localtime</code></h3>
+<h4 id="logging-console-rotation-localtime" class="discrete"><code>logging.console.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1943,7 +1944,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-rotation-max_age" class="discrete"><code>logging.console.rotation.max_age</code></h3>
+<h4 id="logging-console-rotation-max_age" class="discrete"><code>logging.console.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1960,7 +1961,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-rotation-max_size" class="discrete"><code>logging.console.rotation.max_size</code></h3>
+<h4 id="logging-console-rotation-max_size" class="discrete"><code>logging.console.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1977,7 +1978,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-console-rotation-rotated_logs_size" class="discrete"><code>logging.console.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-console-rotation-rotated_logs_size" class="discrete"><code>logging.console.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1994,7 +1995,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-debug-collation_buffer_size" class="discrete"><code>logging.debug.collation_buffer_size</code></h3>
+<h4 id="logging-debug-collation_buffer_size" class="discrete"><code>logging.debug.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2011,7 +2012,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-debug-enabled" class="discrete"><code>logging.debug.enabled</code></h3>
+<h4 id="logging-debug-enabled" class="discrete"><code>logging.debug.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2028,7 +2029,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-debug-rotation-localtime" class="discrete"><code>logging.debug.rotation.localtime</code></h3>
+<h4 id="logging-debug-rotation-localtime" class="discrete"><code>logging.debug.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2045,7 +2046,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-debug-rotation-max_age" class="discrete"><code>logging.debug.rotation.max_age</code></h3>
+<h4 id="logging-debug-rotation-max_age" class="discrete"><code>logging.debug.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2062,7 +2063,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-debug-rotation-max_size" class="discrete"><code>logging.debug.rotation.max_size</code></h3>
+<h4 id="logging-debug-rotation-max_size" class="discrete"><code>logging.debug.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2079,7 +2080,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-debug-rotation-rotated_logs_size" class="discrete"><code>logging.debug.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-debug-rotation-rotated_logs_size" class="discrete"><code>logging.debug.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2096,7 +2097,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-error-collation_buffer_size" class="discrete"><code>logging.error.collation_buffer_size</code></h3>
+<h4 id="logging-error-collation_buffer_size" class="discrete"><code>logging.error.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2113,7 +2114,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-error-enabled" class="discrete"><code>logging.error.enabled</code></h3>
+<h4 id="logging-error-enabled" class="discrete"><code>logging.error.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2130,7 +2131,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-error-rotation-localtime" class="discrete"><code>logging.error.rotation.localtime</code></h3>
+<h4 id="logging-error-rotation-localtime" class="discrete"><code>logging.error.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2147,7 +2148,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-error-rotation-max_age" class="discrete"><code>logging.error.rotation.max_age</code></h3>
+<h4 id="logging-error-rotation-max_age" class="discrete"><code>logging.error.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2164,7 +2165,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-error-rotation-max_size" class="discrete"><code>logging.error.rotation.max_size</code></h3>
+<h4 id="logging-error-rotation-max_size" class="discrete"><code>logging.error.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2181,7 +2182,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-error-rotation-rotated_logs_size" class="discrete"><code>logging.error.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-error-rotation-rotated_logs_size" class="discrete"><code>logging.error.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2198,7 +2199,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-info-collation_buffer_size" class="discrete"><code>logging.info.collation_buffer_size</code></h3>
+<h4 id="logging-info-collation_buffer_size" class="discrete"><code>logging.info.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2215,7 +2216,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-info-enabled" class="discrete"><code>logging.info.enabled</code></h3>
+<h4 id="logging-info-enabled" class="discrete"><code>logging.info.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2232,7 +2233,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-info-rotation-localtime" class="discrete"><code>logging.info.rotation.localtime</code></h3>
+<h4 id="logging-info-rotation-localtime" class="discrete"><code>logging.info.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2249,7 +2250,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-info-rotation-max_age" class="discrete"><code>logging.info.rotation.max_age</code></h3>
+<h4 id="logging-info-rotation-max_age" class="discrete"><code>logging.info.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2266,7 +2267,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-info-rotation-max_size" class="discrete"><code>logging.info.rotation.max_size</code></h3>
+<h4 id="logging-info-rotation-max_size" class="discrete"><code>logging.info.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2283,7 +2284,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-info-rotation-rotated_logs_size" class="discrete"><code>logging.info.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-info-rotation-rotated_logs_size" class="discrete"><code>logging.info.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2300,7 +2301,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-log_file_path" class="discrete"><code>logging.log_file_path</code></h3>
+<h4 id="logging-log_file_path" class="discrete"><code>logging.log_file_path</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2317,7 +2318,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-redaction_level" class="discrete"><code>logging.redaction_level</code></h3>
+<h4 id="logging-redaction_level" class="discrete"><code>logging.redaction_level</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2334,7 +2335,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-stats-collation_buffer_size" class="discrete"><code>logging.stats.collation_buffer_size</code></h3>
+<h4 id="logging-stats-collation_buffer_size" class="discrete"><code>logging.stats.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2351,7 +2352,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-stats-enabled" class="discrete"><code>logging.stats.enabled</code></h3>
+<h4 id="logging-stats-enabled" class="discrete"><code>logging.stats.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2368,7 +2369,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-stats-rotation-localtime" class="discrete"><code>logging.stats.rotation.localtime</code></h3>
+<h4 id="logging-stats-rotation-localtime" class="discrete"><code>logging.stats.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2385,7 +2386,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-stats-rotation-max_age" class="discrete"><code>logging.stats.rotation.max_age</code></h3>
+<h4 id="logging-stats-rotation-max_age" class="discrete"><code>logging.stats.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2402,7 +2403,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-stats-rotation-max_size" class="discrete"><code>logging.stats.rotation.max_size</code></h3>
+<h4 id="logging-stats-rotation-max_size" class="discrete"><code>logging.stats.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2419,7 +2420,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-stats-rotation-rotated_logs_size" class="discrete"><code>logging.stats.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-stats-rotation-rotated_logs_size" class="discrete"><code>logging.stats.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2436,7 +2437,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-trace-collation_buffer_size" class="discrete"><code>logging.trace.collation_buffer_size</code></h3>
+<h4 id="logging-trace-collation_buffer_size" class="discrete"><code>logging.trace.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2453,7 +2454,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-trace-enabled" class="discrete"><code>logging.trace.enabled</code></h3>
+<h4 id="logging-trace-enabled" class="discrete"><code>logging.trace.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2470,7 +2471,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-trace-rotation-localtime" class="discrete"><code>logging.trace.rotation.localtime</code></h3>
+<h4 id="logging-trace-rotation-localtime" class="discrete"><code>logging.trace.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2487,7 +2488,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-trace-rotation-max_age" class="discrete"><code>logging.trace.rotation.max_age</code></h3>
+<h4 id="logging-trace-rotation-max_age" class="discrete"><code>logging.trace.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2504,7 +2505,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-trace-rotation-max_size" class="discrete"><code>logging.trace.rotation.max_size</code></h3>
+<h4 id="logging-trace-rotation-max_size" class="discrete"><code>logging.trace.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2521,7 +2522,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-trace-rotation-rotated_logs_size" class="discrete"><code>logging.trace.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-trace-rotation-rotated_logs_size" class="discrete"><code>logging.trace.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2538,7 +2539,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-warn-collation_buffer_size" class="discrete"><code>logging.warn.collation_buffer_size</code></h3>
+<h4 id="logging-warn-collation_buffer_size" class="discrete"><code>logging.warn.collation_buffer_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2555,7 +2556,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-warn-enabled" class="discrete"><code>logging.warn.enabled</code></h3>
+<h4 id="logging-warn-enabled" class="discrete"><code>logging.warn.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2572,7 +2573,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-warn-rotation-localtime" class="discrete"><code>logging.warn.rotation.localtime</code></h3>
+<h4 id="logging-warn-rotation-localtime" class="discrete"><code>logging.warn.rotation.localtime</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2589,7 +2590,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-warn-rotation-max_age" class="discrete"><code>logging.warn.rotation.max_age</code></h3>
+<h4 id="logging-warn-rotation-max_age" class="discrete"><code>logging.warn.rotation.max_age</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2606,7 +2607,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-warn-rotation-max_size" class="discrete"><code>logging.warn.rotation.max_size</code></h3>
+<h4 id="logging-warn-rotation-max_size" class="discrete"><code>logging.warn.rotation.max_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2623,7 +2624,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="logging-warn-rotation-rotated_logs_size" class="discrete"><code>logging.warn.rotation.rotated_logs_size</code></h3>
+<h4 id="logging-warn-rotation-rotated_logs_size" class="discrete"><code>logging.warn.rotation.rotated_logs_size</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2640,7 +2641,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="max_file_descriptors" class="discrete"><code>max_file_descriptors</code></h3>
+<h4 id="max_file_descriptors" class="discrete"><code>max_file_descriptors</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2657,7 +2658,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="replicator-blip_compression" class="discrete"><code>replicator.blip_compression</code></h3>
+<h4 id="replicator-blip_compression" class="discrete"><code>replicator.blip_compression</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2674,7 +2675,24 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="replicator-max_heartbeat" class="discrete"><code>replicator.max_heartbeat</code></h3>
+<h4 id="replicator-max_concurrent_replications" class="discrete"><code>replicator.max_concurrent_replications</code></h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>integer</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<p>Maximum number of concurrent replication connections allowed. If set to 0 this limit will be ignored.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<h4 id="replicator-max_heartbeat" class="discrete"><code>replicator.max_heartbeat</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2692,7 +2710,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported" class="discrete"><code>unsupported</code></h3>
+<h4 id="unsupported" class="discrete"><code>unsupported</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2709,7 +2727,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-http2-enabled" class="discrete"><code>unsupported.http2.enabled</code></h3>
+<h4 id="unsupported-http2-enabled" class="discrete"><code>unsupported.http2.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2726,7 +2744,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-serverless" class="discrete"><code>unsupported.serverless</code></h3>
+<h4 id="unsupported-serverless" class="discrete"><code>unsupported.serverless</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2743,7 +2761,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-serverless-enabled" class="discrete"><code>unsupported.serverless.enabled</code></h3>
+<h4 id="unsupported-serverless-enabled" class="discrete"><code>unsupported.serverless.enabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2760,7 +2778,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-serverless-min_config_fetch_interval" class="discrete"><code>unsupported.serverless.min_config_fetch_interval</code></h3>
+<h4 id="unsupported-serverless-min_config_fetch_interval" class="discrete"><code>unsupported.serverless.min_config_fetch_interval</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2778,7 +2796,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-stats_log_frequency" class="discrete"><code>unsupported.stats_log_frequency</code></h3>
+<h4 id="unsupported-stats_log_frequency" class="discrete"><code>unsupported.stats_log_frequency</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2796,7 +2814,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-use_stdlib_json" class="discrete"><code>unsupported.use_stdlib_json</code></h3>
+<h4 id="unsupported-use_stdlib_json" class="discrete"><code>unsupported.use_stdlib_json</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -2813,7 +2831,7 @@ See the <a href="#lbl-schema">schema</a> below for more details on these propert
 </dd>
 </dl>
 </div>
-<h3 id="unsupported-use_xattr_config" class="discrete"><code>unsupported.use_xattr_config</code></h3>
+<h4 id="unsupported-use_xattr_config" class="discrete"><code>unsupported.use_xattr_config</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>

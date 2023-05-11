@@ -896,7 +896,7 @@
 <p>Properties associated with a role</p>
 </div>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Role">Role</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Role1">Role1</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -937,7 +937,7 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Resource could not be found</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1105,7 +1105,7 @@ Content-Length: 67
 <p>Properties associated with a user</p>
 </div>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#User">User</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#User1">User1</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1145,7 +1145,7 @@ Content-Length: 67
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Resource could not be found</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP-Error">HTTP-Error</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#HTTP_Error">HTTP_Error</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1228,12 +1228,12 @@ Content-Length: 63
       <a href="#Role-admin_channels">admin_channels</a>: [],
       <a href="#Role-all_channels">all_channels</a>: [],
       <a href="#Role-collection_access">collection_access</a>: {
-         <a href="#Role-collection_access-{scope}">{scope}</a>: {
-            <a href="#Role-collection_access-{scope}-{collection}">{collection}</a>: {
-               <a href="#Role-collection_access-{scope}-{collection}-admin_channels">admin_channels</a>: [],
-               <a href="#Role-collection_access-{scope}-{collection}-all_channels">all_channels</a>: [],
-               <a href="#Role-collection_access-{scope}-{collection}-jwt_channels">jwt_channels</a>: [],
-               <a href="#Role-collection_access-{scope}-{collection}-jwt_last_updated">jwt_last_updated</a>: "string"
+         <a href="#Role-collection_access-{additionalProperties}">{additionalProperties...}</a>: {
+            <a href="#Role-collection_access-{additionalProperties}-{additionalProperties}">{additionalProperties...}</a>: {
+               <a href="#Role-collection_access-{additionalProperties}-{additionalProperties}-admin_channels">admin_channels</a>: [],
+               <a href="#Role-collection_access-{additionalProperties}-{additionalProperties}-all_channels">all_channels</a>: [],
+               <a href="#Role-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels">jwt_channels</a>: [],
+               <a href="#Role-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated">jwt_last_updated</a>: "string"
             }
          }
       },
@@ -1244,8 +1244,8 @@ Content-Length: 63
       <a href="#User-admin_roles">admin_roles</a>: [],
       <a href="#User-all_channels">all_channels</a>: [],
       <a href="#User-collection_access">collection_access</a>: {
-         <a href="#User-collection_access-{additionalProperties}">{additionalProperties}</a>: {
-            <a href="#User-collection_access-{additionalProperties}-{additionalProperties}">{additionalProperties}</a>: {
+         <a href="#User-collection_access-{additionalProperties}">{additionalProperties...}</a>: {
+            <a href="#User-collection_access-{additionalProperties}-{additionalProperties}">{additionalProperties...}</a>: {
                <a href="#User-collection_access-{additionalProperties}-{additionalProperties}-admin_channels">admin_channels</a>: [],
                <a href="#User-collection_access-{additionalProperties}-{additionalProperties}-all_channels">all_channels</a>: [],
                <a href="#User-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels">jwt_channels</a>: [],
@@ -1265,7 +1265,7 @@ Content-Length: 63
    }
 }
 </pre>
-<h3 id="Role" class="discrete"><code>Role</code></h3>
+<h4 id="Role" class="discrete"><code>Role</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1282,7 +1282,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-admin_channels" class="discrete"><code>Role.admin_channels</code></h3>
+<h4 id="Role-admin_channels" class="discrete"><code>Role.admin_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1299,7 +1299,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-all_channels" class="discrete"><code>Role.all_channels</code></h3>
+<h4 id="Role-all_channels" class="discrete"><code>Role.all_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1317,7 +1317,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access" class="discrete"><code>Role.collection_access</code></h3>
+<h4 id="Role-collection_access" class="discrete"><code>Role.collection_access</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1334,7 +1334,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access-{scope}" class="discrete"><code>Role.collection_access.{scope}</code></h3>
+<h4 id="Role-collection_access-{additionalProperties}" class="discrete"><code>Role.collection_access.{additionalProperties&#8230;&#8203;}</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1351,7 +1351,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access-{scope}-{collection}" class="discrete"><code>Role.collection_access.{scope}.{collection}</code></h3>
+<h4 id="Role-collection_access-{additionalProperties}-{additionalProperties}" class="discrete"><code>Role.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1368,7 +1368,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access-{scope}-{collection}-admin_channels" class="discrete"><code>Role.collection_access.{scope}.{collection}.admin_channels</code></h3>
+<h4 id="Role-collection_access-{additionalProperties}-{additionalProperties}-admin_channels" class="discrete"><code>Role.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.admin_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1385,7 +1385,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access-{scope}-{collection}-all_channels" class="discrete"><code>Role.collection_access.{scope}.{collection}.all_channels</code></h3>
+<h4 id="Role-collection_access-{additionalProperties}-{additionalProperties}-all_channels" class="discrete"><code>Role.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.all_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1403,7 +1403,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access-{scope}-{collection}-jwt_channels" class="discrete"><code>Role.collection_access.{scope}.{collection}.jwt_channels</code></h3>
+<h4 id="Role-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels" class="discrete"><code>Role.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1420,7 +1420,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-collection_access-{scope}-{collection}-jwt_last_updated" class="discrete"><code>Role.collection_access.{scope}.{collection}.jwt_last_updated</code></h3>
+<h4 id="Role-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated" class="discrete"><code>Role.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_last_updated</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1437,7 +1437,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="Role-name" class="discrete"><code>Role.name</code></h3>
+<h4 id="Role-name" class="discrete"><code>Role.name</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1455,7 +1455,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User" class="discrete"><code>User</code></h3>
+<h4 id="User" class="discrete"><code>User</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1472,7 +1472,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-admin_channels" class="discrete"><code>User.admin_channels</code></h3>
+<h4 id="User-admin_channels" class="discrete"><code>User.admin_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1489,7 +1489,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-admin_roles" class="discrete"><code>User.admin_roles</code></h3>
+<h4 id="User-admin_roles" class="discrete"><code>User.admin_roles</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1506,7 +1506,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-all_channels" class="discrete"><code>User.all_channels</code></h3>
+<h4 id="User-all_channels" class="discrete"><code>User.all_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1524,7 +1524,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access" class="discrete"><code>User.collection_access</code></h3>
+<h4 id="User-collection_access" class="discrete"><code>User.collection_access</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1541,7 +1541,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access-{additionalProperties}" class="discrete"><code>User.collection_access.{additionalProperties}</code></h3>
+<h4 id="User-collection_access-{additionalProperties}" class="discrete"><code>User.collection_access.{additionalProperties&#8230;&#8203;}</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1558,7 +1558,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access-{additionalProperties}-{additionalProperties}" class="discrete"><code>User.collection_access.{additionalProperties}.{additionalProperties}</code></h3>
+<h4 id="User-collection_access-{additionalProperties}-{additionalProperties}" class="discrete"><code>User.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1575,7 +1575,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access-{additionalProperties}-{additionalProperties}-admin_channels" class="discrete"><code>User.collection_access.{additionalProperties}.{additionalProperties}.admin_channels</code></h3>
+<h4 id="User-collection_access-{additionalProperties}-{additionalProperties}-admin_channels" class="discrete"><code>User.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.admin_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1592,7 +1592,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access-{additionalProperties}-{additionalProperties}-all_channels" class="discrete"><code>User.collection_access.{additionalProperties}.{additionalProperties}.all_channels</code></h3>
+<h4 id="User-collection_access-{additionalProperties}-{additionalProperties}-all_channels" class="discrete"><code>User.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.all_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1610,7 +1610,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels" class="discrete"><code>User.collection_access.{additionalProperties}.{additionalProperties}.jwt_channels</code></h3>
+<h4 id="User-collection_access-{additionalProperties}-{additionalProperties}-jwt_channels" class="discrete"><code>User.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1627,7 +1627,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated" class="discrete"><code>User.collection_access.{additionalProperties}.{additionalProperties}.jwt_last_updated</code></h3>
+<h4 id="User-collection_access-{additionalProperties}-{additionalProperties}-jwt_last_updated" class="discrete"><code>User.collection_access.{additionalProperties&#8230;&#8203;}.{additionalProperties&#8230;&#8203;}.jwt_last_updated</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1644,7 +1644,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-disabled" class="discrete"><code>User.disabled</code></h3>
+<h4 id="User-disabled" class="discrete"><code>User.disabled</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1661,7 +1661,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-email" class="discrete"><code>User.email</code></h3>
+<h4 id="User-email" class="discrete"><code>User.email</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1678,7 +1678,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-jwt_channels" class="discrete"><code>User.jwt_channels</code></h3>
+<h4 id="User-jwt_channels" class="discrete"><code>User.jwt_channels</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1695,7 +1695,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-jwt_issuer" class="discrete"><code>User.jwt_issuer</code></h3>
+<h4 id="User-jwt_issuer" class="discrete"><code>User.jwt_issuer</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1712,7 +1712,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-jwt_last_updated" class="discrete"><code>User.jwt_last_updated</code></h3>
+<h4 id="User-jwt_last_updated" class="discrete"><code>User.jwt_last_updated</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1729,7 +1729,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-jwt_roles" class="discrete"><code>User.jwt_roles</code></h3>
+<h4 id="User-jwt_roles" class="discrete"><code>User.jwt_roles</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1746,7 +1746,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-name" class="discrete"><code>User.name</code></h3>
+<h4 id="User-name" class="discrete"><code>User.name</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1764,7 +1764,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-password" class="discrete"><code>User.password</code></h3>
+<h4 id="User-password" class="discrete"><code>User.password</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
@@ -1782,7 +1782,7 @@ Content-Length: 63
 </dd>
 </dl>
 </div>
-<h3 id="User-roles" class="discrete"><code>User.roles</code></h3>
+<h4 id="User-roles" class="discrete"><code>User.roles</code></h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Type</dt>
