@@ -90,14 +90,56 @@
 <div class="body container">
 <main class="article" data-ceiling="topbar">
 <article class="doc landing-page-doc">
-<h1 class="sect0">Couchbase Documentation</h1>
-<div class="paragraph">
-<p>TODO: Switcher for Capella/Server/Mobile</p>
-</div>
-<div class="sect1">
-<h2>Box for specific news/announcements about chosen product</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
+<style>
+.info-banner {
+    display: block;
+    border: 1px solid #0074e0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    /* background-image: linear-gradient(to right, #00ace0, #636cdc); */
+    padding: 0.75em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.doc.landing-page-doc .info-banner p {
+    text-align: center;
+    color: #292b36;
+    font-weight: lighter;
+}
+.info-banner a {
+    color: #0074e0;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    border: solid 1px #0074e0;
+    padding: 0.5em 1em;
+    margin-left: 1em;
+}
+.info-banner a:hover {
+	text-decoration: none;
+	border: none;
+	background-color: #0074e0;
+	color: white;
+	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,.06);
+    	box-shadow: 0 3px 10px rgba(0,0,0,.06);
+	transition: all 0.5s ease-out;
+}
+</style>
+<div class="paragraph info-banner">
+<p>The Capella Spring release is here!
+Introducing developer integrations for Netlify and VSCode, and more.
+<a href="https://www.couchbase.com/blog/couchbase-capella-spring-release-72">Check it out</a></p>
+</div>
+</div>
+</div>
+<h1 class="sect0">Couchbase Documentation</h1>
+<div class="card-row">
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
 <p><em>Couchbase is the modern database for enterprise applications.</em></p>
 </div>
 <div class="paragraph">
@@ -106,36 +148,294 @@
 <div class="paragraph">
 <p>Find the documentation, samples, and references to help you use Couchbase and build applications.</p>
 </div>
-<div class="sect2">
-<h3>API and CLI reference</h3>
-
 </div>
-<div class="sect2">
-<h3>SQL++ reference</h3>
+<div class="sect5 column">
+<h6></h6>
+<div class="listingblock content">
+<div class="content">
+<pre>// List the schedule of flights from Boston
+// to San Francisco on JETBLUE
 
-</div>
-<div class="sect2">
-<h3>Set up your account</h3>
-
-</div>
-<div class="sect2">
-<h3>Load your data</h3>
-
-</div>
-<div class="sect2">
-<h3>Connect to your database</h3>
-<div class="sect3">
-<h4>SDKs and connectors</h4>
-
-</div>
-<div class="sect3">
-<h4>API</h4>
-
+SELECT DISTINCT airline.name, route.schedule
+FROM `travel-sample`.inventory.route
+  JOIN `travel-sample`.inventory.airline
+  ON KEYS route.airlineid
+WHERE route.sourceairport = "BOS"
+AND route.destinationairport = "SFO"
+AND airline.callsign = "JETBLUE";</pre>
 </div>
 </div>
-<div class="sect2">
-<h3>Analyze your data</h3>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
 
+</div>
+<div class="sect1">
+<h2>Get Started</h2>
+<div class="sectionbody">
+<div class="card-row three-column-row">
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Couchbase Capella (DBaaS)</div>
+<p>Explore Couchbase Capella, our fully-managed database as a service offering.
+Take the complexity out of deploying, managing, scaling, and securing Couchbase in the public cloud.
+Store, query, and analyze any amount of data&#8201;&#8212;&#8201;and let us handle more of the administration&#8201;&#8212;&#8201;all in a few clicks.</p>
+</div>
+<div class="paragraph">
+<p><a href="#cloud::index.adoc" class="xref unresolved">Couchbase Capella</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Couchbase Server</div>
+<p>Explore Couchbase Server, a modern, distributed document database with all the desired capabilities of a relational database and more. It exposes a scale-out, key-value store with managed cache for sub-millisecond data operations, purpose-built indexers for efficient queries, and a powerful query engine for executing SQL-like queries.</p>
+</div>
+<div class="paragraph">
+<p><a href="server.html" class="xref page">Couchbase Server</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Couchbase Mobile</div>
+<p><em>Couchbase Mobile</em> brings the power of NoSQL to the edge.
+The combination of <em>Sync Gateway</em> and <em>Couchbase Lite</em> coupled with the power of <em>Couchbase Server</em> provides fast, efficient bidirectional synchronization of data between the edge and the cloud.
+Enabling you to deploy your offline-first mobile and embedded applications with greater agility on premises or in any cloud.</p>
+</div>
+<div class="paragraph">
+<p><a href="#couchbase-lite::introduction.adoc" class="xref unresolved">Couchbase Lite</a> |
+<a href="#sync-gateway::introduction.adoc" class="xref unresolved">Sync Gateway</a></p>
+</div>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>Developer Tools</h2>
+<div class="sectionbody">
+<div class="card-row three-column-row">
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">SDK and Connectors</div>
+<p>Couchbase SDKs allow applications to access a Couchbase cluster and the big data Connectors enable data exchange with other platforms.</p>
+</div>
+<div class="paragraph">
+<p><a href="sdk.html" class="xref page">Developer Docs</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">CLI and REST APIs</div>
+<p>Use the command-line interface (CLI) tools and REST API to manage and monitor your Couchbase deployment.</p>
+</div>
+<div class="paragraph">
+<p><a href="../server/current/cli/cli-intro.html" class="xref page">Couchbase CLI</a> | <a href="../server/current/rest-api/rest-intro.html" class="xref page">REST API</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Couchbase Shell</div>
+<p>A modern shell to interact with Couchbase Server and Cloud, now available.
+Couchbase Shell public Beta is now available.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://couchbase.sh">Explore Couchbase Shell</a></p>
+</div>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>More Developer Resources</h2>
+<div class="sectionbody">
+<div class="card-row three-column-row">
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Developer Portal</div>
+<p>Explore a variety of resources - sample apps, videos, blogs, and more, to build applications using Couchbase.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://developer.couchbase.com">Developer Portal</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Academy</div>
+<p>Explore extensive hands-on learning experiences through free, online courses or under the guidance of an in-person instructor.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://learn.couchbase.com/store">Academy</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Community</div>
+<p>With open source roots, Couchbase has a rich history of collaboration and community. Connect with our developer community and get involved.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://forums.couchbase.com/">Community</a></p>
+</div>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>Explore Products and Services</h2>
+<div class="sectionbody">
+<table id="table_products-services" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Cloud</th>
+<th class="tableblock halign-left valign-top">Server</th>
+<th class="tableblock halign-left valign-top">SDK and Connectors</th>
+<th class="tableblock halign-left valign-top">Mobile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#cloud::index.adoc" class="xref unresolved">Couchbase Capella</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="server.html" class="xref page">Couchbase Server</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#operator::overview.adoc" class="xref unresolved">Couchbase Autonomous Operator</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#service-broker::index.adoc" class="xref unresolved">Couchbase Service Broker</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#cmos::index.adoc" class="xref unresolved">Couchbase Monitoring and Observability Stack</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#java-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Java SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#scala-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Scala SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#dotnet-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase .NET SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#c-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase C SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#nodejs-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Node.js SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#php-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase PHP SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#python-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Python SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#ruby-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Ruby SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#go-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Go SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#kotlin-sdk:hello-world:overview.adoc" class="xref unresolved">Couchbase Kotlin SDK</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#elasticsearch-connector::getting-started.adoc" class="xref unresolved">Couchbase Elasticsearch Connector</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#kafka-connector::quickstart.adoc" class="xref unresolved">Couchbase Kafka Connector</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#spark-connector::getting-started.adoc" class="xref unresolved">Couchbase Spark Connector</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#couchbase-lite:javascript:quickstart.adoc" class="xref unresolved">Couchbase Lite JavaScript</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#couchbase-lite:csharp:quickstart.adoc" class="xref unresolved">Couchbase Lite C#</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#couchbase-lite:java:quickstart.adoc" class="xref unresolved">Couchbase Lite Java</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#couchbase-lite:android:quickstart.adoc" class="xref unresolved">Couchbase Lite Java Android</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#couchbase-lite:swift:quickstart.adoc" class="xref unresolved">Couchbase Lite Swift</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#couchbase-lite:objc:quickstart.adoc" class="xref unresolved">Couchbase Lite Objective-C</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#sync-gateway::index.adoc" class="xref unresolved">Couchbase Sync Gateway</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5 column">
+<h6></h6>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>Feedback and Contributions</h2>
+<div class="sectionbody">
+<div class="card-row three-column-row">
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Provide Feedback</div>
+<p>Provide feedback, and get help with any problem you may encounter.</p>
+</div>
+<div class="paragraph">
+<p><a href="../server/current/introduction/contact-couchbase.html" class="xref page">Provide Feedback</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Contact Support</div>
+<p>Couchbase Support provides online support for customers of Enterprise Edition who have a support contract.</p>
+</div>
+<div class="paragraph">
+<p><a href="../server/current/introduction/contact-couchbase.html" class="xref page">Contact Couchbase</a></p>
+</div>
+</div>
+<div class="sect5 column">
+<h6></h6>
+<div class="paragraph content">
+<div class="title">Contribute</div>
+<p>You can submit simple changes, such as typo fixes and minor clarifications directly on GitHub. Contributions are greatly encouraged.</p>
+</div>
+<div class="paragraph">
+<p><a href="contribute/index.html" class="xref page">Contribute to the Documentation</a></p>
+</div>
+</div>
 </div>
 </div>
 </div>

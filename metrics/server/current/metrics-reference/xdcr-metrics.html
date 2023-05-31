@@ -3015,606 +3015,380 @@ A list of the metrics provided by XDCR.
 </div>
 <div class="openblock">
 <div class="content">
-<h2 id="xdcr_add_docs_cas_changed" class="discrete"><code>xdcr_add_docs_cas_changed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of add failed because target cas changed</p>
-</div>
-<h2 id="xdcr_add_docs_written" class="discrete"><code>xdcr_add_docs_written</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of adds successfully written to target</p>
-</div>
-<h2 id="xdcr_add_failed_cr_target" class="discrete"><code>xdcr_add_failed_cr_target</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of ADD failed conflict resolution at target cluster</p>
-</div>
-<h2 id="xdcr_changes_left" class="discrete"><code>xdcr_changes_left</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Given the VBs of this node, the number of seqnos that need to be processed (either replicated or handled) before catching up to the high sequence numbers for the VBs</p>
-</div>
-<h2 id="xdcr_data_merge_failed" class="discrete"><code>xdcr_data_merge_failed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of data failed to merge</p>
-</div>
-<h2 id="xdcr_data_merged" class="discrete"><code>xdcr_data_merged</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of data merged for a replication</p>
-</div>
-<h2 id="xdcr_data_replicated" class="discrete"><code>xdcr_data_replicated</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of data replicated for a replication</p>
-</div>
-<h2 id="xdcr_data_replicated_uncompress" class="discrete"><code>xdcr_data_replicated_uncompress</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Theoretical amount of data replicated for a replication if compression were not used</p>
-</div>
-<h2 id="xdcr_datapool_failed_gets" class="discrete"><code>xdcr_datapool_failed_gets</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The total number of failed GET() operation on a reusable datapool within XDCR for the purpose of avoiding garbage generation</p>
-</div>
-<h2 id="xdcr_dcp_datach_length" class="discrete"><code>xdcr_dcp_datach_length</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The number of items sent by KV DCP waiting for XDCR DCP nozzle to ingest and process</p>
-</div>
-<h2 id="xdcr_dcp_dispatch_time" class="discrete"><code>xdcr_dcp_dispatch_time</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes for a document to be received by XDCR from DCP, to the time it is queued up in the out nozzle ready to be sent</p>
-</div>
-<h2 id="xdcr_deletion_docs_cas_changed" class="discrete"><code>xdcr_deletion_docs_cas_changed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of deletion failed because target cas changed</p>
-</div>
-<h2 id="xdcr_deletion_docs_written" class="discrete"><code>xdcr_deletion_docs_written</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of deletion written to target</p>
-</div>
-<h2 id="xdcr_deletion_failed_cr_source" class="discrete"><code>xdcr_deletion_failed_cr_source</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Subset of the number of documents that failed source-side conflict resolution that were delete operations</p>
-</div>
-<h2 id="xdcr_deletion_failed_cr_target" class="discrete"><code>xdcr_deletion_failed_cr_target</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of DELETE failed conflict resolution at target cluster</p>
-</div>
-<h2 id="xdcr_deletion_filtered" class="discrete"><code>xdcr_deletion_filtered</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents filtered that was of a DCP deletion</p>
-</div>
-<h2 id="xdcr_deletion_received_from_dcp" class="discrete"><code>xdcr_deletion_received_from_dcp</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The subset of documents received from DCP that is a Delete action</p>
-</div>
-<h2 id="xdcr_deletion_target_docs_skipped" class="discrete"><code>xdcr_deletion_target_docs_skipped</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Subset of the number of documents that originated from the target that were delete operations</p>
-</div>
-<h2 id="xdcr_docs_checked" class="discrete"><code>xdcr_docs_checked</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Across VBs for this node, the sum of all seqnos that have been considered to be checkpointed</p>
-</div>
-<h2 id="xdcr_docs_cloned" class="discrete"><code>xdcr_docs_cloned</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The number of times a source mutation is cloned to be written to different target namespace</p>
-</div>
-<h2 id="xdcr_docs_failed_cr_source" class="discrete"><code>xdcr_docs_failed_cr_source</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents (or tombstones) that was not replicated to the target due to conflict resolution evaluated on the source cluster</p>
-</div>
-<h2 id="xdcr_docs_failed_cr_target" class="discrete"><code>xdcr_docs_failed_cr_target</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents failed conflict resolution at target cluster</p>
-</div>
-<h2 id="xdcr_docs_filtered" class="discrete"><code>xdcr_docs_filtered</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of documents filtered and not replicated due to any type of filtering</p>
-</div>
-<h2 id="xdcr_docs_merge_cas_changed" class="discrete"><code>xdcr_docs_merge_cas_changed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of merges failed because source cas changed</p>
-</div>
-<h2 id="xdcr_docs_merge_failed" class="discrete"><code>xdcr_docs_merge_failed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of conflicting docs failed to merge</p>
-</div>
-<h2 id="xdcr_docs_merged" class="discrete"><code>xdcr_docs_merged</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of conflicting docs successfully merged</p>
-</div>
-<h2 id="xdcr_docs_opt_repd" class="discrete"><code>xdcr_docs_opt_repd</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents optimistically replicated to the target</p>
-</div>
-<h2 id="xdcr_docs_processed" class="discrete"><code>xdcr_docs_processed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of docs processed for a replication</p>
-</div>
-<h2 id="xdcr_docs_received_from_dcp" class="discrete"><code>xdcr_docs_received_from_dcp</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The number of set operations received from DCP</p>
-</div>
-<h2 id="xdcr_docs_unable_to_filter" class="discrete"><code>xdcr_docs_unable_to_filter</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents that couldn&#x27;t be filtered due to inability to parse the document through Advanced Filtering engine and were not replicated</p>
-</div>
-<h2 id="xdcr_docs_written" class="discrete"><code>xdcr_docs_written</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of docs written/sent to target cluster</p>
-</div>
-<h2 id="xdcr_expiry_docs_merge_failed" class="discrete"><code>xdcr_expiry_docs_merge_failed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of conflicting expiry docs failed to merge</p>
-</div>
-<h2 id="xdcr_expiry_docs_merged" class="discrete"><code>xdcr_expiry_docs_merged</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of expiry merged and written to source</p>
-</div>
-<h2 id="xdcr_expiry_docs_written" class="discrete"><code>xdcr_expiry_docs_written</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of expiry written to target</p>
-</div>
-<h2 id="xdcr_expiry_failed_cr_source" class="discrete"><code>xdcr_expiry_failed_cr_source</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Subset of the number of documents that failed source-side conflict resolution that specifically had expiry flag set</p>
-</div>
-<h2 id="xdcr_expiry_failed_cr_target" class="discrete"><code>xdcr_expiry_failed_cr_target</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of EXPIRE failed conflict resolution at target cluster</p>
-</div>
-<h2 id="xdcr_expiry_filtered" class="discrete"><code>xdcr_expiry_filtered</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents filtered that had expiry flag set</p>
-</div>
-<h2 id="xdcr_expiry_merge_cas_changed" class="discrete"><code>xdcr_expiry_merge_cas_changed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of expiry merges failed because source cas changed</p>
-</div>
-<h2 id="xdcr_expiry_received_from_dcp" class="discrete"><code>xdcr_expiry_received_from_dcp</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The subset of documents received from DCP that either 1.) Is a DCP expiration or 2) Is a document that contains an expiration time</p>
-</div>
-<h2 id="xdcr_expiry_stripped" class="discrete"><code>xdcr_expiry_stripped</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents replicated that had its TTL changed to 0 before writing to target (source is unmodified)</p>
-</div>
-<h2 id="xdcr_expiry_target_docs_skipped" class="discrete"><code>xdcr_expiry_target_docs_skipped</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Subset of the number of documents that originated from the target that specifically had expiry flag set</p>
-</div>
-<h2 id="xdcr_num_checkpoints" class="discrete"><code>xdcr_num_checkpoints</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The number of times checkpoint operation has completed successfully since this XDCR process instance is made aware of this replication</p>
-</div>
-<h2 id="xdcr_num_failedckpts" class="discrete"><code>xdcr_num_failedckpts</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The number of times checkpoint operation has encountered an error since this XDCR process instance is made aware of this replication</p>
-</div>
-<h2 id="xdcr_resp_wait_time" class="discrete"><code>xdcr_resp_wait_time</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes from when a MemcachedRequest is created to be ready to route to an outnozzle to the time that the response has been heard back from the target node after a successful write</p>
-</div>
-<h2 id="xdcr_set_docs_cas_changed" class="discrete"><code>xdcr_set_docs_cas_changed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of set failed because target cas changed</p>
-</div>
-<h2 id="xdcr_set_docs_written" class="discrete"><code>xdcr_set_docs_written</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of SET_WITH_META written to target</p>
-</div>
-<h2 id="xdcr_set_failed_cr_source" class="discrete"><code>xdcr_set_failed_cr_source</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Subset of the number of documents that failed source-side conflict resolution that were set operations</p>
-</div>
-<h2 id="xdcr_set_failed_cr_target" class="discrete"><code>xdcr_set_failed_cr_target</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of SET_WITH_META failed conflict resolution at target cluster</p>
-</div>
-<h2 id="xdcr_set_filtered" class="discrete"><code>xdcr_set_filtered</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents filtered that was of a DCP mutation</p>
-</div>
-<h2 id="xdcr_set_received_from_dcp" class="discrete"><code>xdcr_set_received_from_dcp</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The subset of documents received from DCP that is a mutation (set action)</p>
-</div>
-<h2 id="xdcr_set_target_docs_skipped" class="discrete"><code>xdcr_set_target_docs_skipped</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Subset of the number of documents that originated from the target that were set operations</p>
-</div>
-<h2 id="xdcr_size_rep_queue" class="discrete"><code>xdcr_size_rep_queue</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of data being queued to be sent in an out nozzle</p>
-</div>
-<h2 id="xdcr_target_docs_skipped" class="discrete"><code>xdcr_target_docs_skipped</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of documents that was not replicated to the target because they originated from the target</p>
-</div>
-<h2 id="xdcr_throttle_latency" class="discrete"><code>xdcr_throttle_latency</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average of the latency time introduced due to bandwith throttler</p>
-</div>
-<h2 id="xdcr_throughput_throttle_latency" class="discrete"><code>xdcr_throughput_throttle_latency</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average of the latency time introduced due to throughput throttler</p>
-</div>
-<h2 id="xdcr_time_committing" class="discrete"><code>xdcr_time_committing</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes for a checkpoint operation to complete</p>
-</div>
-<h2 id="xdcr_wtavg_docs_latency" class="discrete"><code>xdcr_wtavg_docs_latency</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes for the source cluster to receive the acknowledgement of a SET_WITH_META response after the Memcached request has been composed to be processed by the XDCR outnozzle</p>
-</div>
-<h2 id="xdcr_wtavg_get_doc_latency" class="discrete"><code>xdcr_wtavg_get_doc_latency</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes once a get document command is composed to be sent to the time the request is handled once the target node has responded</p>
-</div>
-<h2 id="xdcr_wtavg_merge_latency" class="discrete"><code>xdcr_wtavg_merge_latency</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes from routing, conflict detection and resolution, to receive the acknowledgement of merge</p>
-</div>
-<h2 id="xdcr_wtavg_meta_latency" class="discrete"><code>xdcr_wtavg_meta_latency</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: The rolling average amount of time it takes once a getMeta command is composed to be sent to the time the request is handled once the target node has responded</p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 60%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_add_docs_cas_changed</code></p>
+<p class="tableblock">Number of add failed because target cas changed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_add_docs_written</code></p>
+<p class="tableblock">Number of adds successfully written to target</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_add_failed_cr_target</code></p>
+<p class="tableblock">Number of ADD failed conflict resolution at target cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_changes_left</code></p>
+<p class="tableblock">Given the VBs of this node, the number of seqnos that need to be processed (either replicated or handled) before catching up to the high sequence numbers for the VBs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_data_merge_failed</code></p>
+<p class="tableblock">Amount of data failed to merge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_data_merged</code></p>
+<p class="tableblock">Amount of data merged for a replication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_data_replicated</code></p>
+<p class="tableblock">Amount of data replicated for a replication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_datapool_failed_gets</code></p>
+<p class="tableblock">The total number of failed GET() operation on a reusable datapool within XDCR for the purpose of avoiding garbage generation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_dcp_datach_length</code></p>
+<p class="tableblock">The number of items sent by KV DCP waiting for XDCR DCP nozzle to ingest and process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_dcp_dispatch_time</code></p>
+<p class="tableblock">The rolling average amount of time it takes for a document to be received by XDCR from DCP, to the time it is queued up in the out nozzle ready to be sent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_cloned</code></p>
+<p class="tableblock">The number of times a source deletion or expiration is cloned to be written to multiple target namespaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_docs_cas_changed</code></p>
+<p class="tableblock">Number of deletion failed because target cas changed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_docs_written</code></p>
+<p class="tableblock">Number of deletion written to target</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_failed_cr_source</code></p>
+<p class="tableblock">Subset of the number of documents that failed source-side conflict resolution that were delete operations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_failed_cr_target</code></p>
+<p class="tableblock">Number of DELETE failed conflict resolution at target cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_filtered</code></p>
+<p class="tableblock">Number of documents filtered that was of a DCP deletion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_received_from_dcp</code></p>
+<p class="tableblock">The subset of documents received from DCP that is a Delete action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_deletion_target_docs_skipped</code></p>
+<p class="tableblock">Subset of the number of documents that originated from the target that were delete operations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_checked</code></p>
+<p class="tableblock">Across VBs for this node, the sum of all seqnos that have been considered to be checkpointed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_cloned</code></p>
+<p class="tableblock">The number of times a source mutation is cloned to be written to different target namespace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_failed_cr_source</code></p>
+<p class="tableblock">Number of documents (or tombstones) that was not replicated to the target due to conflict resolution evaluated on the source cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_failed_cr_target</code></p>
+<p class="tableblock">Number of documents failed conflict resolution at target cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_filtered</code></p>
+<p class="tableblock">Total number of documents filtered and not replicated due to any type of filtering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_merge_cas_changed</code></p>
+<p class="tableblock">Number of merges failed because source cas changed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_merge_failed</code></p>
+<p class="tableblock">Number of conflicting docs failed to merge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_merged</code></p>
+<p class="tableblock">Number of conflicting docs successfully merged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_opt_repd</code></p>
+<p class="tableblock">Number of documents optimistically replicated to the target</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_processed</code></p>
+<p class="tableblock">Number of docs processed for a replication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_received_from_dcp</code></p>
+<p class="tableblock">The number of set operations received from DCP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_unable_to_filter</code></p>
+<p class="tableblock">Number of documents that couldn&#x27;t be filtered due to inability to parse the document through Advanced Filtering engine and were not replicated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_docs_written</code></p>
+<p class="tableblock">Number of docs written/sent to target cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_docs_merge_failed</code></p>
+<p class="tableblock">Number of conflicting expiry docs failed to merge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_docs_merged</code></p>
+<p class="tableblock">Number of expiry merged and written to source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_docs_written</code></p>
+<p class="tableblock">Number of expiry written to target</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_failed_cr_source</code></p>
+<p class="tableblock">Subset of the number of documents that failed source-side conflict resolution that specifically had expiry flag set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_failed_cr_target</code></p>
+<p class="tableblock">Number of EXPIRE failed conflict resolution at target cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_filtered</code></p>
+<p class="tableblock">Number of documents filtered that had expiry flag set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_merge_cas_changed</code></p>
+<p class="tableblock">Number of expiry merges failed because source cas changed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_received_from_dcp</code></p>
+<p class="tableblock">The subset of documents received from DCP that either 1.) Is a DCP expiration or 2) Is a document that contains an expiration time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_stripped</code></p>
+<p class="tableblock">Number of documents replicated that had its TTL changed to 0 before writing to target (source is unmodified)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_expiry_target_docs_skipped</code></p>
+<p class="tableblock">Subset of the number of documents that originated from the target that specifically had expiry flag set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_num_checkpoints</code></p>
+<p class="tableblock">The number of times checkpoint operation has completed successfully since this XDCR process instance is made aware of this replication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_num_failedckpts</code></p>
+<p class="tableblock">The number of times checkpoint operation has encountered an error since this XDCR process instance is made aware of this replication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_resp_wait_time</code></p>
+<p class="tableblock">The rolling average amount of time it takes from when a MemcachedRequest is created to be ready to route to an outnozzle to the time that the response has been heard back from the target node after a successful write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_docs_cas_changed</code></p>
+<p class="tableblock">Number of set failed because target cas changed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_docs_written</code></p>
+<p class="tableblock">Number of SET_WITH_META written to target</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_failed_cr_source</code></p>
+<p class="tableblock">Subset of the number of documents that failed source-side conflict resolution that were set operations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_failed_cr_target</code></p>
+<p class="tableblock">Number of SET_WITH_META failed conflict resolution at target cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_filtered</code></p>
+<p class="tableblock">Number of documents filtered that was of a DCP mutation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_received_from_dcp</code></p>
+<p class="tableblock">The subset of documents received from DCP that is a mutation (set action)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_set_target_docs_skipped</code></p>
+<p class="tableblock">Subset of the number of documents that originated from the target that were set operations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_size_rep_queue</code></p>
+<p class="tableblock">Amount of data being queued to be sent in an out nozzle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_target_docs_skipped</code></p>
+<p class="tableblock">Number of documents that was not replicated to the target because they originated from the target</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_throttle_latency</code></p>
+<p class="tableblock">The rolling average of the latency time introduced due to bandwith throttler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_throughput_throttle_latency</code></p>
+<p class="tableblock">The rolling average of the latency time introduced due to throughput throttler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_time_committing</code></p>
+<p class="tableblock">The rolling average amount of time it takes for a checkpoint operation to complete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_wtavg_docs_latency</code></p>
+<p class="tableblock">The rolling average amount of time it takes for the source cluster to receive the acknowledgement of a SET_WITH_META response after the Memcached request has been composed to be processed by the XDCR outnozzle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_wtavg_get_doc_latency</code></p>
+<p class="tableblock">The rolling average amount of time it takes once a get document command is composed to be sent to the time the request is handled once the target node has responded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_wtavg_merge_latency</code></p>
+<p class="tableblock">The rolling average amount of time it takes from routing, conflict detection and resolution, to receive the acknowledgement of merge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>xdcr_wtavg_meta_latency</code></p>
+<p class="tableblock">The rolling average amount of time it takes once a getMeta command is composed to be sent to the time the request is handled once the target node has responded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </article>

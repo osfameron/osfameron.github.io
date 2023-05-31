@@ -3015,756 +3015,476 @@ A list of the metrics provided by the Cluster Manager.
 </div>
 <div class="openblock">
 <div class="content">
-<h2 id="audit_queue_length" class="discrete"><code>audit_queue_length</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Current number of entries in the audit queue</p>
-</div>
-<h2 id="audit_unsuccessful_retries" class="discrete"><code>audit_unsuccessful_retries</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Failed attempts to audit</p>
-</div>
-<h2 id="cm_rest_request_enters_total" class="discrete"><code>cm_rest_request_enters_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of REST requests to enter ns_server</p>
-</div>
-<h2 id="cm_rest_request_leaves_total" class="discrete"><code>cm_rest_request_leaves_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of REST requests to exit ns_server</p>
-</div>
-<h2 id="couch_docs_actual_disk_size" class="discrete"><code>couch_docs_actual_disk_size</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of disk space used by couchdb docs</p>
-</div>
-<h2 id="couch_views_actual_disk_size" class="discrete"><code>couch_views_actual_disk_size</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of disk space used by couchdb views</p>
-</div>
-<h2 id="sys_allocstall" class="discrete"><code>sys_allocstall</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of alloc stalls</p>
-</div>
-<h2 id="sys_cpu_burst_rate" class="discrete"><code>sys_cpu_burst_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Rate at which CPUs overran their quota</p>
-</div>
-<h2 id="sys_cpu_throttled_rate" class="discrete"><code>sys_cpu_throttled_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Rate at which CPUs were throttled</p>
-</div>
-<h2 id="sys_cpu_cores_available" class="discrete"><code>sys_cpu_cores_available</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of available cores</p>
-</div>
-<h2 id="sys_cpu_host_cores_available" class="discrete"><code>sys_cpu_host_cores_available</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of available cores in the host</p>
-</div>
-<h2 id="sys_cpu_host_sys_rate" class="discrete"><code>sys_cpu_host_sys_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: System cpu utilization rate</p>
-</div>
-<h2 id="sys_cpu_host_user_rate" class="discrete"><code>sys_cpu_host_user_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: User cpu utilization rate</p>
-</div>
-<h2 id="sys_cpu_host_utilization_rate" class="discrete"><code>sys_cpu_host_utilization_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: cpu utilization rate</p>
-</div>
-<h2 id="sys_cpu_irq_rate" class="discrete"><code>sys_cpu_irq_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: IRQ rate</p>
-</div>
-<h2 id="sys_cpu_stolen_rate" class="discrete"><code>sys_cpu_stolen_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: cpu stolen rate</p>
-</div>
-<h2 id="sys_cpu_sys_rate" class="discrete"><code>sys_cpu_sys_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: User system utilization rate</p>
-</div>
-<h2 id="sys_cpu_user_rate" class="discrete"><code>sys_cpu_user_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: User utilization rate</p>
-</div>
-<h2 id="sys_cpu_utilization_rate" class="discrete"><code>sys_cpu_utilization_rate</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: System utilization rate</p>
-</div>
-<h2 id="sys_mem_actual_free" class="discrete"><code>sys_mem_actual_free</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of free system memory</p>
-</div>
-<h2 id="sys_mem_actual_used" class="discrete"><code>sys_mem_actual_used</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of used system memory</p>
-</div>
-<h2 id="sys_mem_free" class="discrete"><code>sys_mem_free</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of free memory</p>
-</div>
-<h2 id="sys_mem_limit" class="discrete"><code>sys_mem_limit</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: System memory limit</p>
-</div>
-<h2 id="sys_mem_total" class="discrete"><code>sys_mem_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: System memory total</p>
-</div>
-<h2 id="sys_mem_used_sys" class="discrete"><code>sys_mem_used_sys</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: System memory used</p>
-</div>
-<h2 id="sys_mem_cgroup_limit" class="discrete"><code>sys_mem_cgroup_limit</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: cgroup memory limit</p>
-</div>
-<h2 id="sys_mem_cgroup_actual_used" class="discrete"><code>sys_mem_cgroup_actual_used</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Actual memory used by cgroup</p>
-</div>
-<h2 id="sys_mem_cgroup_used" class="discrete"><code>sys_mem_cgroup_used</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Memory used by cgroup</p>
-</div>
-<h2 id="sys_swap_total" class="discrete"><code>sys_swap_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total amount of swap</p>
-</div>
-<h2 id="sys_swap_used" class="discrete"><code>sys_swap_used</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of swap being used</p>
-</div>
-<h2 id="sysproc_cpu_utilization" class="discrete"><code>sysproc_cpu_utilization</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: User cpu utilization rate</p>
-</div>
-<h2 id="sysproc_major_faults_raw" class="discrete"><code>sysproc_major_faults_raw</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of major page faults for the process</p>
-</div>
-<h2 id="sysproc_mem_resident" class="discrete"><code>sysproc_mem_resident</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of resident memory used by the process</p>
-</div>
-<h2 id="sysproc_mem_share" class="discrete"><code>sysproc_mem_share</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of shared memory used by the process</p>
-</div>
-<h2 id="sysproc_mem_size" class="discrete"><code>sysproc_mem_size</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: bytes</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of memory used by the process</p>
-</div>
-<h2 id="sysproc_minor_faults_raw" class="discrete"><code>sysproc_minor_faults_raw</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of minor page faults for the process</p>
-</div>
-<h2 id="sysproc_page_faults_raw" class="discrete"><code>sysproc_page_faults_raw</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of raw page faults for the process</p>
-</div>
-<h2 id="cm_build_streaming_info_total" class="discrete"><code>cm_build_streaming_info_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of streaming requests processed</p>
-</div>
-<h2 id="cm_chronicle_append_batch_size_1m_max" class="discrete"><code>cm_chronicle_append_batch_size_1m_max</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Maximum append batch size over a minute window</p>
-</div>
-<h2 id="cm_chronicle_append_num_total" class="discrete"><code>cm_chronicle_append_num_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of appends</p>
-</div>
-<h2 id="cm_chronicle_disk_latency_seconds" class="discrete"><code>cm_chronicle_disk_latency_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Disk latency</p>
-</div>
-<h2 id="cm_failover_safeness_level" class="discrete"><code>cm_failover_safeness_level</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Failover safeness</p>
-</div>
-<h2 id="cm_http_requests_seconds" class="discrete"><code>cm_http_requests_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of bucket http requests</p>
-</div>
-<h2 id="cm_http_requests_total" class="discrete"><code>cm_http_requests_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of http requests categorized</p>
-</div>
-<h2 id="cm_index_pausing_runs_total" class="discrete"><code>cm_index_pausing_runs_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of times indexing was paused on old master node</p>
-</div>
-<h2 id="cm_lease_aquirer_prev_acquire_estimate_in_future_total" class="discrete"><code>cm_lease_aquirer_prev_acquire_estimate_in_future_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of times lease period start time estimate is in the future</p>
-</div>
-<h2 id="cm_lease_aquirer_prev_acquire_estimate_minus_start_time_seconds" class="discrete"><code>cm_lease_aquirer_prev_acquire_estimate_minus_start_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Histogram of lease acquirer estimates</p>
-</div>
-<h2 id="cm_lease_aquirer_start_time_minus_prev_acquire_estimate_seconds" class="discrete"><code>cm_lease_aquirer_start_time_minus_prev_acquire_estimate_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Histogram of lease acquirer estimates</p>
-</div>
-<h2 id="cm_lease_aquirer_time_inflight_seconds" class="discrete"><code>cm_lease_aquirer_time_inflight_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Histogram of lease inflight seconds</p>
-</div>
-<h2 id="cm_lease_aquirer_used_prev_acquire_estimate_total" class="discrete"><code>cm_lease_aquirer_used_prev_acquire_estimate_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of times previous estimate was used</p>
-</div>
-<h2 id="cm_lease_aquirer_used_start_estimate_total" class="discrete"><code>cm_lease_aquirer_used_start_estimate_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of times start estimate was used</p>
-</div>
-<h2 id="cm_logs_total" class="discrete"><code>cm_logs_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of logs logged</p>
-</div>
-<h2 id="cm_memcached_call_time_seconds" class="discrete"><code>cm_memcached_call_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of time to call memcached</p>
-</div>
-<h2 id="cm_memcached_e2e_call_time_seconds" class="discrete"><code>cm_memcached_e2e_call_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: End to end memcached call times</p>
-</div>
-<h2 id="cm_memcached_q_call_time_seconds" class="discrete"><code>cm_memcached_q_call_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Memcached queue call times</p>
-</div>
-<h2 id="cm_mru_cache_add_time_seconds" class="discrete"><code>cm_mru_cache_add_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Time to add to MRU cache</p>
-</div>
-<h2 id="cm_mru_cache_flush_time_seconds" class="discrete"><code>cm_mru_cache_flush_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Time to flush MRU cache</p>
-</div>
-<h2 id="cm_mru_cache_lock_time_seconds" class="discrete"><code>cm_mru_cache_lock_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Time to lock MRU cache</p>
-</div>
-<h2 id="cm_mru_cache_lookup_time_seconds" class="discrete"><code>cm_mru_cache_lookup_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Time to perform a lookup in the MRU cache</p>
-</div>
-<h2 id="cm_mru_cache_lookup_total" class="discrete"><code>cm_mru_cache_lookup_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of MRU cache lookups</p>
-</div>
-<h2 id="cm_mru_cache_take_lock_total" class="discrete"><code>cm_mru_cache_take_lock_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of times MRU cache lock was obtained</p>
-</div>
-<h2 id="cm_ns_config_merger_queue_len_1m_max" class="discrete"><code>cm_ns_config_merger_queue_len_1m_max</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: gauge</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Length of the ns_config merger queue</p>
-</div>
-<h2 id="cm_ns_config_merger_run_time_seconds" class="discrete"><code>cm_ns_config_merger_run_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Amount of time to run the ns_config merger</p>
-</div>
-<h2 id="cm_ns_config_merger_sleep_time_seconds" class="discrete"><code>cm_ns_config_merger_sleep_time_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Time ns_config merger was asleep</p>
-</div>
-<h2 id="cm_ns_config_rep_push_keys_retries_total" class="discrete"><code>cm_ns_config_rep_push_keys_retries_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of total retries pushing keys</p>
-</div>
-<h2 id="cm_odp_report_failed" class="discrete"><code>cm_odp_report_failed</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of failures to send on-demand pricing report</p>
-</div>
-<h2 id="cm_outgoing_http_requests_seconds" class="discrete"><code>cm_outgoing_http_requests_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Time taken for outgoing http requests</p>
-</div>
-<h2 id="cm_outgoing_http_requests_total" class="discrete"><code>cm_outgoing_http_requests_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of outgoing http requests</p>
-</div>
-<h2 id="cm_request_hibernates_total" class="discrete"><code>cm_request_hibernates_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of times requests were hibernated</p>
-</div>
-<h2 id="cm_request_unhibernates_total" class="discrete"><code>cm_request_unhibernates_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of times requests were unhibernated</p>
-</div>
-<h2 id="cm_status_latency_seconds" class="discrete"><code>cm_status_latency_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Latency time for status</p>
-</div>
-<h2 id="cm_timer_lag_seconds" class="discrete"><code>cm_timer_lag_seconds</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: histogram</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>: seconds</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Number of lag seconds for the canary-in-the-mine</p>
-</div>
-<h2 id="cm_web_cache_hits_total" class="discrete"><code>cm_web_cache_hits_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of web cache hits</p>
-</div>
-<h2 id="cm_web_cache_inner_hits_total" class="discrete"><code>cm_web_cache_inner_hits_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of inner web cache hits</p>
-</div>
-<h2 id="cm_web_cache_updates_total" class="discrete"><code>cm_web_cache_updates_total</code></h2>
-<div class="paragraph">
-<p><strong>Type</strong>: counter</p>
-</div>
-<div class="paragraph">
-<p><strong>Unit</strong>:</p>
-</div>
-<div class="paragraph">
-<p><strong>Description</strong>: Total number of web cache updates</p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 60%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>audit_queue_length</code></p>
+<p class="tableblock">Current number of entries in the audit queue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>audit_unsuccessful_retries</code></p>
+<p class="tableblock">Failed attempts to audit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_rest_request_enters_total</code></p>
+<p class="tableblock">Number of REST requests to enter ns_server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_rest_request_leaves_total</code></p>
+<p class="tableblock">Number of REST requests to exit ns_server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>couch_docs_actual_disk_size</code></p>
+<p class="tableblock">Amount of disk space used by couchdb docs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>couch_views_actual_disk_size</code></p>
+<p class="tableblock">Amount of disk space used by couchdb views</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_allocstall</code></p>
+<p class="tableblock">Number of alloc stalls</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_burst_rate</code></p>
+<p class="tableblock">Rate at which CPUs overran their quota</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_throttled_rate</code></p>
+<p class="tableblock">Rate at which CPUs were throttled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_cores_available</code></p>
+<p class="tableblock">Number of available cores</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_host_cores_available</code></p>
+<p class="tableblock">Number of available cores in the host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_host_seconds_total</code></p>
+<p class="tableblock">Number of cpu seconds utilized</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_host_sys_rate</code></p>
+<p class="tableblock">System cpu utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_host_user_rate</code></p>
+<p class="tableblock">User cpu utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_host_utilization_rate</code></p>
+<p class="tableblock">cpu utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_irq_rate</code></p>
+<p class="tableblock">IRQ rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_stolen_rate</code></p>
+<p class="tableblock">cpu stolen rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_sys_rate</code></p>
+<p class="tableblock">User system utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_user_rate</code></p>
+<p class="tableblock">User utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_cpu_utilization_rate</code></p>
+<p class="tableblock">System utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_actual_free</code></p>
+<p class="tableblock">Amount of free system memory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_actual_used</code></p>
+<p class="tableblock">Amount of used system memory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_free</code></p>
+<p class="tableblock">Amount of free memory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_limit</code></p>
+<p class="tableblock">System memory limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_total</code></p>
+<p class="tableblock">System memory total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_used_sys</code></p>
+<p class="tableblock">System memory used</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_cgroup_limit</code></p>
+<p class="tableblock">cgroup memory limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_cgroup_actual_used</code></p>
+<p class="tableblock">Actual memory used by cgroup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_mem_cgroup_used</code></p>
+<p class="tableblock">Memory used by cgroup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_swap_total</code></p>
+<p class="tableblock">Total amount of swap</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sys_swap_used</code></p>
+<p class="tableblock">Amount of swap being used</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_cpu_utilization</code></p>
+<p class="tableblock">User cpu utilization rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_major_faults_raw</code></p>
+<p class="tableblock">Number of major page faults for the process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_mem_resident</code></p>
+<p class="tableblock">Amount of resident memory used by the process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_mem_share</code></p>
+<p class="tableblock">Amount of shared memory used by the process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_mem_size</code></p>
+<p class="tableblock">Amount of memory used by the process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_minor_faults_raw</code></p>
+<p class="tableblock">Number of minor page faults for the process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sysproc_page_faults_raw</code></p>
+<p class="tableblock">Number of raw page faults for the process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_build_streaming_info_total</code></p>
+<p class="tableblock">Number of streaming requests processed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_chronicle_append_batch_size_1m_max</code></p>
+<p class="tableblock">Maximum append batch size over a minute window</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_chronicle_append_num_total</code></p>
+<p class="tableblock">Total number of appends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_chronicle_disk_latency_seconds</code></p>
+<p class="tableblock">Disk latency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_failover_safeness_level</code></p>
+<p class="tableblock">Failover safeness</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_http_requests_seconds</code></p>
+<p class="tableblock">Number of bucket http requests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_http_requests_total</code></p>
+<p class="tableblock">Total number of http requests categorized</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_index_pausing_runs_total</code></p>
+<p class="tableblock">Number of times indexing was paused on old master node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_lease_aquirer_prev_acquire_estimate_in_future_total</code></p>
+<p class="tableblock">Number of times lease period start time estimate is in the future</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_lease_aquirer_prev_acquire_estimate_minus_start_time_seconds</code></p>
+<p class="tableblock">Histogram of lease acquirer estimates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_lease_aquirer_start_time_minus_prev_acquire_estimate_seconds</code></p>
+<p class="tableblock">Histogram of lease acquirer estimates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_lease_aquirer_time_inflight_seconds</code></p>
+<p class="tableblock">Histogram of lease inflight seconds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_lease_aquirer_used_prev_acquire_estimate_total</code></p>
+<p class="tableblock">Number of times previous estimate was used</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_lease_aquirer_used_start_estimate_total</code></p>
+<p class="tableblock">Number of times start estimate was used</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_logs_total</code></p>
+<p class="tableblock">Total number of logs logged</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_memcached_call_time_seconds</code></p>
+<p class="tableblock">Amount of time to call memcached</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_memcached_e2e_call_time_seconds</code></p>
+<p class="tableblock">End to end memcached call times</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_memcached_q_call_time_seconds</code></p>
+<p class="tableblock">Memcached queue call times</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_mru_cache_add_time_seconds</code></p>
+<p class="tableblock">Time to add to MRU cache</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_mru_cache_flush_time_seconds</code></p>
+<p class="tableblock">Time to flush MRU cache</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_mru_cache_lock_time_seconds</code></p>
+<p class="tableblock">Time to lock MRU cache</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_mru_cache_lookup_time_seconds</code></p>
+<p class="tableblock">Time to perform a lookup in the MRU cache</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_mru_cache_lookup_total</code></p>
+<p class="tableblock">Total number of MRU cache lookups</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_mru_cache_take_lock_total</code></p>
+<p class="tableblock">Total number of times MRU cache lock was obtained</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_ns_config_merger_queue_len_1m_max</code></p>
+<p class="tableblock">Length of the ns_config merger queue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gauge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_ns_config_merger_run_time_seconds</code></p>
+<p class="tableblock">Amount of time to run the ns_config merger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_ns_config_merger_sleep_time_seconds</code></p>
+<p class="tableblock">Time ns_config merger was asleep</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_ns_config_rep_push_keys_retries_total</code></p>
+<p class="tableblock">Number of total retries pushing keys</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_odp_report_failed</code></p>
+<p class="tableblock">Number of failures to send on-demand pricing report</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_outgoing_http_requests_seconds</code></p>
+<p class="tableblock">Time taken for outgoing http requests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_outgoing_http_requests_total</code></p>
+<p class="tableblock">Total number of outgoing http requests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_request_hibernates_total</code></p>
+<p class="tableblock">Number of times requests were hibernated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_request_unhibernates_total</code></p>
+<p class="tableblock">Number of times requests were unhibernated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_status_latency_seconds</code></p>
+<p class="tableblock">Latency time for status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_timer_lag_seconds</code></p>
+<p class="tableblock">Number of lag seconds for the canary-in-the-mine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">histogram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_web_cache_hits_total</code></p>
+<p class="tableblock">Total number of web cache hits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_web_cache_inner_hits_total</code></p>
+<p class="tableblock">Total number of inner web cache hits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cm_web_cache_updates_total</code></p>
+<p class="tableblock">Total number of web cache updates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">counter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </article>
