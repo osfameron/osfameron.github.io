@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "generated": 1687879147032,
+  "url": "https://docs.couchbase.com",
+  "components": [
+    {
+      "name": "analytics",
+      "title": "analytics",
+      "latest": "docs-fun",
+      "versions": [
+        {
+          "version": "docs-fun",
+          "url": "/analytics/current/index.html",
+          "pages": [
+            {
+              "alias": true,
+              "module": "ROOT",
+              "path": "",
+              "url": "/analytics/current"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
