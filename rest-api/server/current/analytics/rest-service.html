@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="generator" content="Antora 3.1.2">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="landing-page">
+<body class="article">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVPNN2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header fixed-top">
   <div class="header-top-row">
@@ -109,33 +109,122 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="#" class="menu-expand-toggle"><span>Navigation</span><i class="fas fa-times-circle"></i><i class="fas fa-chevron-circle-left"></i></a>
   </div>
 </aside>
+<aside class="toc sidebar"
+      data-title="Contents"
+      data-levels="1">
+  <div class="sidebar-box">
+    <div class="tools" role="navigation">
+<ul>
+<li class="tool edit"><a href="file:///Users/hakimcassimally/couchbase/docs-analytics//modules/analytics/pages/rest-service.adoc" title="Edit Page" target="_blank" rel="noopener" class="remove-ext-icon">Edit on GitHub</a></li>
+</ul>
+</div>
+    <div class="toc-menu"></div>
+    <div class="is-this-helpful-box">
+      <h4> Is this page helpful?</h4>
+      <div class="btn-row">
+        <a href="#" class="like-btn helpful-btn" id="yesBtn" data-page-rating="like" >
+                <i class="far fa-thumbs-up"></i>
+            Yes
+
+            </a>
+        <a href="#" class="dislike-btn helpful-btn" id="noBtn"  data-page-rating="dislike"> <i class="far fa-thumbs-down"></i> No</a>
+      </div>
+      <div class="any-feedback">
+        <a href="#" class="btn any-feedback-btn" id="myCustomTrigger">Leave Additional Feedback? </a>
+      </div>
+      <div class="dialog-box" id="dialogBox">
+        <form>
+            <div class="form-group " id="additionalFeedbackBox">
+              <textarea class="input-control feed-back-msg" rows="8" placeholder="Any Additonal Feedback?"></textarea>
+
+              <div class="action-btn-row ">
+                <a href="#" class="skip-btn" id="skipBtnMsg">Skip</a>
+                  <button class="submit-btn btn blue-btn disabled" > Submit  </button>
+                  <a href="#" class="info-btn"><i class="fas fa-info-circle"></i></a>
+              </div>
+
+
+            </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</aside>
+
+<div class="feedback-modal modal-popup">
+  <div class="modal-popup-dialogue">
+    <div class="popup-header">
+      <a href="#" class="close-popup"><i class="fa fa-times"></i></a>
+    </div>
+    <div class="popup-content">
+      <p>
+        Please use the form below to provide your feedback. Because your feedback is valuable to us,
+         the information you submit in this form is recorded in our issue tracking system (JIRA), which is publicly available.
+        You can track the status of your feedback using the ticket number displayed in the dialog once you submit the form.
+      </p>
+    </div>
+  </div>
+</div>
+
 <main class="article" data-ceiling="topbar">
-<article class="doc landing-page-doc">
-<div id="preamble">
+<div class="article-header">
+<nav class="crumbs" aria-label="breadcrumbs">
+<ul>
+<li class="crumb"><a href="../index.html">server</a></li>
+</ul>
+</nav>
+</div>
+<article class="doc">
+<div class="page-heading-title">
+<h1 class="page">Analytics Service REST API</h1>
+<div class="labels">
+<ul></ul>
+</div>
+<div class="labels">
+<ul>
+<li class="edition"><a href="https://www.couchbase.com/products/editions">Enterprise Edition</a></li>
+</ul>
+</div>
+
+
+</div>
+<div class="contributor-list-box">
+<span class="last-commit-date" id="commitdate">    </span>
+<ul id="contributorList"></ul>
+<span  id="otherContributor"> + </span>
+</div><div id="preamble">
 <div class="sectionbody">
 <style>
   main.article {
     max-width: 100em !important; /* TODO */
   }
 
-  .rest-paths .sect2 {
+  .rest-paths .flex-2col {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
   }
 
-  .rest-paths .sect2 > * {
+  .rest-paths .flex-2col > * {
     width: 100%;
   }
 
-  .rest-paths .sect2 > .sect3 {
-    width: clamp(360px, 40%, 100%);
+  .rest-paths .flex-2col > .detail,
+  .rest-paths .flex-2col > .example
+   {
+    width: clamp(480px, 40%, 100%);
     flex-grow: 1;
   }
 
-  .rest-paths .sect2 > .sect3.example {
+  .rest-paths .flex-2col > .detail {
+  }
+
+  .rest-paths .flex-2col > .example {
     position: sticky;
-    top: 2em;
+    top: 5em;
     height: 100%;
   }
 </style>
@@ -233,13 +322,16 @@ This API enables you to run Analytics queries and set request-level parameters.<
 <pre>POST /analytics/service</pre>
 </div>
 </div>
-<div class="sect3 detail">
-<h4 id=""><a class="anchor" href="#"></a></h4>
-<h4 id="description" class="discrete">Description</h4>
+<div class="sect3">
+<h4 id="description"><a class="anchor" href="#description"></a>Description</h4>
 <div class="paragraph">
 <p>Enables you to execute a SQL&#43;&#43; for Analytics statement. This method allows you to run queries and modifying statements, and specify query parameters.</p>
 </div>
-<h4 id="parameters" class="discrete">Parameters</h4>
+</div>
+<div class="sect3 flex-2col">
+<h4 id="request"><a class="anchor" href="#request"></a>Request</h4>
+<div class="sect4 detail">
+<h5 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h5>
 <div class="paragraph">
 <p>By default, the API accepts parameters using the <code>application/x-www-form-urlencoded</code> MIME type.
 You can specify the <code>application/json</code> MIME type using the <code>Content-Type</code> header of the POST request.</p>
@@ -269,7 +361,43 @@ You can specify the <code>application/json</code> MIME type using the <code>Cont
 </tr>
 </tbody>
 </table>
-<h4 id="responses" class="discrete">Responses</h4>
+</div>
+<div class="sect4 example">
+<h5 id="example-http-request"><a class="anchor" href="#example-http-request"></a>Example HTTP request</h5>
+<div class="paragraph">
+<p>The example below uses URL-encoded data.</p>
+</div>
+<div class="paragraph">
+<p><em>Curl request</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">curl -v -u Administrator:password \
+     --data-urlencode "statement=select 1;" \
+     http://localhost:8095/analytics/service</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The example below posts the same query statement as data of type <code>application/json</code> and adds a client context ID.</p>
+</div>
+<div class="paragraph">
+<p><em>Curl request</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">curl -v -u Administrator:password -H "Content-Type: application/json" -d '{
+    "statement":"select 1;",
+    "pretty":true,
+    "client_context_id":"xyz"
+}' http://localhost:8095/analytics/service</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3 flex-2col">
+<h4 id="response"><a class="anchor" href="#response"></a>Response</h4>
+<div class="sect4 detail">
+<h5 id="responses"><a class="anchor" href="#responses"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -301,58 +429,9 @@ You can specify the <code>application/json</code> MIME type using the <code>Cont
 </tr>
 </tbody>
 </table>
-<h4 id="security" class="discrete">Security</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>basic</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><a href="#analytics-manage-analytics-select">Analytics Manage / Analytics Select</a></strong></p></td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="sect3 example">
-<h4 id="-2"><a class="anchor" href="#-2"></a></h4>
-<h4 id="example-http-request" class="discrete">Example HTTP request</h4>
-<div class="paragraph">
-<p>The example below uses URL-encoded data.</p>
-</div>
-<div class="paragraph">
-<p><em>Curl request</em></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">curl -v -u Administrator:password \
-     --data-urlencode "statement=select 1;" \
-     http://localhost:8095/analytics/service</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The example below posts the same query statement as data of type <code>application/json</code> and adds a client context ID.</p>
-</div>
-<div class="paragraph">
-<p><em>Curl request</em></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">curl -v -u Administrator:password -H "Content-Type: application/json" -d '{
-    "statement":"select 1;",
-    "pretty":true,
-    "client_context_id":"xyz"
-}' http://localhost:8095/analytics/service</code></pre>
-</div>
-</div>
-<h4 id="example-http-response" class="discrete">Example HTTP response</h4>
+<div class="sect4 example">
+<h5 id="example-http-response"><a class="anchor" href="#example-http-response"></a>Example HTTP response</h5>
 <div class="paragraph">
 <p><em>Response 200</em></p>
 </div>
@@ -380,6 +459,28 @@ You can specify the <code>application/json</code> MIME type using the <code>Cont
 }</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="security"><a class="anchor" href="#security"></a>Security</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>basic</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><a href="#analytics-manage-analytics-select">Analytics Manage / Analytics Select</a></strong></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p><a name="get_service"></a></p>
 </div>
@@ -392,16 +493,19 @@ You can specify the <code>application/json</code> MIME type using the <code>Cont
 <pre>GET /analytics/service</pre>
 </div>
 </div>
-<div class="sect3 detail">
-<h4 id="-3"><a class="anchor" href="#-3"></a></h4>
-<h4 id="description-2" class="discrete">Description</h4>
+<div class="sect3">
+<h4 id="description-2"><a class="anchor" href="#description-2"></a>Description</h4>
 <div class="paragraph">
 <p>Enables you to execute a SQL&#43;&#43; for Analytics statement. This method only allows you to run queries and specify query parameters. It does not allow you to run modifying statements.</p>
 </div>
 <div class="paragraph">
 <p>This is intended for situations where use of the <code>POST</code> method is restricted.</p>
 </div>
-<h4 id="parameters-2" class="discrete">Parameters</h4>
+</div>
+<div class="sect3 flex-2col">
+<h4 id="query"><a class="anchor" href="#query"></a>Query</h4>
+<div class="sect4 detail">
+<h5 id="parameters-2"><a class="anchor" href="#parameters-2"></a>Parameters</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -568,7 +672,28 @@ Note that the only possible format is <code>JSON</code>.</p></td>
 </tr>
 </tbody>
 </table>
-<h4 id="responses-2" class="discrete">Responses</h4>
+</div>
+<div class="sect4 example">
+<h5 id="example-http-request-2"><a class="anchor" href="#example-http-request-2"></a>Example HTTP request</h5>
+<div class="paragraph">
+<p>The example below uses a URL-encoded query parameter.
+The SQL&#43;&#43; statement is <code>SELECT "hello, beer!" AS greeting</code>.</p>
+</div>
+<div class="paragraph">
+<p><em>Curl request</em></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">curl -v -u Administrator:password \
+http://localhost:8095/analytics/service?statement=SELECT%20%22hello%2C%20beer%21%22%20AS%20greeting</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3 flex-2col">
+<h4 id="response-2"><a class="anchor" href="#response-2"></a>Response</h4>
+<div class="sect4 detail">
+<h5 id="responses-2"><a class="anchor" href="#responses-2"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -600,43 +725,9 @@ Note that the only possible format is <code>JSON</code>.</p></td>
 </tr>
 </tbody>
 </table>
-<h4 id="security-2" class="discrete">Security</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>basic</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><a href="#analytics-manage-analytics-select">Analytics Manage / Analytics Select</a></strong></p></td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="sect3 example">
-<h4 id="-4"><a class="anchor" href="#-4"></a></h4>
-<h4 id="example-http-request-2" class="discrete">Example HTTP request</h4>
-<div class="paragraph">
-<p>The example below uses a URL-encoded query parameter.
-The SQL&#43;&#43; statement is <code>SELECT "hello, beer!" AS greeting</code>.</p>
-</div>
-<div class="paragraph">
-<p><em>Curl request</em></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">curl -v -u Administrator:password \
-http://localhost:8095/analytics/service?statement=SELECT%20%22hello%2C%20beer%21%22%20AS%20greeting</code></pre>
-</div>
-</div>
-<h4 id="example-http-response-2" class="discrete">Example HTTP response</h4>
+<div class="sect4 example">
+<h5 id="example-http-response-2"><a class="anchor" href="#example-http-response-2"></a>Example HTTP response</h5>
 <div class="paragraph">
 <p><em>Response 200</em></p>
 </div>
@@ -662,6 +753,28 @@ http://localhost:8095/analytics/service?statement=SELECT%20%22hello%2C%20beer%21
 }</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="security-2"><a class="anchor" href="#security-2"></a>Security</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>basic</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><a href="#analytics-manage-analytics-select">Analytics Manage / Analytics Select</a></strong></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p><a name="post_query"></a></p>
 </div>
@@ -674,9 +787,8 @@ http://localhost:8095/analytics/service?statement=SELECT%20%22hello%2C%20beer%21
 <pre>POST /query/service</pre>
 </div>
 </div>
-<div class="sect3 detail">
-<h4 id="-5"><a class="anchor" href="#-5"></a></h4>
-<h4 id="description-3" class="discrete">Description</h4>
+<div class="sect3">
+<h4 id="description-3"><a class="anchor" href="#description-3"></a>Description</h4>
 <div class="paragraph">
 <p>An alternative endpoint for the <a href="#query-service">Query Service</a>, provided for tools compatibility.</p>
 </div>
@@ -692,14 +804,16 @@ http://localhost:8095/analytics/service?statement=SELECT%20%22hello%2C%20beer%21
 <pre>GET /query/service</pre>
 </div>
 </div>
-<div class="sect3 detail">
-<h4 id="-6"><a class="anchor" href="#-6"></a></h4>
-<h4 id="description-4" class="discrete">Description</h4>
+<div class="sect3 flex-2col">
+<h4 id="query-2"><a class="anchor" href="#query-2"></a>Query</h4>
+<div class="sect4 detail">
+<h5 id="description-4"><a class="anchor" href="#description-4"></a>Description</h5>
 <div class="paragraph">
 <p>An alternative endpoint for the <a href="#read-only-query-service">Read-Only Query Service</a>, provided for tools compatibility.</p>
 </div>
 <div class="paragraph">
 <p><a name="definitions"></a></p>
+</div>
 </div>
 </div>
 </div>
