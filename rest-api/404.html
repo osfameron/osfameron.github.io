@@ -68,11 +68,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/home/cloud.html">
-                      Capella
-                    </a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="/home/sdk.html">
                       SDKs
                     </a>
@@ -111,9 +106,8 @@ If you typed the URL of this page manually, please double check that you entered
 ;(function (pathname, returnLink) {
   if (!returnLink) return
   var startPages = [
+    { name: "cloud", title: "cloud", url: "/cloud/index.html", prefix: "/cloud" },
     { name: "home", title: "Home", url: "/home/index.html", prefix: "/home" },
-    { name: "server", title: "server", url: "/server/current/index.html", prefix: "/server" },
-    { name: "server", title: "server", version: "7.2", url: "/server/current/index.html", prefix: "/server/7.2" },
   ].reduce(function (accum, it) {
     var prefix = it.prefix
     delete it.prefix

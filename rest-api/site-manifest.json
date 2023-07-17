@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generated": 1688033365653,
+  "generated": 1689603512272,
   "url": "https://docs.couchbase.com",
   "components": [
     {
@@ -95,6 +95,11 @@
               "path": "extensions.adoc",
               "url": "/home/contribute/extensions.html",
               "title": "Site Extensions"
+            },
+            {
+              "module": "contribute",
+              "path": "generate-rest-api-example-redocly.adoc",
+              "url": "/home/contribute/generate-rest-api-example-redocly.html"
             },
             {
               "module": "contribute",
@@ -246,236 +251,6 @@
               "path": "intro.adoc",
               "url": "/home/sdk.html",
               "title": "SDKs &amp; Connectors"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "server",
-      "title": "server",
-      "latest": "7.2",
-      "versions": [
-        {
-          "version": "7.2",
-          "url": "/server/current/index.html",
-          "pages": [
-            {
-              "module": "analytics",
-              "path": "1_intro.adoc",
-              "url": "/server/current/analytics/1_intro.html",
-              "title": "What&#8217;s SQL&plus;&plus; for Analytics?"
-            },
-            {
-              "module": "analytics",
-              "path": "10_data_type.adoc",
-              "url": "/server/current/analytics/10_data_type.html",
-              "title": "Data Types"
-            },
-            {
-              "module": "analytics",
-              "path": "2_expr.adoc",
-              "url": "/server/current/analytics/2_expr.html",
-              "title": "Expressions"
-            },
-            {
-              "module": "analytics",
-              "path": "3_query.adoc",
-              "url": "/server/current/analytics/3_query.html",
-              "title": "Queries"
-            },
-            {
-              "module": "analytics",
-              "path": "4_error.adoc",
-              "url": "/server/current/analytics/4_error.html",
-              "title": "Errors"
-            },
-            {
-              "module": "analytics",
-              "path": "5_ddl.adoc",
-              "url": "/server/current/analytics/5_ddl.html",
-              "title": "Data Definition Language (DDL)"
-            },
-            {
-              "module": "analytics",
-              "path": "5a_views.adoc",
-              "url": "/server/current/analytics/5a_views.html",
-              "title": "Analytics Views"
-            },
-            {
-              "module": "analytics",
-              "path": "5b_cbo.adoc",
-              "url": "/server/current/analytics/5b_cbo.html",
-              "title": "Cost-Based Optimizer for Analytics"
-            },
-            {
-              "module": "analytics",
-              "path": "6_n1ql.adoc",
-              "url": "/server/current/analytics/6_n1ql.html",
-              "title": "SQL&plus;&plus; for Analytics vs. SQL&plus;&plus; for Query"
-            },
-            {
-              "module": "analytics",
-              "path": "7_using_index.adoc",
-              "url": "/server/current/analytics/7_using_index.html",
-              "title": "Using Indexes"
-            },
-            {
-              "module": "analytics",
-              "path": "8_builtin.adoc",
-              "url": "/server/current/analytics/8_builtin.html",
-              "title": "Builtin Functions"
-            },
-            {
-              "alias": true,
-              "module": "analytics",
-              "path": "9_data_type.adoc",
-              "url": "/server/current/analytics/10_data_type.html",
-              "title": "Data Types"
-            },
-            {
-              "module": "analytics",
-              "path": "9_udf.adoc",
-              "url": "/server/current/analytics/9_udf.html",
-              "title": "User-Defined Functions"
-            },
-            {
-              "module": "analytics",
-              "path": "appendix_1_keywords.adoc",
-              "url": "/server/current/analytics/appendix_1_keywords.html",
-              "title": "Reserved keywords"
-            },
-            {
-              "module": "analytics",
-              "path": "appendix_2_parameters.adoc",
-              "url": "/server/current/analytics/appendix_2_parameters.html",
-              "title": "Performance Tuning"
-            },
-            {
-              "module": "analytics",
-              "path": "appendix_3_resolution.adoc",
-              "url": "/server/current/analytics/appendix_3_resolution.html",
-              "title": "Variable Bindings and Name Resolution"
-            },
-            {
-              "module": "analytics",
-              "path": "appendix_4_examples.adoc",
-              "url": "/server/current/analytics/appendix_4_examples.html",
-              "title": "Example Data"
-            },
-            {
-              "module": "analytics",
-              "path": "appendix_5_python.adoc",
-              "url": "/server/current/analytics/appendix_5_python.html",
-              "title": "Python UDFs"
-            },
-            {
-              "module": "analytics",
-              "path": "config.adoc",
-              "url": "/server/current/analytics/config.html",
-              "title": "Analytics Configuration Parameters"
-            },
-            {
-              "module": "analytics",
-              "path": "error-codes.adoc",
-              "url": "/server/current/analytics/error-codes.html",
-              "title": "Analytics Error Codes"
-            },
-            {
-              "module": "analytics",
-              "path": "introduction.adoc",
-              "url": "/server/current/analytics/introduction.html",
-              "title": "Introduction"
-            },
-            {
-              "module": "analytics",
-              "path": "manage-datasets.adoc",
-              "url": "/server/current/analytics/manage-datasets.html",
-              "title": "Managing Collections"
-            },
-            {
-              "module": "analytics",
-              "path": "manage-links.adoc",
-              "url": "/server/current/analytics/manage-links.html",
-              "title": "Managing Links"
-            },
-            {
-              "module": "analytics",
-              "path": "monitor.adoc",
-              "url": "/server/current/analytics/monitor.html",
-              "title": "Monitoring Queries"
-            },
-            {
-              "module": "analytics",
-              "path": "primer-beer.adoc",
-              "url": "/server/current/analytics/primer-beer.html",
-              "title": "Tutorial"
-            },
-            {
-              "module": "analytics",
-              "path": "query-params.adoc",
-              "url": "/server/current/analytics/query-params.html",
-              "title": "Analytics Query Parameters"
-            },
-            {
-              "module": "analytics",
-              "path": "query-responses.adoc",
-              "url": "/server/current/analytics/query-responses.html",
-              "title": "Analytics Query Responses"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-admin.adoc",
-              "url": "/server/current/analytics/rest-admin.html",
-              "title": "Analytics Administration REST APIs"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-analytics.adoc",
-              "url": "/server/current/analytics/rest-analytics.html",
-              "title": "Analytics REST API"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-config.adoc",
-              "url": "/server/current/analytics/rest-config.html",
-              "title": "Analytics Configuration REST API"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-library.adoc",
-              "url": "/server/current/analytics/rest-library.html",
-              "title": "Analytics Library REST API"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-links.adoc",
-              "url": "/server/current/analytics/rest-links.html",
-              "title": "Analytics Links REST API"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-service.adoc",
-              "url": "/server/current/analytics/rest-service.html",
-              "title": "Analytics Service REST API"
-            },
-            {
-              "module": "analytics",
-              "path": "rest-settings.adoc",
-              "url": "/server/current/analytics/rest-settings.html",
-              "title": "Analytics Settings REST API"
-            },
-            {
-              "module": "analytics",
-              "path": "run-query.adoc",
-              "url": "/server/current/analytics/run-query.html",
-              "title": "Running Queries"
-            },
-            {
-              "alias": true,
-              "module": "ROOT",
-              "path": "",
-              "url": "/server/current"
             }
           ]
         }
